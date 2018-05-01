@@ -1,0 +1,34 @@
+{
+  "name": "nomades",
+  "version": "1.0.0",
+  "description": "nomades gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugenielaigle/nomades.git"
+  },
+  "keywords": [
+    "nomades",
+    "studio"
+  ],
+  "author": "Eugénie LAIGLE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eugenielaigle/nomades/issues"
+  },
+  "homepage": "https://github.com/eugenielaigle/nomades#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "install": "^0.11.0",
+    "pump": "^3.0.0",
+    "sass-module-importer": "^1.4.0"
+  }
+}

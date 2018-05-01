@@ -1,0 +1,93 @@
+@media (max-width: 767px){
+
+  .xs-visible{
+    display: block!important;
+  }
+
+  .xs-invisible{
+    display: none;
+  }
+
+  .container-header{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+    .navbar{
+     width: 100%!important;
+     .navbar-search{
+      width: 5%;
+      .recherche-img{
+       width: 100%;
+     }
+   }
+   .navbar-brand{
+    width: 70%;
+    display: flex!important;
+    justify-content: center;
+    margin: 0;
+    .logo{
+      width: 60%;
+    }
+  }
+  #bs4navbar{
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    border-bottom: none!important;
+
+    #menu-menu-principal{
+      margin-top: 10%;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      width: 70%!important;
+      margin-left: 15%;
+      .menu-item{
+        a{
+          img{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+
+
+}
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url('../img/menu-mobile.svg')!important;
+}
+
+.navbar-light .navbar-toggler{
+  border: none !important;
+  padding: 0!important;
+  font-size: 1em!important;
+  z-index: 99;
+}
+
+.collapse.show {
+
+}
+
+
+.navbar-light .navbar-toggler-icon-close{
+  background-image: url('../img/croix.svg')!important;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+}
+
+
+
+
+}
