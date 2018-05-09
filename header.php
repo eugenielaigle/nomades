@@ -39,7 +39,7 @@
 </nav>
 </div>
 
-  <aside class="sidebar-contact xs-invisible">
+  <aside class="sidebar-contact xs-invisible" id="contact">
     <p class="contact">Contact</p>
     <p class="nomades-prez"><span>NOMADES</span> - Magazine Numérique et Studio de Création</p>
   </aside>

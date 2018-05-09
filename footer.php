@@ -18,9 +18,11 @@
 
 
         <div class="col-md-8 footer-right">
-
-
-
+          <div class="newsletter-area">
+            <h4 class="title-newsletter">NEWSLETTER</h4>
+            <p class="sub-title-newsletter">Recevez directement par mail nos dernières publications</p>
+            <button id="newsletter" class="button-newsletter">JE M'INSCRIS</button>
+          </div>
           <!-- widget footer right area -->
           <?php if ( is_active_sidebar( 'footer-right-widget-area' ) ) : ?>
            <div id="footer-right-widget-area" class="right-footer-widget widget-area" role="complementary">

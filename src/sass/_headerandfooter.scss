@@ -1,0 +1,218 @@
+
+/********************* PROGRESS BAR *****************************/
+
+#progress{
+  background-color: black;
+  height: 3px;
+  width: 0;
+  position: fixed;
+  // top: 47px;
+  bottom: 0;
+  left: 60px;
+  z-index: 9999; /* Peut être important si vous avez un menu en position fixe */
+}
+
+
+/********************* HEADER *****************************/
+
+.container-header{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  background-color: #fff;
+  z-index: 99;
+  .navbar{
+    width: 98%;
+    z-index: 99;
+    padding-bottom: 0!important;
+    #bs4navbar{
+      border-bottom: 0.5px solid black;
+      font-size: 1em;
+      font-family: 'LeagueGothic';
+
+      #menu-menu-principal{
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        width: 100%;
+        .menu-item-object-custom{
+          width: 50%;
+          a{
+            position: absolute;
+            left: 45%;
+          }
+        }
+        .menu-item{
+          text-transform: uppercase;
+          a{
+            color: black;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid transparent;
+            .dashicons-search{
+              line-height: 1.6;
+            }
+            img{
+              height: 20px;
+            }
+          }
+          a:hover, .active{
+            text-decoration: underline;
+          }
+          .active{
+            text-decoration-color: $grisclair;
+          }
+        }
+      }
+    }
+  }
+}
+
+div#wpcs_tab_84{
+  top: 65px!important;
+  left: -53px!important;
+  font-family: 'Freight Text Medium Italic';
+  font-size: 12px!important;
+  text-transform: uppercase;
+  background: transparent!important;
+  border: none!important;
+}
+
+.sidebar-contact{
+  position: fixed;
+  width: 3%;
+  height: 100vh;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 99;
+  .contact{
+    transform: rotate(270deg);
+    font-family: 'Freight Text Medium Italic';
+    position: absolute;
+    top: 80px;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  .nomades-prez{
+    transform: rotate(270deg);
+    font-family: 'Freight Text Medium Italic';
+    position: absolute;
+    top: 50vh;
+    font-size: 12px;
+    width: 30vw;
+    left: -13vw;
+    span{
+      font-family: 'Freight Text Bold';
+    }
+  }
+}
+
+.sidebar-recherche{
+  position: fixed;
+  width: 3%;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  img{
+    width: 18px;
+  }
+  .recherche{
+    transform: rotate(270deg);
+    font-family: 'Freight Text Medium Italic';
+    position: absolute;
+    top: 350px;
+    font-size: 12px;
+    width: 30vw;
+    right: -13vw;
+    letter-spacing: 0.3px;
+  }
+}
+
+a, a:active, a:visited, a:hover{
+  color: black!important;
+  text-decoration: none;
+}
+
+button:focus{
+  outline: none!important;
+}
+
+
+/********************* FOOTER *****************************/
+
+footer{
+  margin-bottom: 25px;
+  margin-top: 25px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .container-footer{
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+    .row-footer{
+      margin-left: 2rem;
+      margin-right: 1.5rem;
+      width: 98%;
+      border-top: 2px solid black;
+      .footer-brand{
+        .footer-left-widget{
+          .image{
+            max-width: 250px!important;
+          }
+        }
+        img{
+          margin-top: 25px;
+          margin-bottom: 90px;
+          width:90%;
+        }
+        .copyright{
+          font-family: 'Freight Text Medium';
+          font-size: 11px;
+          margin-bottom: 0rem;
+        }
+        .subphrase-footer{
+          font-family: 'Freight Text Medium Italic';
+          font-size: 10px;
+        }
+      }
+
+      .footer-right{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: column;
+        .right-footer-widget{
+          width: 60%;
+          float: right;
+          .footer-right-widget{
+            width: 100%;
+
+            #menu-menu-footer{
+              font-family: 'LeagueGothic';
+              list-style-type: none;
+              text-transform: uppercase;
+              display: flex;
+              justify-content: space-around;
+              font-size: 16px;
+              .menu-item{
+                a{
+                  img{
+                    width: auto;
+                    height: 16px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

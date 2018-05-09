@@ -1,0 +1,180 @@
+.newsletter-area{
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  font-family: 'Freight Text Medium Italic';
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+.title-newsletter{
+  font-size: 12px;
+  line-height: 20px;
+  margin: 0;
+  text-align: right;
+}
+
+.sub-title-newsletter{
+  line-height: 20px;
+  margin: 0;
+  width: 153px;
+  text-align: right;
+}
+
+
+.button-newsletter{
+    width: 100px;
+    padding: 6px 10px;
+    color:#000;
+    background-color: transparent;
+    font-size: 9px;
+    font-weight:300;
+    line-height: 1.4285;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    white-space: normal;
+    border:1px solid #000;
+    border-radius: 0px;
+    font-family: 'Avenir';
+    letter-spacing: 1.8px;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.button-newsletter:hover{
+  background-color: black;
+  color: #fff;
+}
+.pum-title, .popmake-title{
+  font-family: 'LeagueGothic'!important;
+  margin-bottom: 40px;
+}
+
+
+#sib_signup_form_1{
+  // .sib-alert-message{
+  //   padding: 30% 12px 45% 12px!important;
+  //   text-align: center;
+  // }
+  .sib-alert-message-success, .sib-alert-message-warning, .sib-alert-message-error {
+    position: absolute;
+    background-color: white!important;
+    border: none!important;
+    color: black!important;
+    font-family: 'Freight Text Medium Italic';
+  }
+
+}
+
+// NEWSLETTER MOBILE
+@media (max-width: 767.98px){
+
+.pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
+  width: 100%!important;
+}
+
+.pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
+  left: 0!important;
+  right: 0!important;
+  top: 0!important;
+  bottom: 0!important;
+  height: 100%!important;
+  width: 100%!important;
+}
+
+.popmake-title, .pum-title{
+    margin-bottom: 35%!important;
+    margin-top: 10%;
+}
+
+#sib_signup_form_1 .checkboxes{
+  margin: 10% 0 30% 0!important;
+}
+
+#sib_signup_form_1 .sib-alert-message {
+    padding: 30% 0px 60%!important;
+    text-align: center;
+    width: 100%;
+}
+
+}
+
+// NEWSLETTER LAPTOP MEDIUM
+
+@media (min-width: 992px) and (max-width: 1799.98px){
+#sib_signup_form_1{
+  .sib-alert-message{
+    padding: 30% 12px 45% 12px!important;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
+  width: 25%!important;
+}
+
+}
+
+// NEWSLETTER TABLET
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+.pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
+  width: 40%!important;
+}
+
+.pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
+  top: 25%!important;
+  width: 30%!important;
+}
+
+#sib_signup_form_1{
+  .sib-alert-message{
+    padding: 11% 12px 30%!important;
+    text-align: center;
+    width: 100%;
+    /* left: 100px; */
+    display: flex;
+    justify-content: center;
+}
+
+}
+}
+
+// NEWSLETTER BIG
+
+@media (min-width: 1800px){
+
+.pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
+  width: 18%!important;
+}
+
+
+.pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
+  top: 25%!important;
+  // left: 1280px!important;
+  width: 30%!important;
+}
+
+#sib_signup_form_1{
+  .sib-alert-message{
+    padding: 30% 12px 45% 12px!important;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+}
+
+
+// #popmake-112 .pum-responsive, #popmake-122 .pum-responsive{
+//   width: 30%!important;
+// }

@@ -1,6 +1,19 @@
+// GRAPHIC
 @import 'src/sass/fonts';
 @import 'src/sass/colors';
+@import 'src/sass/reset';
+
+// RESPONSIVE
 @import 'src/sass/mobile';
+@import 'src/sass/big';
+@import 'src/sass/tablet';
+
+// AREAS
+@import 'src/sass/headerandfooter';
+@import 'src/sass/newsletter';
+@import 'src/sass/contact';
+
+
 /*
 * FONTS FAMILIES
 *
@@ -18,200 +31,135 @@
 * font-family: 'LeagueGothic';
 */
 
-body{
-  height: 500vh;
-}
-
-#progress{
-  background-color: black;
-  height: 3px;
-  width: 0;
-  position: fixed;
-  top: 47px;
-  left: 60px;
-  z-index: 9999; /* Peut être important si vous avez un menu en position fixe */
-}
-
-@media (min-width: 1800px){
-  #progress{
-    left: 65px;
-  }
-}
-
-
-
 .xs-visible{
   display: none;
 }
 
-.container-header{
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  .navbar{
-    width: 98%;
-    z-index: 99;
-    #bs4navbar{
-      border-bottom: 0.5px solid black;
-      font-size: 1em;
-      font-family: 'LeagueGothic';
-
-      #menu-menu-principal{
-        display: flex;
-        justify-content: space-between;
-        list-style-type: none;
-        width: 100%;
-        .menu-item-object-custom{
-          width: 50%;
-          a{
-            position: absolute;
-            left: 45%;
-          }
-        }
-        .menu-item{
-          text-transform: uppercase;
-          a{
-            color: black;
-            font-weight: 400;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 1px solid transparent;
-            .dashicons-search{
-              line-height: 1.6;
-            }
-            img{
-              height: 20px;
-            }
-          }
-          a:hover, .active{
-            text-decoration: underline;
-          }
-          .active{
-            text-decoration-color: $grisclair;
-          }
-        }
-      }
-    }
-  }
+.xs-invisible{
+  display: block;
 }
 
-.sidebar-contact{
-  position: relative;
-  width: 3%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  cursor: pointer;
-  .contact{
-    transform: rotate(270deg);
-    font-family: 'Freight Text Medium Italic';
-    position: absolute;
-    top: 80px;
+.normal-title{
+  font-family: 'Freight Big Book'!important;
+}
+
+.italic-title{
+  font-family: 'Freight Big Book Italic'!important;
+}
+
+li p{
+  margin: 0;
+}
+
+a:hover, a:active, a:focus, a:visited{
+  font-weight: bold;
+  text-decoration: none!important;
+}
+
+/*************** ARTICLE ****************************/
+
+.container-content{
+  padding-top: 80px;
+  padding-left: 5.5%;
+  padding-right: 4%;
+}
+
+.article-header{
+  h2{
+    font-family: 'LeagueGothic';
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 17px;
     text-transform: uppercase;
-    font-size: 12px;
   }
-  .nomades-prez{
-    transform: rotate(270deg);
+  .chapeau{
     font-family: 'Freight Text Medium Italic';
-    position: absolute;
-    top: 50vh;
-    font-size: 12px;
-    width: 30vw;
-    left: -13vw;
-    span{
-      font-family: 'Freight Text Bold';
-    }
+    font-size: 21px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 25px;
+    padding-left: 0;
+    padding-right: 0;
   }
-}
-
-.sidebar-recherche{
-  position: absolute;
-  width: 3%;
-  height: 100%;
-  right: 0;
-  top: 0;
-  cursor: pointer;
-  img{
-    width: 18px;
-  }
-  .recherche{
-    transform: rotate(270deg);
-    font-family: 'Freight Text Medium Italic';
-    position: absolute;
-    top: 350px;
-    font-size: 12px;
-    width: 30vw;
-    right: -13vw;
-    letter-spacing: 0.3px;
-  }
-}
-
-a, a:active, a:visited, a:hover{
-  color: black!important;
-  text-decoration: none;
-}
-
-button:focus{
-  outline: none!important;
-}
-
-footer{
-  margin-bottom: 25px;
-  .container-footer{
+  .article-title{
     display: flex;
-    justify-content: center;
-    padding-left: 30px;
-    .row-footer{
-      margin-left: 2rem;
-      margin-right: 1.5rem;
-      width: 98%;
-      border-top: 2px solid black;
-      .footer-brand{
-        img{
-          margin-top: 25px;
-          margin-bottom: 50px;
-          width:90%;
-        }
-        .copyright{
-          font-family: 'Freight Text Medium';
-          font-size: 11px;
-          margin-bottom: 0rem;
-        }
-        .subphrase-footer{
-          font-family: 'Freight Text Medium Italic';
-          font-size: 10px;
-        }
-      }
-      .footer-right{
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        .right-footer-widget{
-          width: 60%;
-          float: right;
-          .footer-right-widget{
-            width: 100%;
-
-            #menu-menu-footer{
-              font-family: 'LeagueGothic';
-              list-style-type: none;
-              text-transform: uppercase;
-              display: flex;
-              justify-content: space-around;
-              font-size: 16px;
-              .menu-item{
-                a{
-                  img{
-                    width: auto;
-                    height: 16px;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+    align-items: flex-end;
+    justify-content: space-between;
+  h1{
+    font-family: 'Freight Big Book Italic';
+    font-size: 58px;
+    font-weight: 300;
+    line-height: 47px;
+    span{
+      font-family: 'Freight Big Book';
     }
   }
+  p{
+      font-family: 'Freight Big Book Italic';
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.55px;
+      line-height: 24px;
+      margin-bottom: .5rem;
+  }
+  }
+  .image-full-size, .video-full-size{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    img{
+      width: 100%;
+    }
+  }
+
+  .legende-image-full-size{
+    position: absolute;
+    bottom: 30px;
+    width: 25%;
+    left: 5%;
+    font-family: 'Freight Text Medium Italic';
+    color: $legende;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+  }
+
+  .plus-upright{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 20px;
+    height: 40px;
+  }
+
+  .row-article{
+    margin-top: 25px;
+    margin-bottom: 25px;
+  .legende-sous-image{
+    font-family: 'Freight Text Medium Italic';
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.9px;
+    line-height: 16px;
+  }
+
+  .article-francais{
+    font-family: 'Freight Text Medium';
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.05px;
+    line-height: 23px;
+  }
+
+  .article-anglais{
+    font-family: 'Freight Text Medium Italic';
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.05px;
+    line-height: 21px;
+    color: $grey-text;
+  }
 }
+
+}
+

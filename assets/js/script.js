@@ -1,0 +1,1 @@
+jQuery(document).ready(function(a){var n=10;a("body").on("click",".load-more",function(){jQuery.post(ajaxurl,{action:"load_more",offset:n},function(o){n+=10,a(".alasuite").append(o)})})});
