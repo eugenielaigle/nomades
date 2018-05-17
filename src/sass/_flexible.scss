@@ -1,0 +1,254 @@
+/************************ PANORAMIQUE ***************************/
+.bloc-panoramique{
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  height: 80vh;
+  .panoramique{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 80vh;
+    // z-index: 5;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .legende-panoramique1, .legende-panoramique2{
+      p{
+        position: absolute;
+        z-index: 6;
+        color: #fbfbfb;
+        font-family: 'Freight Text Medium Italic';
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 1.05px;
+        line-height: 16px;
+        bottom: 30px;
+        margin-bottom: 0;
+        width: 25%;
+      }
+    }
+    .legende-panoramique1 p{
+      left: 5%;
+    }
+    .legende-panoramique2 p{
+      left: 35%;
+    }
+  }
+}
+
+/***************************** DYPTIQUE ************************************/
+
+.container-dyptique{
+  margin: 10vh 25%;
+  .dyptique{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    .image-gauche, .image-droite{
+      height: 60vh;
+      width: 50%;
+      padding: 0 5px;
+    }
+  }
+  .legendes-dyptique{
+    margin-top: 1rem;
+    .legende-dyp{
+      display: flex;
+      justify-content: center;
+      p{
+        font-family: 'Freight Text Medium Italic';
+        font-size: 10px;
+        font-weight: 300;
+        letter-spacing: 0.75px;
+        line-height: 14px;
+        margin-bottom: 0;
+      }
+    }
+    .legende-francais-dyptique{
+      color: #000000;
+    }
+    .legende-anglais-dyptique{
+      color: $grey-text;
+    }
+  }
+
+}
+
+
+
+/********************* IMAGE /TEXTE SCROLLABLE **************************/
+.image-texte-scrollable{
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  display: flex;
+  height: auto;
+  margin-left: 20%;
+  #sticker{
+    width: 40vw!important;
+    height: auto!important;
+  }
+  .image-legende-gauche{
+    position: relative;
+    .image-gauche{
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    .legende-anglais, .legende-francais{
+      width: 80%;
+      p{
+        font-size: 10px;
+        font-weight: 300;
+        font-style: italic;
+        letter-spacing: 0.9px;
+        line-height: 14px;
+      }
+    }
+  }
+  .position-texte{
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+  }
+  .texte-scrollable-droite{
+    display: flex;
+    width: 50vw!important;
+    height: auto;
+    .legende-francais, .legende-anglais{
+      width: 50%;
+      padding-left: 30px;
+    }
+
+  }
+}
+
+.question{
+  font-family: "LeagueGothic"!important;
+  font-size: 21px!important;
+  font-weight: 400;
+}
+
+ @media (min-width: 1800px){
+  .image-texte-scrollable{
+  margin-left: 35%;
+
+   .position-texte{
+      width: 35vw;
+    }
+   }
+ }
+
+
+/***************************** VIDEO ***************************/
+.video{
+  padding: 0 20%;
+  iframe{
+    width: 100%!important;
+  }
+}
+
+
+/************************** IMAGE CENTREE ***********************/
+.image-centree{
+  margin: 10vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .image-relative{
+    position: relative;
+    .image{
+      width: auto;
+      margin: auto;
+      max-height: 80vh;
+      position: relative;
+    }
+  }
+  .legendes{
+    display: flex;
+    align-self: flex-end;
+    margin-top: 15px;
+    margin-right: 10%;
+    width: 50%;
+    p{
+      font-size: 10px!important;
+      font-weight: 300!important;
+      letter-spacing: .75px!important;
+      line-height: 14px!important;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+  }
+}
+
+
+/****************** CITATION *************************/
+.citation{
+   margin: 10vh 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  p{
+    text-align: center;
+  }
+  .titre{
+    font-family: 'Freight Text Medium Italic';
+    font-size: 43px;
+    font-weight: 300;
+    line-height: 52px;
+    font-style: italic;
+    margin: 0;
+    padding: 10vh 20% 5vh 20%;
+  }
+  .sous-titre{
+    color: #626262;
+    font-family: 'Freight Text Medium Italic';
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    margin: 0;
+    padding: 0 15% 10vh 15%;
+  }
+}
+
+
+/********************** DYPTIQUE ASYMETRIQUE ******************************/
+.dyptique-asymetrique{
+  padding: 10vh 10%;
+  img{
+    object-fit: cover;
+  }
+  .images-dyptique-asymetrique{
+    display: flex;
+    justify-content: center;
+    .image-relative{
+      position: relative;
+      .image-gauche{
+        height: 70vh;
+      }
+    }
+    .image-right{
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 30px;
+      .image-dyptique-asymetrique-right{
+        height: 45vh;
+      }
+      .legende-dyptique-asymetrique{
+        padding-top: 15px;
+        p{
+          font-size: 10px;
+          letter-spacing: .75px;
+          line-height: 14px;
+        }
+      }
+    }
+
+  }
+}

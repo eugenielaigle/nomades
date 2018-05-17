@@ -1,1 +1,1 @@
-jQuery(document).ready(function(a){var n=10;a("body").on("click",".load-more",function(){jQuery.post(ajaxurl,{action:"load_more",offset:n},function(o){n+=10,a(".alasuite").append(o)})})});
+!function(e){var o=e("#navbar");o.css("display","none"),e(document).on("scroll",function(){500<e(window).scrollTop()?o.slideDown("slow"):o.slideUp("slow")});var n=e(".home-category-retrospective img").width();e(".article-under-picture").width(n),e(".vignets").on("inview",function(o,n){n&&e(".vignets").toggleClass("load")})}(jQuery);

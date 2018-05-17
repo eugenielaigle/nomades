@@ -1,35 +1,4 @@
-( function() {
-  var nav = document.getElementById( 'site-navigation' ), button, menu;
-  if ( ! nav ) {
-    return;
-  }
 
-  button = nav.getElementsByTagName( 'button' )[0];
-  menu   = nav.getElementsByTagName( 'ul' )[0];
-  if ( ! button ) {
-    return;
-  }
-
-  // Hide button if menu is missing or empty.
-  if ( ! menu || ! menu.childNodes.length ) {
-    button.style.display = 'none';
-    return;
-  }
-
-  button.onclick = function() {
-    if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
-      menu.className = 'nav-menu';
-    }
-
-    if ( -1 !== button.className.indexOf( 'toggled-on' ) ) {
-      button.className = button.className.replace( ' toggled-on', '' );
-      menu.className = menu.className.replace( ' toggled-on', '' );
-    } else {
-      button.className += ' toggled-on';
-      menu.className += ' toggled-on';
-    }
-  };
-} )(jQuery);
 
 // ICONE DE FERMETURE MENU POUR MOBILE
 $('.navbar-toggler').click(function(){
@@ -66,7 +35,7 @@ $(function(){
 
 // BUTTON ENGLISH TEXT ON MOBILE
 $('#english-text').click(function(){
-    $('#article-anglais').toggle('slow');
+  $('#article-anglais').toggle('slow');
 });
 
 
@@ -109,7 +78,7 @@ for (i = 0; i < x.length; i++) {
           }
         }
         h.click();
-    });
+      });
     b.appendChild(c);
   }
   x[i].appendChild(b);
@@ -120,7 +89,7 @@ for (i = 0; i < x.length; i++) {
       closeAllSelect(this);
       this.nextSibling.classList.toggle("select-hide");
       this.classList.toggle("select-arrow-active");
-  });
+    });
 }
 function closeAllSelect(elmnt) {
   /*a function that will close all select boxes in the document,
@@ -145,5 +114,16 @@ function closeAllSelect(elmnt) {
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
+// Image + Texte scrollable
+$(".sticky-wrapper").stick_in_parent({
+  offset_top: 60
+});
+
+  var textDyptique = $(".image-dyptique-asymetrique-right").width();
+  $('.legende-dyptique-asymetrique').width(textDyptique);
+
+
+  var retrospectiveHome = $(".home-category-retrospective img").width();
+  $('.article-under-picture').width(retrospectiveHome);
 
 

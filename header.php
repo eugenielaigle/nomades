@@ -5,11 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Nomades Studio</title>
+  <meta property="og:url"           content="<?php bloginfo('url'); ?>" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Nomades Studio" />
+  <meta property="og:description"   content="" />
+  <meta property="og:image"         content="<?php bloginfo('stylesheet_directory');?>/assets/img/image.jpg" />
   <?php wp_head(); ?>
 </head>
 <body>
 
-<div class="container-fluid container-header" >
+<div class="container-fluid container-header">
 
  <nav class="navbar navbar-expand-md navbar-light bg-faded">
   <a class="xs-visible navbar-search" href="<?php the_permalink(51); ?>">

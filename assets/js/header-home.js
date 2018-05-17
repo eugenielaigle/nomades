@@ -1,0 +1,1 @@
+var navbar=$(".container-header");navbar.css("display","none"),$(document).on("scroll",function(){768<$(window).width()?300<$(window).scrollTop()?navbar.slideDown():navbar.slideUp():navbar.css("display","none")});

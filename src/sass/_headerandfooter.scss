@@ -6,9 +6,9 @@
   height: 3px;
   width: 0;
   position: fixed;
-  // top: 47px;
+  top: 47px;
   bottom: 0;
-  left: 60px;
+  left: 44px;
   z-index: 9999; /* Peut être important si vous avez un menu en position fixe */
 }
 
@@ -84,16 +84,16 @@ div#wpcs_tab_84{
   position: fixed;
   width: 3%;
   height: 100vh;
-  z-index: 100;
   left: 0;
   top: 0;
   cursor: pointer;
-  z-index: 99;
+  z-index: 4;
   .contact{
     transform: rotate(270deg);
     font-family: 'Freight Text Medium Italic';
     position: absolute;
-    top: 80px;
+    top: 100px;
+    left: -0.5vw;
     text-transform: uppercase;
     font-size: 12px;
   }
@@ -101,7 +101,7 @@ div#wpcs_tab_84{
     transform: rotate(270deg);
     font-family: 'Freight Text Medium Italic';
     position: absolute;
-    top: 50vh;
+    bottom: 25vh;
     font-size: 12px;
     width: 30vw;
     left: -13vw;
@@ -125,7 +125,7 @@ div#wpcs_tab_84{
     transform: rotate(270deg);
     font-family: 'Freight Text Medium Italic';
     position: absolute;
-    top: 350px;
+    top: 35vh;
     font-size: 12px;
     width: 30vw;
     right: -13vw;
@@ -155,9 +155,10 @@ footer{
   .container-footer{
     display: flex;
     justify-content: center;
-    padding-left: 30px;
+    padding-left: 27px;
+    padding-right: 27px;
     .row-footer{
-      margin-left: 2rem;
+      margin-left: 1.5rem;
       margin-right: 1.5rem;
       width: 98%;
       border-top: 2px solid black;
