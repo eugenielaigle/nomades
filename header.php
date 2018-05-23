@@ -4,12 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Nomades Studio</title>
-  <meta property="og:url"           content="<?php bloginfo('url'); ?>" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Nomades Studio" />
-  <meta property="og:description"   content="" />
-  <meta property="og:image"         content="<?php bloginfo('stylesheet_directory');?>/assets/img/image.jpg" />
+  <title><?php wp_title(''); ?></title>
   <?php wp_head(); ?>
 </head>
 <body>
@@ -49,7 +44,7 @@
     <p class="nomades-prez"><span>NOMADES</span> - Magazine Numérique et Studio de Création</p>
   </aside>
 
-  <a href="<?php the_permalink(51); ?>">
+  <a href="<?php the_permalink(); ?>">
     <aside class="sidebar-recherche xs-invisible">
 
     <p class="recherche"><img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/ligne-185.svg"" alt=""> <?php the_title(); ?></p>
@@ -57,6 +52,6 @@
 </a>
 
 
-
+<!--  -->
 
 

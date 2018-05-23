@@ -1,51 +1,40 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'Avenir';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir"), url("../fonts/AvenirLTStd-Book.otf") format("opentype"); }
-
-@font-face {
-  font-family: 'Freight Big Book Italic';
-  font-style: italic;
-  font-weight: normal;
-  src: local("Freight Big Book Italic"), url("../fonts/Freight-Big-Book-Italic.otf") format("opentype"); }
+  src: url("../fonts/AvenirLTStd-Book.otf"); }
 
 @font-face {
   font-family: 'Freight Big Book';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Freight Big Book"), url("../fonts/Freight-Big-Book.otf") format("opentype"); }
+  font-style: italic;
+  src: url("../fonts/Freight-Big-Book-Italic.otf"); }
 
 @font-face {
-  font-family: 'Freight Text Bold';
-  font-style: normal;
+  font-family: 'Freight Big Book';
+  src: url("../fonts/Freight-Big-Book.otf"); }
+
+@font-face {
+  font-family: 'Freight Text';
   font-weight: bold;
-  src: local("Freight Text Bold"), url("../fonts/FreightTextBold.ttf") format("truetype"); }
+  src: url("../fonts/FreightTextBold.ttf"); }
 
 @font-face {
-  font-family: 'Freight Text Bold Italic';
+  font-family: 'Freight Text';
   font-style: italic;
   font-weight: bold;
-  src: local("Freight Text Bold Italic"), url("../fonts/FreightTextBoldItalic.ttf") format("truetype"); }
+  src: url("../fonts/FreightTextBoldItalic.ttf"); }
 
 @font-face {
-  font-family: 'Freight Text Medium';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Freight Text Medium"), url("../fonts/FreightTextMedium.ttf") format("truetype"); }
+  font-family: 'Freight Text';
+  src: url("../fonts/FreightTextMedium.ttf"); }
 
 @font-face {
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
   font-style: italic;
-  font-weight: normal;
-  src: local("Freight Text Medium Italic"), url("../fonts/FreightTextMediumItalic.ttf") format("truetype"); }
+  src: url("../fonts/FreightTextMediumItalic.ttf"); }
 
 @font-face {
   font-family: 'LeagueGothic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("LeagueGothic"), url("../fonts/LeagueGothic.otf") format("opentype"); }
+  src: url("../fonts/LeagueGothic.otf"); }
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -168,7 +157,7 @@ table {
     background-color: transparent;
     border: none;
     text-decoration: underline;
-    font-family: 'Freight Text Medium';
+    font-family: 'Freight Text';
     font-size: 12px;
     font-weight: 700;
     font-style: italic;
@@ -225,7 +214,7 @@ table {
   display: flex;
   justify-content: center;
   position: fixed;
-  background-color: #fff;
+  background-color: #fbfbfb;
   z-index: 99; }
 
 .container-header .navbar {
@@ -277,7 +266,8 @@ table {
 div#wpcs_tab_84 {
   top: 65px !important;
   left: -53px !important;
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 12px !important;
   text-transform: uppercase;
   background: transparent !important;
@@ -294,7 +284,8 @@ div#wpcs_tab_84 {
 
 .sidebar-contact .contact {
   transform: rotate(270deg);
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   position: absolute;
   top: 100px;
   left: -0.5vw;
@@ -303,7 +294,8 @@ div#wpcs_tab_84 {
 
 .sidebar-contact .nomades-prez {
   transform: rotate(270deg);
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   position: absolute;
   bottom: 25vh;
   font-size: 12px;
@@ -311,7 +303,8 @@ div#wpcs_tab_84 {
   left: -13vw; }
 
 .sidebar-contact .nomades-prez span {
-  font-family: 'Freight Text Bold'; }
+  font-family: 'Freight Text';
+  font-weight: bold; }
 
 .sidebar-recherche {
   position: fixed;
@@ -319,14 +312,16 @@ div#wpcs_tab_84 {
   height: 100vh;
   right: 0;
   top: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 4; }
 
 .sidebar-recherche img {
   width: 18px; }
 
 .sidebar-recherche .recherche {
   transform: rotate(270deg);
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   position: absolute;
   top: 35vh;
   font-size: 12px;
@@ -360,7 +355,7 @@ footer .container-footer .row-footer {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   width: 98%;
-  border-top: 2px solid black; }
+  border-top: 1px solid black; }
 
 footer .container-footer .row-footer .footer-brand .footer-left-widget .image {
   max-width: 250px !important; }
@@ -371,12 +366,13 @@ footer .container-footer .row-footer .footer-brand img {
   width: 90%; }
 
 footer .container-footer .row-footer .footer-brand .copyright {
-  font-family: 'Freight Text Medium';
+  font-family: 'Freight Text';
   font-size: 11px;
   margin-bottom: 0rem; }
 
 footer .container-footer .row-footer .footer-brand .subphrase-footer {
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 10px; }
 
 footer .container-footer .row-footer .footer-right {
@@ -410,7 +406,8 @@ footer .container-footer .row-footer .footer-right .right-footer-widget .footer-
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: column;
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 12px;
   letter-spacing: 0.3px; }
 
@@ -461,7 +458,8 @@ footer .container-footer .row-footer .footer-right .right-footer-widget .footer-
   background-color: white !important;
   border: none !important;
   color: black !important;
-  font-family: 'Freight Text Medium Italic'; }
+  font-family: 'Freight Text';
+  font-style: italic; }
 
 @media (max-width: 767.98px) {
   .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122 {
@@ -541,16 +539,18 @@ footer .container-footer .row-footer .footer-right .right-footer-widget .footer-
   margin: 0; }
 
 #popmake-122 .pum-content .intro {
-  font-family: 'Freight Text Medium';
+  font-family: 'Freight Text';
   text-align: center;
   margin-top: 30px; }
 
 #popmake-122 .pum-content .infos-sup {
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   text-align: center; }
 
 #popmake-122 .pum-content .infos-call {
-  font-family: 'Freight Text Medium Italic'; }
+  font-family: 'Freight Text';
+  font-style: italic; }
 
 #popmake-122 .pum-content .title-contact {
   margin-top: 20px;
@@ -651,7 +651,7 @@ footer .container-footer .row-footer .footer-right .right-footer-widget .footer-
   float: right;
   outline: none;
   line-height: normal;
-  font-family: 'Freight Text Medium';
+  font-family: 'Freight Text';
   font-size: 14px;
   letter-spacing: 0.35px; }
 
@@ -663,7 +663,8 @@ footer .container-footer .row-footer .footer-right .right-footer-widget .footer-
 #wpcf7-f86-o4 label {
   display: inline;
   width: 20%;
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 12px;
   line-height: 0;
   margin-bottom: 0; }
@@ -676,7 +677,7 @@ footer .container-footer .row-footer .footer-right .right-footer-widget .footer-
   height: 25vh;
   margin-top: 20px;
   border: 1px solid black;
-  font-family: 'Freight Text Medium';
+  font-family: 'Freight Text';
   font-size: 14px;
   letter-spacing: 0.35px;
   line-height: 21px; }
@@ -713,7 +714,8 @@ div.wpcf7-response-output {
   text-align: center;
   border: none !important;
   position: absolute;
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   top: 0;
   left: -15px;
   right: -15px;
@@ -722,11 +724,14 @@ div.wpcf7-response-output {
   color: black;
   height: 100%; }
 
+.fond-blanc {
+  background-color: #fff !important; }
+
 /************************ PANORAMIQUE ***************************/
 .bloc-panoramique {
   margin-top: 10vh;
   margin-bottom: 10vh;
-  height: 80vh; }
+  height: 70vh; }
 
 .bloc-panoramique .panoramique {
   position: absolute;
@@ -743,7 +748,8 @@ div.wpcf7-response-output {
   position: absolute;
   z-index: 6;
   color: #fbfbfb;
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 12px;
   font-weight: 300;
   letter-spacing: 1.05px;
@@ -760,7 +766,8 @@ div.wpcf7-response-output {
 
 /***************************** DYPTIQUE ************************************/
 .container-dyptique {
-  margin: 10vh 25%; }
+  padding: 10vh 25%;
+  margin: 0 -4.5%; }
 
 .container-dyptique .dyptique {
   display: flex;
@@ -781,7 +788,8 @@ div.wpcf7-response-output {
   justify-content: center; }
 
 .container-dyptique .legendes-dyptique .legende-dyp p {
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 10px;
   font-weight: 300;
   letter-spacing: 0.75px;
@@ -849,15 +857,38 @@ div.wpcf7-response-output {
     width: 35vw; } }
 
 /***************************** VIDEO ***************************/
-.video {
-  padding: 0 20%; }
+.container-video {
+  margin: 10vh 0; }
 
-.video iframe {
-  width: 100% !important; }
+.container-video .video {
+  padding: 0 10%; }
+
+.container-video .video iframe {
+  width: 100% !important;
+  height: 70vh !important; }
+
+.container-video .legende-video {
+  padding: 0 13%; }
+
+.container-video .legende-video .title {
+  font-family: "Freight Text";
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 0.5em; }
+
+.container-video .legende-video .legende p {
+  margin-bottom: 0;
+  font-family: "Freight Text";
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.55px;
+  line-height: 13px; }
 
 /************************** IMAGE CENTREE ***********************/
 .image-centree {
-  margin: 10vh 0;
+  margin: 0 -4.5%;
+  padding: 10vh 0;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -888,7 +919,7 @@ div.wpcf7-response-output {
 
 /****************** CITATION *************************/
 .citation {
-  margin: 10vh 0;
+  padding: 10vh 0;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   display: flex;
@@ -899,7 +930,8 @@ div.wpcf7-response-output {
   text-align: center; }
 
 .citation .titre {
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 43px;
   font-weight: 300;
   line-height: 52px;
@@ -909,7 +941,8 @@ div.wpcf7-response-output {
 
 .citation .sous-titre {
   color: #626262;
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 18px;
   font-weight: 300;
   line-height: 22px;
@@ -918,6 +951,7 @@ div.wpcf7-response-output {
 
 /********************** DYPTIQUE ASYMETRIQUE ******************************/
 .dyptique-asymetrique {
+  margin: 0 -4.5%;
   padding: 10vh 10%; }
 
 .dyptique-asymetrique img {
@@ -957,13 +991,8 @@ div.wpcf7-response-output {
 * font-family: 'Avenir';
 *
 * font-family: 'Freight Big Book';
-* font-family: 'Freight Big Book Italic';
 *
-* font-family: 'Freight Text Medium';
-* font-family: 'Freight Text Medium Italic';
-*
-* font-family: 'Freight Text Bold Italic';
-* font-family: 'Freight Text Bold';
+* font-family: 'Freight Text';
 *
 * font-family: 'LeagueGothic';
 */
@@ -973,17 +1002,24 @@ div.wpcf7-response-output {
   .xs-invisible {
     display: block; } }
 
+body {
+  background-color: #fbfbfb !important; }
+
 .normal-title {
   font-family: "Freight Big Book" !important; }
 
 .italic-title {
-  font-family: "Freight Big Book Italic" !important; }
+  font-family: "Freight Big Book" !important;
+  font-style: italic; }
 
 .no-padding {
   padding: 0 !important; }
 
 li p {
   margin: 0; }
+
+li {
+  list-style-type: none; }
 
 a:hover, a:active, a:focus, a:visited {
   text-decoration: none !important; }
@@ -1004,12 +1040,14 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   -ms-filter: brightness(100%);
   transition: all 0.4s ease-in-out; }
 
-.black-background {
-  background-color: black;
-  width: 100%; }
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: bold; }
 
 .legende-francais {
-  font-family: 'Freight Text Medium';
+  font-family: 'Freight Text';
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1.05px;
@@ -1017,12 +1055,16 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   color: black; }
 
 .legende-anglais {
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1.05px;
   line-height: 21px;
   color: #626262; }
+
+.legende-anglais a {
+  color: #626262 !important; }
 
 /*************** ARTICLE ****************************/
 .container-content {
@@ -1038,7 +1080,8 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   text-transform: uppercase; }
 
 .article-header .chapeau {
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 21px;
   font-weight: 500;
   font-style: italic;
@@ -1058,10 +1101,12 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   line-height: 47px; }
 
 .article-header .article-title h1 span {
-  font-family: 'Freight Big Book Italic'; }
+  font-family: 'Freight Big Book';
+  font-style: italic; }
 
 .article-header .article-title p {
-  font-family: 'Freight Big Book Italic';
+  font-family: 'Freight Big Book';
+  font-style: italic;
   font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.55px;
@@ -1081,11 +1126,15 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   bottom: 30px;
   width: 25%;
   left: 5%;
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   color: #fbfbfb;
   font-size: 16px;
   font-weight: 500;
   line-height: 21px; }
+
+.article-header .legende-image-full-size a {
+  color: #fbfbfb !important; }
 
 .article-header .plus-upright {
   position: absolute;
@@ -1106,26 +1155,31 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   margin-bottom: 25px; }
 
 .article-header .row-article .legende-sous-image {
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 12px;
   font-weight: 300;
   letter-spacing: 0.9px;
   line-height: 16px; }
 
 .article-header .row-article .article-francais {
-  font-family: 'Freight Text Medium';
+  font-family: 'Freight Text';
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1.05px;
   line-height: 23px; }
 
 .article-header .row-article .article-anglais {
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1.05px;
   line-height: 21px;
   color: #626262; }
+
+.article-header .row-article .article-anglais a {
+  color: #626262 !important; }
 
 /*********** HOME **************/
 .container-home {
@@ -1155,10 +1209,9 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
 .container-home .header-home .sous-titre-home {
   font-size: 25px;
   font-weight: 300;
-  font-style: italic;
   letter-spacing: 1.25px;
   line-height: 29px;
-  font-family: 'Freight Text Medium';
+  font-family: 'Freight Text';
   font-weight: 300;
   width: 55%;
   float: right;
@@ -1186,18 +1239,18 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   width: 40%;
   padding-left: 15px; }
 
-.bloc-panoramique {
+.bloc-panoramique-home {
   margin-top: 10vh;
   margin-bottom: 10vh;
   height: 100vh; }
 
-.bloc-panoramique .panoramique {
+.bloc-panoramique-home .panoramique {
   position: absolute;
   left: 0;
   right: 0;
   height: 100vh; }
 
-.bloc-panoramique .panoramique img {
+.bloc-panoramique-home .panoramique img {
   width: 100%;
   height: 100%;
   object-fit: cover; }
@@ -1221,7 +1274,7 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   text-align: center; }
 
 .categories-prez a .categorie h3 {
-  font-family: "LeagueGothic";
+  font-family: 'LeagueGothic';
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.65px;
@@ -1229,7 +1282,7 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   text-transform: uppercase; }
 
 .categories-prez a .categorie .paragraphe {
-  font-family: 'Freight Text Medium';
+  font-family: 'Freight Text';
   font-size: 13px;
   font-weight: 500;
   line-height: 18px; }
@@ -1245,7 +1298,7 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   padding: 10vh 0; }
 
 .contact-home h3 {
-  font-family: 'Freight Text Medium';
+  font-family: 'Freight Text';
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -1338,7 +1391,7 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   line-height: 40px; }
 
 .the-category {
-  font-family: "League Gothic";
+  font-family: 'League Gothic';
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.65px;
@@ -1354,23 +1407,26 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   margin-bottom: 30px; }
 
 .the-title span {
-  font-family: 'Freight Big Book Italic'; }
+  font-family: 'Freight Big Book';
+  font-style: italic; }
 
 .the-date {
-  font-family: "Freight Big Book Italic";
+  font-family: 'Freight Big Book';
+  font-style: italic;
   font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.55px;
   line-height: 24px; }
 
 .paragraphe-italique p {
-  font-family: "Freight Text Medium Italic";
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 15px;
   font-weight: 500;
   line-height: 20px; }
 
 .paragraphe-classique p {
-  font-family: "Freight Text Medium";
+  font-family: 'Freight Text';
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.33px;
@@ -1379,19 +1435,19 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
 .title-list {
   font-size: 19px;
   font-weight: 300;
-  font-style: italic;
   line-height: 31px;
-  font-family: 'Freight Big Book Medium'; }
+  font-family: 'Freight Big Book'; }
 
 .title-list span {
-  font-family: 'Freight Big Book Italic'; }
+  font-family: 'Freight Big Book';
+  font-style: italic; }
 
 .decouvrir-aussi {
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.33px;
   line-height: 18px;
-  font-family: 'Freight Text Medium';
+  font-family: 'Freight Text';
   margin-top: 30px; }
 
 .home-edition {
@@ -1409,7 +1465,7 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   justify-content: flex-end; }
 
 .home-edition .write-edition .titre-edition h2 {
-  font-family: "LeagueGothic";
+  font-family: 'LeagueGothic';
   font-size: 35px;
   font-weight: 400;
   line-height: 26px;
@@ -1426,14 +1482,15 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   position: relative; }
 
 .home-edition .write-edition .paragraphe-edition p:first-child {
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 31px;
   font-weight: 300;
   letter-spacing: 1.55px;
   line-height: 35px; }
 
 .home-edition .write-edition .paragraphe-edition p:last-child {
-  font-family: 'Freight Text Medium';
+  font-family: 'Freight Text';
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.33px;
@@ -1460,14 +1517,15 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   justify-content: space-between; }
 
 .remerciements .the-category {
-  font-family: "LeagueGothic";
+  font-family: 'LeagueGothic';
   font-size: 22px;
   font-weight: 400;
   line-height: 17px;
   text-transform: uppercase; }
 
 .remerciements .paragraphe-remerciements {
-  font-family: "Freight Text Medium Italic";
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1.05px;
@@ -1479,7 +1537,7 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   justify-content: space-around; }
 
 .remerciements .partage .partagez {
-  font-family: "Freight Text Medium";
+  font-family: 'Freight Text';
   font-size: 12px;
   font-weight: 500;
   line-height: 28px;
@@ -1487,7 +1545,7 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
   color: #000000; }
 
 .remerciements .partage a {
-  font-family: "LeagueGothic";
+  font-family: 'LeagueGothic';
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.75px;
@@ -1496,3 +1554,259 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
 
 .remerciements .partage a:hover {
   font-weight: bold; }
+
+.articles-a-la-une {
+  padding-top: 5vh;
+  border-top: 1px solid black;
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
+.articles-a-la-une .histoires p {
+  font-family: 'Freight Text';
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 27px; }
+
+.articles-a-la-une .articles-inspirants {
+  display: flex;
+  flex-direction: row; }
+
+.articles-a-la-une .articles-inspirants .article-inspirant {
+  padding: 5px;
+  text-align: center; }
+
+.articles-a-la-une .articles-inspirants .article-inspirant .attachment-post-thumbnail {
+  width: 100%;
+  height: 55vh;
+  object-fit: cover; }
+
+.articles-a-la-une .articles-inspirants .article-inspirant .article-title {
+  padding-left: 20%;
+  padding-right: 20%; }
+
+.articles-a-la-une .articles-inspirants .article-inspirant .article-title .normal-title {
+  font-family: 'Freight Text';
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 23px; }
+
+.articles-a-la-une .articles-inspirants .article-inspirant .article-title .normal-title span {
+  font-style: italic; }
+
+.loader-single {
+  position: fixed;
+  z-index: 9999;
+  background: black;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: wait;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%; }
+
+.loader-single .the-category {
+  margin-bottom: 30px;
+  color: #fbfbfb !important;
+  font-family: "League Gothic";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 17px;
+  text-transform: uppercase; }
+
+.loader-single .lieu-article {
+  color: #fbfbfb;
+  font-family: Freight;
+  font-size: 19px;
+  font-weight: 300;
+  letter-spacing: 0.95px;
+  line-height: 17px;
+  margin-bottom: 0; }
+
+.loader-single .the-date {
+  color: #fbfbfb;
+  font-family: Freight;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.75px;
+  line-height: 20px; }
+
+.loader-single .article-title {
+  height: auto;
+  font-family: 'Freight Text';
+  color: #fbfbfb;
+  font-size: 38px;
+  font-weight: 300;
+  letter-spacing: 1.9px;
+  line-height: 20px; }
+
+.loader-single .article-title span {
+  font-style: italic; }
+
+.category-header {
+  margin: 5vh 10% 0 10% !important; }
+
+.category-header .the-category-title {
+  font-family: 'LeagueGothic';
+  text-transform: uppercase;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 35px; }
+
+.category-header p {
+  font-family: 'Freight Text';
+  font-style: italic;
+  width: 80%;
+  font-size: 33px;
+  font-weight: 300;
+  letter-spacing: 1.65px;
+  line-height: 40px; }
+
+.category-area {
+  margin: 15vh 10% !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+
+.category-area .category-and-date {
+  margin-top: 0.5em;
+  display: flex; }
+
+.category-area .category-and-date .the-category {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  width: 50%; }
+
+.category-area .category-and-date .the-category ul {
+  margin-bottom: 0; }
+
+.category-area .category-and-date .the-date {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50%; }
+
+.category-area .category-and-date .the-date p {
+  margin-bottom: 0; }
+
+.category-area .row-category {
+  display: flex; }
+
+.category-area .row-category .thumbnail-category, .category-area .row-category .right-part-category {
+  padding: 5px; }
+
+.category-area .title-and-sentence {
+  width: 100%; }
+
+.category-area .normal-title {
+  font-weight: normal;
+  transition: font-weight .2s ease-in-out; }
+
+.category-area .normal-title:hover {
+  font-weight: bold;
+  transition: font-weight .2s ease-in-out;
+  cursor: pointer; }
+
+.category-area .normal-title span {
+  font-style: italic !important; }
+
+.first {
+  align-items: center; }
+
+.first .row-category .right-part-category {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.first .thumbnail-category {
+  width: 40%; }
+
+.first .thumbnail-category img {
+  width: 100%;
+  object-fit: cover; }
+
+.first .right-part-category img {
+  height: auto;
+  max-width: 100%;
+  max-height: 60vh;
+  object-fit: cover; }
+
+.first .title-and-sentence-bottom, .first .title-and-sentence-left {
+  display: none; }
+
+.second .row-category {
+  height: auto;
+  display: flex;
+  justify-content: center; }
+
+.second .thumbnail-category, .second .right-part-category {
+  width: 40%; }
+
+.second .thumbnail-category img, .second .right-part-category img {
+  width: 100%;
+  height: auto; }
+
+.second .title-and-sentence, .second .title-and-sentence-left {
+  display: none; }
+
+.second .row-bottom {
+  display: flex;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.second .row-bottom .title-and-sentence-bottom {
+  width: 80%; }
+
+.third .row-category {
+  justify-content: center; }
+
+.third .thumbnail-category {
+  display: none; }
+
+.third .title-and-sentence-bottom, .third .title-and-sentence-left {
+  display: none; }
+
+.third .category-and-date {
+  width: 100%;
+  margin-right: 0; }
+
+.third .right-part-category {
+  width: 100%; }
+
+.third .thumbnail-right img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover; }
+
+.fourth .row-category {
+  justify-content: flex-end; }
+
+.fourth .title-and-sentence, .fourth .title-and-sentence-bottom {
+  display: none; }
+
+.fourth .thumbnail-category, .fourth .right-part-category {
+  width: 40%; }
+
+.fourth .thumbnail-category {
+  display: flex;
+  flex-direction: column; }
+
+.fourth .thumbnail-category img {
+  width: 80%;
+  height: auto;
+  float: right; }
+
+.fourth .thumbnail-category .title-and-sentence-left {
+  width: 100%; }
+
+.fourth .right-part-category img {
+  width: 100%;
+  height: auto; }

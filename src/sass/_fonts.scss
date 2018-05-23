@@ -1,56 +1,44 @@
 @font-face {
   font-family: 'Avenir';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Avenir'), url("../fonts/AvenirLTStd-Book.otf") format("opentype");
-}
-
-@font-face {
-  font-family: 'Freight Big Book Italic';
-  font-style: italic;
-  font-weight: normal;
-  src: local('Freight Big Book Italic'), url("../fonts/Freight-Big-Book-Italic.otf") format("opentype");
+  src: url("../fonts/AvenirLTStd-Book.otf");
 }
 
 @font-face {
   font-family: 'Freight Big Book';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Freight Big Book'), url("../fonts/Freight-Big-Book.otf") format("opentype");
+  font-style: italic;
+  src: url("../fonts/Freight-Big-Book-Italic.otf");
 }
 
 @font-face {
-  font-family: 'Freight Text Bold';
-  font-style: normal;
+  font-family: 'Freight Big Book';
+  src: url("../fonts/Freight-Big-Book.otf");
+}
+
+@font-face {
+  font-family: 'Freight Text';
   font-weight: bold;
-  src: local('Freight Text Bold'), url("../fonts/FreightTextBold.ttf") format("truetype");
+  src: url("../fonts/FreightTextBold.ttf");
 }
 
 @font-face {
-  font-family: 'Freight Text Bold Italic';
+  font-family: 'Freight Text';
   font-style: italic;
   font-weight: bold;
-  src: local('Freight Text Bold Italic'), url("../fonts/FreightTextBoldItalic.ttf") format("truetype");
-}
-
-
-@font-face {
-  font-family: 'Freight Text Medium';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Freight Text Medium'), url("../fonts/FreightTextMedium.ttf") format("truetype");
+  src: url("../fonts/FreightTextBoldItalic.ttf");
 }
 
 @font-face {
-  font-family: 'Freight Text Medium Italic';
+  font-family: 'Freight Text';
+  src: url("../fonts/FreightTextMedium.ttf");
+}
+
+@font-face {
+  font-family: 'Freight Text';
   font-style: italic;
-  font-weight: normal;
-  src: local('Freight Text Medium Italic'), url("../fonts/FreightTextMediumItalic.ttf") format("truetype");
+  src: url("../fonts/FreightTextMediumItalic.ttf");
 }
 
 @font-face {
   font-family: 'LeagueGothic';
-  font-style: normal;
-  font-weight: normal;
-  src: local('LeagueGothic'), url("../fonts/LeagueGothic.otf") format("opentype");
+  src: url("../fonts/LeagueGothic.otf");
 }

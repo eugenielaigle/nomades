@@ -21,16 +21,12 @@
 * font-family: 'Avenir';
 *
 * font-family: 'Freight Big Book';
-* font-family: 'Freight Big Book Italic';
 *
-* font-family: 'Freight Text Medium';
-* font-family: 'Freight Text Medium Italic';
-*
-* font-family: 'Freight Text Bold Italic';
-* font-family: 'Freight Text Bold';
+* font-family: 'Freight Text';
 *
 * font-family: 'LeagueGothic';
 */
+
 @media (min-width: 768px){
   .xs-visible{
     display: none!important;
@@ -40,12 +36,18 @@
     display: block;
   }
 }
+
+body{
+  background-color: $legende!important;
+}
+
 .normal-title{
   font-family: 'Freight Big Book'!important;
 }
 
 .italic-title{
-  font-family: 'Freight Big Book Italic'!important;
+  font-family: 'Freight Big Book'!important;
+  font-style: italic;
 }
 
 .no-padding{
@@ -56,57 +58,61 @@ li p{
   margin: 0;
 }
 
+li{
+  list-style-type: none;
+}
+
 a:hover, a:active, a:focus, a:visited{
-  // font-weight: bold;
   text-decoration: none!important;
 }
 
 img:hover, a:hover img, video:hover , a:hover video{
-  // opacity: 0.85;
-  // transition: opacity .2s linear;
   filter: brightness(90%);
-    -webkit-filter: brightness(90%);
-    -moz-filter: brightness(90%);
-    -o-filter: brightness(90%);
-    -ms-filter: brightness(90%);
-    transition: all 0.4s ease-in-out;
+  -webkit-filter: brightness(90%);
+  -moz-filter: brightness(90%);
+  -o-filter: brightness(90%);
+  -ms-filter: brightness(90%);
+  transition: all 0.4s ease-in-out;
 }
 
 img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-effect{
-  // opacity: 1;
-  // transition: opacity .2s linear;
   filter: brightness(100%);
-    -webkit-filter: brightness(100%);
-    -moz-filter: brightness(100%);
-    -o-filter: brightness(100%);
-    -ms-filter: brightness(100%);
-    transition: all 0.4s ease-in-out;
+  -webkit-filter: brightness(100%);
+  -moz-filter: brightness(100%);
+  -o-filter: brightness(100%);
+  -ms-filter: brightness(100%);
+  transition: all 0.4s ease-in-out;
 }
 
+em{
+  font-style: italic;
+}
 
-.black-background{
-  background-color: black;
-    // height: 100%;
-    width: 100%;
-  }
+strong{
+  font-weight: bold;
+}
 
-  .legende-francais{
-    font-family: 'Freight Text Medium';
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1.05px;
-    line-height: 23px;
-    color: black;
-  }
+.legende-francais{
+  font-family: 'Freight Text';
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.05px;
+  line-height: 23px;
+  color: black;
+}
 
-  .legende-anglais{
-    font-family: 'Freight Text Medium Italic';
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1.05px;
-    line-height: 21px;
-    color: $grey-text;
+.legende-anglais{
+  font-family: 'Freight Text';
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.05px;
+  line-height: 21px;
+  color: $grey-text;
+  a{
+    color: $grey-text!important;
   }
+}
 
 /*************** ARTICLE ****************************/
 
@@ -125,7 +131,8 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
     text-transform: uppercase;
   }
   .chapeau{
-    font-family: 'Freight Text Medium Italic';
+    font-family: 'Freight Text';
+    font-style: italic;
     font-size: 21px;
     font-weight: 500;
     font-style: italic;
@@ -143,11 +150,13 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
       font-weight: 300;
       line-height: 47px;
       span{
-        font-family: 'Freight Big Book Italic';
+        font-family: 'Freight Big Book';
+        font-style: italic;
       }
     }
     p{
-      font-family: 'Freight Big Book Italic';
+      font-family: 'Freight Big Book';
+      font-style: italic;
       font-size: 11px;
       font-weight: 400;
       letter-spacing: 0.55px;
@@ -169,11 +178,15 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
     bottom: 30px;
     width: 25%;
     left: 5%;
-    font-family: 'Freight Text Medium Italic';
+    font-family: 'Freight Text';
+    font-style: italic;
     color: $legende;
     font-size: 16px;
     font-weight: 500;
     line-height: 21px;
+    a{
+      color: $legende!important;
+    }
   }
 
   .plus-upright{
@@ -196,7 +209,8 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
     margin-top: 25px;
     margin-bottom: 25px;
     .legende-sous-image{
-      font-family: 'Freight Text Medium Italic';
+      font-family: 'Freight Text';
+      font-style: italic;
       font-size: 12px;
       font-weight: 300;
       letter-spacing: 0.9px;
@@ -204,7 +218,7 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
     }
 
     .article-francais{
-      font-family: 'Freight Text Medium';
+      font-family: 'Freight Text';
       font-size: 14px;
       font-weight: 500;
       letter-spacing: 1.05px;
@@ -212,12 +226,16 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
     }
 
     .article-anglais{
-      font-family: 'Freight Text Medium Italic';
+      font-family: 'Freight Text';
+      font-style: italic;
       font-size: 14px;
       font-weight: 500;
       letter-spacing: 1.05px;
       line-height: 21px;
       color: $grey-text;
+      a{
+        color: $grey-text!important;
+      }
     }
   }
 
@@ -250,10 +268,9 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
     .sous-titre-home{
       font-size: 25px;
       font-weight: 300;
-      font-style: italic;
       letter-spacing: 1.25px;
       line-height: 29px;
-      font-family: 'Freight Text Medium';
+      font-family: 'Freight Text';
       font-weight: 300;
       width: 55%;
       float: right;
@@ -287,7 +304,7 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
 }
 
 
-.bloc-panoramique{
+.bloc-panoramique-home{
   margin-top: 10vh;
   margin-bottom: 10vh;
   height: 100vh;
@@ -323,7 +340,7 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
       text-align: center;
     }
     h3{
-      font-family: "LeagueGothic";
+      font-family: 'LeagueGothic';
       font-size: 13px;
       font-weight: 400;
       letter-spacing: 0.65px;
@@ -331,7 +348,7 @@ img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-ef
       text-transform: uppercase;
     }
     .paragraphe{
-      font-family: 'Freight Text Medium';
+      font-family: 'Freight Text';
       font-size: 13px;
       font-weight: 500;
       line-height: 18px;
@@ -351,7 +368,7 @@ a:first-child{
   flex-direction: column;
   padding: 10vh 0;
   h3{
-    font-family: 'Freight Text Medium';
+    font-family: 'Freight Text';
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -457,7 +474,7 @@ a:first-child{
 }
 
 .the-category{
-  font-family: "League Gothic";
+  font-family: 'League Gothic';
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.65px;
@@ -473,12 +490,14 @@ a:first-child{
   font-family: 'Freight Big Book';
   margin-bottom: 30px;
   span{
-    font-family: 'Freight Big Book Italic';
+    font-family: 'Freight Big Book';
+    font-style: italic;
   }
 }
 
 .the-date{
-  font-family: "Freight Big Book Italic";
+  font-family: 'Freight Big Book';
+  font-style: italic;
   font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.55px;
@@ -486,14 +505,15 @@ a:first-child{
 }
 
 .paragraphe-italique p{
-  font-family: "Freight Text Medium Italic";
+  font-family: 'Freight Text';
+  font-style: italic;
   font-size: 15px;
   font-weight: 500;
   line-height: 20px;
 }
 
 .paragraphe-classique p{
-  font-family: "Freight Text Medium";
+  font-family: 'Freight Text';
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.33px;
@@ -503,11 +523,11 @@ a:first-child{
 .title-list{
   font-size: 19px;
   font-weight: 300;
-  font-style: italic;
   line-height: 31px;
-  font-family: 'Freight Big Book Medium';
+  font-family: 'Freight Big Book';
   span{
-    font-family: 'Freight Big Book Italic';
+    font-family: 'Freight Big Book';
+    font-style: italic;
   }
 }
 
@@ -516,7 +536,7 @@ a:first-child{
   font-weight: 500;
   letter-spacing: 0.33px;
   line-height: 18px;
-  font-family: 'Freight Text Medium';
+  font-family: 'Freight Text';
   margin-top: 30px;
 }
 
@@ -533,7 +553,7 @@ a:first-child{
       display: flex;
       justify-content: flex-end;
       h2{
-        font-family: "LeagueGothic";
+        font-family: 'LeagueGothic';
         font-size: 35px;
         font-weight: 400;
         line-height: 26px;
@@ -553,14 +573,15 @@ a:first-child{
       z-index: 2;
       position: relative;
       p:first-child{
-        font-family: 'Freight Text Medium Italic';
+        font-family: 'Freight Text';
+        font-style: italic;
         font-size: 31px;
         font-weight: 300;
         letter-spacing: 1.55px;
         line-height: 35px;
       }
       p:last-child{
-        font-family: 'Freight Text Medium';
+        font-family: 'Freight Text';
         font-size: 13px;
         font-weight: 500;
         letter-spacing: 0.33px;
@@ -592,14 +613,15 @@ a:first-child{
   display: flex;
   justify-content: space-between;
   .the-category{
-    font-family: "LeagueGothic";
+    font-family: 'LeagueGothic';
     font-size: 22px;
     font-weight: 400;
     line-height: 17px;
     text-transform: uppercase;
   }
   .paragraphe-remerciements{
-    font-family: "Freight Text Medium Italic";
+    font-family: 'Freight Text';
+    font-style: italic;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 1.05px;
@@ -610,7 +632,7 @@ a:first-child{
     display: flex;
     justify-content: space-around;
     .partagez{
-      font-family: "Freight Text Medium";
+      font-family: 'Freight Text';
       font-size: 12px;
       font-weight: 500;
       line-height: 28px;
@@ -618,7 +640,7 @@ a:first-child{
       color: #000000;
     }
     a{
-      font-family: "LeagueGothic";
+      font-family: 'LeagueGothic';
       font-size: 15px;
       font-weight: 400;
       letter-spacing: 0.75px;
@@ -628,6 +650,307 @@ a:first-child{
     a:hover{
       font-weight: bold;
     }
+  }
+}
+
+.articles-a-la-une{
+  padding-top: 5vh;
+  border-top: 1px solid black;
+  margin-left: 0!important;
+  margin-right: 0!important;
+  .histoires p{
+    font-family: 'Freight Text';
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 27px;
+  }
+  .articles-inspirants{
+    display:flex;
+    flex-direction: row;
+    // margin: 0 10%;
+    .article-inspirant{
+      padding:5px;
+      text-align: center;
+      .attachment-post-thumbnail{
+        width: 100%;
+        height: 55vh;
+        object-fit: cover;
+      }
+      .article-title{
+        padding-left: 20%;
+        padding-right: 20%;
+        .normal-title{
+          font-family: 'Freight Text';
+          font-size: 26px;
+          font-weight: 300;
+          line-height: 23px;
+          span{
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.loader-single {
+  position : fixed;
+  z-index: 9999;
+  background: black;
+  top : 0;
+  left : 0;
+  height : 100%;
+  width : 100%;
+  cursor : wait;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+
+  .the-category {
+    margin-bottom: 30px;
+
+     color: $legende!important;
+     font-family: "League Gothic";
+     font-size: 22px;
+     font-weight: 400;
+     line-height: 17px;
+     text-transform: uppercase;
+
+ }
+
+ .lieu-article{
+  color: $legende;
+  font-family: Freight;
+  font-size: 19px;
+  font-weight: 300;
+  letter-spacing: 0.95px;
+  line-height: 17px;
+  margin-bottom: 0;
+}
+
+.the-date{
+  color: $legende;
+  font-family: Freight;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.75px;
+  line-height: 20px;
+}
+.article-title{
+  height: auto;
+  font-family: 'Freight Text';
+  color: $legende;
+  font-size: 38px;
+  font-weight: 300;
+  letter-spacing: 1.9px;
+  line-height: 20px;
+  span{
+    font-style: italic;
+  }
+}
+}
+
+
+// PAGE CATEGORY
+.category-header{
+  margin: 5vh 10% 0 10%!important;
+  .the-category-title{
+    font-family: 'LeagueGothic';
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 35px;
+  }
+  p{
+    font-family: 'Freight Text';
+    font-style: italic;
+    width: 80%;
+    font-size: 33px;
+    font-weight: 300;
+    letter-spacing: 1.65px;
+    line-height: 40px;
+  }
+}
+
+
+.category-area{
+  margin: 15vh 10%!important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .category-and-date{
+    margin-top: 0.5em;
+    display: flex;
+    .the-category{
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      width: 50%;
+      ul{
+        margin-bottom: 0;
+      }
+    }
+    .the-date{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 50%;
+      p{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+
+  .row-category{
+    display: flex;
+    .thumbnail-category, .right-part-category{
+      padding: 5px;
+    }
+
+  }
+  // .thumbnail-category img{
+  //   width: auto;
+  //   height: 78vh;
+  // }
+  // .right-part-category img{
+  //   height: auto;
+  //   max-width: 40vw;
+  //   max-height: 60vh;
+  //   object-fit: cover;
+  //   margin-left: 15px;
+  // }
+  .title-and-sentence{
+    width: 100%;
+  }
+  .normal-title{
+    font-weight: normal;
+    transition: font-weight .2s ease-in-out;
+  }
+  .normal-title:hover{
+    font-weight: bold;
+    transition: font-weight .2s ease-in-out;
+    cursor: pointer;
+  }
+  .normal-title span{
+    font-style: italic!important;
+  }
+}
+
+.first{
+  // height: 80vh;
+  align-items: center;
+  .row-category{
+    .right-part-category{
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .thumbnail-category{
+    width: 40%;
+    img{
+    width: 100%;
+    object-fit: cover;
+  }
+  }
+  .right-part-category img{
+    height: auto;
+    max-width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
+  }
+  .title-and-sentence-bottom, .title-and-sentence-left{
+    display: none;
+  }
+}
+
+.second{
+  .row-category{
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .thumbnail-category, .right-part-category{
+    width: 40%;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .title-and-sentence, .title-and-sentence-left{
+    display: none;
+  }
+  .row-bottom{
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    .title-and-sentence-bottom{
+      width: 80%;
+    }
+  }
+}
+
+.third{
+  .row-category{
+    justify-content: center;
+  }
+  .thumbnail-category{
+    display: none;
+  }
+  .title-and-sentence-bottom, .title-and-sentence-left{
+    display: none;
+  }
+  .category-and-date{
+    width: 100%;
+    margin-right: 0;
+  }
+  .right-part-category{
+    width: 100%;
+  }
+  .thumbnail-right img{
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
+  }
+}
+
+.fourth{
+  .row-category{
+    justify-content: flex-end;
+  }
+
+  .title-and-sentence, .title-and-sentence-bottom{
+    display:none;
+  }
+
+  .thumbnail-category, .right-part-category{
+    width: 40%;
+  }
+
+  .thumbnail-category{
+    display: flex;
+    flex-direction: column;
+    img{
+      width: 80%;
+      height: auto;
+      float: right;
+    }
+    .title-and-sentence-left{
+      width: 100%;
+    }
+  }
+  .right-part-category img{
+    width: 100%;
+    height: auto;
   }
 
 }

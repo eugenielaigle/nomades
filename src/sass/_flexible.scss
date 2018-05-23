@@ -1,8 +1,13 @@
+.fond-blanc{
+  background-color: #fff!important;
+}
+
+
 /************************ PANORAMIQUE ***************************/
 .bloc-panoramique{
   margin-top: 10vh;
   margin-bottom: 10vh;
-  height: 80vh;
+  height: 70vh;
   .panoramique{
     position: absolute;
     left: 0;
@@ -19,7 +24,8 @@
         position: absolute;
         z-index: 6;
         color: #fbfbfb;
-        font-family: 'Freight Text Medium Italic';
+        font-family: 'Freight Text';
+        font-style: italic;
         font-size: 12px;
         font-weight: 300;
         letter-spacing: 1.05px;
@@ -41,7 +47,8 @@
 /***************************** DYPTIQUE ************************************/
 
 .container-dyptique{
-  margin: 10vh 25%;
+  padding: 10vh 25%;
+  margin: 0 -4.5%;
   .dyptique{
     display: flex;
     flex-direction: row;
@@ -59,7 +66,8 @@
       display: flex;
       justify-content: center;
       p{
-        font-family: 'Freight Text Medium Italic';
+        font-family: 'Freight Text';
+        font-style: italic;
         font-size: 10px;
         font-weight: 300;
         letter-spacing: 0.75px;
@@ -130,29 +138,55 @@
   font-weight: 400;
 }
 
- @media (min-width: 1800px){
+@media (min-width: 1800px){
   .image-texte-scrollable{
-  margin-left: 35%;
+    margin-left: 35%;
 
-   .position-texte{
+    .position-texte{
       width: 35vw;
     }
-   }
- }
-
-
-/***************************** VIDEO ***************************/
-.video{
-  padding: 0 20%;
-  iframe{
-    width: 100%!important;
   }
 }
 
 
+/***************************** VIDEO ***************************/
+.container-video{
+  margin: 10vh 0;
+
+.video{
+  padding: 0 10%;
+  iframe{
+    width: 100%!important;
+    height: 70vh!important;
+  }
+}
+
+.legende-video{
+  padding: 0 13%;
+  .title{
+    font-family: "Freight Text";
+    font-size: 13px;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 0.5em;
+  }
+  .legende{
+    p{
+      margin-bottom: 0;
+      font-family: "Freight Text";
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.55px;
+      line-height: 13px;
+    }
+  }
+}
+}
+
 /************************** IMAGE CENTREE ***********************/
 .image-centree{
-  margin: 10vh 0;
+  margin: 0 -4.5%;
+  padding: 10vh 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,38 +220,41 @@
 
 /****************** CITATION *************************/
 .citation{
-   margin: 10vh 0;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  p{
-    text-align: center;
-  }
-  .titre{
-    font-family: 'Freight Text Medium Italic';
-    font-size: 43px;
-    font-weight: 300;
-    line-height: 52px;
-    font-style: italic;
-    margin: 0;
-    padding: 10vh 20% 5vh 20%;
-  }
-  .sous-titre{
-    color: #626262;
-    font-family: 'Freight Text Medium Italic';
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 22px;
-    margin: 0;
-    padding: 0 15% 10vh 15%;
-  }
+ padding: 10vh 0;
+ border-top: 1px solid black;
+ border-bottom: 1px solid black;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ p{
+  text-align: center;
+}
+.titre{
+  font-family: 'Freight Text';
+  font-style: italic;
+  font-size: 43px;
+  font-weight: 300;
+  line-height: 52px;
+  font-style: italic;
+  margin: 0;
+  padding: 10vh 20% 5vh 20%;
+}
+.sous-titre{
+  color: #626262;
+  font-family: 'Freight Text';
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 0;
+  padding: 0 15% 10vh 15%;
+}
 }
 
 
 /********************** DYPTIQUE ASYMETRIQUE ******************************/
 .dyptique-asymetrique{
+  margin: 0 -4.5%;
   padding: 10vh 10%;
   img{
     object-fit: cover;

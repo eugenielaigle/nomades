@@ -52,7 +52,7 @@
   <p class="nomades-prez"><span>NOMADES</span> - Magazine Numérique et Studio de Création</p>
 </aside>
 
-<a href="<?php the_permalink(51); ?>">
+<a href="<?php the_permalink(); ?>">
   <aside class="sidebar-recherche xs-invisible">
 
     <p class="recherche"><img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/ligne-185.svg"" alt=""> <?php the_title(); ?></p>
@@ -115,7 +115,7 @@
               </div>
             </div> <!-- end scollme image -->
             <div class="scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
-              <h3 class="the-category" ><?php the_category(); ?></h3>
+              <h3 class="the-category" ><?php wp_list_categories('sort_column=id&optioncount=0&use_desc_for_title=0&child_of=6&title_li='); ?></h3>
               <div class="article-title col-md-7 no-padding">
                 <?php
                 $titre = get_field('titre_de_larticle');
@@ -147,7 +147,7 @@
        while ( $the_query->have_posts() ):
          $the_query->the_post();?>
          <div class="scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
-           <h3 class="the-category"><?php the_category(); ?></h3>
+           <h3 class="the-category"><?php wp_list_categories('sort_column=id&optioncount=0&use_desc_for_title=0&child_of=7&title_li='); ?></h3>
            <p class="the-date"><?php the_date(); ?></p>
            <div class="article-title col-md-8 no-padding">
             <?php
@@ -176,7 +176,7 @@
 
       <ul>
         <?php
-        $args = array( 'cat' => '6, 7', 'post__not_in' => get_option( 'sticky_posts' ), 'numberposts' => 5, 'order'=> 'ASC', 'orderby' => 'title' );
+        $args = array( 'cat' => '6, 7', 'post__not_in' => get_option( 'sticky_posts' ), 'numberposts' => 5, 'order'=> 'desc', 'orderby' => 'date' );
         $postslist = get_posts( $args );
         foreach ($postslist as $post) :  setup_postdata($post); ?>
           <a href="<?php the_permalink();?>">
@@ -197,7 +197,7 @@
 
 
 <!-- RETROSPECTIVE -->
-<div class="home-category-retrospective vignet">
+<div class="home-category-retrospective">
 
   <?php
   $sticky = get_option('sticky_posts');
@@ -214,7 +214,7 @@
       </div>
       <div class="article-under-picture">
         <div class="article-title col-md-8 no-padding scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
-          <h3 class="the-category"><?php the_category(); ?></h3>
+          <h3 class="the-category"><?php wp_list_categories('sort_column=id&optioncount=0&use_desc_for_title=0&child_of=8&title_li='); ?></h3>
           <?php
           $titre = get_field('titre_de_larticle');
           if ($titre):?>
@@ -261,7 +261,7 @@ wp_reset_postdata();
     <p class="decouvrir-aussi">A découvrir aussi,</p>
     <ul>
       <?php
-      $args = array( 'category_name' => 'studio', 'post__not_in' => get_option( 'sticky_posts' ), 'numberposts' => 5, 'order'=> 'ASC', 'orderby' => 'title' );
+      $args = array( 'category_name' => 'studio', 'post__not_in' => get_option( 'sticky_posts' ), 'numberposts' => 5, 'order'=> 'desc', 'orderby' => 'date' );
       $postslist = get_posts( $args );
       foreach ($postslist as $post) :  setup_postdata($post); ?>
         <a href="<?php the_permalink();?>">
@@ -292,7 +292,7 @@ wp_reset_postdata();
         endif;?>
       </div>
       <div class="scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
-        <h3 class="the-category"><?php the_category(); ?></h3>
+        <h3 class="the-category"><?php the_category();?></h3>
         <p class="the-date"><?php the_date(); ?></p>
         <div class="article-title col-md-8 no-padding">
           <?php
@@ -320,7 +320,7 @@ wp_reset_postdata();?>
 <!-- PANORAMIQUE -->
 <?php $image = get_field('panoramique');
 if (!empty($image)):?>
-  <div class="bloc-panoramique">
+  <div class="bloc-panoramique-home">
     <div class="panoramique">
       <img class="delete-hover-effect" src="<?php the_field('panoramique');?>" alt="">
     </div>

@@ -114,6 +114,8 @@ function closeAllSelect(elmnt) {
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
+
+
 // Image + Texte scrollable
 $(".sticky-wrapper").stick_in_parent({
   offset_top: 60
@@ -127,3 +129,33 @@ $(".sticky-wrapper").stick_in_parent({
   $('.article-under-picture').width(retrospectiveHome);
 
 
+// LOADER SINGLE
+
+$(window).on('load',function(){
+  $(".loader-single").fadeOut("200");
+});
+
+// //Zoombox
+
+
+// $('a.zoombox').zoombox({
+//                 theme       : 'zoombox',        //available themes : zoombox,lightbox, prettyphoto, darkprettyphoto, simple
+//                 opacity     : 0.8,              // Black overlay opacity
+//                 duration    : 800,              // Animation duration
+//                 animation   : true,             // Do we have to animate the box ?
+//                 width       : 600,
+//                 height      : 600,              // Default width              // Default height
+//                 gallery     : true,             // Allow gallery thumb view
+//                 autoplay    : false,               // Autoplay for video
+//                 overflow    : true
+// });
+// jQuery(document).ready(function($){
+//     $(document).on('click','#sommaire-article a',function(){
+//         var h = $(this).attr('href');
+
+//         $('body,html').animate({
+//             scrollTop:$(h).offset().top
+//         }, 500);
+//         return false;
+//     });
+// });
