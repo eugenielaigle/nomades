@@ -61,6 +61,7 @@
 <!-- end header -->
 
 <div class="container-home">
+
   <div class="header-home">
     <?php  $image = get_field('image_couv_home');
     $video = get_field('video_couv_home');
@@ -99,6 +100,7 @@
 
 
     <div class="home-rencontre-destination">
+
       <!-- RENCONTRE -->
       <div class="home-category-left">
         <?php
@@ -108,6 +110,9 @@
 
          while ( $the_query->have_posts() ):
            $the_query->the_post();?>
+           <?php $category = get_the_category();
+           $mycat = $category[0]->cat_name;
+           $mycat2 = get_cat_id($mycat); ?>
            <a href="<?php the_permalink();?>">
             <div class="scrollme">
               <div class="animateme" data-when="enter" data-from="0.3"data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
@@ -115,7 +120,7 @@
               </div>
             </div> <!-- end scollme image -->
             <div class="scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
-              <h3 class="the-category" ><?php wp_list_categories('sort_column=id&optioncount=0&use_desc_for_title=0&child_of=6&title_li='); ?></h3>
+              <h3 class="the-category" ><?php echo get_cat_name($mycat2);?></h3>
               <div class="article-title col-md-7 no-padding">
                 <?php
                 $titre = get_field('titre_de_larticle');
@@ -127,7 +132,7 @@
               <div class="excerpt-article col-md-7 no-padding">
                 <div class="paragraphe-italique"><?php the_field('sous_titre_article'); ?></div>
                 <div class="paragraphe-classique"><?php the_field('paragraphe_article'); ?></div>
-                <p class="the-date"><?php the_date(); ?></p>
+                <p class="the-date"><?php echo get_the_date(); ?></p>
               </div> <!-- end excerpt-article -->
             </div> <!-- end scrollme text -->
           </a>
@@ -146,9 +151,12 @@
       if ( $the_query->have_posts() ):
        while ( $the_query->have_posts() ):
          $the_query->the_post();?>
+         <?php $category = get_the_category();
+         $mycat = $category[0]->cat_name;
+         $mycat2 = get_cat_id($mycat); ?>
          <div class="scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
-           <h3 class="the-category"><?php wp_list_categories('sort_column=id&optioncount=0&use_desc_for_title=0&child_of=7&title_li='); ?></h3>
-           <p class="the-date"><?php the_date(); ?></p>
+           <h3 class="the-category"><?php echo get_cat_name($mycat2);?></h3>
+           <p class="the-date"><?php echo get_the_date(); ?></p>
            <div class="article-title col-md-8 no-padding">
             <?php
             $titre = get_field('titre_de_larticle');
@@ -206,15 +214,20 @@
 
    while ( $the_query->have_posts() ):
      $the_query->the_post();?>
+     <?php $category = get_the_category();
+     $mycat = $category[0]->cat_name;
+     $mycat2 = get_cat_id($mycat); ?>
      <a href="<?php the_permalink();?>">
       <div class="scrollme">
         <div class="animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
-          <?php the_post_thumbnail(); ?>
+          <?php if (class_exists('MultiPostThumbnails')) :
+          MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'third-image');
+        endif;?>
         </div>
       </div>
       <div class="article-under-picture">
         <div class="article-title col-md-8 no-padding scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
-          <h3 class="the-category"><?php wp_list_categories('sort_column=id&optioncount=0&use_desc_for_title=0&child_of=8&title_li='); ?></h3>
+          <h3 class="the-category"><?php echo get_cat_name($mycat2);?></h3>
           <?php
           $titre = get_field('titre_de_larticle');
           if ($titre):?>
@@ -226,7 +239,7 @@
             <div class="paragraphe-italique"><?php the_field('sous_titre_article'); ?></div>
             <div class="paragraphe-classique"><?php the_field('paragraphe_article'); ?></div>
           </div>
-          <p class="the-date"><?php the_date(); ?></p>
+          <p class="the-date"><?php echo get_the_date(); ?></p>
         </div>
       </div>
     </a>
@@ -293,7 +306,7 @@ wp_reset_postdata();
       </div>
       <div class="scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
         <h3 class="the-category"><?php the_category();?></h3>
-        <p class="the-date"><?php the_date(); ?></p>
+        <p class="the-date"><?php echo get_the_date(); ?></p>
         <div class="article-title col-md-8 no-padding">
           <?php
           $titre = get_field('titre_de_larticle');
@@ -342,8 +355,8 @@ endif;?>
     </div>
   </div>
   <div class="images-edition">
-  <img src="<?php the_field('image1_edition');?>" alt="">
-  <img src="<?php the_field('image2_edition');?>" alt="">
+    <img src="<?php the_field('image1_edition');?>" alt="">
+    <img src="<?php the_field('image2_edition');?>" alt="">
   </div>
 </div>
 

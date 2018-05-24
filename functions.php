@@ -116,12 +116,18 @@ add_theme_support( 'post-thumbnails' );
 if (class_exists('MultiPostThumbnails')) {
 
 new MultiPostThumbnails(array(
-'label' => 'Deuxième Image à la une',
+'label' => 'Image à la une n°2 verticale',
 'id' => 'secondary-image',
 'post_type' => 'post'
  ) );
 
+new MultiPostThumbnails(array(
+'label' => 'Image à la une n°3 horizontale',
+'id' => 'third-image',
+'post_type' => 'post'
+ ) );
  }
+
 
 
 function footer_left_widgets_init() {
@@ -153,14 +159,6 @@ function footer_right_widgets_init() {
 }
 
 add_action( 'widgets_init', 'footer_right_widgets_init' );
-
-
-// function add_js_scripts() {
-// if (is_home ()) {
-//
-// }
-// }
-// add_action('wp_enqueue_scripts', 'add_js_scripts');
 
 
 function wpc_theme_support() {
@@ -205,77 +203,4 @@ add_filter('wpseo_opengraph_image', 'wpc_custom_opengraph_image');
 // }
 // add_action( 'wp_head', 'insert_opengraph_in_head', 5 );
 
-/**
-Génèse des ancres
-*/
-// function replace_ca($matches){
-//   return '<h'.$matches[1].$matches[2].' id="'.sanitize_title($matches[3]).'">'.$matches[3].'</h'.$matches[4].'>';
-// }
 
-// //Ajout d'un filtre sur le contenu
-// add_filter('the_content', 'add_anchor_to_title', 12);
-// function add_anchor_to_title($content){
-//   if(is_singular('post')){ // s'il s'agit d'un article
-//     global $post;
-//     $pattern = "/<h([2-4])(.*?)>(.*?)<\/h([2-4])>/i";
-
-//     $content = preg_replace_callback($pattern, 'replace_ca', $content);
-//     return $content;
-//   }else{
-//     return $content;
-//   }
-// }
-
-// function automenu( $echo = false ){
-//   global $post;
-//   $obj = '<nav id="sommaire-article">';
-//   $original_content = $post->post_content;
-
-//   $patt = "/<h([2-4])(.*?)>(.*?)<\/h([2-4])>/i";
-//   preg_match_all($patt, $original_content, $results);
-
-//   $lvl1 = 0;
-//   $lvl2 = 0;
-//   $lvl3 = 0;
-
-//   foreach ($results[3] as $k=> $r) {
-//     switch($results[1][$k]){
-//       case 2:
-//         $lvl1++;
-//         $niveau = '<span class="title_lvl">'.$lvl1.'/</span>';
-//         $lvl2 = 0;
-//         $lvl3 = 0;
-//         break;
-
-//       case 3:
-//         $lvl2++;
-//         $niveau = '<span class="title_lvl">'.base_convert(($lvl2+9),10,36).'.</span>';
-//         $lvl3 = 0;
-//         break;
-
-//       case 4:
-//         $lvl3++;
-//         $niveau = '<span class="title_lvl">'.$lvl3.')</span>';
-//         break;
-//     }
-
-//     $obj .= '<a href="#'.sanitize_title($r).'" class="title_lvl'.$results[1][$k].'">'.$niveau.$r.'</a>';
-//   }
-
-//   $obj .= '</nav>';
-//   if ( $echo )
-//     echo $obj;
-//   else
-//     return $obj;
-// }
-
-
-// function wpc_entry_categories() {
-//   echo '<span class="cat-links">';
-//   foreach((get_the_category()) as $category) {
-//     if ($category->category_parent  != 0) {
-//       echo '<a title="' . esc_attr(strip_tags($category->name)) . '" href="' . get_category_link($category->term_id) . '">' . $category->name.'</a> ';
-//     }
-//   }
-//   echo '</span>';
-// }

@@ -9,7 +9,7 @@
     <div class="loader-left">
       <h3 class="the-category"><?php echo get_cat_name($mycat2);?></h3>
       <p class="lieu-article"><?php the_field('lieu'); ?></p>
-      <p class="the-date"><?php the_date(); ?></p>
+      <p class="the-date"><?php echo get_the_date(); ?></p>
     </div>
     <div class="article-title">
       <?php
@@ -30,7 +30,7 @@
         if ($titre):?>
           <h1 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h1>
         <?php endif; ?>
-        <p><?php the_date(); ?></p>
+        <p><?php echo get_the_date(); ?></p>
       </div>
 
       <?php
@@ -313,7 +313,7 @@ if( have_rows('article_flexible') ):
                               <div class="remerciements">
                                 <div class="remerciements-left">
                                   <h2 class="the-category"><?php echo get_cat_name($mycat2);?></h2>
-                                  <p><?php the_date();?></p>
+                                  <p class="the-date"><?php echo get_the_date();?></p>
                                 </div>
                                 <div class="remerciements-right">
                                   <div class="article-title">
