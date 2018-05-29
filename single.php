@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  <div class="container-content">
+  <div class="container-content" id="galerie" data-chocolat-title="<?php echo get_cat_name($mycat2);?> <?php the_title(); ?>">
     <div class="article-header">
       <h2><?php echo get_cat_name($mycat2);?></h2>
       <div class="chapeau col-md-4"><?php the_field('chapeau'); ?></div>
@@ -38,7 +38,7 @@
       $video = get_field('video_header');
 
       if (!empty($image)):?> <!-- si image -> afficher image -->
-      <a href="#" class="zoombox zgallery2">
+      <a href="<?php the_field('photo_header');?>" class="chocolat-image">
        <div class="image-full-size">
         <img src="<?php the_field('photo_header');?>">
         <div class="legende-image-full-size xs-invisible">
@@ -51,7 +51,7 @@
     </a>
 
     <?php elseif ($video):?> <!-- sinon -> afficher video -->
-    <a href="#" class="zoombox zgallery2">
+    <a href="">
      <div class="video-full-size">
       <video width="100%" height="auto" autoplay="true" loop>
        <source src="<?php the_field('video_header');?>" type="video/mp4" />
@@ -59,9 +59,9 @@
        <div class="legende-image-full-size xs-invisible">
         <?php the_field('paragraphe_image'); ?>
       </div>
-      <div class="plus-upright">
+      <!-- <div class="plus-upright">
         <img src="http://localhost/nomades/wp-content/uploads/2018/04/plus.svg">
-      </div>
+      </div> -->
     </div>
   </a>
 
@@ -97,24 +97,25 @@ if( have_rows('article_flexible') ):
   while ( have_rows('article_flexible') ) : the_row();
 
     if( get_row_layout() == 'panoramique' ):?>
-      <div class="bloc-panoramique">
-        <div class="panoramique">
-          <img class="delete-hover-effect" src="<?php the_sub_field('image_panoramique');?>" alt="panoramique">
-          <div class="legende-panoramique1">
-            <?php the_sub_field('legende_panoramique_1');?>
-          </div>
-          <div class="legende-panoramique2">
-            <?php the_sub_field('legende_panoramique_2');?>
+      <a href="<?php the_sub_field('image_panoramique');?>" class="chocolat-image">
+        <div class="bloc-panoramique">
+          <div class="panoramique">
+            <img class="delete-hover-effect" src="<?php the_sub_field('image_panoramique');?>" alt="panoramique">
+            <div class="legende-panoramique1">
+              <?php the_sub_field('legende_panoramique_1');?>
+            </div>
+            <div class="legende-panoramique2">
+              <?php the_sub_field('legende_panoramique_2');?>
+            </div>
           </div>
         </div>
-      </div>
-
+      </a>
       <?php elseif( get_row_layout() == 'image_texte_scrollable' ):?>
 
         <div class="image-texte-scrollable">
           <div id="sticker">
             <div class="image-legende-gauche sticky-wrapper" >
-              <a href="#" class="zoombox zgallery2">
+              <a href="<?php the_sub_field('image'); ?>" class="chocolat-image">
                 <img class="image-gauche" src="<?php the_sub_field('image'); ?>" alt="">
                 <div class="plus-upright">
                   <img src="http://localhost/nomades/wp-content/uploads/2018/04/plus.svg">
@@ -167,10 +168,14 @@ if( have_rows('article_flexible') ):
                 <div class="container-dyptique">
                 <?php endif; ?>
 
-                <a href="#" class="zoombox zgallery2">
+
                   <div class="dyptique">
+                    <a href="<?php the_sub_field('image_gauche');?>" class="chocolat-image">
                     <img class="image-gauche" src="<?php the_sub_field('image_gauche');?>" alt="dyptique nomades">
+                    </a>
+                    <a href="<?php the_sub_field('image_droite');?>" class="chocolat-image">
                     <img class="image-droite" src="<?php the_sub_field('image_droite');?>" alt="dyptique nomades">
+                  </a>
                     <div class="plus-upright">
                       <img src="http://localhost/nomades/wp-content/uploads/2018/04/plus.svg">
                     </div>
@@ -183,7 +188,7 @@ if( have_rows('article_flexible') ):
                       <?php the_sub_field('legende_anglais');?>
                     </div>
                   </div>
-                </a>
+
               </div>
 
               <?php elseif( get_row_layout() == 'video' ):?>
@@ -238,12 +243,13 @@ if( have_rows('article_flexible') ):
                 <?php elseif( get_row_layout() == 'image_centree' ):?>
 
                   <?php if( get_sub_field('couleur_fond') == 'Blanc' ): ?>
+
                     <div class="image-centree fond-blanc">
                       <?php else:?>
                         <div class="image-centree">
                         <?php endif; ?>
 
-                        <a class="image-relative zoombox zgallery2" href="#">
+                        <a class="image-relative chocolat-image" href="<?php the_sub_field('image');?>">
                           <img class="image" src="<?php the_sub_field('image');?>" alt="">
                           <div class="plus-upright">
                             <img src="http://localhost/nomades/wp-content/uploads/2018/04/plus.svg">
@@ -270,14 +276,13 @@ if( have_rows('article_flexible') ):
                         </div>
 
                         <?php elseif( get_row_layout() == 'dyptique_asymetrique' ):?>
-
                           <?php if( get_sub_field('couleur_fond') == 'Blanc' ): ?>
                             <div class="dyptique-asymetrique fond-blanc">
                               <?php else:?>
                                 <div class="dyptique-asymetrique">
                                 <?php endif; ?>
                                 <div class="images-dyptique-asymetrique">
-                                  <a href="#" class="zoombox zgallery2 image-relative">
+                                  <a href="<?php the_sub_field('image_gauche');?>" class="image-relative chocolat-image">
                                     <!-- <div class="black-background"> -->
                                       <img class="image-gauche" src="<?php the_sub_field('image_gauche');?>" alt="">
                                       <div class="plus-upleft">
@@ -285,19 +290,21 @@ if( have_rows('article_flexible') ):
                                       </div>
                                       <!--  </div> -->
                                     </a>
-                                    <div class="image-right">
-                                      <!--   <div class="black-background"> -->
-                                        <img class="image-dyptique-asymetrique-right" src="<?php the_sub_field('image_droite');?>" alt="">
-                                        <!-- </div> -->
-                                        <div class="legende-dyptique-asymetrique">
-                                          <div class="legende-francais">
-                                            <?php the_sub_field('legende_francais');?>
-                                          </div>
-                                          <div class="legende-anglais">
-                                            <?php the_sub_field('legende_anglais');?>
+                                    <a href="<?php the_sub_field('image_droite');?>" class="chocolat-image">
+                                      <div class="image-right">
+                                        <!--   <div class="black-background"> -->
+                                          <img class="image-dyptique-asymetrique-right" src="<?php the_sub_field('image_droite');?>" alt="">
+                                          <!-- </div> -->
+                                          <div class="legende-dyptique-asymetrique">
+                                            <div class="legende-francais">
+                                              <?php the_sub_field('legende_francais');?>
+                                            </div>
+                                            <div class="legende-anglais">
+                                              <?php the_sub_field('legende_anglais');?>
+                                            </div>
                                           </div>
                                         </div>
-                                      </div>
+                                      </a>
                                     </div>
 
                                   </div>

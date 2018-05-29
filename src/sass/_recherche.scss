@@ -1,0 +1,71 @@
+.pum-theme-116 .pum-container, .pum-theme-custom {
+  #popmake-438, #popmake-985{
+    padding: 25px!important;
+    background-color: $legende;
+  }
+  #pum_popup_title_438, #pum_popup_title_985{
+    text-align: left!important;
+    font-family: "League Gothic";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+  .screen-reader-text{
+    display: none!important;
+  }
+  #s{
+    border: none;
+    font-family: 'Freight Text';
+    font-size: 47px;
+    font-weight: 300;
+    letter-spacing: 2.35px;
+    line-height: 60px;
+    background-color: $legende;
+  }
+  #s:focus, #s:hover, #s:visited, #s:active, #searchsubmit:hover, #searchsubmit:focus, #searchsubmit:active, #searchsubmit:visited{
+    outline: none!important;
+  }
+  #searchsubmit{
+    width: 109px;
+    height: 28px;
+    padding: 6px 10px;
+    color:#000;
+    background-color: transparent;
+    font-size: 9px;
+    font-weight:300;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    white-space: normal;
+    border:1px solid #000;
+    border-radius: 0px;
+    font-family: 'Avenir';
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #searchsubmit:hover{
+    background-color: black;
+    color: #fff;
+  }
+  #searchform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+      border-bottom: 0.5px solid #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+

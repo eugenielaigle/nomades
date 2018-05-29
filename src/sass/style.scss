@@ -13,6 +13,7 @@
 @import 'src/sass/newsletter';
 @import 'src/sass/contact';
 @import 'src/sass/flexible';
+@import 'src/sass/recherche';
 
 
 /*
@@ -64,6 +65,7 @@ li{
 
 a:hover, a:active, a:focus, a:visited{
   text-decoration: none!important;
+  outline: none!important;
 }
 
 img:hover, a:hover img, video:hover , a:hover video{
@@ -114,12 +116,22 @@ strong{
   }
 }
 
+.titre-page{
+  font-family: "LeagueGothic";
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.85px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
 /*************** ARTICLE ****************************/
 
 .container-content{
   padding-top: 80px;
   padding-left: 4%;
   padding-right: 4%;
+  min-height: 65vh;
 }
 
 .article-header{
@@ -239,6 +251,19 @@ strong{
     }
   }
 
+}
+
+.article-anglais{
+  font-family: 'Freight Text';
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.05px;
+  line-height: 21px;
+  color: $grey-text;
+  a{
+    color: $grey-text!important;
+  }
 }
 
 /********************************** HOME ************************************/
@@ -465,12 +490,12 @@ a:first-child{
   }
   .studio-right{
     width: 55%;
-     .the-category{
-    line-height: 5px;
-  }
-  .the-date{
-    line-height: 10px;
-  }
+    .the-category{
+      line-height: 5px;
+    }
+    .the-date{
+      line-height: 10px;
+    }
     .the-title{
       font-size: 42px;
       font-weight: 300;
@@ -717,46 +742,46 @@ a:first-child{
   .the-category {
     margin-bottom: 30px;
 
-     color: $legende!important;
-     font-family: "League Gothic";
-     font-size: 22px;
-     font-weight: 400;
-     line-height: 17px;
-     text-transform: uppercase;
+    color: $legende!important;
+    font-family: "League Gothic";
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 17px;
+    text-transform: uppercase;
 
- }
-
- .lieu-article{
-  color: $legende;
-  font-family: Freight;
-  font-size: 19px;
-  font-weight: 300;
-  letter-spacing: 0.95px;
-  line-height: 17px;
-  margin-bottom: 0;
-}
-
-.the-date{
-  color: $legende;
-  font-family: Freight;
-  font-size: 15px;
-  font-weight: 300;
-  font-style: italic;
-  letter-spacing: 0.75px;
-  line-height: 20px;
-}
-.article-title{
-  height: auto;
-  font-family: 'Freight Text';
-  color: $legende;
-  font-size: 38px;
-  font-weight: 300;
-  letter-spacing: 1.9px;
-  line-height: 20px;
-  span{
-    font-style: italic;
   }
-}
+
+  .lieu-article{
+    color: $legende;
+    font-family: Freight;
+    font-size: 19px;
+    font-weight: 300;
+    letter-spacing: 0.95px;
+    line-height: 17px;
+    margin-bottom: 0;
+  }
+
+  .the-date{
+    color: $legende;
+    font-family: Freight;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.75px;
+    line-height: 20px;
+  }
+  .article-title{
+    height: auto;
+    font-family: 'Freight Text';
+    color: $legende;
+    font-size: 38px;
+    font-weight: 300;
+    letter-spacing: 1.9px;
+    line-height: 20px;
+    span{
+      font-style: italic;
+    }
+  }
 }
 
 
@@ -850,10 +875,10 @@ a:first-child{
   .thumbnail-category{
     width: 40%;
     img{
-    width: 100%;
-    object-fit: cover;
-    height: auto;
-  }
+      width: 100%;
+      object-fit: cover;
+      height: auto;
+    }
   }
   .right-part-category-horizontal img{
     height: auto;
@@ -949,3 +974,224 @@ a:first-child{
   }
 
 }
+
+/******************************** EDITO *********************************/
+.container-edito{
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  .edito-title{
+    font-family: "LeagueGothic";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 35px;
+    text-transform: uppercase;
+  }
+  .edito-sous-titre{
+    font-family: 'Freight Text';
+    font-size: 31px;
+    font-weight: 300;
+    letter-spacing: 1.55px;
+    line-height: 38px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .edito-left{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .legende-anglais{
+      width: 40%;
+      text-align: right;
+    }
+  }
+  .dyptique-edito-left{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    .legende-anglais{
+      width: 40%;
+      text-align: right;
+    }
+  }
+}
+.container-dyptique-edito{
+  background-color: #fff;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  .row-dyptique-edito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 15%;
+    img{
+      padding: 5px;
+      height: auto;
+      width: 50%;
+      object-fit: cover;
+    }
+
+  }
+  .legende-sous-dyptique{
+    font-family: "Freight Text";
+    font-size: 11px;
+    letter-spacing: 0.55px;
+    line-height: 13px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    p{
+      text-align: right;
+      padding-right: 5px;
+    }
+  }
+
+
+}
+.contact-edito{
+  border-top: 1px solid #000;
+}
+
+/*********************** MENTIONS LEGALES **************************/
+.container-mentions{
+  margin: 0 20%;
+  padding: 10vh 0;
+  .propriete{
+    font-family: 'Freight Text';
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.38px;
+    line-height: 25px;
+  }
+  .proprietaire{
+    font-family: Freight;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.35px;
+    line-height: 23px;
+  }
+  .row-infos{
+    margin-top: 2em;
+  }
+  .sous-titre-mentions{
+    font-family: "Freight Text";
+    font-size: 13px;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.33px;
+    line-height: 21px;
+  }
+  .mentions-name{
+    font-family: "LeagueGothic";
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .mentions-adress p{
+    font-family: "Freight Text";
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    line-height: 21px;
+  }
+}
+.plan-du-site{
+  font-family: "LeagueGothic";
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.85px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.sous-titre-plan-du-site{
+  width: 20%;
+  font-family: "Freight Text";
+font-size: 15px;
+font-weight: 500;
+font-style: italic;
+letter-spacing: 0.38px;
+line-height: 21px;
+}
+
+//GALERIE IMAGE
+
+.chocolat-overlay{
+  background-color: #000!important;
+  opacity: 0.9!important;
+}
+
+.chocolat-wrapper .chocolat-right{
+  right: 25px!important;
+}
+
+.chocolat-wrapper .chocolat-left{
+  left: 25px!important;
+}
+
+.chocolat-wrapper .chocolat-bottom{
+  background: transparent!important;
+  top: 0;
+  right: 50px!important;
+}
+
+
+
+// div.popup-gallery {
+//     text-align: center;
+//     margin-bottom: 40px;
+// }
+
+// div.image-wrap {
+//     width: 18%; /* Change this value to have your thumbnails laid out differently */
+//     margin-bottom: 4px;
+//     display: inline-block;
+// }
+
+// div.image-wrap img {
+//     width: 100%;
+// }
+
+// a.lightbox-link {
+//     -webkit-transition: all 0.25s ease-in-out 0s;
+//     -moz-transition: all 0.25s ease-in-out 0s;
+//     -ms-transition: all 0.25s ease-in-out 0s;
+//     -o-transition: all 0.25s ease-in-out 0s;
+//     transition: all 0.25s ease-in-out 0s;
+// }
+
+// a.lightbox-link:hover {
+//     -webkit-opacity: 0.8;
+//     -khtml-opacity: 0.8;
+//     -moz-opacity: 0.8;
+//     -ms-opacity: 0.8;
+//     -o-opacity: 0.8;
+//     opacity: 0.8;
+//     filter: alpha(opacity=80);
+// }
+
+// .image-wrap figcaption {
+//     display: none;
+// }
+
+// .mfp-bg figcaption {
+//     display: block;
+//     position: absolute;
+// }
+
+// .lb-title {
+//     margin: 0.5em 0 0 0.5em;
+// }
+
+// .lb-description {
+//     margin-left: 0.6em;
+//     width: 100%;
+// }
+

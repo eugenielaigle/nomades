@@ -1,3 +1,6 @@
+<?php  require_once 'Mobile-Detect/Mobile_Detect.php' ;
+$detect = new Mobile_Detect ; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,18 +14,35 @@
 
 <div class="container-fluid container-header">
 
- <nav class="navbar navbar-expand-md navbar-light bg-faded">
+ <nav class="navbar navbar-expand-md navbar-light bg-faded" id="navbar-navigation">
   <a class="xs-visible navbar-search" href="<?php the_permalink(51); ?>">
     <img class="img-responsive recherche-img" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/loupe.svg">
   </a>
   <a class="navbar-brand xs-visible" href="<?php bloginfo('url'); ?>">
     <img class="img-responsive logo" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/logo-nomades.svg">
   </a>
+  <button class="navbar-toggler navbar-toggler-table navbar-special" type="button" data-toggle="collapse"aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon navbar-toggler-table-icon"></span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <?php
+<?php if ( $detect -> isMobile () ) {
+wp_nav_menu([
+    'menu'            => 'menu-mobile',
+    'theme_location'  => 'menu-mobile',
+    'container'       => 'div',
+    'container_id'    => 'bs4navbar',
+    'container_class' => 'collapse navbar-collapse',
+    'menu_id'         => false,
+    'menu_class'      => 'navbar-nav mr-auto',
+    'depth'           => 2,
+    'fallback_cb'     => 'bs4navwalker::fallback',
+    'walker'          => new bs4navwalker()
+  ]);
+
+
+}else{
   wp_nav_menu([
     'menu'            => 'top',
     'theme_location'  => 'top',
@@ -35,7 +55,10 @@
     'fallback_cb'     => 'bs4navwalker::fallback',
     'walker'          => new bs4navwalker()
   ]);
-  ?>
+}
+?>
+
+
 </nav>
 </div>
 

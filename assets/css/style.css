@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'Avenir';
   src: url("../fonts/AvenirLTStd-Book.otf"); }
@@ -84,15 +83,63 @@ table {
   border-spacing: 0; }
 
 @media (max-width: 767px) {
+  .container-content {
+    padding-right: 1% !important;
+    padding-left: 1% !important;
+    width: 100vw !important; }
+  .container-fluid {
+    padding-right: 0 !important; }
   .xs-visible {
     display: block !important; }
   .xs-invisible {
     display: none !important; }
+  .swiper-wrapper {
+    display: flex;
+    padding-left: 15px; }
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    padding: 5px; }
+  .button-english {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    font-family: 'Freight Text';
+    font-size: 12px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 0.9px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: #626262;
+    cursor: pointer;
+    margin-bottom: 10px; }
+  .button-english:hover {
+    font-weight: bold; }
+  .article-anglais {
+    display: none; }
+  .legende-francais, .legende-anglais, .article-francais, .article-anglais {
+    text-align: justify !important; }
+  #progress-bar {
+    background-color: #000;
+    height: 3px;
+    width: 0;
+    position: fixed;
+    top: 56px !important;
+    bottom: 0;
+    left: 0.5rem !important;
+    z-index: 5; }
   .container-header {
     padding-left: 0px !important;
     padding-right: 0px !important; }
   .container-header .navbar {
-    width: 100% !important; }
+    width: 100% !important;
+    border-bottom: 0.5px solid black;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0.5rem;
+    margin-right: 1rem; }
   .container-header .navbar .navbar-search {
     width: 5%; }
   .container-header .navbar .navbar-search .recherche-img {
@@ -105,25 +152,51 @@ table {
   .container-header .navbar .navbar-brand .logo {
     width: 60%; }
   .container-header .navbar #bs4navbar {
-    height: 100vh;
+    height: 105vh;
     position: absolute;
     width: 100%;
-    top: 0;
+    top: 20px;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: white;
+    background-color: #fbfbfb !important;
+    z-index: 6;
     border-bottom: none !important; }
-  .container-header .navbar #bs4navbar #menu-menu-principal {
-    margin-top: 10%;
+  .container-header .navbar #bs4navbar #menu-menu-mobile {
+    margin-top: 56px;
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-bottom: none;
     width: 70% !important;
-    margin-left: 15%; }
-  .container-header .navbar #bs4navbar #menu-menu-principal .menu-item a img {
-    display: none; }
+    margin-left: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; }
+  .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item {
+    font-family: "LeagueGothic";
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0.95px;
+    line-height: 42px;
+    text-transform: uppercase;
+    width: 100%; }
+  .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item a img {
+    width: auto;
+    height: 30px; }
+  .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-425, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-426, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-429, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-964, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-965, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-968 {
+    border-bottom: 0.5px solid #000;
+    padding-bottom: 0.5rem; }
+  .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-427, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-428, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-966, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-967 {
+    margin-top: 0.5rem; }
+  .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-433, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-434, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-970, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-971 {
+    width: 20% !important;
+    margin-top: 0.5rem; }
+  .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-432, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-969 {
+    width: 15% !important;
+    margin-top: 0.5rem; }
   .navbar-light .navbar-toggler-icon {
     background-image: url("../img/menu-mobile.svg") !important; }
+  .navbar-light .navbar-toggler-table-icon {
+    background-image: url("../img/layers.png") !important; }
   .navbar-light .navbar-toggler {
     border: none !important;
     padding: 0 !important;
@@ -138,6 +211,37 @@ table {
     content: "";
     background: no-repeat center center;
     background-size: 100% 100%; }
+  .navbar-light .navbar-toggler-table-icon-close {
+    display: none !important; }
+  .footer-left-widget {
+    margin-top: 0; }
+  .footer-left-widget img {
+    display: none; }
+  #footer-right-mobile-widget-area {
+    width: 100%; }
+  #menu-reseaux-sociaux-mobile-footer, #menu-reseaux-sociaux-footer-mobile {
+    display: flex;
+    justify-content: center; }
+  #menu-reseaux-sociaux-mobile-footer li, #menu-reseaux-sociaux-footer-mobile li {
+    padding: 25px 10px; }
+  #menu-reseaux-sociaux-mobile-footer li img, #menu-reseaux-sociaux-footer-mobile li img {
+    height: 30px;
+    width: auto; }
+  .footer-right {
+    padding-bottom: 25px;
+    border-bottom: 0.5px solid #000; }
+  .footer-right, .newsletter-area {
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 14px !important; }
+  .sub-title-newsletter, .title-newsletter {
+    text-align: center !important;
+    width: 222px !important; }
+  .sub-title-newsletter {
+    padding-top: 10px;
+    padding-bottom: 15px; }
+  .textwidget {
+    text-align: center; }
   .article-header .chapeau p {
     margin-bottom: 0; }
   .article-header .article-title {
@@ -151,26 +255,44 @@ table {
     line-height: 29px; }
   .article-header .row-article {
     margin-top: 10px !important; }
-  .article-header .row-article .button-english {
-    text-align: center;
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    text-decoration: underline;
-    font-family: 'Freight Text';
-    font-size: 12px;
-    font-weight: 700;
-    font-style: italic;
-    letter-spacing: 0.9px;
-    line-height: 23px;
-    text-transform: uppercase;
-    color: #626262;
-    cursor: pointer;
-    margin-bottom: 10px; }
-  .article-header .row-article .button-english:hover {
-    font-weight: bold; }
-  .article-header .row-article .article-anglais {
-    display: none; } }
+  .contact-home p {
+    text-align: center !important; }
+  .bloc-panoramique-home {
+    height: auto !important; }
+  .bloc-panoramique-home .panoramique {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important; }
+  .edito-title {
+    padding-left: 15px; }
+  .edito-sous-titre {
+    margin-bottom: 4em !important;
+    font-size: 23px !important;
+    font-weight: 300 !important;
+    letter-spacing: 1.15px !important;
+    line-height: 29px !important; }
+  .edito-sous-titre-xs {
+    margin-bottom: 2em !important; }
+  .container-dyptique {
+    flex-direction: row !important;
+    overflow: hidden; }
+  .container-dyptique .row-dyptique-edito {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important; }
+  .container-dyptique .row-dyptique-edito img {
+    width: 100% !important; }
+  .container-mentions {
+    padding: 0 !important; }
+  .container-mentions h2, .container-mentions h3, .container-mentions p {
+    text-align: center !important; }
+  .mentions-area {
+    padding: 2em 0;
+    border-top: 1px solid #000; }
+  .plan-du-site {
+    text-align: center; }
+  .sous-titre-plan-du-site {
+    width: 65% !important;
+    margin: auto; } }
 
 /********************* PROGRESS BAR *****************************/
 @media (min-width: 1800px) {
@@ -195,7 +317,12 @@ table {
   .home-edition .images-edition img {
     padding: 10px; }
   .home-edition .images-edition img:last-child {
-    margin-top: -5vh !important; } }
+    margin-top: -5vh !important; }
+  .container-edito {
+    padding-left: 30% !important;
+    padding-right: 10% !important; }
+  .container-mentions {
+    margin: 0 25% !important; } }
 
 /********************* PROGRESS BAR *****************************/
 #progress {
@@ -206,8 +333,7 @@ table {
   top: 47px;
   bottom: 0;
   left: 44px;
-  z-index: 9999;
-  /* Peut être important si vous avez un menu en position fixe */ }
+  z-index: 9999; }
 
 /********************* HEADER *****************************/
 .container-header {
@@ -777,7 +903,6 @@ div.wpcf7-response-output {
 
 .container-dyptique .dyptique .image-gauche, .container-dyptique .dyptique .image-droite {
   height: 60vh;
-  width: 50%;
   padding: 0 5px; }
 
 .container-dyptique .legendes-dyptique {
@@ -985,6 +1110,74 @@ div.wpcf7-response-output {
   letter-spacing: .75px;
   line-height: 14px; }
 
+.pum-theme-116 .pum-container #popmake-438, .pum-theme-116 .pum-container #popmake-985, .pum-theme-custom #popmake-438, .pum-theme-custom #popmake-985 {
+  padding: 25px !important;
+  background-color: #fbfbfb; }
+
+.pum-theme-116 .pum-container #pum_popup_title_438, .pum-theme-116 .pum-container #pum_popup_title_985, .pum-theme-custom #pum_popup_title_438, .pum-theme-custom #pum_popup_title_985 {
+  text-align: left !important;
+  font-family: "League Gothic";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase; }
+
+.pum-theme-116 .pum-container .screen-reader-text, .pum-theme-custom .screen-reader-text {
+  display: none !important; }
+
+.pum-theme-116 .pum-container #s, .pum-theme-custom #s {
+  border: none;
+  font-family: 'Freight Text';
+  font-size: 47px;
+  font-weight: 300;
+  letter-spacing: 2.35px;
+  line-height: 60px;
+  background-color: #fbfbfb; }
+
+.pum-theme-116 .pum-container #s:focus, .pum-theme-116 .pum-container #s:hover, .pum-theme-116 .pum-container #s:visited, .pum-theme-116 .pum-container #s:active, .pum-theme-116 .pum-container #searchsubmit:hover, .pum-theme-116 .pum-container #searchsubmit:focus, .pum-theme-116 .pum-container #searchsubmit:active, .pum-theme-116 .pum-container #searchsubmit:visited, .pum-theme-custom #s:focus, .pum-theme-custom #s:hover, .pum-theme-custom #s:visited, .pum-theme-custom #s:active, .pum-theme-custom #searchsubmit:hover, .pum-theme-custom #searchsubmit:focus, .pum-theme-custom #searchsubmit:active, .pum-theme-custom #searchsubmit:visited {
+  outline: none !important; }
+
+.pum-theme-116 .pum-container #searchsubmit, .pum-theme-custom #searchsubmit {
+  width: 109px;
+  height: 28px;
+  padding: 6px 10px;
+  color: #000;
+  background-color: transparent;
+  font-size: 9px;
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: normal;
+  border: 1px solid #000;
+  border-radius: 0px;
+  font-family: 'Avenir';
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.pum-theme-116 .pum-container #searchsubmit:hover, .pum-theme-custom #searchsubmit:hover {
+  background-color: black;
+  color: #fff; }
+
+.pum-theme-116 .pum-container #searchform, .pum-theme-custom #searchform {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.pum-theme-116 .pum-container #searchform div, .pum-theme-custom #searchform div {
+  border-bottom: 0.5px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 /*
 * FONTS FAMILIES
 *
@@ -1022,7 +1215,8 @@ li {
   list-style-type: none; }
 
 a:hover, a:active, a:focus, a:visited {
-  text-decoration: none !important; }
+  text-decoration: none !important;
+  outline: none !important; }
 
 img:hover, a:hover img, video:hover, a:hover video {
   filter: brightness(90%);
@@ -1066,11 +1260,20 @@ strong {
 .legende-anglais a {
   color: #626262 !important; }
 
+.titre-page {
+  font-family: "LeagueGothic";
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.85px;
+  line-height: 15px;
+  text-transform: uppercase; }
+
 /*************** ARTICLE ****************************/
 .container-content {
   padding-top: 80px;
   padding-left: 4%;
-  padding-right: 4%; }
+  padding-right: 4%;
+  min-height: 65vh; }
 
 .article-header h2 {
   font-family: 'LeagueGothic';
@@ -1179,6 +1382,18 @@ strong {
   color: #626262; }
 
 .article-header .row-article .article-anglais a {
+  color: #626262 !important; }
+
+.article-anglais {
+  font-family: 'Freight Text';
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.05px;
+  line-height: 21px;
+  color: #626262; }
+
+.article-anglais a {
   color: #626262 !important; }
 
 /********************************** HOME ************************************/
@@ -1818,3 +2033,158 @@ strong {
 .category-area:nth-child(4n) .right-part-category-vertical img {
   width: 100%;
   height: auto; }
+
+/******************************** EDITO *********************************/
+.container-edito {
+  margin-top: 10vh;
+  margin-bottom: 10vh; }
+
+.container-edito .edito-title {
+  font-family: "LeagueGothic";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 35px;
+  text-transform: uppercase; }
+
+.container-edito .edito-sous-titre {
+  font-family: 'Freight Text';
+  font-size: 31px;
+  font-weight: 300;
+  letter-spacing: 1.55px;
+  line-height: 38px;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.container-edito .edito-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+
+.container-edito .edito-left .legende-anglais {
+  width: 40%;
+  text-align: right; }
+
+.container-edito .dyptique-edito-left {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end; }
+
+.container-edito .dyptique-edito-left .legende-anglais {
+  width: 40%;
+  text-align: right; }
+
+.container-dyptique-edito {
+  background-color: #fff;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column; }
+
+.container-dyptique-edito .row-dyptique-edito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 15%; }
+
+.container-dyptique-edito .row-dyptique-edito img {
+  padding: 5px;
+  height: auto;
+  width: 50%;
+  object-fit: cover; }
+
+.container-dyptique-edito .legende-sous-dyptique {
+  font-family: "Freight Text";
+  font-size: 11px;
+  letter-spacing: 0.55px;
+  line-height: 13px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%; }
+
+.container-dyptique-edito .legende-sous-dyptique p {
+  text-align: right;
+  padding-right: 5px; }
+
+.contact-edito {
+  border-top: 1px solid #000; }
+
+/*********************** MENTIONS LEGALES **************************/
+.container-mentions {
+  margin: 0 20%;
+  padding: 10vh 0; }
+
+.container-mentions .propriete {
+  font-family: 'Freight Text';
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.38px;
+  line-height: 25px; }
+
+.container-mentions .proprietaire {
+  font-family: Freight;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.35px;
+  line-height: 23px; }
+
+.container-mentions .row-infos {
+  margin-top: 2em; }
+
+.container-mentions .sous-titre-mentions {
+  font-family: "Freight Text";
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.33px;
+  line-height: 21px; }
+
+.container-mentions .mentions-name {
+  font-family: "LeagueGothic";
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.container-mentions .mentions-adress p {
+  font-family: "Freight Text";
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  line-height: 21px; }
+
+.plan-du-site {
+  font-family: "LeagueGothic";
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.85px;
+  line-height: 36px;
+  text-transform: uppercase; }
+
+.sous-titre-plan-du-site {
+  width: 20%;
+  font-family: "Freight Text";
+  font-size: 15px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.38px;
+  line-height: 21px; }
+
+.chocolat-overlay {
+  background-color: #000 !important;
+  opacity: 0.9 !important; }
+
+.chocolat-wrapper .chocolat-right {
+  right: 25px !important; }
+
+.chocolat-wrapper .chocolat-left {
+  left: 25px !important; }
+
+.chocolat-wrapper .chocolat-bottom {
+  background: transparent !important;
+  top: 0;
+  right: 50px !important; }

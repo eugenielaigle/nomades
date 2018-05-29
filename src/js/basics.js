@@ -3,17 +3,18 @@
 // ICONE DE FERMETURE MENU POUR MOBILE
 $('.navbar-toggler').click(function(){
   $(".navbar-toggler-icon").toggleClass('navbar-toggler-icon-close');
+  $(".navbar-toggler-table-icon").toggleClass('navbar-toggler-table-icon-close');
 });
 
 
 // ANIMATION BARRE POUR SCROLL BODY
 $('#bs4navbar').append('<div id="progress" class="xs-invisible"></div>');
-
-
-
+$('#navbar-navigation').append('<div id="progress-bar" class="xs-visible"></div>');
 
 // PROGRESS BAR
-$(function(){
+jQuery(function($){
+
+// LAPTOP
   $(document).on('scroll',function(){ // Détection du scroll
 
     // Calcul de la hauteur "utile"
@@ -31,6 +32,26 @@ $(function(){
     // Modification du CSS pour élargir ou réduire la barre
     $("#progress").css("width",barre);
   });
+
+// MOBILE
+  $(document).on('scroll',function(){ // Détection du scroll
+
+    // Calcul de la hauteur "utile"
+    var hauteur = $(document).height()-$(window).height();
+
+    // Récupération de la position verticale
+    var position = $(document).scrollTop();
+
+    // Récupération de la largeur de la fenêtre
+    var largeur = $('#navbar-navigation').width();
+
+    // Calcul de la largeur de la barre
+    var barre = position / hauteur * largeur;
+
+    // Modification du CSS pour élargir ou réduire la barre
+    $("#progress-bar").css("width",barre);
+  });
+
 });
 
 // BUTTON ENGLISH TEXT ON MOBILE
@@ -38,6 +59,13 @@ $('#english-text').click(function(){
   $('#article-anglais').toggle('slow');
 });
 
+$('#english-text-2').click(function(){
+  $('#article-anglais-2').toggle('slow');
+});
+
+$('#english-text-3').click(function(){
+  $('#article-anglais-3').toggle('slow');
+});
 
 
 // CUSTOM SELECT CONTACT
@@ -128,7 +156,8 @@ $(".sticky-wrapper").stick_in_parent({
   var retrospectiveHome = $(".home-category-retrospective img").width();
   $('.article-under-picture').width(retrospectiveHome);
 
-
+  // var dyptiqueEdito = $(".row-dyptique-edito img:last-child").width();
+  // $('.legende-sous-dyptique').width(dyptiqueEdito);
 // LOADER SINGLE
 
 $(window).on('load',function(){
@@ -159,3 +188,27 @@ $(window).on('load',function(){
 //         return false;
 //     });
 // });
+
+jQuery(document).ready(function ($) {
+    //initialize swiper when document ready
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      init: true,
+      width: 300
+    });
+  });
+
+
+(function() {
+  var searchForm = document.getElementById( 's' );
+  var searchSubmit = document.getElementById( 'searchsubmit' );
+
+  searchForm.value = "Îles Faroes";
+  searchForm.placeholder = "";
+  searchSubmit.value = "Rechercher";
+
+} )(jQuery);
+
+
+

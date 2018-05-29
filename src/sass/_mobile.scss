@@ -1,115 +1,35 @@
 @media (max-width: 767px){
 
-  .xs-visible{
-    display: block!important;
-  }
-
-  .xs-invisible{
-    display: none!important;
-  }
-
-  .container-header{
-    padding-left: 0px!important;
-    padding-right: 0px!important;
-    .navbar{
-     width: 100%!important;
-     .navbar-search{
-      width: 5%;
-      .recherche-img{
-       width: 100%;
-     }
-   }
-   .navbar-brand{
-    width: 70%;
-    display: flex!important;
-    justify-content: center;
-    margin: 0;
-    .logo{
-      width: 60%;
-    }
-  }
-  #bs4navbar{
-    height: 100vh;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: white;
-    border-bottom: none!important;
-
-    #menu-menu-principal{
-      margin-top: 10%;
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
-      width: 70%!important;
-      margin-left: 15%;
-      .menu-item{
-        a{
-          img{
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
-
-
+// BASICS
+.container-content{
+  padding-right: 1%!important;
+  padding-left: 1%!important;
+  width: 100vw!important;
 }
+.container-fluid{
+  padding-right: 0!important;
+}
+.xs-visible{
+  display: block!important;
 }
 
-.navbar-light .navbar-toggler-icon {
-  background-image: url('../img/menu-mobile.svg')!important;
+.xs-invisible{
+  display: none!important;
 }
 
-.navbar-light .navbar-toggler{
-  border: none !important;
-  padding: 0!important;
-  font-size: 1em!important;
-  z-index: 99;
+.swiper-wrapper{
+  display:flex;
+  padding-left: 15px;
+}
+.swiper-slide img{
+  width: 100%;
+  height: auto;
+  padding: 5px;
 }
 
-.collapse.show {
-
-}
-
-
-.navbar-light .navbar-toggler-icon-close{
-  background-image: url('../img/croix.svg')!important;
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  content: "";
-  background: no-repeat center center;
-  background-size: 100% 100%;
-}
-
-.article-header{
-  .chapeau{
-    p{
-      margin-bottom: 0;
-    }
-  }
-  .article-title{
-    flex-direction: column-reverse;
-    align-items: flex-start!important;
-    p{
-      margin-top: 0;
-      margin-bottom: 30vh!important;
-    }
-    h1{
-      font-size: 36px;
-      line-height: 29px;
-    }
-  }
-  .row-article{
-    margin-top: 10px!important;
-  .button-english{
-    text-align: center;
-    width: 100%;
+.button-english{
+  text-align: center;
+    // width: 100%;
     background-color: transparent;
     border: none;
     text-decoration: underline;
@@ -131,9 +51,310 @@
   .article-anglais{
     display: none;
   }
+
+  .legende-francais, .legende-anglais, .article-francais, .article-anglais{
+    text-align: justify!important;
+  }
+
+// NAVBAR
+
+#progress-bar{
+  background-color: #000;
+  height: 3px;
+  width: 0;
+  position: fixed;
+  top: 56px!important;
+  bottom: 0;
+  left: 0.5rem!important;
+  z-index: 5;
 }
+
+
+.container-header{
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+  .navbar{
+   width: 100%!important;
+   border-bottom: 0.5px solid black;
+   padding-left: 0;
+   padding-right: 0;
+   margin-left: 0.5rem;
+   margin-right: 1rem;
+
+   .navbar-search{
+    width: 5%;
+    .recherche-img{
+     width: 100%;
+   }
+ }
+ .navbar-brand{
+  width: 70%;
+  display: flex!important;
+  justify-content: center;
+  margin: 0;
+  .logo{
+    width: 60%;
+  }
+}
+#bs4navbar{
+  height: 105vh;
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $legende!important;
+  z-index: 6;
+  border-bottom: none!important;
+
+  #menu-menu-mobile{
+    margin-top: 56px;
+    border-top: 1px solid black;
+    border-bottom: none;
+    width: 70%!important;
+    margin-left: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .menu-item{
+      font-family: "LeagueGothic";
+      font-size: 19px;
+      font-weight: 400;
+      letter-spacing: 0.95px;
+      line-height: 42px;
+      text-transform: uppercase;
+      width: 100%;
+      a{
+        img{
+          width: auto;
+          height: 30px;
+        }
+      }
+    }
+    .menu-item-425, .menu-item-426, .menu-item-429, .menu-item-964, .menu-item-965, .menu-item-968{
+      border-bottom: 0.5px solid #000;
+      padding-bottom: 0.5rem;
+    }
+    .menu-item-427, .menu-item-428, .menu-item-966, .menu-item-967{
+      margin-top: 0.5rem;
+    }
+    .menu-item-433, .menu-item-434, .menu-item-970, .menu-item-971{
+      width: 20%!important;
+      margin-top: 0.5rem;
+    }
+    .menu-item-432, .menu-item-969{
+       width: 15%!important;
+       margin-top: 0.5rem;
+    }
+  }
 }
 
 
 
 }
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url('../img/menu-mobile.svg')!important;
+}
+
+.navbar-light .navbar-toggler-table-icon {
+  background-image: url('../img/layers.png')!important;
+}
+
+.navbar-light .navbar-toggler{
+  border: none !important;
+  padding: 0!important;
+  font-size: 1em!important;
+  z-index: 99;
+}
+
+
+
+.navbar-light .navbar-toggler-icon-close{
+  background-image: url('../img/croix.svg')!important;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.navbar-light .navbar-toggler-table-icon-close{
+  display: none!important;
+}
+
+
+
+// FOOTER
+
+.footer-left-widget{
+  margin-top: 0;
+  img{
+  display: none;
+}
+}
+#footer-right-mobile-widget-area{
+  width: 100%;
+}
+
+#menu-reseaux-sociaux-mobile-footer, #menu-reseaux-sociaux-footer-mobile{
+  display: flex;
+  justify-content: center;
+  li{
+    padding: 25px 10px;
+  img{
+    height: 30px;
+    width: auto;
+  }
+  }
+}
+
+.footer-right{
+  padding-bottom: 25px;
+  border-bottom: 0.5px solid #000;
+}
+
+.footer-right, .newsletter-area{
+  justify-content: center!important;
+  align-items: center!important;
+  font-size: 14px!important;
+}
+.sub-title-newsletter, .title-newsletter{
+  text-align: center!important;
+  width: 222px!important;
+}
+
+.sub-title-newsletter{
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.textwidget{
+  text-align: center;
+}
+
+// ARTICLE
+.article-header{
+  .chapeau{
+    p{
+      margin-bottom: 0;
+    }
+  }
+  .article-title{
+    flex-direction: column-reverse;
+    align-items: flex-start!important;
+    p{
+      margin-top: 0;
+      margin-bottom: 30vh!important;
+    }
+    h1{
+      font-size: 36px;
+      line-height: 29px;
+    }
+  }
+  .row-article{
+    margin-top: 10px!important;
+  // .button-english{
+  //   text-align: center;
+  //   width: 100%;
+  //   background-color: transparent;
+  //   border: none;
+  //   text-decoration: underline;
+  //   font-family: 'Freight Text';
+  //   font-size: 12px;
+  //   font-weight: 700;
+  //   font-style: italic;
+  //   letter-spacing: 0.9px;
+  //   line-height: 23px;
+  //   text-transform: uppercase;
+  //   color: $grey-text;
+  //   cursor: pointer;
+  //   margin-bottom: 10px;
+  // }
+  // .button-english:hover{
+  //   font-weight: bold;
+  // }
+
+  // .article-anglais{
+  //   display: none;
+  // }
+}
+}
+
+// EDITO
+.contact-home p{
+  text-align: center!important;
+}
+
+.bloc-panoramique-home{
+  height: auto!important;
+  .panoramique{
+    position: relative!important;
+    width: 100%!important;
+    height: auto!important;
+  }
+}
+
+.edito-title{
+  padding-left: 15px;
+}
+.edito-sous-titre{
+  margin-bottom: 4em!important;
+  font-size: 23px!important;
+  font-weight: 300!important;
+  letter-spacing: 1.15px!important;
+  line-height: 29px!important;
+}
+
+.edito-sous-titre-xs{
+  margin-bottom: 2em!important;
+}
+
+// .edito-right, .row-edito{
+//   padding-right: 0!important;
+// }
+
+
+.container-dyptique{
+  flex-direction: row!important;
+  overflow:hidden;
+  .row-dyptique-edito{
+    flex-wrap: nowrap!important;
+    justify-content: flex-start!important;
+  // overflow: hidden;
+
+  img{
+    width: 100%!important;
+  }
+}
+}
+
+.container-mentions{
+  padding: 0!important;
+  h2, h3, p{
+    text-align: center!important;
+  }
+}
+
+.mentions-area{
+  padding: 2em 0;
+  border-top: 1px solid #000;
+}
+
+.plan-du-site{
+  text-align: center;
+}
+
+.sous-titre-plan-du-site{
+  width: 65%!important;
+  margin: auto;
+}
+
+
+}
+
+
