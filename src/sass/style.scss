@@ -77,6 +77,14 @@ img:hover, a:hover img, video:hover , a:hover video{
   transition: all 0.4s ease-in-out;
 }
 
+img{
+  max-width: 100%;
+}
+
+input:focus, input:visited, input{
+  outline: none!important;
+}
+
 img, a img, video, a video, .delete-hover-effect:hover, a:hover .delete-hover-effect{
   filter: brightness(100%);
   -webkit-filter: brightness(100%);
@@ -627,6 +635,7 @@ a:first-child{
     width: 100%;
     height: 100%;
     text-align: center;
+    display:flex;
     img:first-child{
       height: 100vh;
       padding: 5px;
@@ -689,8 +698,8 @@ a:first-child{
   border-top: 1px solid black;
   margin-left: 0!important;
   margin-right: 0!important;
-  .histoires p{
-    font-family: 'Freight Text';
+  .histoires h4{
+    font-family: 'Freight Big Book';
     font-size: 34px;
     font-weight: 300;
     line-height: 27px;
@@ -1114,11 +1123,11 @@ a:first-child{
 .sous-titre-plan-du-site{
   width: 20%;
   font-family: "Freight Text";
-font-size: 15px;
-font-weight: 500;
-font-style: italic;
-letter-spacing: 0.38px;
-line-height: 21px;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.38px;
+  line-height: 21px;
 }
 
 //GALERIE IMAGE
@@ -1138,60 +1147,62 @@ line-height: 21px;
 
 .chocolat-wrapper .chocolat-bottom{
   background: transparent!important;
-  top: 0;
-  right: 50px!important;
 }
 
+.chocolat-wrapper .chocolat-set-title{
+  border-right: none!important;
+  color: #fbfbfb;
+  font-family: 'Freight Text';
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.9px;
+  line-height: 20px;
+}
 
+.chocolat-wrapper .chocolat-set-category{
+  padding-right: 15px;
+  padding-left: 25px;
+  color: #fbfbfb;
+  font-family: "LeagueGothic";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 11px;
+  text-transform: uppercase;;
+}
 
-// div.popup-gallery {
-//     text-align: center;
-//     margin-bottom: 40px;
-// }
+.chocolat-wrapper .chocolat-pagination{
+  color: #fbfbfb;
+  font-family: "LeagueGothic";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  float: left!important;
+}
 
-// div.image-wrap {
-//     width: 18%; /* Change this value to have your thumbnails laid out differently */
-//     margin-bottom: 4px;
-//     display: inline-block;
-// }
+.chocolat-wrapper .chocolat-right{
+  width: 30%!important;
+}
 
-// div.image-wrap img {
-//     width: 100%;
-// }
+.chocolat-wrapper .chocolat-description{
+  max-width: 250px;
+  p{
+  color: #fbfbfb;
+  font-family: "Freight Text";
+  font-size: 10px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.75px;
+  line-height: 14px;
+  padding-left: 15px;
+    padding-top: 10px;
+}
+}
 
-// a.lightbox-link {
-//     -webkit-transition: all 0.25s ease-in-out 0s;
-//     -moz-transition: all 0.25s ease-in-out 0s;
-//     -ms-transition: all 0.25s ease-in-out 0s;
-//     -o-transition: all 0.25s ease-in-out 0s;
-//     transition: all 0.25s ease-in-out 0s;
-// }
-
-// a.lightbox-link:hover {
-//     -webkit-opacity: 0.8;
-//     -khtml-opacity: 0.8;
-//     -moz-opacity: 0.8;
-//     -ms-opacity: 0.8;
-//     -o-opacity: 0.8;
-//     opacity: 0.8;
-//     filter: alpha(opacity=80);
-// }
-
-// .image-wrap figcaption {
-//     display: none;
-// }
-
-// .mfp-bg figcaption {
-//     display: block;
-//     position: absolute;
-// }
-
-// .lb-title {
-//     margin: 0.5em 0 0 0.5em;
-// }
-
-// .lb-description {
-//     margin-left: 0.6em;
-//     width: 100%;
-// }
-
+.chocolat-wrapper .chocolat-right.active{
+    display: flex!important;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

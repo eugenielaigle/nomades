@@ -26,26 +26,26 @@
 
 
 .button-newsletter{
-    width: 100px;
-    padding: 6px 10px;
-    color:#000;
-    background-color: transparent;
-    font-size: 9px;
-    font-weight:300;
-    line-height: 1.4285;
-    text-align: center;
-    cursor: pointer;
-    vertical-align: middle;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-    white-space: normal;
-    border:1px solid #000;
-    border-radius: 0px;
-    font-family: 'Avenir';
-    letter-spacing: 1.8px;
-    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  width: 100px;
+  padding: 6px 10px;
+  color:#000;
+  background-color: transparent;
+  font-size: 9px;
+  font-weight:300;
+  line-height: 1.4285;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: middle;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  white-space: normal;
+  border:1px solid #000;
+  border-radius: 0px;
+  font-family: 'Avenir';
+  letter-spacing: 1.8px;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
 .button-newsletter:hover{
@@ -77,50 +77,50 @@
 // NEWSLETTER MOBILE
 @media (max-width: 767.98px){
 
-.pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
-  width: 100%!important;
-}
+  .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
+    width: 100%!important;
+  }
 
-.pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
-  left: 0!important;
-  right: 0!important;
-  top: 0!important;
-  bottom: 0!important;
-  height: 100%!important;
-  width: 100%!important;
-}
+  .pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
+    left: 0!important;
+    right: 0!important;
+    top: 0!important;
+    bottom: 0!important;
+    height: 100%!important;
+    width: 100%!important;
+  }
 
-.popmake-title, .pum-title{
+  .popmake-title, .pum-title{
     margin-bottom: 35%!important;
     margin-top: 10%;
-}
+  }
 
-#sib_signup_form_1 .checkboxes{
-  margin: 10% 0 30% 0!important;
-}
+  #sib_signup_form_1 .checkboxes{
+    margin: 10% 0 30% 0!important;
+  }
 
-#sib_signup_form_1 .sib-alert-message {
+  #sib_signup_form_1 .sib-alert-message {
     padding: 30% 0px 60%!important;
     text-align: center;
     width: 100%;
-}
+  }
 
 }
 
 // NEWSLETTER LAPTOP MEDIUM
 
 @media (min-width: 992px) and (max-width: 1799.98px){
-#sib_signup_form_1{
-  .sib-alert-message{
-    padding: 30% 12px 45% 12px!important;
-    text-align: center;
-    width: 100%;
+  #sib_signup_form_1{
+    .sib-alert-message{
+      padding: 30% 12px 45% 12px!important;
+      text-align: center;
+      width: 100%;
+    }
   }
-}
 
-.pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
-  width: 25%!important;
-}
+  .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
+    width: 25%!important;
+  }
 
 }
 
@@ -128,24 +128,24 @@
 
 @media (min-width: 768px) and (max-width: 991.98px){
 
-.pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
-  width: 40%!important;
-}
+  .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
+    width: 40%!important;
+  }
 
-.pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
-  top: 25%!important;
-  width: 30%!important;
-}
+  .pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
+    top: 25%!important;
+    width: 30%!important;
+  }
 
-#sib_signup_form_1{
-  .sib-alert-message{
-    padding: 11% 12px 30%!important;
-    text-align: center;
-    width: 100%;
+  #sib_signup_form_1{
+    .sib-alert-message{
+      padding: 11% 12px 30%!important;
+      text-align: center;
+      width: 100%;
     /* left: 100px; */
     display: flex;
     justify-content: center;
-}
+  }
 
 }
 }
@@ -154,13 +154,13 @@
 
 @media (min-width: 1800px){
 
-.pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
-  width: 18%!important;
-}
+  .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
+    width: 18%!important;
+  }
 
 
-.pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
-  top: 25%!important;
+  .pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
+    top: 25%!important;
   // left: 1280px!important;
   width: 30%!important;
 }
@@ -180,3 +180,28 @@
 // #popmake-112 .pum-responsive, #popmake-122 .pum-responsive{
 //   width: 30%!important;
 // }
+
+
+/************************* COOKIES *************************/
+.pum-theme-109 .pum-content, .pum-theme-hello-box .pum-content{
+  text-align: center;
+}
+
+.pum-theme-109 .pum-container, .pum-theme-hello-box .pum-container{
+ font-family: "Freight Text";
+ p{
+  font-style: italic;
+}
+input[type=submit]{
+  background-color: transparent;
+  border: none;
+  color: $legende;
+  font-family: "League Gothic";
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: uppercase;
+  padding: 0;
+  padding-left: 5px;
+}
+}

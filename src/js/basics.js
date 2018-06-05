@@ -56,16 +56,21 @@ jQuery(function($){
 
 // BUTTON ENGLISH TEXT ON MOBILE
 $('#english-text').click(function(){
-  $('#article-anglais').toggle('slow');
+  $('.article-anglais').toggleClass('toggle-anglais');
+  $('.legende-anglais').toggleClass('toggle-anglais');
+  $('.article-francais').toggle('slow');
+  $('.legende-francais').toggle('slow');
+  $('.legende-francais-dyptique').toggle('slow');
+  $('.legende-anglais-dyptique').toggleClass('toggle-anglais');
 });
 
-$('#english-text-2').click(function(){
-  $('#article-anglais-2').toggle('slow');
-});
+// $('#english-text-2').click(function(){
+//   $('#article-anglais-2').toggle('slow');
+// });
 
-$('#english-text-3').click(function(){
-  $('#article-anglais-3').toggle('slow');
-});
+// $('#english-text-3').click(function(){
+//   $('#article-anglais-3').toggle('slow');
+// });
 
 
 // CUSTOM SELECT CONTACT
@@ -145,16 +150,19 @@ document.addEventListener("click", closeAllSelect);
 
 
 // Image + Texte scrollable
+if ($(window).width()>768){
 $(".sticky-wrapper").stick_in_parent({
   offset_top: 60
 });
-
+}
   var textDyptique = $(".image-dyptique-asymetrique-right").width();
   $('.legende-dyptique-asymetrique').width(textDyptique);
 
 
-  var retrospectiveHome = $(".home-category-retrospective img").width();
+if ($(window).width() > 768){
+var retrospectiveHome = $(".home-category-retrospective img").width();
   $('.article-under-picture').width(retrospectiveHome);
+}
 
   // var dyptiqueEdito = $(".row-dyptique-edito img:last-child").width();
   // $('.legende-sous-dyptique').width(dyptiqueEdito);
@@ -204,11 +212,14 @@ jQuery(document).ready(function ($) {
   var searchForm = document.getElementById( 's' );
   var searchSubmit = document.getElementById( 'searchsubmit' );
 
-  searchForm.value = "Îles Faroes";
-  searchForm.placeholder = "";
+  searchForm.value = "";
+  searchForm.placeholder = "Îles Faroes";
   searchSubmit.value = "Rechercher";
 
 } )(jQuery);
+
+
+
 
 
 

@@ -188,6 +188,8 @@
                     width = holderWidth;
                     height = width * imgRatio;
                 }
+
+
             }
             else if (this.settings.imageSize == 'native') {
                 height = imgHeight;
@@ -207,6 +209,8 @@
                     height = imgHeight;
                 }
             }
+
+
 
             return {
                 'height' : height,
@@ -390,13 +394,13 @@
                 'class' : 'chocolat-fullscreen'
             }).appendTo(this.elems.bottom);
 
-            this.elems.description = $('<span/>', {
-                'class' : 'chocolat-description'
-            }).appendTo(this.elems.bottom);
-
             this.elems.pagination = $('<span/>', {
                 'class' : 'chocolat-pagination'
-            }).appendTo(this.elems.bottom);
+            }).appendTo(this.elems.right);
+
+            this.elems.description = $('<div/>', {
+                'class' : 'chocolat-description'
+            }).appendTo(this.elems.right);
 
             this.elems.setTitle = $('<span/>', {
                 'class' : 'chocolat-set-category',

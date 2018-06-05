@@ -76,7 +76,7 @@
     top: 50%;
     margin-top: -50px;
     cursor:pointer;
-    background:url(../images/right.png)  50% 50% no-repeat;
+    background:url(../images/right.png)  85% 50% no-repeat;
     z-index: 17;
     display: none;
 }

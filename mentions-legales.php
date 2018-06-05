@@ -34,6 +34,15 @@ get_header();?>
         <div class="mentions-adress"><?php the_field('editeur_integrateur_adresse'); ?></div>
       </div>
     </div>
+    <?php $infos = get_field('infos_sup_paragraphe');
+    if (!empty($infos)):  ?>
+    <div class="row row-infos">
+      <div class="col-md-12 mentions area">
+        <h3 class="mentions-name"><?php the_field('infos_sup'); ?></h3>
+        <div class="mentions-adress"><?php the_field('infos_sup_paragraphe'); ?></div>
+      </div>
+    </div>
+  <?php endif; ?>
   </div>
 </div>
 

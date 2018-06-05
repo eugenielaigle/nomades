@@ -88,11 +88,12 @@
     <!-- INTRO -->
     <div class="intro">
       <h2>INTRO</h2>
+      <button class="button-english xs-visible" id="english-text">English Text</button>
       <div class="intro-texte">
         <div class="legende-francais">
           <?php the_field('texte_gauche'); ?>
         </div>
-        <div class="legende-anglais">
+        <div class="legende-anglais toggle-anglais">
           <?php the_field('texte_droite'); ?>
         </div>
       </div>
@@ -175,7 +176,7 @@
             </div>
           </div>
         </a>
-        <div class="scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-easing="easeinout">
+        <div class="scrollme animateme a-decouvrir" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-easing="easeinout">
           <p class="decouvrir-aussi">A découvrir aussi,</p>
         <?php endwhile;
       endif;
@@ -219,10 +220,13 @@
      $mycat2 = get_cat_id($mycat); ?>
      <a href="<?php the_permalink();?>">
       <div class="scrollme">
-        <div class="animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
+        <div class="animateme xs-invisible" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
           <?php if (class_exists('MultiPostThumbnails')) :
           MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'third-image');
         endif;?>
+        </div>
+        <div class="animateme xs-visible" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
+          <?php the_post_thumbnail();?>
         </div>
       </div>
       <div class="article-under-picture">
@@ -266,11 +270,25 @@ wp_reset_postdata();
         <div class="scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
           <?php the_post_thumbnail(); ?>
         </div>
+        <div class="scrollme animateme xs-visible" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
+        <h3 class="the-category"><?php the_category();?></h3>
+        <p class="the-date"><?php echo get_the_date(); ?></p>
+        <div class="article-title col-md-8 no-padding">
+          <?php
+          $titre = get_field('titre_de_larticle');
+          if ($titre):?>
+            <h2 class="the-title classique"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
+          <?php endif; ?>
+        </div>
+        <div class="excerpt-article col-md-8 no-padding">
+          <div class="paragraphe-italique"><?php the_field('sous_titre_article'); ?></div>
+        </div>
+      </div> <!-- end scrollme -->
       </a>
     <?php endwhile;
   endif;
   wp_reset_postdata();?>
-  <div class="scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
+  <div class="scrollme animateme a-decouvrir" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
     <p class="decouvrir-aussi">A découvrir aussi,</p>
     <ul>
       <?php
@@ -291,7 +309,7 @@ wp_reset_postdata();
 <?php  wp_reset_postdata();?>
 </div> <!-- end studio-left -->
 
-<div class="studio-right">
+<div class="studio-right xs-invisible">
   <div class="scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
     <?php
     $sticky = get_option('sticky_posts');
@@ -370,7 +388,7 @@ endif;?>
       $terms = get_sub_field('lien_vers_categorie');
       if( $terms ): ?>
         <?php foreach( $terms as $term ): ?>
-          <a href="<?php echo get_term_link( $term ); ?>">
+          <a class ="xs-invisible" href="<?php echo get_term_link( $term ); ?>">
           <?php endforeach; ?>
         <?php endif; ?>
         <div class="categorie">
@@ -393,7 +411,7 @@ endif;?>
   <div class="legende-francais">
     <p>N’hésitez pas à nous contacter directement par mail ou par téléphone.</p>
   </div>
-  <div class="legende-anglais">
+  <div class="legende-anglais toggle-anglais">
     <p>N’hésitez pas à nous contacter directement par mail ou par téléphone.</p>
   </div>
   <button id="contact" class="button-newsletter button-contactez-nous">NOUS CONTACTER</button>

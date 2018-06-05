@@ -14,10 +14,6 @@ $(document).on('scroll', function() {
       }
 });
 
-var retrospectiveHome = $(".home-category-retrospective img").width();
-  $('.article-under-picture').width(retrospectiveHome);
-
-
 
 
 })(jQuery);
@@ -45,5 +41,27 @@ var retrospectiveHome = $(".home-category-retrospective img").width();
 
 
 $(document).ready(function(){
-    $('#galerie').Chocolat();
+
+if ($(window).width() < 768){
+  $('#galerie').Chocolat({
+      imageSize: 'contain',
+      afterMarkup: function () {
+// console.log(this.elems.content.current.clientWidth);
+this.elems.pagination.appendTo(this.elems.bottom);
+this.elems.description.appendTo(this.elems.bottom);
+
+
+
+}
+    });
+} else{
+  $('#galerie').Chocolat({
+      imageSize: 'contain',
+      afterMarkup: function () {
+// console.log(this.elems.content.current.clientWidth);
+// this.elems.description.appendTo(this.elems.bottom)
+
+}
+    });
+}
 });

@@ -13,7 +13,7 @@ get_header();?>
   <div class="container-fluid container-edito">
     <div class="row row-edito">
       <div class="col-md-5 edito-left xs-invisible">
-        <div class="legende-anglais">
+        <div class="legende-anglais toggle-anglais">
           <?php the_field('legende_intro_edito'); ?>
         </div>
       </div> <!-- end edito-left -->
@@ -24,15 +24,15 @@ get_header();?>
         <div class="edito-sous-titre">
           <?php the_field('sous_titre_edito'); ?>
         </div>
+        <button class="button-english xs-visible" id="english-text">English Text</button>
         <div class="col-md-6 legende-francais">
           <?php the_field('colonne_gauche_intro'); ?>
         </div>
-        <div class="col-md-6 legende-anglais xs-invisible">
+        <div class="col-md-6 legende-anglais toggle-anglais xs-invisible">
           <?php the_field('colonne_droite_intro'); ?>
         </div>
         <div class="xs-visible col-md-12">
-          <button class="button-english" id="english-text">English Text</button>
-          <div class="article-anglais" id="article-anglais">
+          <div class="article-anglais toggle-anglais">
             <?php the_field('colonne_droite_intro'); ?>
           </div>
         </div>
@@ -76,7 +76,7 @@ get_header();?>
 <div class="container-fluid container-edito">
   <div class="row">
     <div class="col-md-5 dyptique-edito-left xs-invisible">
-      <div class="legende-anglais">
+      <div class="legende-anglais toggle-anglais">
         <?php the_field('legende_dyptique_edito'); ?>
       </div>
     </div> <!-- end edito-left -->
@@ -87,12 +87,12 @@ get_header();?>
       <div class="col-md-6 legende-francais">
         <?php the_field('colonne_gauche_dyptique_edito'); ?>
       </div>
-      <div class="col-md-6 legende-anglais xs-invisible">
+      <div class="col-md-6 legende-anglais toggle-anglais xs-invisible">
         <?php the_field('colonne_droite_dyptique_edito'); ?>
       </div>
       <div class="xs-visible col-md-12">
-        <button class="button-english" id="english-text-2">English Text</button>
-        <div class="article-anglais" id="article-anglais-2">
+     <!--    <button class="button-english" id="english-text-2">English Text</button> -->
+        <div class="article-anglais toggle-anglais">
           <?php the_field('colonne_droite_dyptique_edito'); ?>
         </div>
       </div>
@@ -114,7 +114,7 @@ endif;?>
 <div class="container-fluid container-edito">
   <div class="row">
     <div class="col-md-5 dyptique-edito-left xs-invisible">
-      <div class="legende-anglais">
+      <div class="legende-anglais toggle-anglais">
         <?php the_field('legende_panoramique_edito'); ?>
       </div>
     </div> <!-- end edito-left -->
@@ -125,12 +125,12 @@ endif;?>
       <div class="col-md-6 legende-francais">
         <?php the_field('colonne_gauche_panoramique_edito'); ?>
       </div>
-      <div class="col-md-6 legende-anglais xs-invisible">
+      <div class="col-md-6 legende-anglais toggle-anglais xs-invisible">
         <?php the_field('colonne_droite_panoramique_edito'); ?>
       </div>
       <div class="xs-visible col-md-12">
-        <button class="button-english" id="english-text-3">English Text</button>
-        <div class="article-anglais" id="article-anglais-3">
+        <!-- <button class="button-english" id="english-text-3">English Text</button> -->
+        <div class="article-anglais toggle-anglais">
           <?php the_field('colonne_droite_panoramique_edito'); ?>
         </div>
       </div>
@@ -145,7 +145,7 @@ endif;?>
   <div class="legende-francais">
     <p>N’hésitez pas à nous contacter directement par mail ou par téléphone.</p>
   </div>
-  <div class="legende-anglais">
+  <div class="legende-anglais toggle-anglais">
     <p>N’hésitez pas à nous contacter directement par mail ou par téléphone.</p>
   </div>
   <button id="contact" class="button-newsletter button-contactez-nous">NOUS CONTACTER</button>

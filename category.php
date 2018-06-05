@@ -15,7 +15,7 @@ $mycat2 = get_cat_id($mycat);?>
       if( $parentcat != 0 ) echo '' .get_cat_name($parentcat);}?></h1>
       <p><?php echo category_description(); ?></p>
     </div>
-    <div>
+    <div class="categ">
       <?php
       $query = new WP_Query( array( 'category_name' => 'destination','order'=> 'desc', 'orderby' => 'date') );
 
@@ -48,7 +48,7 @@ $mycat2 = get_cat_id($mycat);?>
                 </div>
               </div> <!-- end thumbnail-category -->
               <div class="right-part-category-vertical">
-                <div class="thumbnail-right">
+                <div class="thumbnail-right xs-invisible">
                   <a href="<?php the_permalink();?>">
                     <?php if (class_exists('MultiPostThumbnails')) :
                       MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
@@ -73,7 +73,7 @@ $mycat2 = get_cat_id($mycat);?>
                 </div>
               </div> <!-- end right-part-category -->
               <div class="right-part-category-horizontal">
-                <div class="thumbnail-right">
+                <div class="thumbnail-right xs-invisible">
                   <a href="<?php the_permalink();?>">
                     <?php if (class_exists('MultiPostThumbnails')) :
                       MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'third-image');
@@ -134,7 +134,7 @@ $mycat2 = get_cat_id($mycat);?>
       if( $parentcat != 0 ) echo '' .get_cat_name($parentcat);}?></h1>
       <p><?php echo category_description(); ?></p>
     </div>
-    <div>
+    <div class="categ">
       <?php
       $query = new WP_Query( array( 'category_name' => 'rencontre','order'=> 'desc', 'orderby' => 'date') );
 
@@ -165,7 +165,7 @@ $mycat2 = get_cat_id($mycat);?>
                 </div>
               </div> <!-- end thumbnail-category -->
               <div class="right-part-category-vertical">
-                <div class="thumbnail-right">
+                <div class="thumbnail-right xs-invisible">
                   <a href="<?php the_permalink();?>">
                     <?php if (class_exists('MultiPostThumbnails')) :
                       MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
@@ -190,7 +190,7 @@ $mycat2 = get_cat_id($mycat);?>
                 </div>
               </div> <!-- end right-part-category -->
               <div class="right-part-category-horizontal">
-                <div class="thumbnail-right">
+                <div class="thumbnail-right xs-invisible">
                   <a href="<?php the_permalink();?>">
                     <?php if (class_exists('MultiPostThumbnails')) :
                       MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'third-image');
@@ -250,7 +250,7 @@ $mycat2 = get_cat_id($mycat);?>
       <p><?php echo category_description(); ?></p>
     </div>
 
-    <div>
+    <div class="categ">
       <?php
       $query = new WP_Query( array( 'category_name' => 'retrospective','order'=> 'desc', 'orderby' => 'date') );
 
@@ -281,7 +281,7 @@ $mycat2 = get_cat_id($mycat);?>
                 </div>
               </div> <!-- end thumbnail-category -->
               <div class="right-part-category-vertical">
-                <div class="thumbnail-right">
+                <div class="thumbnail-right xs-invisible">
                   <a href="<?php the_permalink();?>">
                     <?php if (class_exists('MultiPostThumbnails')) :
                       MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
@@ -306,7 +306,7 @@ $mycat2 = get_cat_id($mycat);?>
                 </div>
               </div> <!-- end right-part-category -->
               <div class="right-part-category-horizontal">
-                <div class="thumbnail-right">
+                <div class="thumbnail-right xs-invisible">
                   <a href="<?php the_permalink();?>">
                     <?php if (class_exists('MultiPostThumbnails')) :
                       MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'third-image');
@@ -363,7 +363,7 @@ $mycat2 = get_cat_id($mycat);?>
       <p><?php echo category_description(); ?></p>
     </div>
 
-    <div>
+    <div class="categ">
       <?php
       $query = new WP_Query( array( 'category_name' => 'studio','order'=> 'desc', 'orderby' => 'date') );
 
@@ -395,7 +395,7 @@ $mycat2 = get_cat_id($mycat);?>
                 </div>
               </div> <!-- end thumbnail-category -->
               <div class="right-part-category-vertical">
-                <div class="thumbnail-right">
+                <div class="thumbnail-right xs-invisible">
                   <a href="<?php the_permalink();?>">
                     <?php if (class_exists('MultiPostThumbnails')) :
                       MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
@@ -420,7 +420,7 @@ $mycat2 = get_cat_id($mycat);?>
                 </div>
               </div> <!-- end right-part-category -->
               <div class="right-part-category-horizontal">
-                <div class="thumbnail-right">
+                <div class="thumbnail-right xs-invisible">
                   <a href="<?php the_permalink();?>">
                     <?php if (class_exists('MultiPostThumbnails')) :
                       MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'third-image');
