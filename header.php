@@ -11,7 +11,6 @@ $detect = new Mobile_Detect ; ?>
   <?php wp_head(); ?>
 </head>
 <body>
-
 <div class="container-fluid container-header">
 
  <nav class="navbar navbar-expand-md navbar-light bg-faded" id="navbar-navigation">
@@ -21,13 +20,14 @@ $detect = new Mobile_Detect ; ?>
   <a class="navbar-brand xs-visible" href="<?php bloginfo('url'); ?>">
     <img class="img-responsive logo" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/logo-nomades.svg">
   </a>
-  <button class="navbar-toggler navbar-toggler-table navbar-special" type="button" data-toggle="collapse"aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-special cubes" type="button" id="cubes">
     <span class="navbar-toggler-icon navbar-toggler-table-icon"></span>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-<?php if ( $detect -> isMobile () ) {
+<?php if ( $detect -> isMobile () && !$detect->isTablet() ) {
 wp_nav_menu([
     'menu'            => 'menu-mobile',
     'theme_location'  => 'menu-mobile',
@@ -67,10 +67,11 @@ wp_nav_menu([
     <p class="nomades-prez"><span>NOMADES</span> - Magazine Numérique et Studio de Création</p>
   </aside>
 
-  <a href="<?php the_permalink(); ?>">
-    <aside class="sidebar-recherche xs-invisible">
-
-    <p class="recherche"><img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/ligne-185.svg"" alt=""> <?php the_title(); ?></p>
+<a href="<?php the_permalink(); ?>">
+    <aside class="sidebar-recherche xs-invisible" id="sidebar-modulable">
+    <p class="recherche">
+      <span id="counterLayout"></span> <img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/ligne-185.svg"" alt=""> <?php the_title();?>
+    </p>
   </aside>
 </a>
 

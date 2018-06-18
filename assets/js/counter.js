@@ -1,0 +1,1 @@
+$(".layout").on("inview",function(t,n){if(n){var e=$(this).attr("data-count"),o=(e<10?"0":"")+e;document.getElementById("counterLayout").innerHTML=o}});

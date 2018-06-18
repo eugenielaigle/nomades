@@ -15,7 +15,6 @@
 @import 'src/sass/flexible';
 @import 'src/sass/recherche';
 
-
 /*
 * FONTS FAMILIES
 *
@@ -27,6 +26,10 @@
 *
 * font-family: 'LeagueGothic';
 */
+
+.cubes{
+ display: none;
+}
 
 @media (min-width: 768px){
   .xs-visible{
@@ -583,7 +586,7 @@ a:first-child{
 .home-edition{
   margin: 10vh 10%;
   position: relative;
-  height: 120vh;
+  height: 110vh;
   .write-edition{
     display: flex;
     justify-content: center;
@@ -644,6 +647,7 @@ a:first-child{
       height: 70vh;
       padding: 5px;
       margin-top: 5vh;
+      align-self: center;
     }
   }
 }
@@ -1147,6 +1151,8 @@ a:first-child{
 
 .chocolat-wrapper .chocolat-bottom{
   background: transparent!important;
+  // height: 80px!important;
+  // padding-left: 16%!important;
 }
 
 .chocolat-wrapper .chocolat-set-title{
@@ -1179,30 +1185,150 @@ a:first-child{
   line-height: 21px;
   text-transform: uppercase;
   float: left!important;
+  padding-top: 10px;
 }
 
 .chocolat-wrapper .chocolat-right{
   width: 30%!important;
 }
 
-.chocolat-wrapper .chocolat-description{
+.chocolat-wrapper .chocolat-bottom .chocolat-description{
+  display: flex!important;
+  max-width: 70%;
+  p{
+    color: #fbfbfb;
+    font-family: "Freight Text";
+    font-size: 10px;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.75px;
+    line-height: 14px;
+    padding-left: 15px;
+    padding-top: 10px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+.chocolat-wrapper .chocolat-right .chocolat-description{
   max-width: 250px;
   p{
-  color: #fbfbfb;
-  font-family: "Freight Text";
-  font-size: 10px;
-  font-weight: 300;
-  font-style: italic;
-  letter-spacing: 0.75px;
-  line-height: 14px;
-  padding-left: 15px;
+    color: #fbfbfb;
+    font-family: "Freight Text";
+    font-size: 10px;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.75px;
+    line-height: 14px;
+    padding-left: 15px;
     padding-top: 10px;
-}
+    margin-bottom: 0;
+  }
 }
 
 .chocolat-wrapper .chocolat-right.active{
-    display: flex!important;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+  display: flex!important;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+
+/********************************* PAGE 404 *****************************/
+
+.background-404{
+  background-image: url('../img/404.png')!important;
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: -25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .content-404{
+    color: $legende;
+    font-size: 20px;
+    font-style: italic;
+    font-family: 'Freight Text';
+    width: 227px;
+    text-align: center;
+  }
+  .button-404{
+    color: $legende!important;
+    border-color: $legende!important;
+    width: 144px;
+    padding: 7px 6px!important;
+  }
+  .button-404:hover{
+    background-color: $legende!important;
+    color: #000!important;
+
+  }
+}
+
+
+/***************************** EDITION PAGE D'ATTENTE ***************************/
+
+
+.background-edition{
+  background-image: url('../img/edition.png')!important;
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: -25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .content-edition{
+    color: #000;
+    font-size: 18px;
+    font-style: italic;
+    font-family: 'Freight Text';
+    width: 360px;
+    text-align: center;
+  }
+  .button-edition{
+    width: 168px;
+    padding: 7px 6px!important;
+  }
+
+}
+
+#counterLayout{
+  transform: rotate(90deg);
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Freight Big Book';
+  padding-left: 5px;
+}
+
+
+// BANNER
+
+.pum-theme-109 .pum-container p, .pum-theme-hello-box .pum-container p{
+  font-style: normal!important;
+  font-family: 'LeagueGothic';
+}
+
+.pum-theme-109 .pum-container p a, .pum-theme-hello-box .pum-container p a{
+  color: #fff!important;
+}
+
+.pum-theme-109 .pum-container p a:hover, .pum-theme-hello-box .pum-container p a:hover{
+  font-weight: bolder;
+}
+
+.container-with-banner{
+  margin-top: 35px;
+}
+
+#container-with-banner{
+  transition-property: all;
+  transition-duration: .2s;
+
 }

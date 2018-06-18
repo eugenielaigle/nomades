@@ -5,7 +5,8 @@
 *
 *
 */?>
-
+<?php  require_once 'Mobile-Detect/Mobile_Detect.php' ;
+$detect = new Mobile_Detect ; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,7 +17,7 @@
   <?php wp_head(); ?>
 </head>
 <body>
-
+<div class="container-with-banner" id="container-with-banner">
   <div class="container-fluid container-header" id="navbar">
 
    <nav class="navbar navbar-expand-md navbar-light bg-faded">
@@ -30,20 +31,37 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <?php
-    wp_nav_menu([
-      'menu'            => 'top',
-      'theme_location'  => 'top',
-      'container'       => 'div',
-      'container_id'    => 'bs4navbar',
-      'container_class' => 'collapse navbar-collapse',
-      'menu_id'         => false,
-      'menu_class'      => 'navbar-nav mr-auto',
-      'depth'           => 2,
-      'fallback_cb'     => 'bs4navwalker::fallback',
-      'walker'          => new bs4navwalker()
-    ]);
-    ?>
+
+<?php if ( $detect -> isMobile () && !$detect->isTablet() ) {
+wp_nav_menu([
+    'menu'            => 'menu-mobile',
+    'theme_location'  => 'menu-mobile',
+    'container'       => 'div',
+    'container_id'    => 'bs4navbar',
+    'container_class' => 'collapse navbar-collapse',
+    'menu_id'         => false,
+    'menu_class'      => 'navbar-nav mr-auto',
+    'depth'           => 2,
+    'fallback_cb'     => 'bs4navwalker::fallback',
+    'walker'          => new bs4navwalker()
+  ]);
+
+
+}else{
+  wp_nav_menu([
+    'menu'            => 'top',
+    'theme_location'  => 'top',
+    'container'       => 'div',
+    'container_id'    => 'bs4navbar',
+    'container_class' => 'collapse navbar-collapse',
+    'menu_id'         => false,
+    'menu_class'      => 'navbar-nav mr-auto',
+    'depth'           => 2,
+    'fallback_cb'     => 'bs4navwalker::fallback',
+    'walker'          => new bs4navwalker()
+  ]);
+}
+?>
   </nav>
 </div>
 

@@ -1,10 +1,97 @@
-<?php get_header();
+<?php  require_once 'Mobile-Detect/Mobile_Detect.php' ;
+$detect = new Mobile_Detect ; ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title><?php wp_title(''); ?></title>
+  <?php wp_head(); ?>
+</head>
+<body>
+
+<div class="container-fluid container-header">
+
+ <nav class="navbar navbar-expand-md navbar-light bg-faded" id="navbar-navigation">
+  <a class="xs-visible navbar-search" href="<?php the_permalink(51); ?>">
+    <img class="img-responsive recherche-img" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/loupe.svg">
+  </a>
+  <a class="navbar-brand xs-visible" href="<?php bloginfo('url'); ?>">
+    <img class="img-responsive logo" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/logo-nomades.svg">
+  </a>
+  <button class="navbar-special cubes" type="button" id="cubes">
+    <span class="navbar-toggler-icon navbar-toggler-table-icon"></span>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+<?php if ( $detect -> isMobile () && !$detect->isTablet() ) {
+wp_nav_menu([
+    'menu'            => 'menu-mobile',
+    'theme_location'  => 'menu-mobile',
+    'container'       => 'div',
+    'container_id'    => 'bs4navbar',
+    'container_class' => 'collapse navbar-collapse',
+    'menu_id'         => false,
+    'menu_class'      => 'navbar-nav mr-auto',
+    'depth'           => 2,
+    'fallback_cb'     => 'bs4navwalker::fallback',
+    'walker'          => new bs4navwalker()
+  ]);
+
+
+}else{
+  wp_nav_menu([
+    'menu'            => 'top',
+    'theme_location'  => 'top',
+    'container'       => 'div',
+    'container_id'    => 'bs4navbar',
+    'container_class' => 'collapse navbar-collapse',
+    'menu_id'         => false,
+    'menu_class'      => 'navbar-nav mr-auto',
+    'depth'           => 2,
+    'fallback_cb'     => 'bs4navwalker::fallback',
+    'walker'          => new bs4navwalker()
+  ]);
+}
+?>
+
+
+</nav>
+</div>
+
+  <aside class="sidebar-contact xs-invisible" id="contact">
+    <p class="contact">Contact</p>
+    <p class="nomades-prez"><span>NOMADES</span> - Magazine Numérique et Studio de Création</p>
+  </aside>
+
+<a href="<?php the_permalink(); ?>">
+    <aside class="sidebar-recherche xs-invisible" id="sidebar-special">
+    <p class="recherche">
+      <img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/ligne-185.svg"" alt="">
+      <?php if (is_category ('destinations') || is_category('destination') || is_category('rencontres') || is_category('rencontre') || is_category('retrospectives') || is_category('retrospective')):
+        foreach((get_the_category()) as $childcat) {
+      $parentcat = $childcat->category_parent;
+      if( $parentcat != 0) echo '' .get_cat_name($parentcat);}
+      elseif (is_category ('studio')):?>
+        Studio
+      <?php endif;?>
+    </p>
+  </aside>
+</a>
+
+<!-- END HEADER -->
+
+<?php
 
 $category = get_the_category();
 $mycat = $category[0]->cat_name;
 $mycat2 = get_cat_id($mycat);?>
 
-<div class="container-content">
+<div class="container-content container-cubes">
   <div class="category-header">
 
     <!-- CATEGORIE DESTINATIONS -->
@@ -15,9 +102,9 @@ $mycat2 = get_cat_id($mycat);?>
       if( $parentcat != 0 ) echo '' .get_cat_name($parentcat);}?></h1>
       <p><?php echo category_description(); ?></p>
     </div>
-    <div class="categ">
+    <div class="categ" id="categories">
       <?php
-      $query = new WP_Query( array( 'category_name' => 'destination','order'=> 'desc', 'orderby' => 'date') );
+      $query = new WP_Query( array( 'category_name' => 'destination','order'=> 'desc', 'orderby' => 'date', 'posts_per_page' => -1) );
 
 
       if ( $query->have_posts() ) : ?>
@@ -134,9 +221,9 @@ $mycat2 = get_cat_id($mycat);?>
       if( $parentcat != 0 ) echo '' .get_cat_name($parentcat);}?></h1>
       <p><?php echo category_description(); ?></p>
     </div>
-    <div class="categ">
+    <div class="categ" id="categories">
       <?php
-      $query = new WP_Query( array( 'category_name' => 'rencontre','order'=> 'desc', 'orderby' => 'date') );
+      $query = new WP_Query( array( 'category_name' => 'rencontre','order'=> 'desc', 'orderby' => 'date', 'posts_per_page' => -1) );
 
 
       if ( $query->have_posts() ) : ?>
@@ -250,9 +337,9 @@ $mycat2 = get_cat_id($mycat);?>
       <p><?php echo category_description(); ?></p>
     </div>
 
-    <div class="categ">
+    <div class="categ" id="categories">
       <?php
-      $query = new WP_Query( array( 'category_name' => 'retrospective','order'=> 'desc', 'orderby' => 'date') );
+      $query = new WP_Query( array( 'category_name' => 'retrospective','order'=> 'desc', 'orderby' => 'date', 'posts_per_page' => -1) );
 
       if ( $query->have_posts() ) : ?>
         <?php while ( $query->have_posts() ) : $query->the_post(); /* start the loop */?>
@@ -363,9 +450,9 @@ $mycat2 = get_cat_id($mycat);?>
       <p><?php echo category_description(); ?></p>
     </div>
 
-    <div class="categ">
+    <div class="categ" id="categories">
       <?php
-      $query = new WP_Query( array( 'category_name' => 'studio','order'=> 'desc', 'orderby' => 'date') );
+      $query = new WP_Query( array( 'category_name' => 'studio','order'=> 'desc', 'orderby' => 'date', 'posts_per_page' => -1) );
 
 
       if ( $query->have_posts() ) : ?>

@@ -45,6 +45,7 @@
   border-radius: 0px;
   font-family: 'Avenir';
   letter-spacing: 1.8px;
+  text-transform: uppercase;
   transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
@@ -167,7 +168,7 @@
 
 #sib_signup_form_1{
   .sib-alert-message{
-    padding: 30% 12px 45% 12px!important;
+    padding: 30% 12px 55% 12px!important;
     text-align: center;
     display: flex;
     justify-content: center;

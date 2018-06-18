@@ -3,8 +3,8 @@
 }
 
 .image-relative{
-    position: relative;
-  }
+  position: relative;
+}
 
 /************************ PANORAMIQUE ***************************/
 .bloc-panoramique{
@@ -105,7 +105,7 @@
   .image-legende-gauche{
     position: relative;
     .image-gauche{
-      margin-bottom: 15px;
+      margin-bottom: 5px;
       width: 100%;
     }
     .legende-anglais, .legende-francais{
@@ -157,42 +157,42 @@
 .container-video{
   margin: 10vh 0;
 
-.video{
-  padding: 0 10%;
-  iframe{
-    width: 100%!important;
-  }
-}
-
-@media (min-width: 768px){
   .video{
-  iframe{
-    height: 70vh!important;
-  }
-}
-
-}
-
-.legende-video{
-  padding: 0 13%;
-  .title{
-    font-family: "Freight Text";
-    font-size: 13px;
-    font-weight: 500;
-    font-style: italic;
-    margin-bottom: 0.5em;
-  }
-  .legende{
-    p{
-      margin-bottom: 0;
-      font-family: "Freight Text";
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.55px;
-      line-height: 13px;
+    padding: 0 10%;
+    iframe{
+      width: 100%!important;
     }
   }
-}
+
+  @media (min-width: 768px){
+    .video{
+      iframe{
+        height: 70vh!important;
+      }
+    }
+
+  }
+
+  .legende-video{
+    padding: 0 13%;
+    .title{
+      font-family: "Freight Text";
+      font-size: 13px;
+      font-weight: 500;
+      font-style: italic;
+      margin-bottom: 0.5em;
+    }
+    .legende{
+      p{
+        margin-bottom: 0;
+        font-family: "Freight Text";
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.55px;
+        line-height: 13px;
+      }
+    }
+  }
 }
 
 /************************** IMAGE CENTREE ***********************/
@@ -291,10 +291,12 @@
       }
       .legende-dyptique-asymetrique{
         padding-top: 15px;
+        min-width: 50%;
         p{
           font-size: 10px;
           letter-spacing: .75px;
           line-height: 14px;
+          margin-bottom: 5px;
         }
       }
     }

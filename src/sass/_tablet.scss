@@ -1,0 +1,77 @@
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+.container-home .header-home .image-full-size .background-img, .container-home .header-home .image-full-size video, .container-home .header-home .video-full-size .background-img, .container-home .header-home .video-full-size video{
+  height: 35vh!important;
+}
+
+.container-home .header-home .logo-home{
+  bottom: 60vh!important;
+}
+
+.container-home .header-home .sous-titre-home{
+  margin-top: 50vh!important;
+}
+
+
+
+  .home-edition{
+    .images-edition{
+      img:last-child{
+        display: none;
+      }
+    }
+  }
+
+
+  .home-category-left, .home-category-right{
+    width: 45%!important;
+    .article-title, .excerpt-article{
+      max-width: 100%!important;
+    }
+    img{
+      height: auto!important;
+    }
+  }
+
+  .home-category-retrospective{
+    .article-title, .excerpt-article{
+      max-width: 100%!important;
+    }
+  }
+
+  .category-studio{
+    margin-left: 15%!important;
+    .studio-left{
+      width: 60%!important;
+    }
+    .studio-right{
+      width: 40%!important;
+    }
+    img{
+      height: auto;
+    }
+  }
+
+  .bloc-panoramique-home .panoramique img{
+    height: auto!important;
+  }
+
+  .bloc-panoramique-home{
+    height: 48vh!important;
+  }
+
+
+  footer .container-footer .row-footer .footer-right .right-footer-widget{
+    width: 80%!important;
+  }
+
+  .sidebar-contact .nomades-prez{
+    bottom: 15vh!important;
+    width: 35vw!important;
+    left: -15vw!important;
+  }
+
+
+
+}

@@ -1,15 +1,19 @@
-.pum-theme-116 .pum-container, .pum-theme-custom {
-  #popmake-438, #popmake-985{
-    padding: 25px!important;
-    background-color: $legende;
+.container-recherche{
+  #close-recherche{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: $grey-text;
   }
-  #pum_popup_title_438, #pum_popup_title_985{
-    text-align: left!important;
+  .recherche-titre{
+    text-align: left;
     font-family: "League Gothic";
     font-size: 13px;
     font-weight: 400;
     line-height: 30px;
     text-transform: uppercase;
+    margin-left: 50px;
+    padding-top: 30px;
   }
   .screen-reader-text{
     display: none!important;
@@ -20,8 +24,9 @@
     font-size: 47px;
     font-weight: 300;
     letter-spacing: 2.35px;
-    line-height: 60px;
+    line-height: 54px;
     background-color: $legende;
+    text-transform: capitalize;
   }
   #s:focus, #s:hover, #s:visited, #s:active, #searchsubmit:hover, #searchsubmit:focus, #searchsubmit:active, #searchsubmit:visited{
     outline: none!important;
@@ -60,12 +65,99 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    div{
+    flex-direction: column;
+    height: 90vh;
+    .search-mots{
       border-bottom: 0.5px solid #000;
       display: flex;
       justify-content: center;
       align-items: center;
     }
+    #choix p{
+      color: #000000;
+      font-family: "League Gothic";
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 30px;
+      text-transform: uppercase;
+      text-align: center;
+      width: 100%;
+      margin-top: 20vh;
+    }
+    #choix input{
+      display:none;
+    }
+    #choix label{
+      display:inline-block;
+      text-align:center;
+      padding:10px 27px;
+      cursor:pointer;
+      color: #000000;
+      font-family: "Freight Text";
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.6px;
+      line-height: 29px;
+      transition: color .2s linear;
+    }
+    #choix label.active{
+      color: $grey-text;
+      transition: color .2s linear;
+    }
   }
 }
 
+
+.the-search-title{
+  color: #000000;
+  font-family: 'Freight Big Book';
+  font-size: 45px;
+  font-weight: 300;
+  letter-spacing: 2.25px;
+  line-height: 49px;
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.the-search-subtitle{
+  font-family: "League Gothic";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+.recherche-zero{
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.recherche-none{
+  margin: 2em 0.5em 1em;
+  padding: 10vh 5%;
+  text-align: center;
+  font-family: 'Freight Text';
+  font-style: italic;
+  top: 0;
+  left: -15px;
+  right: -15px;
+  bottom: 0;
+  background-color: $legende;
+  color: black;
+  width: 100%;
+}
+
+.button-recherche{
+  width: 200px!important;
+
+}
+
+.recherche-capitalize{
+  text-transform: capitalize;
+}

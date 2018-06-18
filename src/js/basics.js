@@ -1,4 +1,8 @@
-
+jQuery(document).ready(function($){
+  var textDyptique = $(".image-dyptique-asymetrique-right").width();
+console.log(textDyptique);
+$('.legende-dyptique-asymetrique').width(textDyptique);
+});
 
 // ICONE DE FERMETURE MENU POUR MOBILE
 $('.navbar-toggler').click(function(){
@@ -63,15 +67,6 @@ $('#english-text').click(function(){
   $('.legende-francais-dyptique').toggle('slow');
   $('.legende-anglais-dyptique').toggleClass('toggle-anglais');
 });
-
-// $('#english-text-2').click(function(){
-//   $('#article-anglais-2').toggle('slow');
-// });
-
-// $('#english-text-3').click(function(){
-//   $('#article-anglais-3').toggle('slow');
-// });
-
 
 // CUSTOM SELECT CONTACT
 var x, i, j, selElmnt, a, b, c;
@@ -151,51 +146,25 @@ document.addEventListener("click", closeAllSelect);
 
 // Image + Texte scrollable
 if ($(window).width()>768){
-$(".sticky-wrapper").stick_in_parent({
-  offset_top: 60
-});
+  $(".sticky-wrapper").stick_in_parent({
+    offset_top: 60
+  });
 }
-  var textDyptique = $(".image-dyptique-asymetrique-right").width();
-  $('.legende-dyptique-asymetrique').width(textDyptique);
 
 
-if ($(window).width() > 768){
-var retrospectiveHome = $(".home-category-retrospective img").width();
-  $('.article-under-picture').width(retrospectiveHome);
-}
+// if ($(window).width() > 768){
+//   var retrospectiveHome = $(".home-category-retrospective img").width();
+//   $('.article-under-picture').width(retrospectiveHome);
+// }
 
   // var dyptiqueEdito = $(".row-dyptique-edito img:last-child").width();
   // $('.legende-sous-dyptique').width(dyptiqueEdito);
+
 // LOADER SINGLE
 
 $(window).on('load',function(){
   $(".loader-single").fadeOut("200");
 });
-
-// //Zoombox
-
-
-// $('a.zoombox').zoombox({
-//                 theme       : 'zoombox',        //available themes : zoombox,lightbox, prettyphoto, darkprettyphoto, simple
-//                 opacity     : 0.8,              // Black overlay opacity
-//                 duration    : 800,              // Animation duration
-//                 animation   : true,             // Do we have to animate the box ?
-//                 width       : 600,
-//                 height      : 600,              // Default width              // Default height
-//                 gallery     : true,             // Allow gallery thumb view
-//                 autoplay    : false,               // Autoplay for video
-//                 overflow    : true
-// });
-// jQuery(document).ready(function($){
-//     $(document).on('click','#sommaire-article a',function(){
-//         var h = $(this).attr('href');
-
-//         $('body,html').animate({
-//             scrollTop:$(h).offset().top
-//         }, 500);
-//         return false;
-//     });
-// });
 
 jQuery(document).ready(function ($) {
     //initialize swiper when document ready
@@ -208,15 +177,18 @@ jQuery(document).ready(function ($) {
   });
 
 
-(function() {
-  var searchForm = document.getElementById( 's' );
-  var searchSubmit = document.getElementById( 'searchsubmit' );
+(function($){
 
-  searchForm.value = "";
-  searchForm.placeholder = "Îles Faroes";
-  searchSubmit.value = "Rechercher";
+  var navbar = $('#navbar');
+  $(document).on('scroll', function() {
+   if($(window).scrollTop()> 0){
+    $('#container-with-banner').removeClass('container-with-banner');
+  }else if($(window).scrollTop()< 1){
+    $('#container-with-banner').addClass('container-with-banner');
+  }
+});
 
-} )(jQuery);
+})(jQuery);
 
 
 
