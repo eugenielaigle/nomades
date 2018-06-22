@@ -4,7 +4,7 @@ console.log('recherche');
   var searchForm = document.getElementById('s');
   var searchSubmit = document.getElementById('searchsubmit');
 
-  searchForm.placeholder = "Îles Faroes";
+  searchForm.placeholder = "Je recherche";
   searchSubmit.value = "Rechercher";
 
 } )(jQuery);

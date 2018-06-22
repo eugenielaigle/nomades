@@ -20,7 +20,7 @@
 <div class="container-recherche">
   <h2 class="recherche-titre"><?php the_title(); ?></h2>
 
-<a id="close-recherche" href="javascript:history.go(-1)">X</a>
+<a id="close-recherche" href="javascript:history.go(-1)">+</a>
   <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
     <div class="search-mots">
       <input type="text" name="s" id="s" />

@@ -147,10 +147,18 @@ document.addEventListener("click", closeAllSelect);
 // Image + Texte scrollable
 if ($(window).width()>768){
   $(".sticky-wrapper").stick_in_parent({
-    offset_top: 60
+    offset_top: 120
   });
 }
 
+// var imageCentree = $('.image-centree .image-relative .image' );
+// var largeur = imageCentree.width();
+// console.log('largeur:' + largeur);
+// var hauteur = imageCentree.height();
+// console.log('hauteur :' + hauteur);
+// if (imageCentree.width() < imageCentree.height()){
+//   imageCentree.addClass('image-centree-horizontale');
+// }
 
 // if ($(window).width() > 768){
 //   var retrospectiveHome = $(".home-category-retrospective img").width();
@@ -188,10 +196,35 @@ jQuery(document).ready(function ($) {
   }
 });
 
+
+
+// (function($){
+//   var category = $('.home-edition .images-edition img:last-child').offset().top;
+//   var imageTop = category.top;
+
+//   $(window).scroll(function() {
+//         if ($(window).scrollTop() === imageTop {
+//           $('.sidebar-contact').css("position", "relative" );
+//         }
+// })(jQuery);
+
+
+// SMOOTH SCROLL
+
+  $('a[href^="#"]').on('click', function(event) {
+      var target = $(this.getAttribute('href'));
+      if( target.length ) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+              scrollTop: target.offset().top
+          }, 1000);
+      }
+  });
+
+// EDITO SCROLL LEGENDE LAPTOP
+
+$("#sidebar").stick_in_parent({
+  offset_top: 70
+});
+
 })(jQuery);
-
-
-
-
-
-

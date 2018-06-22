@@ -12,18 +12,24 @@ get_header();?>
 <div class="container-content">
   <div class="container-fluid container-edito">
     <div class="row row-edito">
-      <div class="col-md-5 edito-left xs-invisible">
-        <div class="legende-anglais toggle-anglais">
-          <?php the_field('legende_intro_edito'); ?>
-        </div>
+      <div class="col-md-6 edito-big-left xs-invisible">
       </div> <!-- end edito-left -->
-      <div class="col-md-7 edito-right row">
+      <div class="col-md-6 edito-big-right edito-right row">
         <div class="edito-title">
           <?php the_title(); ?>
         </div>
         <div class="edito-sous-titre">
           <?php the_field('sous_titre_edito'); ?>
         </div>
+      </div>
+    </div>
+<div class="row row-edito">
+    <div class="col-md-6 edito-big-left edito-left xs-invisible">
+        <div class="legende-anglais toggle-anglais" >
+          <div id="sidebar"><?php the_field('legende_intro_edito'); ?></div>
+        </div>
+      </div> <!-- end edito-left -->
+      <div class="col-md-6 edito-big-right edito-right row">
         <button class="button-english xs-visible" id="english-text">English Text</button>
         <div class="col-md-6 legende-francais">
           <?php the_field('colonne_gauche_intro'); ?>
@@ -75,12 +81,12 @@ get_header();?>
 
 <div class="container-fluid container-edito">
   <div class="row">
-    <div class="col-md-5 dyptique-edito-left xs-invisible">
+    <div class="col-md-6 edito-big-left dyptique-edito-left xs-invisible">
       <div class="legende-anglais toggle-anglais">
         <?php the_field('legende_dyptique_edito'); ?>
       </div>
     </div> <!-- end edito-left -->
-    <div class="col-md-7 edito-right row">
+    <div class="col-md-6 edito-big-right edito-right row">
       <div class="edito-sous-titre edito-sous-titre-xs">
         <?php the_field('titre_dyptique'); ?>
       </div>
@@ -113,12 +119,12 @@ if (!empty($image)):?>
 endif;?>
 <div class="container-fluid container-edito">
   <div class="row">
-    <div class="col-md-5 dyptique-edito-left xs-invisible">
+    <div class="col-md-6 edito-big-left dyptique-edito-left xs-invisible">
       <div class="legende-anglais toggle-anglais">
         <?php the_field('legende_panoramique_edito'); ?>
       </div>
     </div> <!-- end edito-left -->
-    <div class="col-md-7 edito-right row">
+    <div class="col-md-6 edito-big-right edito-right row">
       <div class="edito-sous-titre edito-sous-titre-xs">
         <?php the_field('titre_panoramique'); ?>
       </div>

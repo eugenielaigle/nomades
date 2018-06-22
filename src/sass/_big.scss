@@ -26,14 +26,26 @@
     }
   }
 
-  .home-rencontre-destination img{
-    width: 90%!important;
+  .home-category-left img{
+    width: 78%!important;
   }
+
+  // .home-rencontre-destination img{
+  //   width: 90%!important;
+  // }
 
   .home-category-retrospective{
     margin-left:15%!important;
     margin-right: 15%!important;
+    .the-title{
+      width: 70%;
+    }
+    .excerpt-article{
+      width: 40%!important;
+    }
   }
+
+
 
   .category-studio{
     .studio-left{
@@ -59,7 +71,7 @@
   .home-edition{
     .write-edition{
       .paragraphe-edition{
-        margin-right: 30%;
+        // margin-right: 30%;
         width: 60%;
       }
     }
@@ -79,6 +91,15 @@
   padding-right: 10%!important;
 }
 
+.container-edito .edito-big-left{
+  max-width: 35%!important;
+}
+
+.container-edito .edito-big-right{
+  max-width: 65%!important;
+  flex-basis: 65%!important;
+}
+
 .container-mentions{
   margin: 0 25%!important;
 }
@@ -90,6 +111,24 @@
 
 .chocolat-wrapper .chocolat-bottom .chocolat-description{
   max-width: 60%!important;
+}
+
+.category-header p{
+  width: 45%!important;
+}
+
+.image-texte-scrollable #sticker {
+    width: 15vw!important;
+    height: auto!important;
+}
+
+.article-header .row-article .legende-sous-image{
+      width: 60%!important;
+    max-width: 60%!important;
+    flex-basis: 60%!important;
+}
+.article-header .row-article .article-anglais, .article-header .row-article .article-francais{
+  max-width: 20%!important;
 }
 
 

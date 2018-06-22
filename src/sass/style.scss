@@ -43,6 +43,7 @@
 
 body{
   background-color: $legende!important;
+  overflow-x: hidden;
 }
 
 .normal-title{
@@ -140,8 +141,8 @@ strong{
 
 .container-content{
   padding-top: 80px;
-  padding-left: 4%;
-  padding-right: 4%;
+  padding-left: 5%;
+  padding-right: 5%;
   min-height: 65vh;
 }
 
@@ -150,7 +151,7 @@ strong{
     font-family: 'LeagueGothic';
     font-size: 22px;
     font-weight: 400;
-    line-height: 17px;
+    line-height: 35px;
     text-transform: uppercase;
   }
   .chapeau{
@@ -242,20 +243,22 @@ strong{
 
     .article-francais{
       font-family: 'Freight Text';
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 500;
       letter-spacing: 1.05px;
       line-height: 23px;
+      text-align: justify;
     }
 
     .article-anglais{
       font-family: 'Freight Text';
       font-style: italic;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 500;
       letter-spacing: 1.05px;
       line-height: 21px;
       color: $grey-text;
+      text-align: justify;
       a{
         color: $grey-text!important;
       }
@@ -280,12 +283,10 @@ strong{
 /********************************** HOME ************************************/
 
 .container-home{
-  padding-left: 4%;
-  padding-right: 4%;
+  padding-left: 5%;
+  padding-right: 5%;
   .header-home{
-    margin-left: 2%;
-    margin-right: 2%;
-    height: 100vh;
+    height: 110vh;
     position: relative;
     .image-full-size, .video-full-size{
       overflow: hidden;
@@ -298,20 +299,21 @@ strong{
     .logo-home{
       position: absolute;
       width: 90%;
-      bottom: 30vh;
+      bottom: 40vh;
       left: 5%;
     }
     .sous-titre-home{
-      font-size: 25px;
+      font-size: 22px;
       font-weight: 300;
       letter-spacing: 1.25px;
       line-height: 29px;
       font-family: 'Freight Text';
       font-weight: 300;
-      width: 55%;
+      width: 56%;
       float: right;
       margin-top: 12vh;
-      margin-right: 5%;
+      padding-right: 10%;
+      text-align: justify;
     }
   }
 
@@ -324,16 +326,17 @@ strong{
       font-weight: 400;
       line-height: 26px;
       text-transform: uppercase;
-      width: 50%;
+      width: 43%;
       text-align: right;
       padding-top: 7px;
     }
     .intro-texte{
       display: flex;
-      width: 50%;
+      width: 57%;
       .legende-anglais, .legende-francais{
-        width: 40%;
+        width: 41.5%;
         padding-left: 15px;
+        text-align: justify;
       }
     }
   }
@@ -448,12 +451,16 @@ a:first-child{
   // position: absolute;
   width: 65%;
   // opacity: 0;
+  img{
+    width: 70%;
+    height: auto;
+  }
 }
 .home-category-right{
   width: 45%;
   margin-top: 20vh;
   .the-category{
-    line-height: 5px;
+    line-height: 15px;
   }
   .the-date{
     line-height: 10px;
@@ -560,6 +567,7 @@ a:first-child{
   font-weight: 500;
   letter-spacing: 0.33px;
   line-height: 18px;
+  text-align: justify;
 }
 
 .title-list{
@@ -582,11 +590,15 @@ a:first-child{
   margin-top: 30px;
 }
 
+.decouvrir-part2{
+  margin-top: 80px!important;
+}
+
 
 .home-edition{
   margin: 10vh 10%;
   position: relative;
-  height: 110vh;
+  height: 120vh;
   .write-edition{
     display: flex;
     justify-content: center;
@@ -621,6 +633,7 @@ a:first-child{
         font-weight: 300;
         letter-spacing: 1.55px;
         line-height: 35px;
+        width: 80%;
       }
       p:last-child{
         font-family: 'Freight Text';
@@ -628,6 +641,8 @@ a:first-child{
         font-weight: 500;
         letter-spacing: 0.33px;
         line-height: 18px;
+        width: 70%;
+        text-align: justify;
       }
     }
   }
@@ -639,6 +654,7 @@ a:first-child{
     height: 100%;
     text-align: center;
     display:flex;
+    margin-left: 10%;
     img:first-child{
       height: 100vh;
       padding: 5px;
@@ -646,7 +662,7 @@ a:first-child{
     img:last-child{
       height: 70vh;
       padding: 5px;
-      margin-top: 5vh;
+      margin-top: -10vh;
       align-self: center;
     }
   }
@@ -656,12 +672,20 @@ a:first-child{
 .remerciements{
   display: flex;
   justify-content: space-between;
+  .remerciements-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
   .the-category{
     font-family: 'LeagueGothic';
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 17px;
     text-transform: uppercase;
+  }
+  .article-title{
+    text-align: right;
   }
   .paragraphe-remerciements{
     font-family: 'Freight Text';
@@ -671,13 +695,14 @@ a:first-child{
     letter-spacing: 1.05px;
     line-height: 20px;
     width: 325px;
+    text-align: right;
   }
   .partage{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     .partagez{
       font-family: 'Freight Text';
-      font-size: 12px;
+      font-size: 10px!important;
       font-weight: 500;
       line-height: 28px;
       text-transform: uppercase;
@@ -685,11 +710,12 @@ a:first-child{
     }
     a{
       font-family: 'LeagueGothic';
-      font-size: 15px;
+      font-size: 12px;
       font-weight: 400;
       letter-spacing: 0.75px;
       line-height: 24px;
       text-transform: uppercase;
+      margin-left: 10px;
     }
     a:hover{
       font-weight: bold;
@@ -704,7 +730,7 @@ a:first-child{
   margin-right: 0!important;
   .histoires h4{
     font-family: 'Freight Big Book';
-    font-size: 34px;
+    font-size: 28px;
     font-weight: 300;
     line-height: 27px;
   }
@@ -717,15 +743,15 @@ a:first-child{
       text-align: center;
       .attachment-post-thumbnail{
         width: 100%;
-        height: 55vh;
+        height: auto;
         object-fit: cover;
       }
       .article-title{
-        padding-left: 20%;
-        padding-right: 20%;
+        padding-left: 15%;
+        padding-right: 15%;
         .normal-title{
           font-family: 'Freight Text';
-          font-size: 26px;
+          font-size: 24px;
           font-weight: 300;
           line-height: 23px;
           span{
@@ -750,14 +776,14 @@ a:first-child{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10%;
+  padding: 0 15%;
 
   .the-category {
     margin-bottom: 30px;
 
     color: $legende!important;
     font-family: "League Gothic";
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 17px;
     text-transform: uppercase;
@@ -766,8 +792,8 @@ a:first-child{
 
   .lieu-article{
     color: $legende;
-    font-family: Freight;
-    font-size: 19px;
+    font-family: 'Freight Big Book';
+    font-size: 17px;
     font-weight: 300;
     letter-spacing: 0.95px;
     line-height: 17px;
@@ -776,8 +802,8 @@ a:first-child{
 
   .the-date{
     color: $legende;
-    font-family: Freight;
-    font-size: 15px;
+    font-family: 'Freight Big Book';
+    font-size: 13px;
     font-weight: 300;
     font-style: italic;
     letter-spacing: 0.75px;
@@ -785,22 +811,32 @@ a:first-child{
   }
   .article-title{
     height: auto;
-    font-family: 'Freight Text';
+    font-family: 'Freight Big Book';
     color: $legende;
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 300;
     letter-spacing: 1.9px;
     line-height: 20px;
-    span{
-      font-style: italic;
+    .normal-title{
+      font-size: 28px!important;}
+      span{
+        font-style: italic;
+      }
     }
   }
-}
 
 
 /************************* PAGE CATEGORY ********************************/
-.category-header{
+
+.container-category{
+  padding-top: 150px!important;
+}
+@media (min-width: 768px){
   margin: 5vh 10% 0 10%!important;
+}
+
+.category-header{
+
   .the-category-title{
     font-family: 'LeagueGothic';
     text-transform: uppercase;
@@ -809,13 +845,14 @@ a:first-child{
     line-height: 35px;
   }
   p{
-    font-family: 'Freight Text';
+    font-family: 'Freight Big Book';
     font-style: italic;
-    width: 80%;
+    width: 65%;
     font-size: 33px;
     font-weight: 300;
     letter-spacing: 1.65px;
     line-height: 40px;
+    text-align: justify;
   }
 }
 
@@ -882,7 +919,10 @@ a:first-child{
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
+      p{
+        margin-bottom: 0!important;
+      }
     }
   }
   .thumbnail-category{
@@ -891,6 +931,7 @@ a:first-child{
       width: 100%;
       object-fit: cover;
       height: auto;
+      // max-height: 70vh;
     }
   }
   .right-part-category-horizontal img{
@@ -899,8 +940,8 @@ a:first-child{
     max-height: 60vh;
     object-fit: cover;
   }
-  .title-and-sentence-bottom, .title-and-sentence-left, .right-part-category-vertical{
-    display: none;
+  .title-and-sentence-bottom, .title-and-sentence-left, .right-part-category-vertical, .third-part-horizontal{
+    display: none!important;
   }
 }
 
@@ -911,7 +952,7 @@ a:first-child{
     justify-content: center;
   }
   .thumbnail-category, .right-part-category-vertical{
-    width: 40%;
+    width: 45%;
     img{
       width: 100%;
       height: auto;
@@ -926,7 +967,7 @@ a:first-child{
     padding-left: 10px;
     padding-right: 10px;
     .title-and-sentence-bottom{
-      width: 80%;
+      width: 90%;
     }
   }
 }
@@ -935,7 +976,7 @@ a:first-child{
   .row-category{
     justify-content: center;
   }
-  .thumbnail-category{
+  .thumbnail-category, .first-part-horizontal{
     display: none;
   }
   .title-and-sentence-bottom, .title-and-sentence-left, .right-part-category-vertical{
@@ -946,7 +987,24 @@ a:first-child{
     margin-right: 0;
   }
   .right-part-category-horizontal{
-    width: 100%;
+    width: 90%;
+  }
+
+  .third-part-horizontal .title-and-sentence{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .paragraphe-italique p{
+      text-align: right;
+    }
+    .category-and-date{
+      .the-date{
+        justify-content: flex-start!important;
+      }
+      .the-category{
+        justify-content: flex-end!important;
+      }
+    }
   }
   .thumbnail-right img{
     width: 100%;
@@ -959,6 +1017,7 @@ a:first-child{
 .category-area:nth-child(4n){
   .row-category{
     justify-content: flex-end;
+    width: 95%;
   }
 
   .title-and-sentence, .title-and-sentence-bottom, .right-part-category-horizontal{
@@ -966,7 +1025,7 @@ a:first-child{
   }
 
   .thumbnail-category, .right-part-category-vertical{
-    width: 40%;
+    width: 45%;
   }
 
   .thumbnail-category{
@@ -979,6 +1038,40 @@ a:first-child{
     }
     .title-and-sentence-left{
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      a{
+        position: relative;
+        height: 45px;
+        width: 100%;
+        .article-title{
+          position: absolute;
+          right: 0;
+          left: -55px;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+      .category-and-date{
+        width: 80%;
+        .the-category{
+          justify-content: flex-end!important;
+        }
+        .the-date{
+          justify-content: flex-start!important;
+        }
+      }
+      .normal-title{
+        text-align: right;
+      }
+      .paragraphe-italique{
+        width: 85%;
+        p{
+          text-align: right;
+        }
+      }
     }
   }
   .right-part-category-vertical img{
@@ -998,9 +1091,10 @@ a:first-child{
     font-weight: 400;
     line-height: 35px;
     text-transform: uppercase;
+    padding-left: 15px;
   }
   .edito-sous-titre{
-    font-family: 'Freight Text';
+    font-family: 'Freight Big Book';
     font-size: 31px;
     font-weight: 300;
     letter-spacing: 1.55px;
@@ -1008,15 +1102,19 @@ a:first-child{
     margin-top: 1em;
     margin-bottom: 2em;
     padding-left: 15px;
-    padding-right: 15px;
+    // padding-right: 15px;
+  }
+  .edito-right{
+    text-align: justify;
   }
   .edito-left{
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: flex-end;
     .legende-anglais{
       width: 40%;
       text-align: right;
+      margin-top: 70px;
     }
   }
   .dyptique-edito-left{
@@ -1031,52 +1129,63 @@ a:first-child{
 }
 .container-dyptique-edito{
   background-color: #fff;
-  padding-top: 15vh;
-  padding-bottom: 15vh;
+  // padding-top: 15vh;
+  // padding-bottom: 15vh;
   padding-left: 0;
   padding-right: 0;
   display: flex;
   flex-direction: column;
-  .row-dyptique-edito{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 15%;
-    img{
-      padding: 5px;
-      height: auto;
-      width: 50%;
-      object-fit: cover;
+      // position: relative;
+    // left: -65px;
+    // width: 115%;
+    height: 120vh;
+    .row-dyptique-edito{
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 15vh 15%;
+      img{
+        padding: 5px;
+        height: auto;
+        width: 50%;
+        object-fit: cover;
+      }
+
+    }
+    .legende-sous-dyptique{
+      font-family: "Freight Text";
+      font-size: 11px;
+      letter-spacing: 0.55px;
+      line-height: 13px;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      p{
+        text-align: right;
+        padding-right: 5px;
+      }
     }
 
-  }
-  .legende-sous-dyptique{
-    font-family: "Freight Text";
-    font-size: 11px;
-    letter-spacing: 0.55px;
-    line-height: 13px;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    p{
-      text-align: right;
-      padding-right: 5px;
-    }
-  }
 
-
-}
-.contact-edito{
-  border-top: 1px solid #000;
-}
+  }
+  .contact-edito{
+    border-top: 1px solid #000;
+  }
 
 /*********************** MENTIONS LEGALES **************************/
 .container-mentions{
   margin: 0 20%;
   padding: 10vh 0;
+  .titre-page{
+    margin-bottom: 20px;
+  }
   .propriete{
-    font-family: 'Freight Text';
+    font-family: 'Freight Big Book';
     font-size: 15px;
     font-weight: 300;
     letter-spacing: 0.38px;
@@ -1100,6 +1209,9 @@ a:first-child{
     font-style: italic;
     letter-spacing: 0.33px;
     line-height: 21px;
+  }
+  .sous-titre-plan{
+    margin-bottom: 0;
   }
   .mentions-name{
     font-family: "LeagueGothic";
@@ -1141,9 +1253,13 @@ a:first-child{
   opacity: 0.9!important;
 }
 
-.chocolat-wrapper .chocolat-right{
-  right: 25px!important;
+@media (min-width: 768px){
+  .chocolat-wrapper .chocolat-right{
+    right: 0px!important;
+    height: 48vh!important;
+  }
 }
+
 
 .chocolat-wrapper .chocolat-left{
   left: 25px!important;
@@ -1158,7 +1274,7 @@ a:first-child{
 .chocolat-wrapper .chocolat-set-title{
   border-right: none!important;
   color: #fbfbfb;
-  font-family: 'Freight Text';
+  font-family: 'Freight Big Book';
   font-size: 18px;
   font-weight: 300;
   font-style: italic;
@@ -1168,7 +1284,7 @@ a:first-child{
 
 .chocolat-wrapper .chocolat-set-category{
   padding-right: 15px;
-  padding-left: 25px;
+  padding-left: 65px;
   color: #fbfbfb;
   font-family: "LeagueGothic";
   font-size: 12px;
@@ -1178,23 +1294,23 @@ a:first-child{
 }
 
 .chocolat-wrapper .chocolat-pagination{
-  color: #fbfbfb;
+  color: #fff;
   font-family: "LeagueGothic";
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
   text-transform: uppercase;
   float: left!important;
-  padding-top: 10px;
+  padding-top: 0px;
 }
 
 .chocolat-wrapper .chocolat-right{
-  width: 30%!important;
+  width: 33%!important;
 }
 
 .chocolat-wrapper .chocolat-bottom .chocolat-description{
   display: flex!important;
-  max-width: 70%;
+  max-width: 50%;
   p{
     color: #fbfbfb;
     font-family: "Freight Text";
@@ -1206,7 +1322,7 @@ a:first-child{
     padding-left: 15px;
     padding-top: 10px;
     margin-bottom: 0;
-    text-align: left;
+    text-align: justify;
   }
 }
 
@@ -1229,7 +1345,7 @@ a:first-child{
 .chocolat-wrapper .chocolat-right.active{
   display: flex!important;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: flex-start;
 }
 
@@ -1247,6 +1363,7 @@ a:first-child{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 5vh;
   .content-404{
     color: $legende;
     font-size: 20px;
@@ -1284,6 +1401,7 @@ a:first-child{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 5vh;
   .content-edition{
     color: #000;
     font-size: 18px;
@@ -1302,7 +1420,7 @@ a:first-child{
 #counterLayout{
   transform: rotate(90deg);
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'Freight Big Book';
   padding-left: 5px;
 }
@@ -1310,18 +1428,61 @@ a:first-child{
 
 // BANNER
 
-.pum-theme-109 .pum-container p, .pum-theme-hello-box .pum-container p{
-  font-style: normal!important;
-  font-family: 'LeagueGothic';
+.banner{
+  padding: 2px!important;
+  // padding-top: 6px!important;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  a{
+    cursor: pointer;
+    p{
+      font-style: normal!important;
+      font-family: 'LeagueGothic';
+      color: #fff!important;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.85px;
+      display: flex;
+      span{
+        text-transform: lowercase!important;
+        font-family: 'Freight Text'!important;
+        font-size: 10px;
+        font-style: italic;
+        align-self: center;
+        display: inline-block;
+
+      }
+    }
+  }
 }
 
-.pum-theme-109 .pum-container p a, .pum-theme-hello-box .pum-container p a{
-  color: #fff!important;
+@media (min-width: 768px){
+.banner{
+  a{
+    p{
+      span{
+        margin-left: 15px!important;
+      }
+    }
+  }
+}
 }
 
-.pum-theme-109 .pum-container p a:hover, .pum-theme-hello-box .pum-container p a:hover{
-  font-weight: bolder;
+
+.banner a:hover{
+  // font-weight: bolder;
+  span{
+    text-decoration: underline;
+    font-weight: normal;
+  }
 }
+
 
 .container-with-banner{
   margin-top: 35px;

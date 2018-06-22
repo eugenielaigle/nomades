@@ -141,6 +141,7 @@
 
         center : function(width, height, left, top, duration) {
 
+        // if fitting.width > fitting.height{
             return this.elems.content
                 .css('overflow', 'visible')
                 .animate({
@@ -150,6 +151,17 @@
                     'top'    :top
                 }, duration)
                 .promise();
+        // }else if fitting.width < fitting.height{
+        //         return this.elems.content
+        //         .css('overflow', 'visible')
+        //         .animate({
+        //             'width'  :width*1.2,
+        //             'height' :height*1.2,
+        //             'left'   :left/1.2,
+        //             'top'    :top/5
+        //         }, duration)
+        //         .promise();
+        //     }
         },
 
         appear : function(i) {
@@ -210,14 +222,30 @@
                 }
             }
 
-
-
+if ($(window).width() > 768){
+        if (imgWidth < imgHeight){
             return {
+                'height' : height*1.3,
+                'width'  : width*1.3,
+                'top'    : (holderHeight - height)/10,
+                'left'   : (holderWidth - width)/2.3
+            };
+        }else{
+            return {
+                'height' : height,
+                'width'  : width,
+                'top'    : (holderHeight - height)/3,
+                'left'   : (holderWidth - width)/2
+            };
+        }
+}else{
+    return {
                 'height' : height,
                 'width'  : width,
                 'top'    : (holderHeight - height)/2,
                 'left'   : (holderWidth - width)/2
             };
+}
         },
 
         change : function(signe) {

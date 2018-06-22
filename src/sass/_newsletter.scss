@@ -10,6 +10,32 @@
   letter-spacing: 0.3px;
 }
 
+form#sib_signup_form_1 .sib-default-btn{
+  border-radius: 0px!important;
+
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+}
+
+input[type=checkbox] {
+    -border-radius: 0px;
+    height: 12px;
+    width: 12px;
+    background: #fff;
+    border: 1px solid #000;
+}
+
+input[type="checkbox"]:checked {
+  background: #000;
+  margin:0px;
+  padding: 1px;
+  position: relative;
+}
+
 .title-newsletter{
   font-size: 12px;
   line-height: 20px;
@@ -18,21 +44,22 @@
 }
 
 .sub-title-newsletter{
-  line-height: 20px;
+  line-height: 17px;
   margin: 0;
   width: 153px;
+  margin-bottom: 12px;
   text-align: right;
 }
 
 
 .button-newsletter{
   width: 100px;
-  padding: 6px 10px;
+  padding: 8px 10px;
   color:#000;
   background-color: transparent;
   font-size: 9px;
   font-weight:300;
-  line-height: 1.4285;
+  line-height: 1;
   text-align: center;
   cursor: pointer;
   vertical-align: middle;
@@ -71,6 +98,19 @@
     color: black!important;
     font-family: 'Freight Text';
     font-style: italic;
+    display: flex;
+    justify-content: center;
+    border-radius: 0!important;
+  }
+
+  .sib_loader{
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 }
@@ -78,9 +118,19 @@
 // NEWSLETTER MOBILE
 @media (max-width: 767.98px){
 
+  form#sib_signup_form_1 .sib-default-btn{
+    width: 100%!important;
+  }
+
+
   .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
     width: 100%!important;
   }
+
+  form#sib_signup_form_1 .checkboxes {
+    width: 70%!important;
+    margin: 10vh 15%!important;
+}
 
   .pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
     left: 0!important;
@@ -100,22 +150,48 @@
     margin: 10% 0 30% 0!important;
   }
 
-  #sib_signup_form_1 .sib-alert-message {
+  .pum-theme-116 .pum-container, .pum-theme-custom .pum-container{
+    padding: 30px!important;
+  }
+
+  #sib_signup_form_1{
+    // width: 95%;
+    // margin: 0 2.5%;
+    font-style: italic;
+    .sib_loader{
+       height: 65vh;
+    }
+   .sib-alert-message {
     padding: 30% 0px 60%!important;
     text-align: center;
     width: 100%;
+    line-height: 25px!important;
+    display: flex;
+    justify-content: center;
   }
-
+}
 }
 
 // NEWSLETTER LAPTOP MEDIUM
 
 @media (min-width: 992px) and (max-width: 1799.98px){
+
+   form#sib_signup_form_1 .sib-default-btn{
+    width: 50%!important;
+    margin: 0px 25%!important;
+  }
   #sib_signup_form_1{
+    font-style: italic;
+    .sib_loader{
+       height: 40vh;
+    }
     .sib-alert-message{
       padding: 30% 12px 45% 12px!important;
       text-align: center;
       width: 100%;
+      line-height: 25px!important;
+      display: flex;
+    justify-content: center;
     }
   }
 
@@ -129,6 +205,11 @@
 
 @media (min-width: 768px) and (max-width: 991.98px){
 
+   form#sib_signup_form_1 .sib-default-btn{
+    width: 50%!important;
+    margin: 0px 25%!important;
+  }
+
   .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
     width: 40%!important;
   }
@@ -139,13 +220,18 @@
   }
 
   #sib_signup_form_1{
+    font-style: italic;
+    .sib_loader{
+       height: 30vh;
+    }
     .sib-alert-message{
-      padding: 11% 12px 30%!important;
+      padding: 25% 12px 75%!important;
       text-align: center;
       width: 100%;
     /* left: 100px; */
     display: flex;
     justify-content: center;
+    line-height: 25px!important;
   }
 
 }
@@ -154,6 +240,11 @@
 // NEWSLETTER BIG
 
 @media (min-width: 1800px){
+
+   form#sib_signup_form_1 .sib-default-btn{
+    width: 50%!important;
+    margin: 0px 25%!important;
+  }
 
   .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
     width: 18%!important;
@@ -167,8 +258,12 @@
 }
 
 #sib_signup_form_1{
+  font-style: italic;
+  .sib_loader{
+       height: 27vh;
+    }
   .sib-alert-message{
-    padding: 30% 12px 55% 12px!important;
+    padding: 20% 12px 30% 12px!important;
     text-align: center;
     display: flex;
     justify-content: center;

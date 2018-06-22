@@ -1,5 +1,6 @@
 
 <footer>
+  <a href="#top" class="run-to-top"></a>
   <div class="container-fluid container-footer">
     <div class="row row-footer">
       <div class="footer-brand col-md-4 xs-invisible">

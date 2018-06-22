@@ -17,6 +17,19 @@ $detect = new Mobile_Detect ; ?>
   <?php wp_head(); ?>
 </head>
 <body>
+  <div id="top"></div>
+
+  <?php  $banner = get_field('banner-annonce');
+
+  if (!empty($banner)): ?>
+
+    <div class="banner">
+      <a href="<?php the_field('banner-link');?>">
+    <p><?php the_field('banner-annonce'); ?><span>lire la suite</span></p>
+    </a>
+  </div>
+
+<?php endif; ?>
 <div class="container-with-banner" id="container-with-banner">
   <div class="container-fluid container-header" id="navbar">
 
@@ -175,7 +188,7 @@ wp_nav_menu([
          $mycat2 = get_cat_id($mycat); ?>
          <div class="scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
            <h3 class="the-category"><?php echo get_cat_name($mycat2);?></h3>
-           <p class="the-date"><?php echo get_the_date(); ?></p>
+           <p class="the-date xs-invisible"><?php echo get_the_date(); ?></p>
            <div class="article-title col-md-8 no-padding">
             <?php
             $titre = get_field('titre_de_larticle');
@@ -186,6 +199,7 @@ wp_nav_menu([
           <div class="excerpt-article col-md-8 no-padding">
             <div class="paragraphe-italique"><?php the_field('sous_titre_article'); ?></div>
           </div>
+          <p class="the-date xs-visible"><?php echo get_the_date(); ?></p>
         </div>
         <a href="<?php the_permalink();?>">
           <div class="scrollme">
@@ -257,7 +271,7 @@ wp_nav_menu([
           <?php endif; ?>
         </div>
         <div class="scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
-          <div class="excerpt-article col-md-9 no-padding">
+          <div class="excerpt-article col-md-8 no-padding">
             <div class="paragraphe-italique"><?php the_field('sous_titre_article'); ?></div>
             <div class="paragraphe-classique"><?php the_field('paragraphe_article'); ?></div>
           </div>
@@ -290,7 +304,7 @@ wp_reset_postdata();
         </div>
         <div class="scrollme animateme xs-visible" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
         <h3 class="the-category"><?php the_category();?></h3>
-        <p class="the-date"><?php echo get_the_date(); ?></p>
+        <p class="the-date xs-invisible"><?php echo get_the_date(); ?></p>
         <div class="article-title col-md-8 no-padding">
           <?php
           $titre = get_field('titre_de_larticle');
@@ -301,13 +315,14 @@ wp_reset_postdata();
         <div class="excerpt-article col-md-8 no-padding">
           <div class="paragraphe-italique"><?php the_field('sous_titre_article'); ?></div>
         </div>
+        <p class="the-date xs-visible"><?php echo get_the_date(); ?></p>
       </div> <!-- end scrollme -->
       </a>
     <?php endwhile;
   endif;
   wp_reset_postdata();?>
   <div class="scrollme animateme a-decouvrir" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
-    <p class="decouvrir-aussi">A découvrir aussi,</p>
+    <p class="decouvrir-aussi decouvrir-part2">A découvrir aussi,</p>
     <ul>
       <?php
       $args = array( 'category_name' => 'studio', 'post__not_in' => get_option( 'sticky_posts' ), 'numberposts' => 5, 'order'=> 'desc', 'orderby' => 'date' );
@@ -342,17 +357,18 @@ wp_reset_postdata();
       </div>
       <div class="scrollme animateme" data-when="enter" data-from="0.3" data-to="0" data-opacity="0" data-translatey="25" data-easing="easeinout">
         <h3 class="the-category"><?php the_category();?></h3>
-        <p class="the-date"><?php echo get_the_date(); ?></p>
-        <div class="article-title col-md-8 no-padding">
+        <div class="article-title col-md-9 no-padding">
           <?php
           $titre = get_field('titre_de_larticle');
           if ($titre):?>
             <h2 class="the-title classique"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
           <?php endif; ?>
         </div>
-        <div class="excerpt-article col-md-8 no-padding">
+        <p class="the-date"><?php echo get_the_date(); ?></p>
+        <div class="excerpt-article col-md-9 no-padding">
           <div class="paragraphe-italique"><?php the_field('sous_titre_article'); ?></div>
         </div>
+
       </div> <!-- end scrollme -->
     </a>
 

@@ -11,7 +11,7 @@ $detect = new Mobile_Detect ; ?>
   <?php wp_head(); ?>
 </head>
 <body>
-
+<div id="top"></div>
 <div class="container-fluid container-header">
 
  <nav class="navbar navbar-expand-md navbar-light bg-faded" id="navbar-navigation">
@@ -91,7 +91,7 @@ $category = get_the_category();
 $mycat = $category[0]->cat_name;
 $mycat2 = get_cat_id($mycat);?>
 
-<div class="container-content container-cubes">
+<div class="container-content container-cubes container-category">
   <div class="category-header">
 
     <!-- CATEGORIE DESTINATIONS -->
@@ -100,7 +100,7 @@ $mycat2 = get_cat_id($mycat);?>
     foreach((get_the_category()) as $childcat) {
       $parentcat = $childcat->category_parent;
       if( $parentcat != 0 ) echo '' .get_cat_name($parentcat);}?></h1>
-      <p><?php echo category_description(); ?></p>
+      <?php echo category_description(); ?>
     </div>
     <div class="categ" id="categories">
       <?php
@@ -119,8 +119,8 @@ $mycat2 = get_cat_id($mycat);?>
                 </a>
                 <div class="title-and-sentence-left no-padding">
                   <div class="category-and-date">
-                    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
                     <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
                   </div>
                   <a href="<?php the_permalink();?>">
                     <div class="article-title">
@@ -131,7 +131,7 @@ $mycat2 = get_cat_id($mycat);?>
                       <?php endif; ?>
                     </div>
                   </a>
-                  <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="paragraphe-italique no-padding"><?php the_field('sous_titre_article'); ?></div>
                 </div>
               </div> <!-- end thumbnail-category -->
               <div class="right-part-category-vertical">
@@ -159,7 +159,7 @@ $mycat2 = get_cat_id($mycat);?>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
                 </div>
               </div> <!-- end right-part-category -->
-              <div class="right-part-category-horizontal">
+              <div class="right-part-category-horizontal first-part-horizontal">
                 <div class="thumbnail-right xs-invisible">
                   <a href="<?php the_permalink();?>">
                     <?php if (class_exists('MultiPostThumbnails')) :
@@ -183,7 +183,39 @@ $mycat2 = get_cat_id($mycat);?>
                   </a>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
                 </div>
-              </div> <!-- end right-part-category -->
+              </div> <!-- end right-part-category first part-->
+
+
+              <!-- Third part start -->
+              <div class="right-part-category-horizontal third-part-horizontal">
+                <div class="thumbnail-right xs-invisible">
+                  <a href="<?php the_permalink();?>">
+                    <?php if (class_exists('MultiPostThumbnails')) :
+                      MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'third-image');
+                    endif;?>
+                  </a>
+                </div>
+                <div class="title-and-sentence no-padding">
+                  <div class="category-and-date">
+                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
+                  </div>
+                  <a href="<?php the_permalink();?>">
+                    <div class="article-title">
+                      <?php
+                      $titre = get_field('titre_de_larticle');
+                      if ($titre):?>
+                        <h2 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
+                      <?php endif; ?>
+                    </div>
+                  </a>
+                  <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                </div>
+              </div> <!-- end right-part-category third-part -->
+
+
+
+
             </div> <!-- end row -->
             <div class="row-bottom">
               <div class="title-and-sentence-bottom no-padding">
@@ -236,8 +268,9 @@ $mycat2 = get_cat_id($mycat);?>
                 </a>
                 <div class="title-and-sentence-left no-padding">
                   <div class="category-and-date">
-                    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
+
                     <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
                   </div>
                   <a href="<?php the_permalink();?>">
                     <div class="article-title">
@@ -248,7 +281,7 @@ $mycat2 = get_cat_id($mycat);?>
                       <?php endif; ?>
                     </div>
                   </a>
-                  <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="paragraphe-italique no-padding"><?php the_field('sous_titre_article'); ?></div>
                 </div>
               </div> <!-- end thumbnail-category -->
               <div class="right-part-category-vertical">
@@ -276,7 +309,9 @@ $mycat2 = get_cat_id($mycat);?>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
                 </div>
               </div> <!-- end right-part-category -->
-              <div class="right-part-category-horizontal">
+
+
+              <div class="right-part-category-horizontal first-part-horizontal">
                 <div class="thumbnail-right xs-invisible">
                   <a href="<?php the_permalink();?>">
                     <?php if (class_exists('MultiPostThumbnails')) :
@@ -301,6 +336,32 @@ $mycat2 = get_cat_id($mycat);?>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
                 </div>
               </div> <!-- end right-part-category -->
+              <!-- Third part start -->
+              <div class="right-part-category-horizontal third-part-horizontal">
+                <div class="thumbnail-right xs-invisible">
+                  <a href="<?php the_permalink();?>">
+                    <?php if (class_exists('MultiPostThumbnails')) :
+                      MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'third-image');
+                    endif;?>
+                  </a>
+                </div>
+                <div class="title-and-sentence no-padding">
+                  <div class="category-and-date">
+                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
+                  </div>
+                  <a href="<?php the_permalink();?>">
+                    <div class="article-title">
+                      <?php
+                      $titre = get_field('titre_de_larticle');
+                      if ($titre):?>
+                        <h2 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
+                      <?php endif; ?>
+                    </div>
+                  </a>
+                  <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                </div>
+              </div> <!-- end right-part-category third-part -->
             </div> <!-- end row -->
             <div class="row-bottom">
               <div class="title-and-sentence-bottom no-padding">
@@ -352,8 +413,9 @@ $mycat2 = get_cat_id($mycat);?>
                 </a>
                 <div class="title-and-sentence-left no-padding">
                   <div class="category-and-date">
-                    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
+
                     <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
                   </div>
                   <a href="<?php the_permalink();?>">
                     <div class="article-title">
@@ -364,7 +426,7 @@ $mycat2 = get_cat_id($mycat);?>
                       <?php endif; ?>
                     </div>
                   </a>
-                  <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="paragraphe-italique no-padding"><?php the_field('sous_titre_article'); ?></div>
                 </div>
               </div> <!-- end thumbnail-category -->
               <div class="right-part-category-vertical">
@@ -392,7 +454,34 @@ $mycat2 = get_cat_id($mycat);?>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
                 </div>
               </div> <!-- end right-part-category -->
-              <div class="right-part-category-horizontal">
+
+              <!-- Third part start -->
+              <div class="right-part-category-horizontal third-part-horizontal">
+                <div class="thumbnail-right xs-invisible">
+                  <a href="<?php the_permalink();?>">
+                    <?php if (class_exists('MultiPostThumbnails')) :
+                      MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'third-image');
+                    endif;?>
+                  </a>
+                </div>
+                <div class="title-and-sentence no-padding">
+                  <div class="category-and-date">
+                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
+                  </div>
+                  <a href="<?php the_permalink();?>">
+                    <div class="article-title">
+                      <?php
+                      $titre = get_field('titre_de_larticle');
+                      if ($titre):?>
+                        <h2 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
+                      <?php endif; ?>
+                    </div>
+                  </a>
+                  <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                </div>
+              </div> <!-- end right-part-category third-part -->
+              <div class="right-part-category-horizontal first-part-horizontal">
                 <div class="thumbnail-right xs-invisible">
                   <a href="<?php the_permalink();?>">
                     <?php if (class_exists('MultiPostThumbnails')) :
@@ -466,8 +555,9 @@ $mycat2 = get_cat_id($mycat);?>
                 </a>
                 <div class="title-and-sentence-left no-padding">
                   <div class="category-and-date">
-                    <div class="the-category"><?php the_category(); ?></div>
+
                     <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-category"><?php the_category(); ?></div>
                   </div>
                   <a href="<?php the_permalink();?>">
                     <div class="article-title">
@@ -478,7 +568,7 @@ $mycat2 = get_cat_id($mycat);?>
                       <?php endif; ?>
                     </div>
                   </a>
-                  <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="paragraphe-italique no-padding"><?php the_field('sous_titre_article'); ?></div>
                 </div>
               </div> <!-- end thumbnail-category -->
               <div class="right-part-category-vertical">
@@ -506,7 +596,34 @@ $mycat2 = get_cat_id($mycat);?>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
                 </div>
               </div> <!-- end right-part-category -->
-              <div class="right-part-category-horizontal">
+
+              <!-- Third part start -->
+              <div class="right-part-category-horizontal third-part-horizontal">
+                <div class="thumbnail-right xs-invisible">
+                  <a href="<?php the_permalink();?>">
+                    <?php if (class_exists('MultiPostThumbnails')) :
+                      MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'third-image');
+                    endif;?>
+                  </a>
+                </div>
+                <div class="title-and-sentence no-padding">
+                  <div class="category-and-date">
+                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
+                  </div>
+                  <a href="<?php the_permalink();?>">
+                    <div class="article-title">
+                      <?php
+                      $titre = get_field('titre_de_larticle');
+                      if ($titre):?>
+                        <h2 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
+                      <?php endif; ?>
+                    </div>
+                  </a>
+                  <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                </div>
+              </div> <!-- end right-part-category third-part -->
+              <div class="right-part-category-horizontal first-part-horizontal">
                 <div class="thumbnail-right xs-invisible">
                   <a href="<?php the_permalink();?>">
                     <?php if (class_exists('MultiPostThumbnails')) :

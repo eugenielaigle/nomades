@@ -325,7 +325,7 @@ endif; ?>
                   </div>
                 </div> <!-- end layout -->
 
-                <!-- LAYOUT IMAGE CENTREE -->
+                <!-- LAYOUT IMAGE CENTREE HORIZONTALE-->
                 <?php elseif( get_row_layout() == 'image_centree' ):?>
                  <div class="layout layout-<?php echo get_row_index();?>" data-count="<?php echo get_row_index()+1;?>">
                   <?php if( get_sub_field('couleur_fond') == 'Blanc' ): ?>
@@ -335,8 +335,7 @@ endif; ?>
                       <div class="plus-upright">
                         <img src="https://nomades.studio/wp-content/uploads/2018/04/plus.svg">
                       </div>
-                    </a>
-                    <div class="legendes xs-invisible">
+                      <div class="legendes xs-invisible">
                       <div class="legende-francais">
                         <p><?php the_sub_field('legende_image'); ?></p>
                       </div>
@@ -344,6 +343,8 @@ endif; ?>
                         <p><?php the_sub_field('legende_image_anglais'); ?></p>
                       </div>
                     </div>
+                    </a>
+
                   </div>
                   <?php else:?>
                     <div class="image-centree">
@@ -352,8 +353,7 @@ endif; ?>
                         <div class="plus-upright">
                           <img src="https://nomades.studio/wp-content/uploads/2018/04/plus.svg">
                         </div>
-                      </a>
-                      <div class="legendes xs-invisible">
+                        <div class="legendes xs-invisible">
                         <div class="legende-francais">
                           <p><?php the_sub_field('legende_image'); ?></p>
                         </div>
@@ -361,6 +361,50 @@ endif; ?>
                           <p><?php the_sub_field('legende_image_anglais'); ?></p>
                         </div>
                       </div>
+                      </a>
+
+                    </div>
+                  <?php endif; ?>
+                </div> <!-- end layout -->
+
+                <!-- LAYOUT IMAGE CENTREE VERTICALE-->
+                <?php elseif( get_row_layout() == 'image_centree_verticale' ):?>
+                 <div class="layout layout-<?php echo get_row_index();?>" data-count="<?php echo get_row_index()+1;?>">
+                  <?php if( get_sub_field('couleur_fond_verticale') == 'Blanc' ): ?>
+
+                    <div class="image-centree-verticale fond-blanc"><a class="image-relative chocolat-image" href="<?php the_sub_field('image_verticale');?>" title="<?php the_sub_field('legende_image_verticale'); ?> <?php the_sub_field('legende_image_anglais_verticale'); ?>">
+                      <img class="image" src="<?php the_sub_field('image_verticale');?>" alt="">
+                      <div class="plus-upright">
+                        <img src="https://nomades.studio/wp-content/uploads/2018/04/plus.svg">
+                      </div>
+                      <div class="legendes xs-invisible">
+                      <div class="legende-francais">
+                        <?php the_sub_field('legende_image_verticale'); ?>
+                      </div>
+                      <div class="legende-anglais toggle-anglais">
+                        <?php the_sub_field('legende_image_anglais_verticale'); ?>
+                      </div>
+                    </div>
+                    </a>
+
+                  </div>
+                  <?php else:?>
+                    <div class="image-centree-verticale">
+                      <a class="image-relative chocolat-image" href="<?php the_sub_field('image_verticale');?>" title="<?php the_sub_field('legende_image_verticale'); ?> <?php the_sub_field('legende_image_anglais_verticale'); ?>">
+                        <img class="image" src="<?php the_sub_field('image_verticale');?>" alt="">
+                        <div class="plus-upright">
+                          <img src="https://nomades.studio/wp-content/uploads/2018/04/plus.svg">
+                        </div>
+                        <div class="legendes xs-invisible">
+                        <div class="legende-francais">
+                          <?php the_sub_field('legende_image_verticale'); ?>
+                        </div>
+                        <div class="legende-anglais toggle-anglais">
+                          <?php the_sub_field('legende_image_anglais_verticale'); ?>
+                        </div>
+                      </div>
+                      </a>
+
                     </div>
                   <?php endif; ?>
                 </div> <!-- end layout -->
@@ -459,10 +503,10 @@ endif; ?>
                       </div>
 
                       <div class="articles-a-la-une row">
-                        <div class="histoires col-md-3">
-                          <h4><?php the_field('titre_histoires'); ?></h4>
+                        <div class="histoires col-md-4">
+                          <h4>Histoires<br> qui pourraient<br> vous inspirer</h4>
                         </div>
-                        <div class="col-md-9 histoire">
+                        <div class="col-md-8 histoire">
                           <?php
                           $post_objects = get_field('articles_a_la_une');
                           if( $post_objects ): ?>

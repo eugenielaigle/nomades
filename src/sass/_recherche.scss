@@ -1,9 +1,12 @@
 .container-recherche{
+  background-color: #fff;
   #close-recherche{
     position: absolute;
     top: 30px;
     right: 30px;
     color: $grey-text;
+    font-size: 25px;
+    transform: rotate(45deg);
   }
   .recherche-titre{
     text-align: left;
@@ -20,13 +23,16 @@
   }
   #s{
     border: none;
-    font-family: 'Freight Text';
+    font-family: 'Freight Big Book';
     font-size: 47px;
     font-weight: 300;
     letter-spacing: 2.35px;
     line-height: 54px;
-    background-color: $legende;
+    // background-color: $legende;
     text-transform: capitalize;
+  }
+  #s::placeholder{
+    color: $grisclair;
   }
   #s:focus, #s:hover, #s:visited, #s:active, #searchsubmit:hover, #searchsubmit:focus, #searchsubmit:active, #searchsubmit:visited{
     outline: none!important;
@@ -90,7 +96,7 @@
     #choix label{
       display:inline-block;
       text-align:center;
-      padding:10px 27px;
+      padding:10px 5px;
       cursor:pointer;
       color: #000000;
       font-family: "Freight Text";
@@ -140,7 +146,7 @@
 }
 .recherche-none{
   margin: 2em 0.5em 1em;
-  padding: 10vh 5%;
+  padding: 20vh 5% 0 5%;
   text-align: center;
   font-family: 'Freight Text';
   font-style: italic;
@@ -160,4 +166,14 @@
 
 .recherche-capitalize{
   text-transform: capitalize;
+}
+
+@media (min-width: 768px){
+  .container-search{
+  padding-left: 10%!important;
+}
+}
+
+.container-search{
+  padding-top: 100px!important;
 }

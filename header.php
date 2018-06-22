@@ -11,6 +11,7 @@ $detect = new Mobile_Detect ; ?>
   <?php wp_head(); ?>
 </head>
 <body>
+  <div id="top"></div>
 <div class="container-fluid container-header">
 
  <nav class="navbar navbar-expand-md navbar-light bg-faded" id="navbar-navigation">

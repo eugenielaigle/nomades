@@ -18,15 +18,15 @@ get_header();?>
     </div>
     <div class="row row-infos">
       <div class="col-md-4 mentions-area">
-        <p class="sous-titre-mentions">Pages</p>
+        <p class="sous-titre-mentions sous-titre-plan">Pages</p>
         <div class="plan-du-site"><?php wp_nav_menu(array ('theme_location' => 'plan-du-site-pages'));?></div>
       </div>
       <div class="col-md-4 mentions-area">
-        <p class="sous-titre-mentions">Rubriques</p>
+        <p class="sous-titre-mentions sous-titre-plan">Rubriques</p>
         <div class="plan-du-site"><?php wp_nav_menu(array ('theme_location' => 'plan-du-site-rubriques'));?></div>
       </div>
       <div class="col-md-4 mentions-area">
-        <p class="sous-titre-mentions">Edition</p>
+        <p class="sous-titre-mentions sous-titre-plan">Edition</p>
         <div class="plan-du-site"><?php wp_nav_menu(array ('theme_location' => 'plan-du-site-edition'));?></div>
       </div>
     </div>

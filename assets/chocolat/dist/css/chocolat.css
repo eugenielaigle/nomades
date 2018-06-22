@@ -76,7 +76,7 @@
     top: 50%;
     margin-top: -50px;
     cursor:pointer;
-    background:url(../images/right.png)  85% 50% no-repeat;
+    background:url(../images/right.png)  85% 10% no-repeat;
     z-index: 17;
     display: none;
 }
@@ -112,16 +112,25 @@
     left: 0;
     right: 0;
     line-height:40px;
-    height:80px;
+    height:110px;
     font-size:12px;
     z-index: 17;
    /* padding-left: 15px;*/
     padding-right: 15px;
     background: rgba(0, 0, 0, 0.2);
     text-align: right;
-    margin-top: 10px;
+    margin-top: 0px;
  /*   height: 250px;*/
-    padding-left: 16%!important;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media (min-width: 768px){
+   .chocolat-wrapper .chocolat-bottom{
+      padding-left: 18%!important;
+   }
 }
 .chocolat-wrapper .chocolat-set-title{
     display: inline-block;
@@ -145,6 +154,9 @@
     margin:auto;
     cursor: pointer;
     float: right;
+        position: absolute;
+    bottom: 0;
+    right: 20px;
 }
 .chocolat-wrapper .chocolat-description{
     display: inline-block;

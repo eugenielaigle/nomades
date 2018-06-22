@@ -1,3 +1,9 @@
+var el = document.getElementsByClassName("wpcf7-mail-sent-ok");
+var elChild = document.createElement("h2");
+elChild.innerHTML = 'FORMULAIRE';
+
+
+
 
 // NAVBAR APPEARS ON SCROLL HOMEPAGE
 (function($){
@@ -19,7 +25,7 @@
 $(document).ready(function(){
   if ($(window).width() < 768){
     $('#galerie').Chocolat({
-      imageSize: 'contain',
+      imageSize: 'default',
       loop: true,
       afterMarkup: function () {
         this.elems.pagination.appendTo(this.elems.bottom);
@@ -34,6 +40,7 @@ $(document).ready(function(){
        if ($(this.elems.img).width() > $(this.elems.img).height()){
         this.elems.pagination.appendTo(this.elems.bottom);
         this.elems.description.appendTo(this.elems.bottom);
+        this.elems.fullscreen.appendTo(this.elems.bottom);
       } else{
         this.elems.pagination.appendTo(this.elems.right);
         this.elems.description.appendTo(this.elems.right);

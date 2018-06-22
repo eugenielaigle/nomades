@@ -79,7 +79,7 @@ wp_nav_menu([
 <!-- END HEADER -->
 
 
-<div class="container-content">
+<div class="container-content container-search">
     <h1 class="the-search-title"><?php printf( __( '%s' ), get_search_query() ); ?></h1>
     <h4 class="the-search-subtitle">(<?php echo $wp_query->found_posts;?> résultats)</h4>
 
@@ -211,4 +211,4 @@ else:?>
 <?php endif; ?>
 </div>
 </div>
-<?php get_footer(); ?>
+ <?php wp_footer(); ?>

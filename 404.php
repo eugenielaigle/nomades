@@ -2,9 +2,9 @@
 
 <div class="background-404">
   <div class="content-404">
-    <p>Il semblerait que
-      cette page n’existe plus.
-      Nous vous invitons à revenir
+    <p>Il semblerait que <br>
+      cette page n’existe plus.<br>
+      Nous vous invitons à revenir<br>
     à l’accueil du site.</p>
   </div>
   <a href="<?php bloginfo('url');?>">

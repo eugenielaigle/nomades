@@ -3,7 +3,7 @@
 // }
 
 .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
-  height: 100%!important;
+  // height: 100%!important;
   top: 0!important;
   padding: 0px 50px!important;
   margin-bottom: 0!important;
@@ -11,6 +11,12 @@
   flex-direction: column;
   justify-content: space-around;
 }
+
+@media (min-height: 670px){
+  .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
+  height: 100%!important;
+}
+  }
 
 #popmake-122{
   #pum_popup_title_122{
@@ -28,12 +34,13 @@
     .intro{
       font-family: 'Freight Text';
       text-align: center;
-      margin-top: 30px;
+      margin-top: 15px;
     }
     .infos-sup{
       font-family: 'Freight Text';
       font-style: italic;
       text-align: center;
+      margin-bottom: 15px;
     }
     .infos-call{
       font-family: 'Freight Text';
@@ -70,7 +77,7 @@
 
 .select-selected {
   background-color: white;
-  color: #a2a2a2!important;
+  color: #000!important;
 }
 /*style the arrow inside the select element:*/
 .select-selected:after {
@@ -81,11 +88,11 @@
   width: 0;
   height: 0;
   border: 5px solid transparent;
-  border-color: #a2a2a2 transparent transparent transparent;
+  border-color: #000 transparent transparent transparent;
 }
 /*point the arrow upwards when the select box is open (active):*/
 .select-selected.select-arrow-active:after {
-  border-color: transparent transparent #a2a2a2 transparent;
+  border-color: transparent transparent #000 transparent;
   top: 2px;
 }
 /*style the items (options), including the selected item:*/
@@ -129,7 +136,7 @@
 }
 
 .select-items div:first-child{
-  border-top: 1px solid #a2a2a2!important;
+  border-top: 1px solid #000!important;
 }
 .select-items div:hover, .same-as-selected {
   background-color: black;
@@ -154,6 +161,10 @@
   font-family: 'Freight Text';
   font-size: 14px;
   letter-spacing: 0.35px;
+}
+
+#wpcf7-f86-o4 textarea:focus, #wpcf7-f86-o8 textarea:focus{
+  outline: none;
 }
 
 #wpcf7-f86-o4 p, #wpcf7-f86-o8 p{
@@ -181,9 +192,11 @@
  margin-top: 20px;
  border: 1px solid black;
  font-family: 'Freight Text';
- font-size: 14px;
+ font-size: 12px;
  letter-spacing: 0.35px;
  line-height: 21px;
+ font-style: italic;
+ padding: 15px;
 }
 
 #wpcf7-f86-o4 input[type=submit], #wpcf7-f86-o8 input[type=submit]{
@@ -213,13 +226,18 @@
 
 
 .form-inputs{
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.select-arrow-active{
+  color: #000!important;
 }
 
 
 
-div.wpcf7-response-output {
+
+div.wpcf7-mail-sent-ok {
   margin: 2em 0.5em 1em;
   padding: 40vh 5%;
   text-align: center;
@@ -227,11 +245,35 @@ div.wpcf7-response-output {
   position: absolute;
   font-family: 'Freight Text';
   font-style: italic;
-  top: 0;
+  top: -20px;
   left: -15px;
   right: -15px;
   bottom: 0;
   background-color: white;
   color: black;
   height: 100%;
+}
+
+.wpcf7-validation-errors{
+  font-family: 'Freight Text';
+  font-style: italic;
+  border: none!important;
+  font-size: 10px;
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+}
+
+.wpcf7-not-valid-tip{
+  font-family: 'Freight Text';
+  font-style: italic;
+  font-size: 10px!important;
+  position: absolute;
+  top: 26px;
+  left: 35px;
+}
+
+.pum-theme-116 .pum-content + .pum-close, .pum-theme-custom .pum-content + .pum-close{
+  font-size: 20px!important;
+  transform: rotate(45deg);
+  background-color: transparent!important;
 }
