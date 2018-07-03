@@ -126,9 +126,12 @@ strong{
   font-style: italic;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 1.05px;
-  line-height: 21px;
+  letter-spacing: 1.25px;
+  line-height: 23px;
   color: $grey-text;
+  p{
+    margin-bottom: 1rem!important;
+  }
   a{
     color: $grey-text!important;
   }
@@ -261,10 +264,13 @@ strong{
       font-style: italic;
       font-size: 14px;
       font-weight: 500;
-      letter-spacing: 1.05px;
-      line-height: 21px;
+      letter-spacing: 1.25px;
+      line-height: 23px;
       color: $grey-text;
       text-align: justify;
+p{
+    margin-bottom: 1rem!important;
+  }
       a{
         color: $grey-text!important;
       }
@@ -357,7 +363,7 @@ strong{
 .bloc-panoramique-home{
   margin-top: 10vh;
   margin-bottom: 10vh;
-  height: 110vh;
+  height: 120vh;
   .panoramique{
     position: absolute;
     left: 0;
@@ -485,6 +491,9 @@ a:first-child{
   a:hover .title-list{
     opacity: 0.7;
   }
+  img{
+    max-height: 80vh;
+  }
 }
 
 .home-category-retrospective{
@@ -532,6 +541,8 @@ a:first-child{
       line-height: 40px;
     }
   }
+
+
 }
 
 .the-category{
@@ -599,7 +610,8 @@ a:first-child{
   letter-spacing: 0.33px;
   line-height: 18px;
   font-family: 'Freight Text';
-  margin-top: 30px;
+  // margin-top: 30px;
+  margin-top: 15vh;
 }
 
 @media (max-width: 1800px){
@@ -1111,7 +1123,7 @@ a:first-child{
 /******************************** EDITO *********************************/
 @media (min-width: 768px){
   .edit{
-  padding-top: 10vh;
+  padding-top: 10vh!important;
 }
 .container-edito{
   margin-top: 10vh!important;
@@ -1136,7 +1148,7 @@ a:first-child{
     font-weight: 300;
     letter-spacing: 1.55px;
     line-height: 38px;
-    margin-top: 1em;
+    // margin-top: 1em;
     margin-bottom: 2em;
     padding-left: 15px;
     // padding-right: 15px;
@@ -1187,10 +1199,11 @@ a:first-child{
   padding-right: 0;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10vh;
       // position: relative;
     // left: -65px;
     // width: 115%;
-    height: 120vh;
+    height: 125vh;
     .row-dyptique-edito{
       position: absolute;
       left: 0;
@@ -1357,13 +1370,17 @@ a:first-child{
   padding-top: 0px;
 }
 
+.chocolat-wrapper .chocolat-bottom .chocolat-pagination{
+  padding-left: 0!important;
+}
+
 .chocolat-wrapper .chocolat-right{
   width: 33%!important;
 }
 
 .chocolat-wrapper .chocolat-bottom .chocolat-description{
   display: flex!important;
-  max-width: 50%;
+  max-width: 70%;
   p{
     color: #fbfbfb;
     font-family: "Freight Text";
@@ -1372,8 +1389,9 @@ a:first-child{
     font-style: italic;
     letter-spacing: 0.75px;
     line-height: 14px;
-    padding-left: 15px;
+    padding-left: 0px;
     padding-top: 10px;
+    padding-right: 15px;
     margin-bottom: 0;
     text-align: justify;
   }
@@ -1559,5 +1577,14 @@ a:first-child{
   margin-bottom: 0!important;
 }
 
+.chocolat-wrapper .chocolat-fullscreen{
+  display: none!important;
+}
 
+#popmake-997 .pum-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 

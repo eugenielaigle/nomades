@@ -300,10 +300,11 @@ form#sib_signup_form_1 p.sib-alert-message-warning{
   text-align: center;
 }
 
-.pum-theme-109 .pum-container, .pum-theme-hello-box .pum-container{
+#popmake-997 .pum-container, .pum-theme-hello-box .pum-container{
  font-family: "Freight Text";
  p{
   font-style: italic;
+  line-height: 1em!important;
 }
 input[type=submit]{
   background-color: transparent;
@@ -327,8 +328,8 @@ input[type=submit]{
       width: 100%;
       height: 100%;
       top: 0;
-      padding-left: 16vw;
-      padding-top: 4px;
+      padding-left: 17vw;
+      padding-top: 8px;
       left: 0;
       cursor: pointer!important;
     }

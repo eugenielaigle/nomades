@@ -172,7 +172,7 @@
   display: flex;
   align-items: flex-end;
 }
-#wpcf7-f86-o4 label, #wpcf7-f86-o8 label{
+#wpcf7-f86-o4 label, #wpcf7-f86-o8 label, .wpcf7-list-item-label{
  display: inline;
  width: 30%!important;
  font-family: 'Freight Text';
@@ -289,4 +289,8 @@ div.wpcf7-mail-sent-ok {
   transform: rotate(45deg);
       font-weight: 300;
   background-color: transparent!important;
+}
+
+.wpcf7 .ajax-loader{
+  display: none!important;
 }

@@ -15,11 +15,11 @@
         this.element   = element;
 
         this._cssClasses = [
-            'chocolat-open',
-            'chocolat-in-container',
-            'chocolat-cover',
-            'chocolat-zoomable',
-            'chocolat-zoomed'
+        'chocolat-open',
+        'chocolat-in-container',
+        'chocolat-cover',
+        'chocolat-zoomable',
+        'chocolat-zoomed'
         ];
 
         if (!this.settings.setTitle && element.data('chocolat-title')) {
@@ -99,16 +99,16 @@
             }, this.settings.duration);
 
             var deferred = this.preload(i)
-                .then(function (imgLoader) {
-                    return that.place(i, imgLoader);
-                })
-                .then(function (imgLoader) {
-                    return that.appear(i);
-                })
-                .then(function (imgLoader) {
-                    that.zoomable();
-                    that.settings.afterImageLoad.call(that);
-                });
+            .then(function (imgLoader) {
+                return that.place(i, imgLoader);
+            })
+            .then(function (imgLoader) {
+                return that.appear(i);
+            })
+            .then(function (imgLoader) {
+                that.zoomable();
+                that.settings.afterImageLoad.call(that);
+            });
 
             var nextIndex = i + 1;
             if (typeof this.settings.images[nextIndex] != 'undefined') {
@@ -136,21 +136,21 @@
                 fitting.left,
                 fitting.top,
                 0
-            );
+                );
         },
 
         center : function(width, height, left, top, duration) {
 
         // if fitting.width > fitting.height{
             return this.elems.content
-                .css('overflow', 'visible')
-                .animate({
-                    'width'  :width,
-                    'height' :height,
-                    'left'   :left,
-                    'top'    :top
-                }, duration)
-                .promise();
+            .css('overflow', 'visible')
+            .animate({
+                'width'  :width,
+                'height' :height,
+                'left'   :left,
+                'top'    :top
+            }, duration)
+            .promise();
         // }else if fitting.width < fitting.height{
         //         return this.elems.content
         //         .css('overflow', 'visible')
@@ -162,143 +162,160 @@
         //         }, duration)
         //         .promise();
         //     }
-        },
+    },
 
-        appear : function(i) {
-            var that = this;
-            clearTimeout(this.settings.timer);
+    appear : function(i) {
+        var that = this;
+        clearTimeout(this.settings.timer);
 
-            this.elems.loader.stop().fadeOut(300, function() {
-                that.elems.img
-                    .attr('src', that.settings.images[i].src);
-            });
-        },
+        this.elems.loader.stop().fadeOut(300, function() {
+            that.elems.img
+            .attr('src', that.settings.images[i].src);
+        });
+    },
 
-        fit : function(i, container) {
-            var height;
-            var width;
+    fit : function(i, container) {
+        var height;
+        var width;
 
-            var imgHeight        = this.settings.images[i].height;
-            var imgWidth         = this.settings.images[i].width;
-            var holderHeight     = $(container).height();
-            var holderWidth      = $(container).width();
-            var holderOutMarginH = this.getOutMarginH();
-            var holderOutMarginW = this.getOutMarginW();
+        var imgHeight        = this.settings.images[i].height;
+        var imgWidth         = this.settings.images[i].width;
+        var holderHeight     = $(container).height();
+        var holderWidth      = $(container).width();
+        var holderOutMarginH = this.getOutMarginH();
+        var holderOutMarginW = this.getOutMarginW();
 
-            var holderGlobalWidth  = holderWidth-holderOutMarginW;
-            var holderGlobalHeight = holderHeight-holderOutMarginH;
-            var holderGlobalRatio  = (holderGlobalHeight / holderGlobalWidth);
-            var holderRatio        = (holderHeight / holderWidth);
-            var imgRatio           = (imgHeight / imgWidth);
+        var holderGlobalWidth  = holderWidth-holderOutMarginW;
+        var holderGlobalHeight = holderHeight-holderOutMarginH;
+        var holderGlobalRatio  = (holderGlobalHeight / holderGlobalWidth);
+        var holderRatio        = (holderHeight / holderWidth);
+        var imgRatio           = (imgHeight / imgWidth);
 
-            if (this.settings.imageSize == 'cover') {
-                if (imgRatio < holderRatio) {
-                    height = holderHeight;
-                    width = height / imgRatio;
-                }
-                else {
-                    width = holderWidth;
-                    height = width * imgRatio;
-                }
-
-
+        if (this.settings.imageSize == 'cover') {
+            if (imgRatio < holderRatio) {
+                height = holderHeight;
+                width = height / imgRatio;
             }
-            else if (this.settings.imageSize == 'native') {
-                height = imgHeight;
+            else {
+                width = holderWidth;
+                height = width * imgRatio;
+            }
+
+
+        }
+        else if (this.settings.imageSize == 'native') {
+            height = imgHeight;
+            width = imgWidth;
+        }
+        else {
+            if (imgRatio > holderGlobalRatio) {
+                height = holderGlobalHeight;
+                width = height / imgRatio;
+            }
+            else {
+                width = holderGlobalWidth;
+                height = width * imgRatio;
+            }
+            if (this.settings.imageSize === 'default' && (width >= imgWidth || height >= imgHeight)) {
                 width = imgWidth;
+                height = imgHeight;
             }
-            else {
-                if (imgRatio > holderGlobalRatio) {
-                    height = holderGlobalHeight;
-                    width = height / imgRatio;
-                }
-                else {
-                    width = holderGlobalWidth;
-                    height = width * imgRatio;
-                }
-                if (this.settings.imageSize === 'default' && (width >= imgWidth || height >= imgHeight)) {
-                    width = imgWidth;
-                    height = imgHeight;
-                }
-            }
-
-if ($(window).width() >= 768 && $(window).height() > 670){
-        if (imgWidth < imgHeight){
-            return {
-                'height' : height*1.25,
-                'width'  : width*1.3,
-                'top'    : (holderHeight - height)/10,
-                'left'   : (holderWidth - width)/2.3
-            };
-        }else{
-            return {
-                'height' : height,
-                'width'  : width,
-                'top'    : (holderHeight - height)/3,
-                'left'   : (holderWidth - width)/2
-            };
         }
-}else if ($(window).width() < 768){
-    if (imgWidth < imgHeight){
-    return {
-                'height' : height*1.5,
-                'width'  : width*1.5,
-                'top'    : (holderHeight - height)/5,
-                'left'   : (holderWidth - width)/4
-            };
-        }else{
-            return {
-                'height' : height*1.75,
-                'width'  : width*1.75,
-                'top'    : (holderHeight - height)/5,
-                'left'   : (holderWidth - width)/15
-            };
+
+        if ($(window).width() >= 768 && $(window).width() <= 1800 && $(window).height() > 670){
+            if (imgWidth < imgHeight){
+                return {
+                    'height' : height*1.3,
+                    'width'  : width*1.3,
+                    'top'    : (holderHeight - height)/10,
+                    'left'   : (holderWidth - width)/2.3
+                };
+            }else{
+                return {
+                    'height' : height,
+                    'width'  : width,
+                    'top'    : (holderHeight - height)/4,
+                    'left'   : (holderWidth - width)/2
+                };
+            }
+        }else if ($(window).width() < 768){
+            if (imgWidth < imgHeight){
+                return {
+                    'height' : height*1.5,
+                    'width'  : width*1.5,
+                    'top'    : (holderHeight - height)/5,
+                    'left'   : (holderWidth - width)/4
+                };
+            }else{
+                return {
+                    'height' : height*1.75,
+                    'width'  : width*1.75,
+                    'top'    : (holderHeight - height)/5,
+                    'left'   : (holderWidth - width)/15
+                };
+            }
+        } else if ($(window).width() >= 1800){
+            if (imgWidth < imgHeight){
+                return {
+                    'height' : height*1.15,
+                    'width'  : width*1.2,
+                    'top'    : (holderHeight - height)/10,
+                    'left'   : (holderWidth - width)/2
+                };
+            }else{
+                return {
+                    'height' : height*1.1,
+                    'width'  : width*1.1,
+                    'top'    : (holderHeight - height)/6,
+                    'left'   : (holderWidth - width)/2.2
+                };
+            }
+
+        } else {
+            if (imgWidth < imgHeight){
+                return {
+                    'height' : height*1.3,
+                    'width'  : width*1.3,
+                    'top'    : (holderHeight - height)/10,
+                    'left'   : (holderWidth - width)/2.3
+                };
+            }else{
+                return {
+                    'height' : height,
+                    'width'  : width,
+                    'top'    : (holderHeight - height)/3,
+                    'left'   : (holderWidth - width)/2
+                };
+            }
         }
-} else {
-    if (imgWidth < imgHeight){
-            return {
-                'height' : height*1.3,
-                'width'  : width*1.3,
-                'top'    : (holderHeight - height)/10,
-                'left'   : (holderWidth - width)/2.3
-            };
-        }else{
-            return {
-                'height' : height,
-                'width'  : width,
-                'top'    : (holderHeight - height)/3,
-                'left'   : (holderWidth - width)/2
-            };
-        }
-}
-        },
+    },
 
-        change : function(signe) {
-            this.zoomOut(0);
-            this.zoomable();
+    change : function(signe) {
+        this.zoomOut(0);
+        this.zoomable();
 
-            var requestedImage = this.settings.currentImage + parseInt(signe);
-            if (requestedImage > this.settings.lastImage) {
-                if (this.settings.loop) {
-                    return this.load(0);
-                }
-            }
-            else if (requestedImage < 0) {
-                if (this.settings.loop) {
-                    return this.load(this.settings.lastImage);
-                }
-            }
-            else {
-                return this.load(requestedImage);
-            }
-        },
-
-        arrows: function() {
+        var requestedImage = this.settings.currentImage + parseInt(signe);
+        if (requestedImage > this.settings.lastImage) {
             if (this.settings.loop) {
-                $([this.elems.left[0],this.elems.right[0]])
-                    .addClass('active');
+                return this.load(0);
             }
-            else if (this.settings.linkImages) {
+        }
+        else if (requestedImage < 0) {
+            if (this.settings.loop) {
+                return this.load(this.settings.lastImage);
+            }
+        }
+        else {
+            return this.load(requestedImage);
+        }
+    },
+
+    arrows: function() {
+        if (this.settings.loop) {
+            $([this.elems.left[0],this.elems.right[0]])
+            .addClass('active');
+        }
+        else if (this.settings.linkImages) {
                 // right
                 if (this.settings.currentImage == this.settings.lastImage) {
                     this.elems.right.removeClass('active');
@@ -316,14 +333,14 @@ if ($(window).width() >= 768 && $(window).height() > 670){
             }
             else {
                 $([this.elems.left[0],this.elems.right[0]])
-                    .removeClass('active');
+                .removeClass('active');
             }
         },
 
         description : function() {
             var that = this;
             this.elems.description
-                .html(that.settings.images[that.settings.currentImage].title);
+            .html(that.settings.images[that.settings.currentImage].title);
         },
 
         pagination : function() {
@@ -332,7 +349,7 @@ if ($(window).width() >= 768 && $(window).height() > 670){
             var position  = this.settings.currentImage + 1;
 
             this.elems.pagination
-                .html('PHOTO N°'+ position + ' ' + that.settings.separator2 + ' ' + last);
+            .html('PHOTO N°'+ position + ' ' + that.settings.separator2 + ' ' + last);
         },
 
         storeImgSize : function(img, i) {
@@ -353,9 +370,9 @@ if ($(window).width() >= 768 && $(window).height() > 670){
             }
 
             var els = [
-                this.elems.overlay[0],
-                this.elems.loader[0],
-                this.elems.wrapper[0]
+            this.elems.overlay[0],
+            this.elems.loader[0],
+            this.elems.wrapper[0]
             ];
             var that = this;
             var def = $.when($(els).fadeOut(200)).done(function () {
@@ -542,54 +559,54 @@ if ($(window).width() >= 768 && $(window).height() > 670){
             // });
 
             this.elems.wrapper.find('.chocolat-right')
-                .off('click.chocolat')
-                .on('click.chocolat', function() {
-                    that.change(+1);
+            .off('click.chocolat')
+            .on('click.chocolat', function() {
+                that.change(+1);
             });
 
             this.elems.wrapper.find('.chocolat-left')
-                .off('click.chocolat')
-                .on('click.chocolat', function() {
-                    return that.change(-1);
+            .off('click.chocolat')
+            .on('click.chocolat', function() {
+                return that.change(-1);
             });
 
             $([this.elems.overlay[0], this.elems.close[0]])
-                .off('click.chocolat')
-                .on('click.chocolat', function() {
-                    return that.close();
+            .off('click.chocolat')
+            .on('click.chocolat', function() {
+                return that.close();
             });
 
             this.elems.fullscreen
-                .off('click.chocolat')
-                .on('click.chocolat', function() {
-                    if (that.settings.fullscreenOpen) {
-                        that.exitFullScreen();
-                        return;
-                    }
+            .off('click.chocolat')
+            .on('click.chocolat', function() {
+                if (that.settings.fullscreenOpen) {
+                    that.exitFullScreen();
+                    return;
+                }
 
-                    that.openFullScreen();
+                that.openFullScreen();
             });
 
             if (that.settings.backgroundClose) {
                 this.elems.overlay
-                    .off('click.chocolat')
-                    .on('click.chocolat', function() {
-                        return that.close();
+                .off('click.chocolat')
+                .on('click.chocolat', function() {
+                    return that.close();
                 });
             }
             this.elems.wrapper
-                .off('click.chocolat')
-                .on('click.chocolat', function(e) {
-                    return that.zoomOut(e);
+            .off('click.chocolat')
+            .on('click.chocolat', function(e) {
+                return that.zoomOut(e);
             });
 
             this.elems.wrapper.find('.chocolat-img')
-                .off('click.chocolat')
-                .on('click.chocolat', function(e) {
-                    if (that.settings.initialZoomState === null && that.elems.domContainer.hasClass('chocolat-zoomable')) {
-                        e.stopPropagation();
-                        return that.zoomIn(e);
-                    }
+            .off('click.chocolat')
+            .on('click.chocolat', function(e) {
+                if (that.settings.initialZoomState === null && that.elems.domContainer.hasClass('chocolat-zoomable')) {
+                    e.stopPropagation();
+                    return that.zoomIn(e);
+                }
             });
 
             this.elems.wrapper.mousemove(function( e ) {
@@ -764,7 +781,7 @@ if ($(window).width() >= 768 && $(window).height() > 670){
         }
     });
 
-    var defaults = {
+var defaults = {
         container         : window, // window or jquery object or jquery selector, or element
         imageSelector     : '.chocolat-image',
         className         : '',
@@ -802,7 +819,7 @@ if ($(window).width() >= 768 && $(window).height() > 670){
             if (!$.data(this, 'chocolat')) {
                 $.data(this, 'chocolat',
                     new Chocolat($(this), settings)
-                );
+                    );
             }
         });
     };

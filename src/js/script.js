@@ -40,6 +40,7 @@ $(document).ready(function(){
     $('#galerie').Chocolat({
       imageSize: 'contain',
       loop: true,
+      fullScreen: false,
       enableZoom: false,
       afterMarkup: function () {
         this.elems.pagination.appendTo(this.elems.top);
@@ -61,6 +62,7 @@ $(document).ready(function(){
     $('#galerie').Chocolat({
       imageSize: 'contain',
       loop: true,
+      fullScreen: false,
       enableZoom: false,
       afterMarkup: function () {
         this.elems.pagination.appendTo(this.elems.top);
@@ -82,12 +84,18 @@ $(document).ready(function(){
     $('#galerie').Chocolat({
       imageSize: 'contain',
       loop: true,
+      fullScreen: false,
       enableZoom: false,
       afterImageLoad: function () {
        if ($(this.elems.img).width() > $(this.elems.img).height()){
+        var imageLargeur = $(this.elems.img).width();
+        var imageLeft = this.elems.content[0].offsetLeft;
+        console.log(imageLeft);
         this.elems.pagination.appendTo(this.elems.bottom);
         this.elems.description.appendTo(this.elems.bottom);
-        this.elems.fullscreen.appendTo(this.elems.bottom);
+        // this.elems.fullscreen.appendTo(this.elems.bottom);
+        $(this.elems.bottom).width(imageLargeur);
+        $(this.elems.bottom).css("margin-left", imageLeft);
       } else{
         this.elems.pagination.appendTo(this.elems.right);
         this.elems.description.appendTo(this.elems.right);

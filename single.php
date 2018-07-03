@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div class="container-content" id="galerie" data-chocolat-category="<?php echo get_cat_name($mycat2); ?>" data-chocolat-title="<?php the_title(); ?>">
+  <div class="container-content container-article" id="galerie" data-chocolat-category="<?php echo get_cat_name($mycat2); ?>" data-chocolat-title="<?php the_title(); ?>">
     <div class="article-header">
       <div class="layout layout-1" data-count="1">
         <h2><?php echo get_cat_name($mycat2);?></h2>
@@ -337,10 +337,10 @@ endif; ?>
                       </div>
                       <div class="legendes xs-invisible">
                       <div class="legende-francais">
-                        <p><?php the_sub_field('legende_image'); ?></p>
+                        <?php the_sub_field('legende_image'); ?>
                       </div>
                       <div class="legende-anglais toggle-anglais">
-                        <p><?php the_sub_field('legende_image_anglais'); ?></p>
+                        <?php the_sub_field('legende_image_anglais'); ?>
                       </div>
                     </div>
                     </a>

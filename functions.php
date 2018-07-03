@@ -161,6 +161,61 @@ add_action( 'wp_footer', 'theme_js' );
 //     return $additional_mail;
 // }
 
+// add_filter( 'wpcf7_additional_mail', 'my_wpcf7_use_mail_2_or_not', 10, 2 );
+
+// function my_wpcf7_use_mail_2_or_not( $additional_mail, $cf ) {
+//   if ( "Recevoir une copie par mail" != $cf->posted_data['send_c'][1] )
+//     $additional_mail = array();
+
+//   return $additional_mail;
+// }
+
+
+add_filter( 'wpcf7_additional_mail', 'my3_wpcf7_additional_mail', 10, 2 );
+function my3_wpcf7_additional_mail( array $mails, WPCF7_ContactForm $form ) {
+  $opts = $form->additional_setting( 'send_email_copy' );
+  if ( empty( $opts[0] ) ) {
+    return $mails;
+  }
+
+  /*
+   * $opts[0] = Name of the checkbox field.
+   * $opts[1] = Name of the user's email field.
+   * $opts[2] = Name of the email template.
+   */
+  $opts = explode( '|', $opts[0] );
+  if ( count( $opts ) < 3 ) {
+    return $mails;
+  }
+
+  // Check if we're using a valid Mail template.
+  if ( ( 'mail' !== $opts[2] )
+  && ( 'mail_2' !== $opts[2] ) ) {
+    return $mails;
+  }
+
+  $submission = WPCF7_Submission::get_instance();
+
+  // The user may not want a copy of the email.
+  $values = $submission->get_posted_data( $opts[0] );
+  if ( ! is_array( $values ) || empty( $values[0] ) ) {
+    return $mails;
+  }
+
+  // The address to be sent a copy of the email.
+  $email = $submission->get_posted_data( $opts[1] );
+  if ( ! wpcf7_is_email( $email ) ) {
+    return $mails;
+  }
+
+  $mail = $form->prop( $opts[2] );
+  if ( $mail && is_array( $mail ) ) {
+    $mail['recipient'] = $email;
+    $mails[ $opts[2] . '_copy' ] = $mail;
+  }
+
+  return $mails;
+}
 
 // Include custom navwalker
 require_once('bs4navwalker.php');

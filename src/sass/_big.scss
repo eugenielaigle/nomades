@@ -9,11 +9,12 @@
 
 /************************** HOME *****************************/
 .sidebar-contact .nomades-prez{
-    bottom: 28vh!important;
+    bottom: 32vh!important;
     left: -14vw!important;
 }
 .sidebar-recherche .recherche{
   right: -14vw!important;
+  top: 25vh!important;
 }
 
 .container-home .header-home .sous-titre-home, .container-home .intro .intro-texte{
@@ -53,7 +54,9 @@
     }
   }
 
-
+.bloc-panoramique-home{
+  height: 110vh!important;
+}
 
   .category-studio{
     margin-left: 35%!important;
@@ -127,9 +130,14 @@
 
 }
 
-.chocolat-wrapper .chocolat-bottom{
-  height: 15vh!important;
-}
+// .chocolat-content{
+//   max-height: 84vh;
+// }
+
+// .chocolat-wrapper .chocolat-bottom{
+//   height: 12vh!important;
+//   padding-left: 15.5%!important;
+// }
 
 .chocolat-wrapper .chocolat-right .chocolat-description, .chocolat-wrapper .chocolat-right .chocolat-pagination{
   margin-left: 5vw!important;
@@ -161,6 +169,13 @@
 .pum-theme-109 .pum-container input[type=submit], .pum-theme-hello-box .pum-container input[type=submit]{
   padding-left: 11vw!important;
 }
+
+.articles-a-la-une .histoires, .articles-a-la-une .histoire{
+  max-width: 50%!important;
+  flex-basis: 50%!important;
+}
+
+
 
 
 }

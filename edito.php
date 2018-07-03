@@ -79,8 +79,8 @@ get_header();?>
 
 
 
-  <div class="container-fluid container-edito edit">
-    <div class="row">
+  <div class="container-fluid container-edito">
+    <div class="row edit">
       <div class="col-md-6 edito-big-left xs-invisible">
       </div> <!-- end edito-left -->
 
