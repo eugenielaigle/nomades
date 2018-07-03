@@ -119,7 +119,7 @@ $mycat2 = get_cat_id($mycat);?>
                 </a>
                 <div class="title-and-sentence-left no-padding">
                   <div class="category-and-date">
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                     <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
                   </div>
                   <a href="<?php the_permalink();?>">
@@ -132,6 +132,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end thumbnail-category -->
               <div class="right-part-category-vertical">
@@ -145,9 +146,9 @@ $mycat2 = get_cat_id($mycat);?>
                 <div class="title-and-sentence no-padding">
                   <div class="category-and-date">
                     <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                   </div>
-                  <a href="<?php the_permalink();?>">
+                  <a class="link-thumb" href="<?php the_permalink();?>">
                     <div class="article-title">
                       <?php
                       $titre = get_field('titre_de_larticle');
@@ -157,6 +158,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end right-part-category -->
               <div class="right-part-category-horizontal first-part-horizontal">
@@ -170,9 +172,9 @@ $mycat2 = get_cat_id($mycat);?>
                 <div class="title-and-sentence no-padding">
                   <div class="category-and-date">
                     <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                   </div>
-                  <a href="<?php the_permalink();?>">
+                  <a class="link-thumb" href="<?php the_permalink();?>">
                     <div class="article-title">
                       <?php
                       $titre = get_field('titre_de_larticle');
@@ -182,6 +184,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end right-part-category first part-->
 
@@ -197,10 +200,10 @@ $mycat2 = get_cat_id($mycat);?>
                 </div>
                 <div class="title-and-sentence no-padding">
                   <div class="category-and-date">
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                     <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
                   </div>
-                  <a href="<?php the_permalink();?>">
+                  <a class="link-thumb" href="<?php the_permalink();?>">
                     <div class="article-title">
                       <?php
                       $titre = get_field('titre_de_larticle');
@@ -210,6 +213,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end right-part-category third-part -->
 
@@ -221,7 +225,7 @@ $mycat2 = get_cat_id($mycat);?>
               <div class="title-and-sentence-bottom no-padding">
                 <div class="category-and-date">
                   <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
-                  <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                  <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
                 <a href="<?php the_permalink();?>">
                   <div class="article-title">
@@ -233,6 +237,7 @@ $mycat2 = get_cat_id($mycat);?>
                   </div>
                 </a>
                 <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
               </div>
             </div>
           </article><!--  end category-area -->
@@ -269,7 +274,7 @@ $mycat2 = get_cat_id($mycat);?>
                 <div class="title-and-sentence-left no-padding">
                   <div class="category-and-date">
 
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                     <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
                   </div>
                   <a href="<?php the_permalink();?>">
@@ -282,6 +287,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end thumbnail-category -->
               <div class="right-part-category-vertical">
@@ -295,9 +301,9 @@ $mycat2 = get_cat_id($mycat);?>
                 <div class="title-and-sentence no-padding">
                   <div class="category-and-date">
                     <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                   </div>
-                  <a href="<?php the_permalink();?>">
+                  <a class="link-thumb" href="<?php the_permalink();?>">
                     <div class="article-title">
                       <?php
                       $titre = get_field('titre_de_larticle');
@@ -307,6 +313,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end right-part-category -->
 
@@ -322,9 +329,9 @@ $mycat2 = get_cat_id($mycat);?>
                 <div class="title-and-sentence no-padding">
                   <div class="category-and-date">
                     <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                   </div>
-                  <a href="<?php the_permalink();?>">
+                  <a class="link-thumb" href="<?php the_permalink();?>">
                     <div class="article-title">
                       <?php
                       $titre = get_field('titre_de_larticle');
@@ -334,6 +341,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end right-part-category -->
               <!-- Third part start -->
@@ -347,10 +355,10 @@ $mycat2 = get_cat_id($mycat);?>
                 </div>
                 <div class="title-and-sentence no-padding">
                   <div class="category-and-date">
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                     <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
                   </div>
-                  <a href="<?php the_permalink();?>">
+                  <a class="link-thumb" href="<?php the_permalink();?>">
                     <div class="article-title">
                       <?php
                       $titre = get_field('titre_de_larticle');
@@ -360,6 +368,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end right-part-category third-part -->
             </div> <!-- end row -->
@@ -367,7 +376,7 @@ $mycat2 = get_cat_id($mycat);?>
               <div class="title-and-sentence-bottom no-padding">
                 <div class="category-and-date">
                   <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
-                  <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                  <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
                 <a href="<?php the_permalink();?>">
                   <div class="article-title">
@@ -379,6 +388,7 @@ $mycat2 = get_cat_id($mycat);?>
                   </div>
                 </a>
                 <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
               </div>
             </div>
           </article><!--  end category-area -->
@@ -414,7 +424,7 @@ $mycat2 = get_cat_id($mycat);?>
                 <div class="title-and-sentence-left no-padding">
                   <div class="category-and-date">
 
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                     <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
                   </div>
                   <a href="<?php the_permalink();?>">
@@ -427,6 +437,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end thumbnail-category -->
               <div class="right-part-category-vertical">
@@ -440,9 +451,9 @@ $mycat2 = get_cat_id($mycat);?>
                 <div class="title-and-sentence no-padding">
                   <div class="category-and-date">
                     <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                   </div>
-                  <a href="<?php the_permalink();?>">
+                  <a class="link-thumb" href="<?php the_permalink();?>">
                     <div class="article-title">
                       <?php
                       $titre = get_field('titre_de_larticle');
@@ -452,6 +463,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end right-part-category -->
 
@@ -466,10 +478,10 @@ $mycat2 = get_cat_id($mycat);?>
                 </div>
                 <div class="title-and-sentence no-padding">
                   <div class="category-and-date">
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                     <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
                   </div>
-                  <a href="<?php the_permalink();?>">
+                  <a class="link-thumb" href="<?php the_permalink();?>">
                     <div class="article-title">
                       <?php
                       $titre = get_field('titre_de_larticle');
@@ -479,6 +491,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end right-part-category third-part -->
               <div class="right-part-category-horizontal first-part-horizontal">
@@ -492,9 +505,9 @@ $mycat2 = get_cat_id($mycat);?>
                 <div class="title-and-sentence no-padding">
                   <div class="category-and-date">
                     <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                   </div>
-                  <a href="<?php the_permalink();?>">
+                  <a class="link-thumb" href="<?php the_permalink();?>">
                     <div class="article-title">
                       <?php
                       $titre = get_field('titre_de_larticle');
@@ -504,6 +517,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end right-part-category -->
             </div> <!-- end row -->
@@ -511,7 +525,7 @@ $mycat2 = get_cat_id($mycat);?>
               <div class="title-and-sentence-bottom no-padding">
                 <div class="category-and-date">
                   <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
-                  <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                  <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
                 <a href="<?php the_permalink();?>">
                   <div class="article-title">
@@ -523,6 +537,7 @@ $mycat2 = get_cat_id($mycat);?>
                   </div>
                 </a>
                 <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
               </div>
             </div>
           </article><!--  end category-area -->
@@ -556,7 +571,7 @@ $mycat2 = get_cat_id($mycat);?>
                 <div class="title-and-sentence-left no-padding">
                   <div class="category-and-date">
 
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                     <div class="the-category"><?php the_category(); ?></div>
                   </div>
                   <a href="<?php the_permalink();?>">
@@ -569,6 +584,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end thumbnail-category -->
               <div class="right-part-category-vertical">
@@ -582,9 +598,9 @@ $mycat2 = get_cat_id($mycat);?>
                 <div class="title-and-sentence no-padding">
                   <div class="category-and-date">
                     <div class="the-category"><?php the_category(); ?></div>
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                   </div>
-                  <a href="<?php the_permalink();?>">
+                  <a class="link-thumb" href="<?php the_permalink();?>">
                     <div class="article-title">
                       <?php
                       $titre = get_field('titre_de_larticle');
@@ -594,6 +610,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end right-part-category -->
 
@@ -608,10 +625,10 @@ $mycat2 = get_cat_id($mycat);?>
                 </div>
                 <div class="title-and-sentence no-padding">
                   <div class="category-and-date">
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                     <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
                   </div>
-                  <a href="<?php the_permalink();?>">
+                  <a class="link-thumb" href="<?php the_permalink();?>">
                     <div class="article-title">
                       <?php
                       $titre = get_field('titre_de_larticle');
@@ -621,6 +638,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end right-part-category third-part -->
               <div class="right-part-category-horizontal first-part-horizontal">
@@ -634,9 +652,9 @@ $mycat2 = get_cat_id($mycat);?>
                 <div class="title-and-sentence no-padding">
                   <div class="category-and-date">
                     <div class="the-category"><?php the_category();?></div>
-                    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                   </div>
-                  <a href="<?php the_permalink();?>">
+                  <a class="link-thumb" href="<?php the_permalink();?>">
                     <div class="article-title">
                       <?php
                       $titre = get_field('titre_de_larticle');
@@ -646,6 +664,7 @@ $mycat2 = get_cat_id($mycat);?>
                     </div>
                   </a>
                   <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
               </div> <!-- end right-part-category -->
             </div> <!-- end row -->
@@ -653,7 +672,7 @@ $mycat2 = get_cat_id($mycat);?>
               <div class="title-and-sentence-bottom no-padding">
                 <div class="category-and-date">
                   <div class="the-category"><?php the_category(); ?></div>
-                  <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                  <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
                 </div>
                 <a href="<?php the_permalink();?>">
                   <div class="article-title">
@@ -665,6 +684,7 @@ $mycat2 = get_cat_id($mycat);?>
                   </div>
                 </a>
                 <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
               </div>
             </div>
           </article><!--  end category-area -->

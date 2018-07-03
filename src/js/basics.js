@@ -1,7 +1,46 @@
 jQuery(document).ready(function($){
+  $('.categories-prez').on('inview', function(event, isInView) {
+    if (isInView) {
+    // element is now visible in the viewport
+    var prezHeight = document.body.clientHeight - $('.categories-prez').offset().top;
+    $('.sidebar-recherche').css({
+      'position': 'absolute',
+      'bottom': prezHeight,
+      'top':'auto',
+      // 'transition': 'top .1s linear, bottom .1s linear'
+    });
+
+    $('.sidebar-contact').css({
+      'position': 'absolute',
+      'bottom': prezHeight,
+      'top':'auto',
+      // 'transition': 'top .1s linear, bottom .1s linear'
+    });
+  } else {
+    // element has gone out of viewport
+    $('.sidebar-recherche').css({
+      'position': 'fixed',
+      'bottom': '0',
+      'top':'0'
+    });
+    $('.sidebar-contact').css({
+      'position': 'fixed',
+      'bottom': '0',
+      'top':'0'
+    });
+  }
+});
+
+});
+
+jQuery(document).ready(function($){
   var textDyptique = $(".image-dyptique-asymetrique-right").width();
-console.log(textDyptique);
-$('.legende-dyptique-asymetrique').width(textDyptique);
+  $('.legende-dyptique-asymetrique').width(textDyptique);
+
+  // var video = $("#player .vp-player-layout").width();
+  // console.log(video);
+  // $('.container-video .legende-video').width(video);
+
 });
 
 // ICONE DE FERMETURE MENU POUR MOBILE
@@ -14,6 +53,7 @@ $('.navbar-toggler').click(function(){
 // ANIMATION BARRE POUR SCROLL BODY
 $('#bs4navbar').append('<div id="progress" class="xs-invisible"></div>');
 $('#navbar-navigation').append('<div id="progress-bar" class="xs-visible"></div>');
+$('#navbar').append('<div id="progress-bar" class="xs-visible"></div>');
 
 // PROGRESS BAR
 jQuery(function($){
@@ -48,6 +88,26 @@ jQuery(function($){
 
     // Récupération de la largeur de la fenêtre
     var largeur = $('#navbar-navigation').width();
+    // var largeur = $('#navbar').width();
+
+    // Calcul de la largeur de la barre
+    var barre = position / hauteur * largeur;
+
+    // Modification du CSS pour élargir ou réduire la barre
+    $("#progress-bar").css("width",barre);
+  });
+
+$(document).on('scroll',function(){ // Détection du scroll
+
+    // Calcul de la hauteur "utile"
+    var hauteur = $(document).height()-$(window).height();
+
+    // Récupération de la position verticale
+    var position = $(document).scrollTop();
+
+    // Récupération de la largeur de la fenêtre
+    var largeur = $('#navbar').width();
+    // var largeur = $('#navbar').width();
 
     // Calcul de la largeur de la barre
     var barre = position / hauteur * largeur;
@@ -211,15 +271,15 @@ jQuery(document).ready(function ($) {
 
 // SMOOTH SCROLL
 
-  $('a[href^="#"]').on('click', function(event) {
-      var target = $(this.getAttribute('href'));
-      if( target.length ) {
-          event.preventDefault();
-          $('html, body').stop().animate({
-              scrollTop: target.offset().top
-          }, 1000);
-      }
-  });
+$('a[href^="#"]').on('click', function(event) {
+  var target = $(this.getAttribute('href'));
+  if( target.length ) {
+    event.preventDefault();
+    $('html, body').stop().animate({
+      scrollTop: target.offset().top
+    }, 1000);
+  }
+});
 
 // EDITO SCROLL LEGENDE LAPTOP
 
@@ -227,4 +287,14 @@ $("#sidebar").stick_in_parent({
   offset_top: 70
 });
 
+$("#sidebar-two").stick_in_parent({
+  offset_top: 70
+});
+
+$("#sidebar-three").stick_in_parent({
+  offset_top: 70
+});
+
 })(jQuery);
+
+

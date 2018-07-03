@@ -4,13 +4,14 @@
     position: absolute;
     top: 30px;
     right: 30px;
+    font-weight: 300;
     color: $grey-text;
     font-size: 25px;
     transform: rotate(45deg);
   }
   .recherche-titre{
     text-align: left;
-    font-family: "League Gothic";
+    font-family: "LeagueGothic";
     font-size: 13px;
     font-weight: 400;
     line-height: 30px;
@@ -22,6 +23,7 @@
     display: none!important;
   }
   #s{
+    border-radius: 0!important;
     border: none;
     font-family: 'Freight Big Book';
     font-size: 47px;
@@ -31,86 +33,104 @@
     // background-color: $legende;
     text-transform: capitalize;
   }
-  #s::placeholder{
-    color: $grisclair;
-  }
-  #s:focus, #s:hover, #s:visited, #s:active, #searchsubmit:hover, #searchsubmit:focus, #searchsubmit:active, #searchsubmit:visited{
-    outline: none!important;
-  }
-  #searchsubmit{
-    width: 109px;
-    height: 28px;
-    padding: 6px 10px;
-    color:#000;
-    background-color: transparent;
-    font-size: 9px;
-    font-weight:300;
-    text-align: center;
-    cursor: pointer;
-    vertical-align: middle;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-    white-space: normal;
-    border:1px solid #000;
-    border-radius: 0px;
-    font-family: 'Avenir';
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    transition: background-color .2s ease-in-out, color .2s ease-in-out;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #searchsubmit:hover{
-    background-color: black;
-    color: #fff;
-  }
-  #searchform{
+
+  @media (max-width: 767px){
+    #s{
+     font-size: 38px!important;
+   }
+ }
+ #s::placeholder{
+  color: $grisclair;
+}
+#s:focus, #s:hover, #s:visited, #s:active, #searchsubmit:hover, #searchsubmit:focus, #searchsubmit:active, #searchsubmit:visited{
+  outline: none!important;
+}
+#searchsubmit{
+  width: 109px;
+  height: 28px;
+  padding: 6px 10px;
+  color:#000;
+  background-color: transparent;
+  font-size: 9px;
+  font-weight:300;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: middle;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  white-space: normal;
+  border:1px solid #000;
+  border-radius: 0px;
+  font-family: 'Avenir';
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+#searchsubmit:hover{
+  background-color: black;
+  color: #fff;
+}
+#searchform{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  .search-mots{
+    border-bottom: 0.5px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: 90vh;
-    .search-mots{
-      border-bottom: 0.5px solid #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #choix p{
-      color: #000000;
-      font-family: "League Gothic";
-      font-size: 13px;
-      font-weight: 400;
-      line-height: 30px;
-      text-transform: uppercase;
+  }
+  @media (max-width: 767px) and (max-height: 670px){
+    #choix{
+      padding: 0 23%!important;
       text-align: center;
-      width: 100%;
-      margin-top: 20vh;
-    }
-    #choix input{
-      display:none;
-    }
-    #choix label{
-      display:inline-block;
-      text-align:center;
-      padding:10px 5px;
-      cursor:pointer;
-      color: #000000;
-      font-family: "Freight Text";
-      font-size: 12px;
-      font-weight: 300;
-      letter-spacing: 0.6px;
-      line-height: 29px;
-      transition: color .2s linear;
-    }
-    #choix label.active{
-      color: $grey-text;
-      transition: color .2s linear;
     }
   }
+  @media (max-width: 767px){
+    #choix{
+      padding: 0 13%;
+      text-align: center;
+    }
+  }
+  #choix p{
+    color: #000000;
+    font-family: "LeagueGothic";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    margin-top: 20vh;
+  }
+  #choix input{
+    display:none;
+  }
+  #choix label{
+    display:inline-block;
+    text-align:center;
+    padding:10px 5px;
+    cursor:pointer;
+    color: #000000;
+    font-family: "Freight Text";
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.6px;
+    line-height: 29px;
+    transition: color .2s linear;
+  }
+  #choix label.active{
+    color: $grey-text;
+    transition: color .2s linear;
+  }
+}
 }
 
 
@@ -127,7 +147,7 @@
 }
 
 .the-search-subtitle{
-  font-family: "League Gothic";
+  font-family: "LeagueGothic";
   font-size: 15px;
   font-weight: 400;
   line-height: 30px;
@@ -159,6 +179,12 @@
   width: 100%;
 }
 
+@media (max-width: 767px){
+  .recherche-none{
+    margin: 0em .5em 6em!important;
+  }
+}
+
 .button-recherche{
   width: 200px!important;
 
@@ -170,8 +196,8 @@
 
 @media (min-width: 768px){
   .container-search{
-  padding-left: 10%!important;
-}
+    padding-left: 10%!important;
+  }
 }
 
 .container-search{

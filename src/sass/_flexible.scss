@@ -98,12 +98,17 @@
   margin-bottom: 10vh;
   display: flex;
   height: auto;
-  margin-left: 20%;
+  // margin-left: 20%;
+  #sticker{
+    margin-left: 24%;
+    margin-right: 15px;
+  }
   @media (max-width: 1800px){
     #sticker{
-    width: 40vw!important;
-    height: auto!important;
-  }
+      width: 35vw!important;
+      height: auto!important;
+
+    }
   }
 
   .image-legende-gauche{
@@ -127,6 +132,7 @@
     width: 60vw;
     display: flex;
     justify-content: center;
+    padding: 0!important;
   }
   .texte-scrollable-droite{
     display: flex;
@@ -134,7 +140,7 @@
     height: auto;
     .legende-francais, .legende-anglais{
       width: 50%;
-      padding-left: 30px;
+      padding-left: 15px;
     }
 
   }
@@ -153,7 +159,8 @@
 
 @media (min-width: 1800px){
   .image-texte-scrollable{
-    margin-left: 35%;
+    margin-left: 24%;
+    margin-right: 15px;
 
     .position-texte{
       width: 35vw;
@@ -166,46 +173,74 @@
 .container-video{
   margin: 10vh 0;
 
-  .video{
-    padding: 10px 10%;
-    iframe{
-      width: 100%!important;
-    }
-  }
 
   @media (min-width: 768px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     .video{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: #fff;
+      width: 90%;
       iframe{
-        height: 70vh!important;
-      }
+      // width: 100%!important;
+      width: 100%!important;
     }
+  //     iframe{
+  //       height: 80vh!important;
+  //       padding-left: 5px;
+  //       padding-right: 5px;
+  //       padding-bottom: 5px;
+  //       padding-top: 5px;
+  //       background-color:#fff;
+  //     }
+  //   }
+  //   .legende-video{
+  //     padding: 0 8% 0 12.5%;
+  //     margin-top: -10px;
+}
+
+}
+@media (max-width: 767px){
+  .legende-video{
+    padding-left: 15px;
+    padding-right: 15px;
 
   }
+}
 
-  .legende-video{
-    padding: 0 10%;
-    .title{
+.legende-video{
+  align-self: center;
+  padding-top: 10px;
+  .title{
+    font-family: "Freight Text";
+    font-size: 13px;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 0.5em;
+  }
+  .legende{
+    p{
+      margin-bottom: 0;
       font-family: "Freight Text";
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 500;
-      font-style: italic;
-      margin-bottom: 0.5em;
+      letter-spacing: 0.55px;
+      line-height: 13px;
     }
-    .legende{
-      p{
-        margin-bottom: 0;
-        font-family: "Freight Text";
-        font-size: 11px;
-        font-weight: 500;
-        letter-spacing: 0.55px;
-        line-height: 13px;
-      }
-    }
+  }
+  @media (min-width: 768px){
     .direction-artistique{
-      padding-left: 0!important;
+      padding-left: 5px!important;
     }
-    .musique-originale{
-      padding-right: 0!important;
+  }
+
+  .musique-originale{
+      // padding-right: 0!important;
     }
   }
 }
@@ -237,7 +272,7 @@
     align-self: flex-end;
     margin-top: 15px;
     // margin-right: 10%;
-    width: 70%;
+    width: 50%;
     p{
       font-size: 10px;
       font-weight: 300;
@@ -296,6 +331,7 @@
 /****************** CITATION *************************/
 .citation{
  padding: 10vh 0;
+ margin: 0 10%;
  border-top: 0.2px solid black;
  border-bottom: 0.2px solid black;
  display: flex;
@@ -311,7 +347,7 @@
   font-weight: 300;
   line-height: 52px;
   margin: 0;
-  padding: 10vh 20% 5vh 20%;
+  padding: 10vh 10% 5vh 10%;
 }
 .sous-titre{
   color: #626262;

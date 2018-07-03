@@ -36,7 +36,7 @@
           if ($titre):?>
             <h1 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h1>
           <?php endif; ?>
-          <p><?php echo get_the_date(); ?></p>
+          <p class="the-date"><?php echo get_the_date(); ?></p>
         </div>
 
         <?php
@@ -158,10 +158,10 @@ endif; ?>
                   </div>
                 </div>
               </div>
-              <div class="position-texte">
+              <div class="position-texte col-md-6">
                 <div class="texte-scrollable-droite">
                   <?php if( have_rows('texte_scrollable_francais') ): ?>
-                    <div class="legende-francais">
+                    <div class="legende-francais col-md-6">
                       <?php  while ( have_rows('texte_scrollable_francais') ) : the_row();?>
                         <div class="question">
                           <?php the_sub_field('question');?>
@@ -174,7 +174,7 @@ endif; ?>
                   <?php endif; ?>
 
                   <?php if( have_rows('texte_scrollable_anglais') ): ?>
-                    <div class="legende-anglais toggle-anglais">
+                    <div class="legende-anglais toggle-anglais col-md-6">
                       <?php  while ( have_rows('texte_scrollable_anglais') ) : the_row();?>
                         <div class="question">
                           <?php the_sub_field('question');?>
@@ -255,7 +255,7 @@ endif; ?>
                   </div>
                 <?php endif; ?>
               </div> <!-- end layout -->
-              <div class="container-dyptique-edito xs-visible">
+              <div class="container-dyptique-edito dypt xs-visible">
                 <div class="swiper-container xs-visible">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -413,12 +413,14 @@ endif; ?>
                 <?php elseif( get_row_layout() == 'citation' ):?>
                   <div class="layout layout-<?php echo get_row_index();?>" data-count="<?php echo get_row_index()+1;?>">
                     <div class="citation">
+                    <hr class="hr-citation xs-visible">
                       <div class="titre">
                         <?php the_sub_field('citation_titre');?>
                       </div>
                       <div class="sous-titre">
                         <?php the_sub_field('citation_sous_titre');?>
                       </div>
+                     <hr class="hr-citation xs-visible">
                     </div>
                   </div> <!-- end layout -->
 
@@ -484,6 +486,20 @@ endif; ?>
                             </div>
                             <div class="paragraphe-remerciements">
                               <?php the_field('remerciements'); ?>
+                            </div>
+                            <div class="interview-traduction xs-visible">
+                              <div class="infos-finales">
+                              <p>Photos et Interview:<br></p>
+                              <?php the_field('photos_et_interview'); ?>
+                              </div>
+                              <div class="infos-finales">
+                              <p>Traduction: <br>
+                                <?php the_field('traduction_article'); ?></p>
+                              </div>
+                              <div class="infos-finales">
+                              <p>Publié le <br>
+                                <?php echo get_the_date(); ?></p>
+                                </div>
                             </div>
                             <div class="partage">
                               <?php

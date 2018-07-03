@@ -16,10 +16,18 @@
   right: -14vw!important;
 }
 
+.container-home .header-home .sous-titre-home, .container-home .intro .intro-texte{
+  width: 43%!important;
+}
+
+.container-home .intro h2{
+  width: 56%!important;
+}
+
 
   .home-rencontre-destination{
     margin-left:15%!important;
-    margin-right: 15%!important;
+    margin-right: 5%!important;
     img{
       width: 80%;
       height:auto;
@@ -36,19 +44,21 @@
 
   .home-category-retrospective{
     margin-left:15%!important;
-    margin-right: 15%!important;
+    margin-right: 13%!important;
     .the-title{
-      width: 70%;
+      width: 55%;
     }
     .excerpt-article{
-      width: 40%!important;
+      width: 38%!important;
     }
   }
 
 
 
   .category-studio{
+    margin-left: 35%!important;
     .studio-left{
+      width: 42%!important;
       img{
         width: 95%;
         height: auto;
@@ -56,23 +66,32 @@
     }
     .studio-right{
       img{
-        width: 60%;
+        width: 67.5%;
         height: auto;
       }
     }
   }
 
 .home-category-left{
-  width: 70%!important;
+  width: 75%!important;
 }
 .home-category-right{
-  width: 65%!important;
+  width: 70%!important;
 }
   .home-edition{
     .write-edition{
+      .titre-edition{
+        width: 100%!important;
+      }
       .paragraphe-edition{
         // margin-right: 30%;
         width: 60%;
+        p:first-child{
+          width: 53%!important;
+        }
+        p:last-child{
+          width: 53%!important
+        }
       }
     }
     .images-edition{
@@ -104,9 +123,16 @@
   margin: 0 25%!important;
 }
 
+.chocolat-wrapper .chocolat-right{
+
+}
 
 .chocolat-wrapper .chocolat-bottom{
-  height: 110px!important;
+  height: 15vh!important;
+}
+
+.chocolat-wrapper .chocolat-right .chocolat-description, .chocolat-wrapper .chocolat-right .chocolat-pagination{
+  margin-left: 5vw!important;
 }
 
 .chocolat-wrapper .chocolat-bottom .chocolat-description{
@@ -114,7 +140,7 @@
 }
 
 .category-header p{
-  width: 45%!important;
+  width: 38%!important;
 }
 
 .image-texte-scrollable #sticker {
@@ -129,6 +155,11 @@
 }
 .article-header .row-article .article-anglais, .article-header .row-article .article-francais{
   max-width: 20%!important;
+}
+
+
+.pum-theme-109 .pum-container input[type=submit], .pum-theme-hello-box .pum-container input[type=submit]{
+  padding-left: 11vw!important;
 }
 
 

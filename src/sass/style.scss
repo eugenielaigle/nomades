@@ -73,11 +73,11 @@ a:hover, a:active, a:focus, a:visited{
 }
 
 img:hover, a:hover img, video:hover , a:hover video{
-  filter: brightness(90%);
-  -webkit-filter: brightness(90%);
-  -moz-filter: brightness(90%);
-  -o-filter: brightness(90%);
-  -ms-filter: brightness(90%);
+  filter: brightness(95%);
+  -webkit-filter: brightness(95%);
+  -moz-filter: brightness(95%);
+  -o-filter: brightness(95%);
+  -ms-filter: brightness(95%);
   transition: all 0.4s ease-in-out;
 }
 
@@ -104,6 +104,12 @@ em{
 
 strong{
   font-weight: bold;
+}
+
+#cubes {
+  -webkit-appearance: none!important;
+  background-color: transparent;
+  border: none;
 }
 
 .legende-francais{
@@ -148,7 +154,7 @@ strong{
 
 .article-header{
   h2{
-    font-family: 'LeagueGothic';
+    font-family: "LeagueGothic";
     font-size: 22px;
     font-weight: 400;
     line-height: 35px;
@@ -243,7 +249,7 @@ strong{
 
     .article-francais{
       font-family: 'Freight Text';
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 500;
       letter-spacing: 1.05px;
       line-height: 23px;
@@ -253,7 +259,7 @@ strong{
     .article-anglais{
       font-family: 'Freight Text';
       font-style: italic;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 500;
       letter-spacing: 1.05px;
       line-height: 21px;
@@ -303,11 +309,11 @@ strong{
       left: 5%;
     }
     .sous-titre-home{
-      font-size: 22px;
+      font-size: 25px;
       font-weight: 300;
       letter-spacing: 1.25px;
       line-height: 29px;
-      font-family: 'Freight Text';
+      font-family: 'Freight Big Book';
       font-weight: 300;
       width: 56%;
       float: right;
@@ -317,11 +323,16 @@ strong{
     }
   }
 
+@media (min-width: 992px) and (max-width: 1800px){
+    .intro{
+      margin-top: 20vh;
+    }
+}
   .intro{
     display:flex;
 
     h2{
-      font-family: 'LeagueGothic';
+      font-family: "LeagueGothic";
       font-size: 35px;
       font-weight: 400;
       line-height: 26px;
@@ -346,7 +357,7 @@ strong{
 .bloc-panoramique-home{
   margin-top: 10vh;
   margin-bottom: 10vh;
-  height: 100vh;
+  height: 110vh;
   .panoramique{
     position: absolute;
     left: 0;
@@ -365,6 +376,7 @@ strong{
   border-bottom: 1px solid black;
   border-top: 1px solid black;
   display: flex;
+  margin-top: 10vh;
   // margin: 0 5%;
   a{
     border-left: 1px solid black;
@@ -379,7 +391,7 @@ strong{
       text-align: center;
     }
     h3{
-      font-family: 'LeagueGothic';
+      font-family: "LeagueGothic";
       font-size: 13px;
       font-weight: 400;
       letter-spacing: 0.65px;
@@ -523,7 +535,7 @@ a:first-child{
 }
 
 .the-category{
-  font-family: 'League Gothic';
+  font-family: "LeagueGothic"!important;
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.65px;
@@ -590,13 +602,16 @@ a:first-child{
   margin-top: 30px;
 }
 
-.decouvrir-part2{
-  margin-top: 80px!important;
+@media (max-width: 1800px){
+  .decouvrir-part2{
+  margin-top: 25vh!important;
+}
 }
 
 
+
 .home-edition{
-  margin: 10vh 10%;
+  margin: 10vh 10% 0 10%;
   position: relative;
   height: 120vh;
   .write-edition{
@@ -607,7 +622,7 @@ a:first-child{
       display: flex;
       justify-content: flex-end;
       h2{
-        font-family: 'LeagueGothic';
+        font-family: "LeagueGothic";
         font-size: 35px;
         font-weight: 400;
         line-height: 26px;
@@ -627,8 +642,8 @@ a:first-child{
       z-index: 2;
       position: relative;
       p:first-child{
-        font-family: 'Freight Text';
-        font-style: italic;
+        font-family: 'Freight Big Book';
+        // font-style: italic;
         font-size: 31px;
         font-weight: 300;
         letter-spacing: 1.55px;
@@ -676,9 +691,13 @@ a:first-child{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    @media (min-width: 768px){
+      padding-right: 20px;
+    }
   }
+
   .the-category{
-    font-family: 'LeagueGothic';
+    font-family: "LeagueGothic";
     font-size: 16px;
     font-weight: 400;
     line-height: 17px;
@@ -709,7 +728,7 @@ a:first-child{
       color: #000000;
     }
     a{
-      font-family: 'LeagueGothic';
+      font-family: "LeagueGothic";
       font-size: 12px;
       font-weight: 400;
       letter-spacing: 0.75px;
@@ -725,7 +744,7 @@ a:first-child{
 
 .articles-a-la-une{
   padding-top: 5vh;
-  border-top: 1px solid black;
+  border-top: 0.5px solid black;
   margin-left: 0!important;
   margin-right: 0!important;
   .histoires h4{
@@ -780,9 +799,8 @@ a:first-child{
 
   .the-category {
     margin-bottom: 30px;
-
     color: $legende!important;
-    font-family: "League Gothic";
+    font-family: "LeagueGothic"!important;
     font-size: 18px;
     font-weight: 400;
     line-height: 17px;
@@ -817,8 +835,11 @@ a:first-child{
     font-weight: 300;
     letter-spacing: 1.9px;
     line-height: 20px;
-    .normal-title{
-      font-size: 28px!important;}
+    @media (min-width: 768px){
+      .normal-title{
+        font-size: 28px!important;}
+      }
+
       span{
         font-style: italic;
       }
@@ -836,9 +857,9 @@ a:first-child{
 }
 
 .category-header{
-
+   margin-left: 10%;
   .the-category-title{
-    font-family: 'LeagueGothic';
+    font-family: "LeagueGothic";
     text-transform: uppercase;
     font-size: 45px;
     font-weight: 400;
@@ -901,8 +922,8 @@ a:first-child{
     transition: font-weight .2s ease-in-out;
   }
   .normal-title:hover{
-    font-weight: bold;
-    transition: font-weight .2s ease-in-out;
+    // font-weight: bold;
+    // transition: font-weight .2s ease-in-out;
     cursor: pointer;
   }
   .normal-title span{
@@ -1001,9 +1022,12 @@ a:first-child{
       .the-date{
         justify-content: flex-start!important;
       }
-      .the-category{
-        justify-content: flex-end!important;
+      @media (min-width: 768px){
+        .the-category{
+          justify-content: flex-end!important;
+        }
       }
+
     }
   }
   .thumbnail-right img{
@@ -1056,32 +1080,45 @@ a:first-child{
       }
       .category-and-date{
         width: 80%;
-        .the-category{
+        @media (min-width: 768px){
+         .the-category{
           justify-content: flex-end!important;
         }
-        .the-date{
-          justify-content: flex-start!important;
-        }
       }
-      .normal-title{
+
+      .the-date{
+        justify-content: flex-start!important;
+      }
+    }
+    .normal-title{
+      text-align: right;
+    }
+    .paragraphe-italique{
+      width: 85%;
+      p{
         text-align: right;
-      }
-      .paragraphe-italique{
-        width: 85%;
-        p{
-          text-align: right;
-        }
       }
     }
   }
-  .right-part-category-vertical img{
-    width: 100%;
-    height: auto;
-  }
+}
+.right-part-category-vertical img{
+  width: 100%;
+  height: auto;
+}
 
 }
 
 /******************************** EDITO *********************************/
+@media (min-width: 768px){
+  .edit{
+  padding-top: 10vh;
+}
+.container-edito{
+  margin-top: 10vh!important;
+  }
+}
+
+
 .container-edito{
   margin-top: 10vh;
   margin-bottom: 10vh;
@@ -1104,6 +1141,13 @@ a:first-child{
     padding-left: 15px;
     // padding-right: 15px;
   }
+  // .edito-sous-titre-dyptique{
+  //   margin-top: 2em!important;
+  // }
+
+  // .edito-sous-titre-pano{
+  //   padding-top: 0!important;
+  // }
   .edito-right{
     text-align: justify;
   }
@@ -1114,12 +1158,12 @@ a:first-child{
     .legende-anglais{
       width: 40%;
       text-align: right;
-      margin-top: 70px;
+      // margin-top: 70px;
     }
   }
   .dyptique-edito-left{
     display: flex;
-    align-items: flex-end;
+    // align-items: flex-start;
     justify-content: flex-end;
     .legende-anglais{
       width: 40%;
@@ -1127,6 +1171,14 @@ a:first-child{
     }
   }
 }
+
+@media (min-width: 768px){
+  .bloc-panoramique-edito{
+  height: 100vh!important;
+}
+}
+
+
 .container-dyptique-edito{
   background-color: #fff;
   // padding-top: 15vh;
@@ -1259,6 +1311,7 @@ a:first-child{
     height: 48vh!important;
   }
 }
+
 
 
 .chocolat-wrapper .chocolat-left{
@@ -1443,7 +1496,7 @@ a:first-child{
     cursor: pointer;
     p{
       font-style: normal!important;
-      font-family: 'LeagueGothic';
+      font-family: "LeagueGothic";
       color: #fff!important;
       margin-bottom: 0;
       text-transform: uppercase;
@@ -1456,22 +1509,22 @@ a:first-child{
         font-style: italic;
         align-self: center;
         display: inline-block;
-
+        text-decoration: underline;
       }
     }
   }
 }
 
 @media (min-width: 768px){
-.banner{
-  a{
-    p{
-      span{
-        margin-left: 15px!important;
+  .banner{
+    a{
+      p{
+        span{
+          margin-left: 15px!important;
+        }
       }
     }
   }
-}
 }
 
 
@@ -1485,11 +1538,26 @@ a:first-child{
 
 
 .container-with-banner{
-  margin-top: 35px;
+  margin-top: 28px;
+
 }
 
 #container-with-banner{
   transition-property: all;
   transition-duration: .2s;
+  position: relative;
 
 }
+
+.pum-theme-109 .pum-container p, .pum-theme-hello-box .pum-container p{
+  margin: 0!important;
+}
+
+#popmake-997{
+  bottom: 0!important;
+  min-height: 50px;
+  margin-bottom: 0!important;
+}
+
+
+

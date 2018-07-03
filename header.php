@@ -23,6 +23,7 @@ $detect = new Mobile_Detect ; ?>
   </a>
   <button class="navbar-special cubes" type="button" id="cubes">
     <span class="navbar-toggler-icon navbar-toggler-table-icon"></span>
+  </button>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

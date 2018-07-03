@@ -14,9 +14,9 @@
 
 @media (min-height: 670px){
   .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
-  height: 100%!important;
-}
+    height: 100%!important;
   }
+}
 
 #popmake-122{
   #pum_popup_title_122{
@@ -49,7 +49,7 @@
     .title-contact{
       margin-top: 20px;
       font-size: 15px;
-      font-family: 'LeagueGothic';
+      font-family: "LeagueGothic";
       line-height: 35px;
     }
   }
@@ -58,7 +58,7 @@
 
 
 .custom-select {
-  width: 80%!important;
+  width: 90%!important;
   height: auto!important;
   position: relative;
   font-family: 'Avenir';
@@ -197,13 +197,14 @@
  line-height: 21px;
  font-style: italic;
  padding: 15px;
+ border-radius: 0!important;
 }
 
 #wpcf7-f86-o4 input[type=submit], #wpcf7-f86-o8 input[type=submit]{
   padding: 6px 10px;
   text-transform: uppercase;
-  color:#fff;
-  background-color: #000;
+  color:#000;
+  background-color: #fff;
   font-size: 9px;
   font-weight:300;
   line-height: 1.4285;
@@ -216,13 +217,18 @@
   font-size: 9px;
   letter-spacing: 1.8px;
   transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
 }
 
 #wpcf7-f86-o4 input[type=submit]:hover, #wpcf7-f86-o8 input[type=submit]:hover{
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
 }
 
+
+span.wpcf7-list-item{
+  margin: 0!important;
+}
 
 
 .form-inputs{
@@ -239,7 +245,7 @@
 
 div.wpcf7-mail-sent-ok {
   margin: 2em 0.5em 1em;
-  padding: 40vh 5%;
+  padding: 30vh 5%;
   text-align: center;
   border: none!important;
   position: absolute;
@@ -252,6 +258,12 @@ div.wpcf7-mail-sent-ok {
   background-color: white;
   color: black;
   height: 100%;
+  h2{
+    font-family: "LeagueGothic"!important;
+    font-size: 14px!important;
+    margin-bottom: 30px!important;
+    font-style: normal!important;
+  }
 }
 
 .wpcf7-validation-errors{
@@ -272,8 +284,9 @@ div.wpcf7-mail-sent-ok {
   left: 35px;
 }
 
-.pum-theme-116 .pum-content + .pum-close, .pum-theme-custom .pum-content + .pum-close{
+.pum-theme-116 .pum-content + .pum-close, .pum-theme-custom .pum-content + .pum-close, .pum-theme-116 .pum-content + .pum-close:hover, .pum-theme-custom .pum-content + .pum-close:hover{
   font-size: 20px!important;
   transform: rotate(45deg);
+      font-weight: 300;
   background-color: transparent!important;
 }

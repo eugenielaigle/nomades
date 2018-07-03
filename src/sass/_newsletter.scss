@@ -1,3 +1,7 @@
+:not(output):-moz-ui-invalid {
+  box-shadow:  none!important;
+}
+
 .newsletter-area{
   margin-top: 25px;
   display: flex;
@@ -12,21 +16,22 @@
 
 form#sib_signup_form_1 .sib-default-btn{
   border-radius: 0px!important;
+  font-size: 12px!important;
 
 }
 
 input[type=checkbox] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
 }
 
 input[type=checkbox] {
-    -border-radius: 0px;
-    height: 12px;
-    width: 12px;
-    background: #fff;
-    border: 1px solid #000;
+  -border-radius: 0px;
+  height: 12px;
+  width: 12px;
+  background: #fff;
+  border: 1px solid #000;
 }
 
 input[type="checkbox"]:checked {
@@ -81,7 +86,7 @@ input[type="checkbox"]:checked {
   color: #fff;
 }
 .pum-title, .popmake-title{
-  font-family: 'LeagueGothic'!important;
+  font-family: "LeagueGothic"!important;
   margin-bottom: 40px;
 }
 
@@ -130,7 +135,7 @@ input[type="checkbox"]:checked {
   form#sib_signup_form_1 .checkboxes {
     width: 70%!important;
     margin: 10vh 15%!important;
-}
+  }
 
   .pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
     left: 0!important;
@@ -159,15 +164,17 @@ input[type="checkbox"]:checked {
     // margin: 0 2.5%;
     font-style: italic;
     .sib_loader{
-       height: 65vh;
-    }
+     height: 65vh;
+   }
    .sib-alert-message {
-    padding: 30% 0px 60%!important;
+    padding: 40% 10% 75% 10%!important;
     text-align: center;
     width: 100%;
     line-height: 25px!important;
     display: flex;
     justify-content: center;
+    left: 0;
+    right: 0;
   }
 }
 }
@@ -176,28 +183,36 @@ input[type="checkbox"]:checked {
 
 @media (min-width: 992px) and (max-width: 1799.98px){
 
-   form#sib_signup_form_1 .sib-default-btn{
-    width: 50%!important;
-    margin: 0px 25%!important;
-  }
-  #sib_signup_form_1{
-    font-style: italic;
-    .sib_loader{
-       height: 40vh;
-    }
-    .sib-alert-message{
-      padding: 30% 12px 45% 12px!important;
-      text-align: center;
-      width: 100%;
-      line-height: 25px!important;
-      display: flex;
-    justify-content: center;
-    }
-  }
+ form#sib_signup_form_1 .sib-default-btn{
+  width: 60%!important;
+  margin: 0px 20%!important;
+}
+#sib_signup_form_1{
+  font-style: italic;
+  .sib_loader{
+   height: 40vh;
+ }
+ .sib-alert-message{
+  padding: 30% 12px 55% 12px!important;
+  text-align: center;
+  width: 100%;
+  line-height: 25px!important;
+  display: flex;
+  justify-content: center;
+}
+}
 
-  .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
-    width: 25%!important;
-  }
+form#sib_signup_form_1 p.sib-alert-message-warning{
+  padding: 30% 12px 65% 12px!important;
+}
+#sib_signup_form_1 .sib_loader{
+  height: 48vh!important;
+}
+.pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122, .pum-theme-custom #popmake-112{
+  width: 25%!important;
+  top: 20%!important;
+}
+
 
 }
 
@@ -205,70 +220,72 @@ input[type="checkbox"]:checked {
 
 @media (min-width: 768px) and (max-width: 991.98px){
 
-   form#sib_signup_form_1 .sib-default-btn{
-    width: 50%!important;
-    margin: 0px 25%!important;
-  }
-
-  .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
-    width: 40%!important;
-  }
-
-  .pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
-    top: 25%!important;
-    width: 30%!important;
-  }
-
-  #sib_signup_form_1{
-    font-style: italic;
-    .sib_loader{
-       height: 30vh;
-    }
-    .sib-alert-message{
-      padding: 25% 12px 75%!important;
-      text-align: center;
-      width: 100%;
-    /* left: 100px; */
-    display: flex;
-    justify-content: center;
-    line-height: 25px!important;
-  }
-
-}
+ form#sib_signup_form_1 .sib-default-btn{
+  width: 50%!important;
+  margin: 0px 25%!important;
 }
 
-// NEWSLETTER BIG
+.pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
+  width: 40%!important;
+}
 
-@media (min-width: 1800px){
-
-   form#sib_signup_form_1 .sib-default-btn{
-    width: 50%!important;
-    margin: 0px 25%!important;
-  }
-
-  .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
-    width: 18%!important;
-  }
-
-
-  .pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
-    top: 25%!important;
-  // left: 1280px!important;
+.pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
+  top: 25%!important;
   width: 30%!important;
 }
 
 #sib_signup_form_1{
   font-style: italic;
   .sib_loader{
-       height: 27vh;
-    }
-  .sib-alert-message{
-    padding: 20% 12px 30% 12px!important;
-    text-align: center;
+   height: 30vh;
+ }
+ .sib-alert-message{
+  padding: 25% 12px 75%!important;
+  text-align: center;
+  width: 100%;
+    /* left: 100px; */
     display: flex;
     justify-content: center;
-    width: 100%;
+    line-height: 25px!important;
   }
+
+
+}
+
+}
+
+// NEWSLETTER BIG
+
+@media (min-width: 1800px){
+
+ form#sib_signup_form_1 .sib-default-btn{
+  width: 50%!important;
+  margin: 0px 25%!important;
+}
+
+.pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
+  width: 18%!important;
+}
+
+
+.pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112{
+  top: 30%!important;
+  // left: 1280px!important;
+  width: 17%!important;
+}
+
+#sib_signup_form_1{
+  font-style: italic;
+  .sib_loader{
+   height: 27vh;
+ }
+ .sib-alert-message{
+  padding: 20% 12px 30% 12px!important;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 }
 }
 
@@ -292,12 +309,51 @@ input[type=submit]{
   background-color: transparent;
   border: none;
   color: $legende;
-  font-family: "League Gothic";
+  font-family: "LeagueGothic";
   font-size: 17px;
   font-weight: 400;
   line-height: 26px;
   text-transform: uppercase;
   padding: 0;
   padding-left: 5px;
+
 }
 }
+
+@media (min-width: 768px){
+  .pum-theme-109 .pum-container, .pum-theme-hello-box .pum-container{
+    input[type=submit]{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      padding-left: 16vw;
+      padding-top: 4px;
+      left: 0;
+      cursor: pointer!important;
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .pum-theme-109 .pum-container, .pum-theme-hello-box .pum-container{
+    input[type=submit]{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      padding-top: 4px;
+      text-align: right;
+    }
+  }
+}
+
+
+
+
+  input:matches([type="button"], [type="submit"], [type="reset"]), input[type="file"]::-webkit-file-upload-button, button{
+    cursor: pointer!important;
+  }
+
+

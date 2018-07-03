@@ -28,21 +28,29 @@ get_header();?>
         <h3 class="mentions-name"><?php the_field('design_nom'); ?></h3>
         <div class="mentions-adress"><?php the_field('design_adresse'); ?></div>
       </div>
+
+
+    <?php $infos = get_field('infos_sup_paragraphe');
+    if (!empty($infos)):  ?>
       <div class="col-md-4 mentions-area">
         <p class="sous-titre-mentions">Editeur et Intégrateur</p>
         <h3 class="mentions-name"><?php the_field('editeur_integrateur'); ?></h3>
         <div class="mentions-adress"><?php the_field('editeur_integrateur_adresse'); ?></div>
       </div>
-    </div>
-    <?php $infos = get_field('infos_sup_paragraphe');
-    if (!empty($infos)):  ?>
-    <div class="row row-infos">
-      <div class="col-md-12 mentions area">
+
+      <div class="col-md-12 mentions area mentions-edit">
         <h3 class="mentions-name"><?php the_field('infos_sup'); ?></h3>
         <div class="mentions-adress"><?php the_field('infos_sup_paragraphe'); ?></div>
       </div>
-    </div>
+  <?php else: ?>
+     <div class="col-md-4 mentions-area mentions-edit">
+        <p class="sous-titre-mentions">Editeur et Intégrateur</p>
+        <h3 class="mentions-name"><?php the_field('editeur_integrateur'); ?></h3>
+        <div class="mentions-adress"><?php the_field('editeur_integrateur_adresse'); ?></div>
+      </div>
+
   <?php endif; ?>
+  </div>
   </div>
 </div>
 

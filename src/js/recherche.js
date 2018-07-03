@@ -4,7 +4,7 @@ console.log('recherche');
   var searchForm = document.getElementById('s');
   var searchSubmit = document.getElementById('searchsubmit');
 
-  searchForm.placeholder = "Je recherche";
+  searchForm.placeholder = "Recherche";
   searchSubmit.value = "Rechercher";
 
 } )(jQuery);

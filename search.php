@@ -103,99 +103,136 @@ wp_nav_menu([
             $mycat2 = get_cat_id($mycat);
             get_the_tag_list();?>
             <!-- <div class="search-posts"> -->
-              <article class="category-area">
-                <div class="row-category">
-                  <div class="thumbnail-category">
-                    <a href="<?php the_permalink();?>">
-                      <?php the_post_thumbnail(); ?>
+                        <article class="category-area">
+            <div class="row-category">
+              <div class="thumbnail-category">
+                <a href="<?php the_permalink();?>">
+                  <?php the_post_thumbnail(); ?>
+                </a>
+                <div class="title-and-sentence-left no-padding">
+                  <div class="category-and-date">
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
+                  </div>
+                  <a href="<?php the_permalink();?>">
+                    <div class="article-title">
+                      <?php
+                      $titre = get_field('titre_de_larticle');
+                      if ($titre):?>
+                        <h2 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
+                      <?php endif; ?>
+                    </div>
                   </a>
-                  <div class="title-and-sentence-left no-padding">
-                      <div class="category-and-date">
-                        <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
-                        <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
+                  <div class="paragraphe-italique no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
+                </div>
+              </div> <!-- end thumbnail-category -->
+              <div class="right-part-category-vertical">
+                <div class="thumbnail-right xs-invisible">
+                  <a href="<?php the_permalink();?>">
+                    <?php if (class_exists('MultiPostThumbnails')) :
+                      MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
+                    endif;?>
+                  </a>
+                </div>
+                <div class="title-and-sentence no-padding">
+                  <div class="category-and-date">
+                    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
+                  </div>
+                  <a class="link-thumb" href="<?php the_permalink();?>">
+                    <div class="article-title">
+                      <?php
+                      $titre = get_field('titre_de_larticle');
+                      if ($titre):?>
+                        <h2 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
+                      <?php endif; ?>
                     </div>
-                    <a href="<?php the_permalink();?>">
-                        <div class="article-title">
-                          <?php
-                          $titre = get_field('titre_de_larticle');
-                          if ($titre):?>
-                            <h2 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
-                        <?php endif; ?>
+                  </a>
+                  <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
+                </div>
+              </div> <!-- end right-part-category -->
+              <div class="right-part-category-horizontal first-part-horizontal">
+                <div class="thumbnail-right xs-invisible">
+                  <a href="<?php the_permalink();?>">
+                    <?php if (class_exists('MultiPostThumbnails')) :
+                      MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'third-image');
+                    endif;?>
+                  </a>
+                </div>
+                <div class="title-and-sentence no-padding">
+                  <div class="category-and-date">
+                    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
+                  </div>
+                  <a class="link-thumb" href="<?php the_permalink();?>">
+                    <div class="article-title">
+                      <?php
+                      $titre = get_field('titre_de_larticle');
+                      if ($titre):?>
+                        <h2 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
+                      <?php endif; ?>
                     </div>
+                  </a>
+                  <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
+                </div>
+              </div> <!-- end right-part-category first part-->
+
+
+              <!-- Third part start -->
+              <div class="right-part-category-horizontal third-part-horizontal">
+                <div class="thumbnail-right xs-invisible">
+                  <a href="<?php the_permalink();?>">
+                    <?php if (class_exists('MultiPostThumbnails')) :
+                      MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'third-image');
+                    endif;?>
+                  </a>
+                </div>
+                <div class="title-and-sentence no-padding">
+                  <div class="category-and-date">
+                    <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
+                    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
+                  </div>
+                  <a class="link-thumb" href="<?php the_permalink();?>">
+                    <div class="article-title">
+                      <?php
+                      $titre = get_field('titre_de_larticle');
+                      if ($titre):?>
+                        <h2 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
+                      <?php endif; ?>
+                    </div>
+                  </a>
+                  <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                  <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
+                </div>
+              </div> <!-- end right-part-category third-part -->
+
+
+
+
+            </div> <!-- end row -->
+            <div class="row-bottom">
+              <div class="title-and-sentence-bottom no-padding">
+                <div class="category-and-date">
+                  <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
+                  <div class="the-date xs-invisible"><p><?php echo get_the_date(); ?></p></div>
+                </div>
+                <a href="<?php the_permalink();?>">
+                  <div class="article-title">
+                    <?php
+                    $titre = get_field('titre_de_larticle');
+                    if ($titre):?>
+                      <h2 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
+                    <?php endif; ?>
+                  </div>
                 </a>
                 <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
+                <div class="the-date xs-visible"><p><?php echo get_the_date(); ?></p></div>
+              </div>
             </div>
-        </div> <!-- end thumbnail-category -->
-        <div class="right-part-category-vertical">
-            <div class="thumbnail-right xs-invisible">
-              <a href="<?php the_permalink();?>">
-                <?php if (class_exists('MultiPostThumbnails')) :
-                  MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
-              endif;?>
-          </a>
-      </div>
-      <div class="title-and-sentence no-padding">
-          <div class="category-and-date">
-            <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
-            <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
-        </div>
-        <a href="<?php the_permalink();?>">
-            <div class="article-title">
-              <?php
-              $titre = get_field('titre_de_larticle');
-              if ($titre):?>
-                <h2 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
-            <?php endif; ?>
-        </div>
-    </a>
-    <div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
-</div>
-</div> <!-- end right-part-category -->
-<div class="right-part-category-horizontal">
-    <div class="thumbnail-right xs-invisible">
-      <a href="<?php the_permalink();?>">
-        <?php if (class_exists('MultiPostThumbnails')) :
-          MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'third-image');
-      endif;?>
-  </a>
-</div>
-<div class="title-and-sentence no-padding">
-  <div class="category-and-date">
-    <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
-    <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
-</div>
-<a href="<?php the_permalink();?>">
-    <div class="article-title">
-      <?php
-      $titre = get_field('titre_de_larticle');
-      if ($titre):?>
-        <h2 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
-    <?php endif; ?>
-</div>
-</a>
-<div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
-</div>
-</div> <!-- end right-part-category -->
-</div> <!-- end row -->
-<div class="row-bottom">
-  <div class="title-and-sentence-bottom no-padding">
-    <div class="category-and-date">
-      <div class="the-category"><?php echo get_cat_name($mycat2);?></div>
-      <div class="the-date"><p><?php echo get_the_date(); ?></p></div>
-  </div>
-  <a href="<?php the_permalink();?>">
-      <div class="article-title">
-        <?php
-        $titre = get_field('titre_de_larticle');
-        if ($titre):?>
-          <h2 class="normal-title"><?php echo $titre['titre_1']; ?> <span class="italic"><?php echo $titre['titre_2']; ?></span> <?php echo $titre['titre_3']; ?> <span class="italic"><?php echo $titre['titre_4']; ?></span></h2>
-      <?php endif; ?>
-  </div>
-</a>
-<div class="paragraphe-italique col-md-8 no-padding"><?php the_field('sous_titre_article'); ?></div>
-</div>
-</div>
-</article><!--  end category-area -->
+          </article><!--  end category-area -->
 <!-- </div> -->
 
 <?php
