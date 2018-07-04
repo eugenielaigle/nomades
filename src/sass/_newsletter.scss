@@ -92,10 +92,6 @@ input[type="checkbox"]:checked {
 
 
 #sib_signup_form_1{
-  // .sib-alert-message{
-  //   padding: 30% 12px 45% 12px!important;
-  //   text-align: center;
-  // }
   .sib-alert-message-success, .sib-alert-message-warning, .sib-alert-message-error {
     position: absolute;
     background-color: white!important;
@@ -160,8 +156,6 @@ input[type="checkbox"]:checked {
   }
 
   #sib_signup_form_1{
-    // width: 95%;
-    // margin: 0 2.5%;
     font-style: italic;
     .sib_loader{
      height: 65vh;
@@ -243,11 +237,10 @@ form#sib_signup_form_1 p.sib-alert-message-warning{
   padding: 25% 12px 75%!important;
   text-align: center;
   width: 100%;
-    /* left: 100px; */
-    display: flex;
-    justify-content: center;
-    line-height: 25px!important;
-  }
+  display: flex;
+  justify-content: center;
+  line-height: 25px!important;
+}
 
 
 }
@@ -289,10 +282,6 @@ form#sib_signup_form_1 p.sib-alert-message-warning{
 }
 }
 
-
-// #popmake-112 .pum-responsive, #popmake-122 .pum-responsive{
-//   width: 30%!important;
-// }
 
 
 /************************* COOKIES *************************/
@@ -353,8 +342,26 @@ input[type=submit]{
 
 
 
-  input:matches([type="button"], [type="submit"], [type="reset"]), input[type="file"]::-webkit-file-upload-button, button{
-    cursor: pointer!important;
-  }
+input:matches([type="button"], [type="submit"], [type="reset"]), input[type="file"]::-webkit-file-upload-button, button{
+  cursor: pointer!important;
+}
+
+
+#popmake-997 .pum-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pum-theme-109 .pum-container p, .pum-theme-hello-box .pum-container p{
+  margin: 0!important;
+}
+
+#popmake-997{
+  bottom: 0!important;
+  min-height: 50px;
+  margin-bottom: 0!important;
+}
 
 

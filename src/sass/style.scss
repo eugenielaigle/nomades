@@ -182,6 +182,7 @@ strong{
       font-size: 58px;
       font-weight: 300;
       line-height: 47px;
+          margin-bottom: 0.2em;
       span{
         font-family: 'Freight Big Book';
         font-style: italic;
@@ -268,9 +269,9 @@ strong{
       line-height: 23px;
       color: $grey-text;
       text-align: justify;
-p{
-    margin-bottom: 1rem!important;
-  }
+      p{
+        margin-bottom: 1rem!important;
+      }
       a{
         color: $grey-text!important;
       }
@@ -329,11 +330,11 @@ p{
     }
   }
 
-@media (min-width: 992px) and (max-width: 1800px){
+  @media (min-width: 992px) and (max-width: 1800px){
     .intro{
-      margin-top: 20vh;
+      margin-top: 10vh;
     }
-}
+  }
   .intro{
     display:flex;
 
@@ -525,6 +526,10 @@ a:first-child{
     a:hover .title-list{
       opacity: 0.7;
     }
+    img{
+      width: 97%;
+      height: auto;
+    }
 
   }
   .studio-right{
@@ -539,6 +544,10 @@ a:first-child{
       font-size: 42px;
       font-weight: 300;
       line-height: 40px;
+    }
+    img{
+      width: 62%;
+      height: auto;
     }
   }
 
@@ -616,8 +625,8 @@ a:first-child{
 
 @media (max-width: 1800px){
   .decouvrir-part2{
-  margin-top: 25vh!important;
-}
+    margin-top: 12vh!important;
+  }
 }
 
 
@@ -748,9 +757,9 @@ a:first-child{
       text-transform: uppercase;
       margin-left: 10px;
     }
-    a:hover{
-      font-weight: bold;
-    }
+    // a:hover{
+    //   font-weight: bold;
+    // }
   }
 }
 
@@ -869,24 +878,24 @@ a:first-child{
 }
 
 .category-header{
-   margin-left: 10%;
-  .the-category-title{
-    font-family: "LeagueGothic";
-    text-transform: uppercase;
-    font-size: 45px;
-    font-weight: 400;
-    line-height: 35px;
-  }
-  p{
-    font-family: 'Freight Big Book';
-    font-style: italic;
-    width: 65%;
-    font-size: 33px;
-    font-weight: 300;
-    letter-spacing: 1.65px;
-    line-height: 40px;
-    text-align: justify;
-  }
+ margin-left: 10%;
+ .the-category-title{
+  font-family: "LeagueGothic";
+  text-transform: uppercase;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 35px;
+}
+p{
+  font-family: 'Freight Big Book';
+  font-style: italic;
+  width: 65%;
+  font-size: 33px;
+  font-weight: 300;
+  letter-spacing: 1.65px;
+  line-height: 40px;
+  text-align: justify;
+}
 }
 
 
@@ -1079,13 +1088,13 @@ a:first-child{
       justify-content: flex-end;
       align-items: flex-end;
       a{
-        position: relative;
+        // position: relative;
         height: 45px;
-        width: 100%;
+        width: 80%;
         .article-title{
-          position: absolute;
-          right: 0;
-          left: -55px;
+          // position: absolute;
+          // right: 0;
+          // left: -55px;
           display: flex;
           justify-content: flex-end;
         }
@@ -1123,10 +1132,10 @@ a:first-child{
 /******************************** EDITO *********************************/
 @media (min-width: 768px){
   .edit{
-  padding-top: 10vh!important;
-}
-.container-edito{
-  margin-top: 10vh!important;
+    padding-top: 10vh!important;
+  }
+  .container-edito{
+    margin-top: 10vh!important;
   }
 }
 
@@ -1186,8 +1195,8 @@ a:first-child{
 
 @media (min-width: 768px){
   .bloc-panoramique-edito{
-  height: 100vh!important;
-}
+    height: 100vh!important;
+  }
 }
 
 
@@ -1500,11 +1509,12 @@ a:first-child{
 // BANNER
 
 .banner{
-  padding: 2px!important;
+  padding: 2px 15px!important;
   // padding-top: 6px!important;
   background-color: #000;
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
+  text-align: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -1519,7 +1529,12 @@ a:first-child{
       margin-bottom: 0;
       text-transform: uppercase;
       letter-spacing: 0.85px;
-      display: flex;
+      // display: flex;
+      // flex-wrap: nowrap;
+      // max-width: 100%!important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       span{
         text-transform: lowercase!important;
         font-family: 'Freight Text'!important;
@@ -1567,24 +1582,10 @@ a:first-child{
 
 }
 
-.pum-theme-109 .pum-container p, .pum-theme-hello-box .pum-container p{
-  margin: 0!important;
-}
 
-#popmake-997{
-  bottom: 0!important;
-  min-height: 50px;
-  margin-bottom: 0!important;
-}
 
 .chocolat-wrapper .chocolat-fullscreen{
   display: none!important;
 }
 
-#popmake-997 .pum-content {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 

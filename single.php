@@ -520,7 +520,11 @@ endif; ?>
 
                       <div class="articles-a-la-une row">
                         <div class="histoires col-md-4">
+                          <?php if (get_cat_name($mycat2) == 'Studio'):?>
+                            <h4>Projets<br> qui pourraient<br> vous inspirer</h4>
+                          <?php else: ?>
                           <h4>Histoires<br> qui pourraient<br> vous inspirer</h4>
+                          <?php endif; ?>
                         </div>
                         <div class="col-md-8 histoire">
                           <?php

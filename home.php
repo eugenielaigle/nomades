@@ -25,7 +25,7 @@ $detect = new Mobile_Detect ; ?>
 
     <div class="banner">
       <a href="<?php the_field('banner-link');?>">
-        <p><?php the_field('banner-annonce'); ?><span>lire la suite</span></p>
+        <p><?php the_field('banner-annonce'); ?><span class="xs-invisible">lire la suite</span></p>
       </a>
     </div>
 

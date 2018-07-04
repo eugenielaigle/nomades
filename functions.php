@@ -1,6 +1,5 @@
 <?php
 /*** Module de Menu WP **/
-
 register_nav_menus(array(
   'menu-principal' => 'Menu Principal',
   'menu-footer' => 'Menu Pied de Page',
@@ -11,15 +10,6 @@ register_nav_menus(array(
   'reseaux-sociaux-mobile' => 'Réseaux sociaux Footer Mobile'
 ));
 
-// add_filter ('wp_nav_menu_items', 'your_custom_menu_item', 10, 2);
-// function your_custom_menu_item ($items, $args) {
-// if ($args->theme_location === 'menu-mobile') {
-// $items.= '
-
-// ';
-// }
-// return $items;
-// }
 
 /*** Fichiers CSS ***/
 
@@ -43,24 +33,11 @@ function wpdocs_bootstrap_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_bootstrap_scripts' );
 
-// function wpdocs_magnific_scripts() {
-//   wp_register_style('magnific-style', get_template_directory_uri().'/assets/magnificpopup/dist/magnific-popup.css', array(), true);
-//   wp_enqueue_style('magnific-style');
-// }
-// add_action( 'wp_enqueue_scripts', 'wpdocs_magnific_scripts' );
-
 function wpdocs_magnific_scripts() {
   wp_register_style('chocolat-style', get_template_directory_uri().'/assets/chocolat/dist/css/chocolat.css', array(), true);
   wp_enqueue_style('chocolat-style');
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_magnific_scripts' );
-
-// zoombox css
-// function wpdocs_zoombox_scripts() {
-//   wp_register_style('zoombox', get_template_directory_uri().'/assets/zoombox/zoombox.css', array(), true);
-//   wp_enqueue_style('zoombox');
-// }
-// add_action( 'wp_enqueue_scripts', 'wpdocs_zoombox_scripts' );
 
 // style.min.css
 // function wpdocs_select_scripts() {
@@ -74,7 +51,6 @@ function wpdocs_swiper_scripts() {
   wp_enqueue_style('swiper-style');
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_swiper_scripts' );
-
 
 // function add_js_scrollme() {
 //   wp_enqueue_script( 'scrollme', get_template_directory_uri() . '/assets/scrollme/jquery.scrollme.min.js', array() );
@@ -96,35 +72,30 @@ add_action( 'wp_default_scripts', function( $scripts ) {
 //         wp_enqueue_script('jquery');
 //    }
 // }
+
+
 /*** Fichiers JS ***/
 function theme_js(){
 
-// wp_enqueue_script( 'jquery' );
-// wp_enqueue_script( 'jquery-ui-core' );
-// wp_enqueue_script( 'jquery-ui-slider' );
-// wp_enqueue_script( 'jquery-effects-core' );
-// elseif( is_single() ):
   wp_enqueue_script( 'jquery-mobile-customized-min', get_template_directory_uri() . '/assets/js/jquery.min.js', array('jquery'), false  );
 
-// wp_enqueue_script( 'magnific', get_template_directory_uri() . '/assets/magnificpopup/dist/jquery.magnific-popup.min.js', array('jquery'), '4.9.5', true );
+  wp_register_script('cubes', get_template_directory_uri().'/assets/js/cubes.js', array('jquery'), '4.9.6', true);
+  if( is_category() ):
+    wp_enqueue_script('cubes');
+  endif;
 
-wp_register_script('cubes', get_template_directory_uri().'/assets/js/cubes.js', array('jquery'), '4.9.6', true);
-if( is_category() ):
-wp_enqueue_script('cubes');
-endif;
+  wp_register_script('recherche-form', get_template_directory_uri().'/assets/js/recherche.js', array('jquery'), '4.9.6', true);
+  if( is_page('recherche') ):
+    wp_enqueue_script('recherche-form');
+  endif;
 
-wp_register_script('recherche-form', get_template_directory_uri().'/assets/js/recherche.js', array('jquery'), '4.9.6', true);
-if( is_page('recherche') ):
-wp_enqueue_script('recherche-form');
-endif;
-
-wp_register_script('inview', get_template_directory_uri().'/assets/inview/jquery.inview.min.js', array('jquery'), '4.9.6', true);
-wp_register_script('counter', get_template_directory_uri().'/assets/js/counter.js', array('jquery'), '4.9.6', true);
-if( is_single() ):
-wp_enqueue_script('inview');
-wp_enqueue_script('counter');
-endif;
-wp_enqueue_script('inview');
+  wp_register_script('inview', get_template_directory_uri().'/assets/inview/jquery.inview.min.js', array('jquery'), '4.9.6', true);
+  wp_register_script('counter', get_template_directory_uri().'/assets/js/counter.js', array('jquery'), '4.9.6', true);
+  if( is_single() ):
+    wp_enqueue_script('inview');
+    wp_enqueue_script('counter');
+  endif;
+  wp_enqueue_script('inview');
   wp_enqueue_script( 'chocolat', get_template_directory_uri() . '/assets/js/jquery.chocolat.js', array('jquery'), '4.9.6', true );
 
   wp_register_script('script', get_template_directory_uri().'/assets/js/script.js', array('jquery'), '4.9.6', true);
@@ -153,24 +124,7 @@ wp_enqueue_script('inview');
 add_action( 'wp_footer', 'theme_js' );
 
 
-// add_filter( 'wpcf7_additional_mail', 'my_wpcf7_use_mail_2_or_not', 10, 2 );
-
-// function my_wpcf7_use_mail_2_or_not( $additional_mail, $cf ) {
-//     if ( in_array('Recevoir une copie par mail', $cf->posted_data['send_c']))
-//         $additional_mail = array();
-//     return $additional_mail;
-// }
-
-// add_filter( 'wpcf7_additional_mail', 'my_wpcf7_use_mail_2_or_not', 10, 2 );
-
-// function my_wpcf7_use_mail_2_or_not( $additional_mail, $cf ) {
-//   if ( "Recevoir une copie par mail" != $cf->posted_data['send_c'][1] )
-//     $additional_mail = array();
-
-//   return $additional_mail;
-// }
-
-
+// CONTACT FORM 7 - ENVOYER COPIE - CHOIX
 add_filter( 'wpcf7_additional_mail', 'my3_wpcf7_additional_mail', 10, 2 );
 function my3_wpcf7_additional_mail( array $mails, WPCF7_ContactForm $form ) {
   $opts = $form->additional_setting( 'send_email_copy' );
@@ -190,32 +144,34 @@ function my3_wpcf7_additional_mail( array $mails, WPCF7_ContactForm $form ) {
 
   // Check if we're using a valid Mail template.
   if ( ( 'mail' !== $opts[2] )
-  && ( 'mail_2' !== $opts[2] ) ) {
+    && ( 'mail_2' !== $opts[2] ) ) {
     return $mails;
-  }
+}
 
-  $submission = WPCF7_Submission::get_instance();
+$submission = WPCF7_Submission::get_instance();
 
   // The user may not want a copy of the email.
-  $values = $submission->get_posted_data( $opts[0] );
-  if ( ! is_array( $values ) || empty( $values[0] ) ) {
-    return $mails;
-  }
-
-  // The address to be sent a copy of the email.
-  $email = $submission->get_posted_data( $opts[1] );
-  if ( ! wpcf7_is_email( $email ) ) {
-    return $mails;
-  }
-
-  $mail = $form->prop( $opts[2] );
-  if ( $mail && is_array( $mail ) ) {
-    $mail['recipient'] = $email;
-    $mails[ $opts[2] . '_copy' ] = $mail;
-  }
-
+$values = $submission->get_posted_data( $opts[0] );
+if ( ! is_array( $values ) || empty( $values[0] ) ) {
   return $mails;
 }
+
+  // The address to be sent a copy of the email.
+$email = $submission->get_posted_data( $opts[1] );
+if ( ! wpcf7_is_email( $email ) ) {
+  return $mails;
+}
+
+$mail = $form->prop( $opts[2] );
+if ( $mail && is_array( $mail ) ) {
+  $mail['recipient'] = $email;
+  $mails[ $opts[2] . '_copy' ] = $mail;
+}
+
+return $mails;
+}
+
+
 
 // Include custom navwalker
 require_once('bs4navwalker.php');
@@ -243,7 +199,7 @@ if (class_exists('MultiPostThumbnails')) {
 }
 
 
-
+// WIDGETS
 function footer_left_widgets_init() {
 
  register_sidebar( array(
@@ -309,6 +265,8 @@ function recherche_widgets_init() {
 
 add_action( 'widgets_init', 'recherche_widgets_init' );
 
+
+
 /* Yoast SEO Opengraph */
 function wpc_custom_opengraph_image($thumb) {
   $post = get_queried_object();
@@ -345,6 +303,9 @@ add_filter('wpseo_opengraph_image', 'wpc_custom_opengraph_image');
 // }
 // add_action( 'wp_head', 'insert_opengraph_in_head', 5 );
 
+
+
+// RECHERCHE
 function formulaire_de_recherche() {
   ob_start();
   get_template_part('recherche-form');
@@ -353,34 +314,7 @@ function formulaire_de_recherche() {
 add_shortcode( 'formulaire_de_recherche', 'formulaire_de_recherche' );
 
 
-// function add_js_scripts() {
-
-//   // pass Ajax Url to script.js
-//   wp_localize_script('basics', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
-// }
-// add_action('wp_enqueue_scripts', 'add_js_scripts');
-
-
-// add_action( 'wp_ajax_search', 'search' );
-// add_action( 'wp_ajax_nopriv_search', 'search' );
-
-// function search() {
-//   // récupération du mot tapé dans la recherche
-//   $keyword = $_GET['keyword'];
-
-//   $args = array(
-//     's' => $keyword
-//   );
-
-//   $ajax_query = new WP_Query($args);
-
-
-//     get_template_part( 'search' );
-
-
-// die();
-// }
-
+// FILTRES DE RECHERCHE
 add_filter('pre_get_posts','custom_search_filter');
 
 function custom_search_filter($query) {
