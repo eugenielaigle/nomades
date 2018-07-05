@@ -119,14 +119,11 @@ $(document).on('scroll',function(){ // Détection du scroll
 });
 
 // BUTTON ENGLISH TEXT ON MOBILE
+
 $('#english-text').click(function(){
-  $('.article-anglais').toggleClass('toggle-anglais');
-  $('.legende-anglais').toggleClass('toggle-anglais');
-  $('.article-francais').toggle('slow');
-  $('.legende-francais').toggle('slow');
-  $('.legende-francais-dyptique').toggle('slow');
-  $('.legende-anglais-dyptique').toggleClass('toggle-anglais');
+  $('.article-anglais, .legende-anglais, .legende-anglais-dyptique').toggleClass('toggle-absolute-english');
 });
+
 
 // CUSTOM SELECT CONTACT
 var x, i, j, selElmnt, a, b, c;
@@ -240,7 +237,7 @@ jQuery(document).ready(function ($) {
       // Optional parameters
       direction: 'horizontal',
       init: true,
-      width: 300
+      width: 280
     });
   });
 

@@ -119,6 +119,7 @@ strong{
   letter-spacing: 1.05px;
   line-height: 23px;
   color: black;
+  text-align: justify;
 }
 
 .legende-anglais{
@@ -129,6 +130,7 @@ strong{
   letter-spacing: 1.25px;
   line-height: 23px;
   color: $grey-text;
+  text-align: justify;
   p{
     margin-bottom: 1rem!important;
   }
@@ -460,7 +462,7 @@ a:first-child{
 
 .home-rencontre-destination{
   position: relative;
-  margin-top: 10vh;
+  margin-top: 15vh;
   margin-left: 10%;
   margin-right: 10%;
   display: flex;
@@ -1115,7 +1117,7 @@ p{
       text-align: right;
     }
     .paragraphe-italique{
-      width: 85%;
+      width: 80%;
       p{
         text-align: right;
       }
@@ -1150,6 +1152,7 @@ p{
     line-height: 35px;
     text-transform: uppercase;
     padding-left: 15px;
+    margin-bottom: 5px;
   }
   .edito-sous-titre{
     font-family: 'Freight Big Book';

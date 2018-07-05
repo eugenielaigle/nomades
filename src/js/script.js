@@ -36,51 +36,52 @@
 
 // PHOTOS GALLERY ON SINGLE PAGES
 $(document).ready(function(){
-  if ($(window).width() < 768 && $(window).height() > 670){
-    $('#galerie').Chocolat({
-      imageSize: 'contain',
-      loop: true,
-      fullScreen: false,
-      enableZoom: false,
-      afterMarkup: function () {
-        this.elems.pagination.appendTo(this.elems.top);
-        this.elems.description.appendTo(this.elems.bottom);
-        $('.chocolat-set-category').css("display", "none");
-        $('.chocolat-set-title').css("display", "none");
-      },
-      afterImageLoad: function () {
-       if ($(this.elems.img).width() > $(this.elems.img).height()){
-        this.elems.bottom.css("justify-content","flex-start");
-        this.elems.bottom.css("height", "390px");
-      } else{
-        this.elems.bottom.css("height", "350px");
-        this.elems.bottom.css("justify-content","center");
-      }
-    }
-  });
-  } else if ($(window).width() < 768 && $(window).height() < 670 ){
-    $('#galerie').Chocolat({
-      imageSize: 'contain',
-      loop: true,
-      fullScreen: false,
-      enableZoom: false,
-      afterMarkup: function () {
-        this.elems.pagination.appendTo(this.elems.top);
-        this.elems.description.appendTo(this.elems.bottom);
-        $('.chocolat-set-category').css("display", "none");
-        $('.chocolat-set-title').css("display", "none");
-      },
-      afterImageLoad: function () {
-       if ($(this.elems.img).width() > $(this.elems.img).height()){
-        this.elems.bottom.css("justify-content","flex-start");
-        this.elems.bottom.css("height", "200px");
-      } else{
-        this.elems.bottom.css("height", "80px");
-        this.elems.bottom.css("justify-content","center");
-      }
-    }
-  });
-  } else if  ($(window).width() > 768){
+  // if ($(window).width() < 768 && $(window).height() > 670){
+  //   $('#galerie').Chocolat({
+  //     imageSize: 'contain',
+  //     loop: true,
+  //     fullScreen: false,
+  //     enableZoom: false,
+  //     afterMarkup: function () {
+  //       this.elems.pagination.appendTo(this.elems.top);
+  //       this.elems.description.appendTo(this.elems.bottom);
+  //       $('.chocolat-set-category').css("display", "none");
+  //       $('.chocolat-set-title').css("display", "none");
+  //     },
+  //     afterImageLoad: function () {
+  //      if ($(this.elems.img).width() > $(this.elems.img).height()){
+  //       this.elems.bottom.css("justify-content","flex-start");
+  //       this.elems.bottom.css("height", "390px");
+  //     } else{
+  //       this.elems.bottom.css("height", "350px");
+  //       this.elems.bottom.css("justify-content","center");
+  //     }
+  //   }
+  // });
+  // } else if ($(window).width() < 768 && $(window).height() < 670 ){
+  //   $('#galerie').Chocolat({
+  //     imageSize: 'contain',
+  //     loop: true,
+  //     fullScreen: false,
+  //     enableZoom: false,
+  //     afterMarkup: function () {
+  //       this.elems.pagination.appendTo(this.elems.top);
+  //       this.elems.description.appendTo(this.elems.bottom);
+  //       $('.chocolat-set-category').css("display", "none");
+  //       $('.chocolat-set-title').css("display", "none");
+  //     },
+  //     afterImageLoad: function () {
+  //      if ($(this.elems.img).width() > $(this.elems.img).height()){
+  //       this.elems.bottom.css("justify-content","flex-start");
+  //       this.elems.bottom.css("height", "200px");
+  //     } else{
+  //       this.elems.bottom.css("height", "80px");
+  //       this.elems.bottom.css("justify-content","center");
+  //     }
+  //   }
+  // });
+  // } else
+  if  ($(window).width() > 768){
     $('#galerie').Chocolat({
       imageSize: 'contain',
       loop: true,
@@ -102,15 +103,19 @@ $(document).ready(function(){
       }
     }
   });
+  } else{
+    $('.article-header a').click(function(){
+    return false;
+});
   }
 });
 
 
 if ($(window).width() > 768) {
-  var widthContent = $('.container-video .video iframe').width();
+  var widthContent = $('.container-video .video iframe').width()/1.35;
   console.log(widthContent);
-  var goodHeight = widthContent/1.8;
-  $('.container-video .video iframe').height(goodHeight);
+  var goodHeight = widthContent/2.5;
+  $('.container-video .video iframe ').height(goodHeight);
 
   $('.container-video .legende-video').width(widthContent);
   var containerVideoHeight = $('.container-video .video').height((parseFloat(goodHeight) + 20 + "px"));
@@ -119,6 +124,11 @@ if ($(window).width() > 768) {
   console.log(containerVideoHeight);
   console.log(containerVideoWidth);
 }
+
+
+
+
+
 
 
 

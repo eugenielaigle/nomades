@@ -9,3 +9,26 @@ $('.layout').on('inview', function(event, isInView) {
   } else {
   }
 });
+
+
+
+var videoPlay = document.getElementById("video3");
+
+function PlayPause3()
+{
+if (videoPlay.paused) videoPlay.play();
+else videoPlay.pause();
+}
+
+videoPlay.onclick=function(){PlayPause3()}
+
+
+var videoSecond = document.getElementById("video4");
+
+function PlayPause4()
+{
+if (videoSecond.paused) videoSecond.play();
+else videoSecond.pause();
+}
+
+videoSecond.onclick=function(){PlayPause4()}

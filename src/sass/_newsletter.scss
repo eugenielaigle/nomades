@@ -2,6 +2,15 @@
   box-shadow:  none!important;
 }
 
+form#sib_signup_form_1 .sib-default-btn{
+  line-height: auto!important;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px 4px 12px!important;
+}
+
+
 .newsletter-area{
   margin-top: 25px;
   display: flex;
@@ -252,8 +261,8 @@ form#sib_signup_form_1 p.sib-alert-message-warning{
 @media (min-width: 1800px){
 
  form#sib_signup_form_1 .sib-default-btn{
-  width: 50%!important;
-  margin: 0px 25%!important;
+  width: 70%!important;
+  margin: 0px 15%!important;
 }
 
 .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122{
@@ -293,7 +302,7 @@ form#sib_signup_form_1 p.sib-alert-message-warning{
  font-family: "Freight Text";
  p{
   font-style: italic;
-  line-height: 1em!important;
+  line-height: 1.5em!important;
 }
 input[type=submit]{
   background-color: transparent;

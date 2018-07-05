@@ -128,7 +128,7 @@ $detect = new Mobile_Detect ; ?>
         </div>
         <?php elseif ($video): ?>
           <div class="video-full-size">
-            <video class="delete-hover-effect" width="100%" height="auto" autoplay="true" loop>
+            <video class="delete-hover-effect" width="100%" height="auto" autoplay="true" loop id="video1">
              <source src="<?php the_field('video_couv_home');?>" type="video/mp4" />
              </video>
              <img class ="logo-home delete-hover-effect" src="<?php the_field('logo_home_header');?>" alt="logo nomades">
@@ -147,8 +147,11 @@ $detect = new Mobile_Detect ; ?>
         <div class="intro-texte">
           <div class="legende-francais">
             <?php the_field('texte_gauche'); ?>
+            <div class="legende-anglais xs-visible">
+              <?php the_field('texte_droite'); ?>
+            </div>
           </div>
-          <div class="legende-anglais toggle-anglais">
+          <div class="legende-anglais xs-invisible">
             <?php the_field('texte_droite'); ?>
           </div>
         </div>
@@ -420,7 +423,7 @@ if (!empty($image)):?>
   elseif ($video):?>
     <div class="bloc-panoramique-home">
       <div class="panoramique">
-        <video class="delete-hover-effect" width="100%" height="auto" autoplay="true" loop>
+        <video class="delete-hover-effect" width="100%" height="auto" autoplay="true" loop id="video2">
          <source src="<?php the_field('panoramique_video');?>" type="video/mp4" />
          </video>
        </div>
@@ -478,8 +481,11 @@ if (!empty($image)):?>
   <h3>Une question ? Un projet ?</h3>
   <div class="legende-francais">
     <p>N’hésitez pas à nous contacter directement par mail ou par téléphone.</p>
+    <div class="legende-anglais xs-visible">
+      <p>N’hésitez pas à nous contacter directement par mail ou par téléphone.</p>
+    </div>
   </div>
-  <div class="legende-anglais toggle-anglais">
+  <div class="legende-anglais xs-invisible">
     <p>N’hésitez pas à nous contacter directement par mail ou par téléphone.</p>
   </div>
   <button id="contact" class="button-newsletter button-contactez-nous">NOUS CONTACTER</button>

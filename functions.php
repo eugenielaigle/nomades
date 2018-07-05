@@ -89,12 +89,15 @@ function theme_js(){
     wp_enqueue_script('recherche-form');
   endif;
 
+
+
   wp_register_script('inview', get_template_directory_uri().'/assets/inview/jquery.inview.min.js', array('jquery'), '4.9.6', true);
   wp_register_script('counter', get_template_directory_uri().'/assets/js/counter.js', array('jquery'), '4.9.6', true);
   if( is_single() ):
     wp_enqueue_script('inview');
     wp_enqueue_script('counter');
   endif;
+
   wp_enqueue_script('inview');
   wp_enqueue_script( 'chocolat', get_template_directory_uri() . '/assets/js/jquery.chocolat.js', array('jquery'), '4.9.6', true );
 
@@ -105,6 +108,12 @@ function theme_js(){
   wp_register_script('swiper', get_template_directory_uri() . '/assets/swiper/dist/js/swiper.min.js', array('jquery'), '4.9.6', true );
 
   wp_enqueue_script('script');
+
+   wp_register_script('home', get_template_directory_uri() . '/assets/js/home.js', array('jquery'), '4.9.6', true );
+
+  if( is_front_page() ):
+    wp_enqueue_script('home');
+  endif;
 
   wp_enqueue_script( 'bootstrap-bundle-js', get_template_directory_uri() . '/assets/bootstrap-4/js/bootstrap.bundle.min.js', array('jquery'), '4.9.6', true );
 

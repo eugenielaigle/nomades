@@ -107,7 +107,7 @@ table {
   .swiper-slide img {
     width: 100%;
     height: auto;
-    padding: 5px; }
+    padding: 5px 15px 5px 0; }
   .button-english {
     text-align: left;
     background-color: transparent;
@@ -131,6 +131,26 @@ table {
     display: none !important; }
   .legende-francais, .legende-anglais, .article-francais, .article-anglais {
     text-align: justify !important; }
+  .article-anglais, .legende-anglais, .legende-anglais-dyptique {
+    position: absolute !important;
+    left: -370px;
+    top: 0 !important;
+    height: 100% !important;
+    background-color: #fbfbfb !important;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s; }
+  .toggle-absolute-english {
+    left: 0;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s; }
+  .article-francais, .legende-francais, .legende-francais-dyptique {
+    position: relative !important; }
   .banner a p {
     letter-spacing: 0px !important;
     font-size: 0.85em !important; }
@@ -155,10 +175,10 @@ table {
     top: 0; }
   #navbar-base #bs4navbar #menu-menu-mobile {
     margin-top: 56px;
-    border-top: 1px solid black;
+    border-top: 0.5px solid black;
     border-bottom: none;
     width: 70% !important;
-    margin-left: 15%;
+    margin-left: 13%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row; }
@@ -172,7 +192,7 @@ table {
     width: 100%; }
   #navbar-base #bs4navbar #menu-menu-mobile .menu-item a img {
     width: auto;
-    height: 30px; }
+    height: 22.5px; }
   #navbar-base #bs4navbar #menu-menu-mobile .menu-item-425, #navbar-base #bs4navbar #menu-menu-mobile .menu-item-426, #navbar-base #bs4navbar #menu-menu-mobile .menu-item-429, #navbar-base #bs4navbar #menu-menu-mobile .menu-item-964, #navbar-base #bs4navbar #menu-menu-mobile .menu-item-965, #navbar-base #bs4navbar #menu-menu-mobile .menu-item-968 {
     border-bottom: 0.5px solid #000;
     padding-bottom: 0.5rem; }
@@ -214,7 +234,9 @@ table {
     width: 70%;
     display: flex !important;
     justify-content: center;
-    margin: 0; }
+    margin: 0;
+    margin-left: 10px;
+    margin-right: -10px; }
   .container-header .navbar .navbar-brand .logo {
     width: 60%; }
   .container-header .navbar #bs4navbar {
@@ -230,10 +252,10 @@ table {
     border-bottom: none !important; }
   .container-header .navbar #bs4navbar #menu-menu-mobile {
     margin-top: 56px;
-    border-top: 1px solid black;
+    border-top: 0.5px solid black;
     border-bottom: none;
     width: 70% !important;
-    margin-left: 15%;
+    margin-left: 13%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row; }
@@ -247,7 +269,7 @@ table {
     width: 100%; }
   .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item a img {
     width: auto;
-    height: 30px; }
+    height: 22.5px; }
   .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-425, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-426, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-429, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-964, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-965, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-968 {
     border-bottom: 0.5px solid #000;
     padding-bottom: 0.5rem; }
@@ -264,7 +286,7 @@ table {
     width: 1em !important;
     height: 1em !important; }
   .navbar-light .navbar-toggler-table-icon {
-    background-image: url("../img/layers.png") !important;
+    background-image: url("../img/carre.svg") !important;
     width: 1em !important;
     height: 1em !important; }
   .navbar-light .navbar-toggler {
@@ -347,7 +369,7 @@ table {
     font-style: italic !important;
     width: 85% !important;
     font-size: 25px !important;
-    line-height: 35px !important;
+    line-height: 30px !important;
     text-align: left !important;
     width: 80% !important;
     padding-left: 15px !important; }
@@ -357,7 +379,7 @@ table {
     padding-left: 15px !important; }
   .article-header .article-title p {
     margin-top: 0;
-    margin-bottom: 30vh !important; }
+    margin-bottom: 32vh !important; }
   .article-header .article-title h1 {
     font-size: 36px;
     line-height: 29px;
@@ -366,7 +388,7 @@ table {
     margin-top: 10px !important;
     margin-left: 0px !important; }
   .article-header .video-full-size, .article-header .image-full-size {
-    padding: 15px !important; }
+    padding: 15px 15px 0 15px !important; }
   /****************************** EDITO ******************************************/
   .container-edito {
     margin-top: 15vh !important; }
@@ -383,6 +405,10 @@ table {
     line-height: 35px !important;
     text-align: left !important;
     width: 80% !important; }
+  .container-dyptique-edito .legende-sous-dyptique p {
+    text-align: left !important;
+    padding-left: 20px;
+    font-size: 12px !important; }
   .container-dyptique-edito .legende-sous-dyptique p {
     margin-bottom: 0 !important; }
   .contact-home p {
@@ -444,7 +470,7 @@ table {
     text-align: center !important;
     opacity: 0.9; }
   .loader-single .article-title h2 {
-    padding: 0 20px !important;
+    padding: 0 !important;
     font-size: 40px !important;
     font-weight: 300 !important;
     letter-spacing: 2px !important;
@@ -454,14 +480,17 @@ table {
   .article-header .article-title .the-date {
     font-size: 0.8em !important;
     padding-top: 5px !important; }
+  .article-header .row-article {
+    width: 100%; }
   .dyptique-asymetrique .images-dyptique-asymetrique {
     flex-direction: column;
     align-items: center; }
   .dyptique-asymetrique {
     margin: 0 !important;
-    padding: 0 !important; }
+    padding-left: 15px !important;
+    padding-right: 15px !important; }
   .dyptique-asymetrique .images-dyptique-asymetrique a:last-child {
-    width: 90% !important;
+    width: 100% !important;
     padding-top: 10px !important; }
   .dyptique-asymetrique .images-dyptique-asymetrique a:last-child .image-right {
     width: 100% !important; }
@@ -469,19 +498,21 @@ table {
     width: 100% !important;
     height: auto !important; }
   .image-texte-scrollable .image-legende-gauche .image-gauche {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     width: 100% !important;
     max-height: 100% !important; }
   #sticker {
     display: none; }
   .sticker {
     text-align: center;
-    padding-top: 5vh; }
+    padding-top: 0;
+    padding-left: 15px;
+    padding-right: 15px; }
   .image-texte-scrollable {
     flex-direction: column;
     margin-left: 0 !important;
-    margin-top: 30px !important;
-    margin-bottom: 30px !important; }
+    margin-top: 5px !important;
+    margin-bottom: 5px !important; }
   .image-texte-scrollable .position-texte {
     width: 100% !important; }
   .image-texte-scrollable .position-texte .texte-scrollable-droite {
@@ -493,18 +524,18 @@ table {
   .image-texte-scrollable .position-texte .texte-scrollable-droite .legende-francais .question p, .image-texte-scrollable .position-texte .texte-scrollable-droite .legende-anglais .question p {
     font-size: 21px !important;
     font-weight: 400 !important;
-    padding-top: 30px;
-    padding-bottom: 30px; }
+    padding-top: 10px;
+    padding-bottom: 10px; }
   .image-texte-scrollable .image-legende-gauche .legende-francais, .image-texte-scrollable .image-legende-gauche .legende-anglais {
     width: 100% !important;
     padding-left: 15px;
     padding-right: 15px; }
   .bloc-panoramique {
-    height: auto !important;
-    margin-top: 30px !important;
-    margin-bottom: 30px !important; }
-  .bloc-panoramique .panoramique {
-    position: initial !important; }
+    height: 35vh !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important; }
+  .bloc-panoramique .panoramique img {
+    max-height: 35vh !important; }
   .bloc-panoramique .panoramique .legende-panoramique1 p, .bloc-panoramique .panoramique .legende-panoramique2 p {
     position: initial !important;
     margin-top: 30px;
@@ -516,8 +547,8 @@ table {
   .bloc-panoramique .panoramique .legende-panoramique2 p {
     color: #626262 !important; }
   .citation {
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
     border-top: none !important;
     border-bottom: none !important; }
   .citation .titre {
@@ -532,14 +563,19 @@ table {
   .citation .hr-citation {
     border-color: #626262;
     width: 20%; }
+  .container-video {
+    margin: 10px 0 !important; }
   .container-dyptique-edito {
-    padding: 30px 0 !important; }
+    padding: 30px 0 15px !important; }
   .container-dyptique-edito .legendes-dyptique .legende-dyp {
     padding: 0 15px; }
   .container-dyptique-edito .legendes-dyptique .legende-dyp p {
     text-align: center; }
+  .dypt {
+    padding: 10px 0 10px !important;
+    margin-bottom: 0 !important; }
   .image-centree, .image-centree-verticale {
-    padding: 15px 2px !important;
+    padding: 15px 15px !important;
     width: 100%;
     margin: 0 !important; }
   .image-centree .image-relative, .image-centree-verticale .image-relative {
@@ -555,7 +591,7 @@ table {
   .container-video .video {
     padding: 0 !important; }
   .container-video .video iframe {
-    height: 30vh !important;
+    height: 20vh !important;
     width: 100% !important; }
   .container-video .legende-video .direction-artistique .title, .container-video .legende-video .lieu-video .title, .container-video .legende-video .vues-aeriennes .title, .container-video .legende-video .musique-originale .title {
     margin-bottom: 0;
@@ -571,13 +607,17 @@ table {
   .container-video .legende-video .direction-artistique .title, .container-video .legende-video .lieu-video .title, .container-video .legende-video .musique-originale .title, .container-video .legende-video .vues-aeriennes .title {
     font-size: 1.1em !important; }
   .dyptique-asymetrique {
-    padding-top: 30px !important;
-    padding-bottom: 30px !important; }
+    padding-top: 20px !important;
+    padding-bottom: 10px !important; }
   .dyptique-asymetrique .images-dyptique-asymetrique .image-right {
     padding-left: 0 !important;
     padding-top: 10px; }
   .dypt .swiper-wrapper {
-    padding: 0; }
+    padding: 12px; }
+  body .articles-a-la-une {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    padding-top: 35px !important; }
   .remerciements {
     justify-content: center !important;
     flex-direction: column;
@@ -602,7 +642,8 @@ table {
     width: 100% !important;
     justify-content: center !important; }
   .article-footer .remerciements .partage .partagez {
-    font-size: 16px !important; }
+    font-size: 16px !important;
+    margin-bottom: 35px; }
   .remerciements .partage a {
     font-size: 18px !important;
     margin-left: 20px !important; }
@@ -656,7 +697,7 @@ table {
     font-size: 1em !important;
     line-height: 1em !important; }
   .categ .category-area {
-    margin: 5vh 15px !important; }
+    margin: 5vh 5px !important; }
   .categ .category-area .row-category {
     flex-direction: column;
     width: 100%; }
@@ -684,8 +725,8 @@ table {
     display: block !important; }
   /***************** HOME ********************/
   .container-home {
-    padding-left: 2% !important;
-    padding-right: 2% !important; }
+    padding-left: 15px !important;
+    padding-right: 15px !important; }
   .container-with-banner {
     margin-top: 24px !important; }
   .container-home .header-home {
@@ -785,6 +826,8 @@ table {
     align-items: center !important;
     margin-top: 10px !important;
     margin-bottom: 10px !important; }
+  .category-area:nth-child(4n) .thumbnail-category .title-and-sentence-left a {
+    width: 100% !important; }
   .category-area .category-and-date, .category-area:nth-child(4n+3) .third-part-horizontal .title-and-sentence .category-and-date, .category-area:nth-child(4n) .thumbnail-category .title-and-sentence-left .category-and-date {
     width: 100% !important;
     margin: 0 !important; }
@@ -833,7 +876,9 @@ table {
     border-bottom: 0.5px solid #000 !important;
     margin-bottom: 5vh; }
   .container-recherche #searchsubmit {
-    width: 100% !important; }
+    width: 100% !important;
+    height: 35px !important;
+    padding: 10px 10px !important; }
   .container-recherche #searchform {
     height: 100vh !important; }
   .container-recherche #searchform .search-mots {
@@ -910,15 +955,20 @@ table {
 .pum-theme-109 .pum-container input[type=submit], .pum-theme-hello-box .pum-container input[type=submit] {
   font-size: 14px; }
 
+.container-mentions .mentions-adress p:last-child {
+  margin-bottom: 0 !important; }
+
 @media (max-width: 767px) and (max-height: 670px) {
   .container-header .navbar {
     padding-top: 0 !important; }
+  body .container-cubes-mobile {
+    padding-top: 42px !important; }
   .dyptique-asymetrique .images-dyptique-asymetrique .image-relative .image-gauche {
     height: auto !important; }
   .container-header .navbar #bs4navbar #menu-menu-mobile {
     margin-top: 20px !important; }
   .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item {
-    line-height: 35px !important; }
+    line-height: 25px !important; }
   .container-home .header-home .logo-home {
     bottom: 72vh !important; }
   .container-video .legende-video .direction-artistique .title, .container-video .legende-video .lieu-video .title, .container-video .legende-video .musique-originale .title, .container-video .legende-video .vues-aeriennes .title {
@@ -935,11 +985,22 @@ table {
   .bloc-panoramique-home {
     height: 30vh !important; }
   .pum-theme-116 #popmake-122, .pum-theme-custom #popmake-122 {
-    height: 140% !important; }
+    height: 160% !important; }
   html.pum-open.pum-open-overlay.pum-open-fixed .pum-overlay {
-    overflow: scroll !important; }
+    overflow-x: hidden !important; }
   html.pum-open.pum-open-overlay.pum-open-fixed .pum-container {
-    position: absolute !important; } }
+    position: absolute !important; }
+  .wpcf7-not-valid-tip {
+    top: 30px !important; }
+  .select-selected {
+    padding: 9px 7px 7px 7px !important;
+    line-height: 0.5rem; }
+  .pum-container .popmake-title, .pum-title {
+    margin-bottom: 15% !important; }
+  body .container-recherche #searchform {
+    height: 80vh !important; }
+  body .container-recherche #searchform #choix p {
+    margin-top: 10vh !important; } }
 
 /********************* PROGRESS BAR *****************************/
 @media (min-width: 1800px) {
@@ -1030,7 +1091,44 @@ table {
     padding-left: 11vw !important; }
   .articles-a-la-une .histoires, .articles-a-la-une .histoire {
     max-width: 50% !important;
-    flex-basis: 50% !important; } }
+    flex-basis: 50% !important; }
+  footer .container-footer .row-footer .footer-right .right-footer-widget .footer-right-widget .menu-menu-footer-container {
+    width: 55% !important; }
+  .bloc-panoramique {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    height: 100vh; }
+  .bloc-panoramique .panoramique {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: auto;
+    overflow: hidden; }
+  .bloc-panoramique .panoramique img {
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    object-fit: cover; }
+  .bloc-panoramique .panoramique .legende-panoramique1 p, .bloc-panoramique .panoramique .legende-panoramique2 p {
+    position: absolute;
+    z-index: 6;
+    color: #fbfbfb;
+    font-family: 'Freight Text';
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1.05px;
+    line-height: 16px;
+    bottom: 30px;
+    margin-bottom: 0 !important;
+    width: 20% !important;
+    text-align: justify; }
+  .bloc-panoramique .panoramique .legende-panoramique1 p {
+    left: 15%; }
+  .bloc-panoramique .panoramique .legende-panoramique2 p {
+    left: 37% !important; }
+  .image-centree .legendes {
+    width: 40% !important; } }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   .container-home .header-home .image-full-size .background-img, .container-home .header-home .image-full-size video, .container-home .header-home .video-full-size .background-img, .container-home .header-home .video-full-size video {
@@ -1335,6 +1433,13 @@ footer .container-footer .row-footer .footer-right .right-footer-widget .footer-
 :not(output):-moz-ui-invalid {
   box-shadow: none !important; }
 
+form#sib_signup_form_1 .sib-default-btn {
+  line-height: auto !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px 4px 12px !important; }
+
 .newsletter-area {
   margin-top: 25px;
   display: flex;
@@ -1514,8 +1619,8 @@ input[type="checkbox"]:checked {
 
 @media (min-width: 1800px) {
   form#sib_signup_form_1 .sib-default-btn {
-    width: 50% !important;
-    margin: 0px 25% !important; }
+    width: 70% !important;
+    margin: 0px 15% !important; }
   .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122 {
     width: 18% !important; }
   .pum-theme-116 #popmake-112, .pum-theme-custom #popmake-112 {
@@ -1541,7 +1646,7 @@ input[type="checkbox"]:checked {
 
 #popmake-997 .pum-container p, .pum-theme-hello-box .pum-container p {
   font-style: italic;
-  line-height: 1em !important; }
+  line-height: 1.5em !important; }
 
 #popmake-997 .pum-container input[type=submit], .pum-theme-hello-box .pum-container input[type=submit] {
   background-color: transparent;
@@ -1658,7 +1763,10 @@ input:matches([type="button"], [type="submit"], [type="reset"]), input[type="fil
 
 .select-selected {
   background-color: white;
-  color: #000 !important; }
+  color: #000 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 /*style the arrow inside the select element:*/
 .select-selected:after {
@@ -1732,13 +1840,16 @@ input:matches([type="button"], [type="submit"], [type="reset"]), input[type="fil
   background-color: transparent;
   float: right;
   outline: none;
+  border-radius: 0;
   line-height: normal;
   font-family: 'Freight Text';
   font-size: 14px;
   letter-spacing: 0.35px; }
 
 #wpcf7-f86-o4 textarea:focus, #wpcf7-f86-o8 textarea:focus {
-  outline: none; }
+  outline: none;
+  box-shadow: none !important;
+  outline-offset: none !important; }
 
 #wpcf7-f86-o4 p, #wpcf7-f86-o8 p {
   margin-bottom: 8px;
@@ -1768,7 +1879,9 @@ input:matches([type="button"], [type="submit"], [type="reset"]), input[type="fil
   line-height: 21px;
   font-style: italic;
   padding: 15px;
-  border-radius: 0 !important; }
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline-offset: none !important; }
 
 #wpcf7-f86-o4 input[type=submit], #wpcf7-f86-o8 input[type=submit] {
   padding: 6px 10px;
@@ -1888,7 +2001,7 @@ div.wpcf7-mail-sent-ok h2 {
   letter-spacing: 1.05px;
   line-height: 16px;
   bottom: 30px;
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
   width: 25%; }
 
 .bloc-panoramique .panoramique .legende-panoramique1 p {
@@ -2074,7 +2187,7 @@ div.wpcf7-mail-sent-ok h2 {
   display: flex;
   align-self: flex-end;
   margin-top: 15px;
-  width: 50%; }
+  width: 40%; }
 
 .image-centree .legendes p {
   font-size: 10px;
@@ -2469,7 +2582,8 @@ strong {
   font-weight: 500;
   letter-spacing: 1.05px;
   line-height: 23px;
-  color: black; }
+  color: black;
+  text-align: justify; }
 
 .legende-anglais {
   font-family: 'Freight Text';
@@ -2478,7 +2592,8 @@ strong {
   font-weight: 500;
   letter-spacing: 1.25px;
   line-height: 23px;
-  color: #626262; }
+  color: #626262;
+  text-align: justify; }
 
 .legende-anglais p {
   margin-bottom: 1rem !important; }
@@ -2779,7 +2894,7 @@ strong {
 
 .home-rencontre-destination {
   position: relative;
-  margin-top: 10vh;
+  margin-top: 15vh;
   margin-left: 10%;
   margin-right: 10%;
   display: flex;
@@ -3357,7 +3472,7 @@ strong {
   text-align: right; }
 
 .category-area:nth-child(4n) .thumbnail-category .title-and-sentence-left .paragraphe-italique {
-  width: 85%; }
+  width: 80%; }
 
 .category-area:nth-child(4n) .thumbnail-category .title-and-sentence-left .paragraphe-italique p {
   text-align: right; }
@@ -3383,7 +3498,8 @@ strong {
   font-weight: 400;
   line-height: 35px;
   text-transform: uppercase;
-  padding-left: 15px; }
+  padding-left: 15px;
+  margin-bottom: 5px; }
 
 .container-edito .edito-sous-titre {
   font-family: 'Freight Big Book';

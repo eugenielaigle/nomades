@@ -42,7 +42,7 @@
         letter-spacing: 1.05px;
         line-height: 16px;
         bottom: 30px;
-        margin-bottom: 0;
+        margin-bottom: 0!important;
         width: 25%;
       }
     }
@@ -284,7 +284,7 @@
     align-self: flex-end;
     margin-top: 15px;
     // margin-right: 10%;
-    width: 50%;
+    width: 40%;
     p{
       font-size: 10px;
       font-weight: 300;
