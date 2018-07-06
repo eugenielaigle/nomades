@@ -8,8 +8,8 @@
 
 .container-article{
   img:hover, a:hover img, video:hover , a:hover video{
-  filter: none!important;
-}
+    filter: none!important;
+  }
 }
 
 /************************ PANORAMIQUE ***************************/
@@ -22,7 +22,7 @@
     left: 0;
     right: 0;
     height: auto;
-        overflow: hidden;
+    overflow: hidden;
     // z-index: 5;
     img{
       width: 100%;
@@ -167,7 +167,7 @@
 }
 
 .legende-anglais .question p{
-    margin-bottom: 1rem!important;
+  margin-bottom: 1rem!important;
 }
 
 @media (min-width: 1800px){

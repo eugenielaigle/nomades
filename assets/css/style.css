@@ -133,7 +133,6 @@ table {
     text-align: justify !important; }
   .article-anglais, .legende-anglais, .legende-anglais-dyptique {
     position: absolute !important;
-    left: -370px;
     top: 0 !important;
     height: 100% !important;
     background-color: #fbfbfb !important;
@@ -881,30 +880,6 @@ table {
     font-weight: 500 !important;
     letter-spacing: 1.16px !important;
     line-height: 25px !important; }
-  /************************ RECHERCHE **************************/
-  .container-recherche #s {
-    width: 100%;
-    text-align: center;
-    border-bottom: 0.5px solid #000 !important;
-    margin-bottom: 5vh; }
-  .container-recherche #searchsubmit {
-    width: 100% !important;
-    height: 35px !important;
-    padding: 10px 10px !important; }
-  .container-recherche #searchform {
-    height: 100vh !important; }
-  .container-recherche #searchform .search-mots {
-    flex-direction: column;
-    padding: 20px;
-    border: none !important; }
-  .container-recherche #searchform #choix label {
-    padding: 0 !important;
-    font-size: 14px !important; }
-  .container-recherche .recherche-titre {
-    text-align: center !important;
-    margin: 0 !important; }
-  .button-recherche {
-    width: 100% !important; }
   .appear-cubes {
     display: block !important; }
   .container-header .navbar .navbar-cubes {
@@ -943,10 +918,38 @@ table {
     margin-bottom: 0 !important; }
   .categ-cubes .category-and-date, .categ-cubes .paragraphe-italique, .categ-cubes .the-date, .categ-cubes .right-part-category-vertical {
     display: none !important; }
+  /************************************** RECHERCHE *********************************/
+  .container-recherche #s {
+    width: 100%;
+    text-align: center;
+    border-bottom: 0.5px solid #000 !important;
+    margin-bottom: 5vh; }
+  .container-recherche #searchsubmit {
+    width: 100% !important;
+    height: 35px !important;
+    padding: 10px 10px !important; }
+  .container-recherche #searchform {
+    height: 100vh !important; }
+  .container-recherche #searchform .search-mots {
+    flex-direction: column;
+    padding: 20px;
+    border: none !important; }
+  .container-recherche #searchform #choix label {
+    padding: 0 !important;
+    font-size: 14px !important; }
+  .container-recherche .recherche-titre {
+    text-align: center !important;
+    margin: 0 !important; }
+  .button-recherche {
+    width: 100% !important; }
+  body .container-search {
+    padding-right: 5px !important;
+    padding-left: 5px !important; }
   .run-to-top {
     display: none; }
   .footer-brand {
     padding: 0 !important; }
+  /***************************** PAGE EDITION **********************/
   .background-edition .content-edition {
     width: 300px !important;
     font-size: 16px !important; }
@@ -1020,6 +1023,11 @@ table {
   .categ-cubes .category-area {
     width: 44.8% !important; } }
 
+@media (max-width: 767px) {
+  .article-anglais, .legende-anglais, .legende-anglais-dyptique {
+    position: absolute !important;
+    left: -370px; } }
+
 /********************* PROGRESS BAR *****************************/
 @media (min-width: 1800px) {
   #progress {
@@ -1080,6 +1088,7 @@ table {
     padding: 10px; }
   .home-edition .images-edition img:last-child {
     margin-top: -5vh !important; }
+  /****************************** EDITO *****************************/
   .container-edito {
     padding-left: 30% !important;
     padding-right: 10% !important; }
@@ -1088,14 +1097,18 @@ table {
   .container-edito .edito-big-right {
     max-width: 65% !important;
     flex-basis: 65% !important; }
+  /******************** MENTIONS LEGALES ****************/
   .container-mentions {
     margin: 0 25% !important; }
+  /****************GALERIE *******************************/
   .chocolat-wrapper .chocolat-right .chocolat-description, .chocolat-wrapper .chocolat-right .chocolat-pagination {
     margin-left: 5vw !important; }
   .chocolat-wrapper .chocolat-bottom .chocolat-description {
     max-width: 60% !important; }
+  /*************************** CATEGORY ******************************/
   .category-header p {
     width: 38% !important; }
+  /*********************** ARTICLE ************************************/
   .image-texte-scrollable #sticker {
     width: 15vw !important;
     height: auto !important; }
@@ -1171,6 +1184,8 @@ table {
     width: 100% !important; }
   .article-anglais, .legende-anglais, .legende-anglais-dyptique {
     left: -780px; }
+  .toggle-absolute-english {
+    left: 0; }
   .container-home .header-home .logo-home {
     bottom: 68vh !important; }
   .container-header .navbar .navbar-search .recherche-img {
@@ -1206,7 +1221,13 @@ table {
   .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-433, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-434, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-970, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-971 {
     width: 7% !important; }
   body .container-search {
-    padding-left: 0 !important; }
+    padding-right: 15px !important;
+    padding-left: 15px !important; }
+  .container-search .col-md-3, .container-search .col-md-4, .container-search .col-md-5, .container-search .col-md-6, .container-search .col-md-7, .container-search .col-md-8, .container-search .col-md-9 {
+    max-width: 100% !important;
+    flex-basis: 100% !important; }
+  .container-search .category-area:nth-child(4n+3) .third-part-horizontal .title-and-sentence .category-and-date .the-category, .container-search .category-area:nth-child(4n) .thumbnail-category .title-and-sentence-left .category-and-date .the-category {
+    justify-content: center !important; }
   .dyptique-asymetrique .images-dyptique-asymetrique .image-relative {
     width: 100%; }
   .dyptique-asymetrique .images-dyptique-asymetrique .image-relative .image-gauche {
@@ -1220,6 +1241,9 @@ table {
   .loader-single {
     padding: 20% 15% 35% !important;
     flex-direction: column; }
+  .container-mentions .col-md-3, .container-mentions .col-md-4, .container-mentions .col-md-5, .container-mentions .col-md-6, .container-mentions .col-md-7, .container-mentions .col-md-8, .container-mentions .col-md-9 {
+    max-width: 100% !important;
+    flex-basis: 100% !important; }
   /* STYLES GO HERE */ }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
@@ -1392,6 +1416,27 @@ table {
 
 .run-to-top {
   right: 25px !important; }
+
+.container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-432, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-969 {
+  width: 5% !important; }
+
+.container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-433, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-434, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-970, .container-header .navbar #bs4navbar #menu-menu-mobile .menu-item-971 {
+  width: 7% !important; }
+
+.sidebar-contact .nomades-prez {
+  bottom: 20vh !important; }
+
+.container-dyptique-edito {
+  height: 90vh !important; }
+
+body .pum-theme-116 #popmake-122, .pum-theme-custom #popmake-112, body .pum-theme-custom #popmake-122 {
+  width: 30% !important; }
+
+body .pum-theme-116 #popmake-122 .custom-select, .pum-theme-custom #popmake-112 .custom-select, body .pum-theme-custom #popmake-122 .custom-select {
+  width: 100% !important; }
+
+footer .container-footer .row-footer .footer-right .right-footer-widget {
+  width: 70% !important; }
 
 /********************* PROGRESS BAR *****************************/
 #progress {

@@ -32,50 +32,70 @@ $detect = new Mobile_Detect ; ?>
   <?php endif; ?>
   <div class="container-with-banner" id="container-with-banner">
     <div class="container-fluid container-header" id="navbar">
+<?php if ( $detect -> isMobile () || $detect->isTablet() ) {?>
+ <nav class="navbar navbar-expand-xl navbar-light bg-faded" id="navbar-navigation">
+  <a class="xs-visible navbar-search" href="<?php the_permalink(51); ?>">
+    <img class="img-responsive recherche-img" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/loupe.svg">
+  </a>
+  <a class="navbar-brand xs-visible" href="<?php bloginfo('url'); ?>">
+    <img class="img-responsive logo" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/logo-nomades.svg">
+  </a>
+  <button class="navbar-special cubes" type="button" id="cubes">
+    <span class="navbar-toggler-icon navbar-toggler-table-icon"></span>
+  </button>
 
-     <nav class="navbar navbar-expand-xl navbar-light bg-faded">
-      <a class="xs-visible navbar-search" href="<?php the_permalink(51); ?>">
-        <img class="img-responsive recherche-img" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/loupe.svg">
-      </a>
-      <a class="navbar-brand xs-visible" href="<?php bloginfo('url'); ?>">
-        <img class="img-responsive logo" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/logo-nomades.svg">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+<?php
+wp_nav_menu([
+    'menu'            => 'menu-mobile',
+    'theme_location'  => 'menu-mobile',
+    'container'       => 'div',
+    'container_id'    => 'bs4navbar',
+    'container_class' => 'collapse navbar-collapse',
+    'menu_id'         => false,
+    'menu_class'      => 'navbar-nav mr-auto',
+    'depth'           => 2,
+    'fallback_cb'     => 'bs4navwalker::fallback',
+    'walker'          => new bs4navwalker()
+  ]);?>
+</nav>
+
+<?php  }else{?>
+  <nav class="navbar navbar-expand-md navbar-light bg-faded" id="navbar-navigation">
+  <a class="xs-visible navbar-search" href="<?php the_permalink(51); ?>">
+    <img class="img-responsive recherche-img" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/loupe.svg">
+  </a>
+  <a class="navbar-brand xs-visible" href="<?php bloginfo('url'); ?>">
+    <img class="img-responsive logo" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/logo-nomades.svg">
+  </a>
+  <button class="navbar-special cubes" type="button" id="cubes">
+    <span class="navbar-toggler-icon navbar-toggler-table-icon"></span>
+  </button>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <?php
+  wp_nav_menu([
+    'menu'            => 'top',
+    'theme_location'  => 'top',
+    'container'       => 'div',
+    'container_id'    => 'bs4navbar',
+    'container_class' => 'collapse navbar-collapse',
+    'menu_id'         => false,
+    'menu_class'      => 'navbar-nav mr-auto',
+    'depth'           => 2,
+    'fallback_cb'     => 'bs4navwalker::fallback',
+    'walker'          => new bs4navwalker()
+  ]);?>
+  </nav>
+<?php }
+?>
 
 
-      <?php if ( $detect -> isMobile () || $detect->isTablet() ) {
-        wp_nav_menu([
-          'menu'            => 'menu-mobile',
-          'theme_location'  => 'menu-mobile',
-          'container'       => 'div',
-          'container_id'    => 'bs4navbar',
-          'container_class' => 'collapse navbar-collapse',
-          'menu_id'         => false,
-          'menu_class'      => 'navbar-nav mr-auto',
-          'depth'           => 2,
-          'fallback_cb'     => 'bs4navwalker::fallback',
-          'walker'          => new bs4navwalker()
-        ]);
-
-
-      }else{
-        wp_nav_menu([
-          'menu'            => 'top',
-          'theme_location'  => 'top',
-          'container'       => 'div',
-          'container_id'    => 'bs4navbar',
-          'container_class' => 'collapse navbar-collapse',
-          'menu_id'         => false,
-          'menu_class'      => 'navbar-nav mr-auto',
-          'depth'           => 2,
-          'fallback_cb'     => 'bs4navwalker::fallback',
-          'walker'          => new bs4navwalker()
-        ]);
-      }
-      ?>
-    </nav>
   </div>
 
   <aside class="sidebar-contact xs-invisible" id="contact">

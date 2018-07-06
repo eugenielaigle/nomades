@@ -75,7 +75,7 @@ img{
 
   .article-anglais, .legende-anglais, .legende-anglais-dyptique{
     position: absolute!important;
-    left: -370px;
+    // left: -370px;
     top: 0!important;
     height: 100%!important;
     background-color: $legende!important;
@@ -1245,49 +1245,6 @@ body .articles-a-la-une{
   line-height: 25px!important;
 }
 
-/************************ RECHERCHE **************************/
-.container-recherche{
-  #s{
-    width: 100%;
-    text-align: center;
-    border-bottom: .5px solid #000!important;
-    margin-bottom: 5vh;
-  }
-  #searchsubmit{
-    width: 100%!important;
-        height: 35px!important;
-    padding: 10px 10px!important;
-  }
-
-
-
-
-  #searchform{
-    height: 100vh!important;
-    .search-mots{
-      flex-direction: column;
-      padding: 20px;
-      border: none!important;
-    }
-    #choix label{
-      padding: 0!important;
-      font-size: 14px!important;
-    }
-
-
-  }
-  .recherche-titre{
-    text-align: center!important;
-    margin: 0!important;
-  }
-
-}
-
-
-.button-recherche{
-  width: 100%!important;
-}
-
 .appear-cubes{
  display: block!important;
 }
@@ -1346,6 +1303,54 @@ body .container-cubes-mobile{
   }
 }
 
+/************************************** RECHERCHE *********************************/
+.container-recherche{
+  #s{
+    width: 100%;
+    text-align: center;
+    border-bottom: .5px solid #000!important;
+    margin-bottom: 5vh;
+  }
+  #searchsubmit{
+    width: 100%!important;
+        height: 35px!important;
+    padding: 10px 10px!important;
+  }
+
+
+
+
+  #searchform{
+    height: 100vh!important;
+    .search-mots{
+      flex-direction: column;
+      padding: 20px;
+      border: none!important;
+    }
+    #choix label{
+      padding: 0!important;
+      font-size: 14px!important;
+    }
+
+
+  }
+  .recherche-titre{
+    text-align: center!important;
+    margin: 0!important;
+  }
+
+}
+
+
+.button-recherche{
+  width: 100%!important;
+}
+
+body .container-search{
+      padding-right: 5px!important;
+    padding-left: 5px!important;
+}
+
 .run-to-top{
   display: none;
 }
@@ -1355,7 +1360,7 @@ body .container-cubes-mobile{
 }
 
 
-
+/***************************** PAGE EDITION **********************/
 .background-edition{
   .content-edition{
     width: 300px!important;
@@ -1397,6 +1402,9 @@ body .container-cubes-mobile{
   margin-bottom: 0!important;
 }
 
+
+
+// IPHONE 5
 @media (max-width: 767px) and (max-height: 670px){
   .container-header .navbar{
    padding-top: 0!important;
@@ -1496,4 +1504,11 @@ body .container-recherche #searchform{
 }
 
 
+}
+
+@media (max-width: 767px){
+  .article-anglais, .legende-anglais, .legende-anglais-dyptique{
+    position: absolute!important;
+    left: -370px;
+  }
 }

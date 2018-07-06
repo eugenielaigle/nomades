@@ -107,7 +107,7 @@
       }
     }
   }
-
+/****************************** EDITO *****************************/
 .container-edito{
   padding-left: 30%!important;
   padding-right: 10%!important;
@@ -121,14 +121,11 @@
   max-width: 65%!important;
   flex-basis: 65%!important;
 }
-
+/******************** MENTIONS LEGALES ****************/
 .container-mentions{
   margin: 0 25%!important;
 }
 
-.chocolat-wrapper .chocolat-right{
-
-}
 
 // .chocolat-content{
 //   max-height: 84vh;
@@ -139,6 +136,8 @@
 //   padding-left: 15.5%!important;
 // }
 
+
+/****************GALERIE *******************************/
 .chocolat-wrapper .chocolat-right .chocolat-description, .chocolat-wrapper .chocolat-right .chocolat-pagination{
   margin-left: 5vw!important;
 }
@@ -146,11 +145,12 @@
 .chocolat-wrapper .chocolat-bottom .chocolat-description{
   max-width: 60%!important;
 }
-
+ /*************************** CATEGORY ******************************/
 .category-header p{
   width: 38%!important;
 }
 
+/*********************** ARTICLE ************************************/
 .image-texte-scrollable #sticker {
     width: 15vw!important;
     height: auto!important;
