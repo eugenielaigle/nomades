@@ -82,7 +82,7 @@ input[type="checkbox"]:checked {
   -ms-user-select:none;
   user-select:none;
   white-space: normal;
-  border:1px solid #000;
+  border:0.5px solid #000;
   border-radius: 0px;
   font-family: 'Avenir';
   letter-spacing: 1.8px;
@@ -213,7 +213,7 @@ form#sib_signup_form_1 p.sib-alert-message-warning{
 }
 .pum-theme-custom #popmake-122, .pum-theme-116 #popmake-122, .pum-theme-custom #popmake-112{
   width: 25%!important;
-  top: 20%!important;
+  top: 16.5%!important;
 }
 
 
@@ -334,7 +334,7 @@ input[type=submit]{
   }
 }
 
-@media (max-width: 767px){
+@media (max-width: 768px){
   .pum-theme-109 .pum-container, .pum-theme-hello-box .pum-container{
     input[type=submit]{
       position: absolute;

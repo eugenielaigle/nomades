@@ -48,7 +48,7 @@ get_header();?>
 
   <!-- DYPTIQUE AREA -->
   <div class="container-dyptique-edito">
-    <div class="swiper-container xs-visible">
+    <div class="swiper-container xs-visible tablet-invisible">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="<?php the_field('dyptique_edito_image_1');?>" alt="Natacha">
@@ -58,14 +58,14 @@ get_header();?>
         </div>
       </div>
     </div>
-    <div class="legende-sous-dyptique xs-visible">
+    <div class="legende-sous-dyptique xs-visible tablet-invisible">
       <?php the_field('legende_images_dyptique'); ?>
     </div>
 
 
-    <div class="row-dyptique-edito xs-invisible">
-      <img class="swiper-slide" src="<?php the_field('dyptique_edito_image_1');?>" alt="Natacha">
-      <img class="swiper-slide" src="<?php the_field('dyptique_edito_image_2');?>" alt="Mathieu">
+    <div class="row-dyptique-edito xs-invisible tablet-visible">
+      <img class="swiper-slide delete-hover-effect" src="<?php the_field('dyptique_edito_image_1');?>" alt="Natacha">
+      <img class="swiper-slide delete-hover-effect" src="<?php the_field('dyptique_edito_image_2');?>" alt="Mathieu">
       <div class="legende-sous-dyptique">
         <?php the_field('legende_images_dyptique'); ?>
       </div>
@@ -122,6 +122,8 @@ if (!empty($image)):?>
   <?php
 endif;?>
 
+<?php $titre = get_field('titre_panoramique');
+if ($titre): ?>
 <div class="container-fluid container-edito">
     <div class="row">
       <div class="col-md-6 edito-big-left xs-invisible">
@@ -154,7 +156,7 @@ endif;?>
   </div> <!-- end row -->
 </div> <!-- end container-fluid -->
 
-
+<?php endif; ?>
 
 
 

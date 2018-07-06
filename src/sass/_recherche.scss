@@ -2,8 +2,8 @@
   background-color: #fff;
   #close-recherche{
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 22px;
+    right: 15px;
     font-weight: 300;
     color: $grey-text;
     font-size: 25px;
@@ -34,7 +34,7 @@
     text-transform: capitalize;
   }
 
-  @media (max-width: 767px){
+  @media (max-width: 768px){
     #s{
      font-size: 38px!important;
    }
@@ -61,7 +61,7 @@
   -ms-user-select:none;
   user-select:none;
   white-space: normal;
-  border:1px solid #000;
+  border:0.5px solid #000;
   border-radius: 0px;
   font-family: 'Avenir';
   letter-spacing: 1.8px;
@@ -92,8 +92,11 @@
       padding: 0 23%!important;
       text-align: center;
     }
+
+
   }
-  @media (max-width: 767px){
+  @media (max-width: 768px){
+
     #choix{
       padding: 0 13%;
       text-align: center;
@@ -179,7 +182,7 @@
   width: 100%;
 }
 
-@media (max-width: 767px){
+@media (max-width: 768px){
   .recherche-none{
     margin: 0em .5em 6em!important;
   }

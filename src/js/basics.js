@@ -1,39 +1,4 @@
 jQuery(document).ready(function($){
-  $('.categories-prez').on('inview', function(event, isInView) {
-    if (isInView) {
-    // element is now visible in the viewport
-    var prezHeight = document.body.clientHeight - $('.categories-prez').offset().top;
-    $('.sidebar-recherche').css({
-      'position': 'absolute',
-      'bottom': prezHeight,
-      'top':'auto',
-      // 'transition': 'top .1s linear, bottom .1s linear'
-    });
-
-    $('.sidebar-contact').css({
-      'position': 'absolute',
-      'bottom': prezHeight,
-      'top':'auto',
-      // 'transition': 'top .1s linear, bottom .1s linear'
-    });
-  } else {
-    // element has gone out of viewport
-    $('.sidebar-recherche').css({
-      'position': 'fixed',
-      'bottom': '0',
-      'top':'0'
-    });
-    $('.sidebar-contact').css({
-      'position': 'fixed',
-      'bottom': '0',
-      'top':'0'
-    });
-  }
-});
-
-});
-
-jQuery(document).ready(function($){
   var textDyptique = $(".image-dyptique-asymetrique-right").width();
   $('.legende-dyptique-asymetrique').width(textDyptique);
 
@@ -59,25 +24,13 @@ $('#navbar').append('<div id="progress-bar" class="xs-visible"></div>');
 jQuery(function($){
 
 // LAPTOP
-  $(document).on('scroll',function(){ // Détection du scroll
 
-    // Calcul de la hauteur "utile"
-    var hauteur = $(document).height()-$(window).height();
-
-    // Récupération de la position verticale
-    var position = $(document).scrollTop();
-
-    // Récupération de la largeur de la fenêtre
-    var largeur = $('#bs4navbar').width();
-
-    // Calcul de la largeur de la barre
-    var barre = position / hauteur * largeur;
-
-    // Modification du CSS pour élargir ou réduire la barre
-    $("#progress").css("width",barre);
-  });
 
 // MOBILE
+
+if ($(window).width()<=768){
+
+
   $(document).on('scroll',function(){ // Détection du scroll
 
     // Calcul de la hauteur "utile"
@@ -106,7 +59,26 @@ $(document).on('scroll',function(){ // Détection du scroll
     var position = $(document).scrollTop();
 
     // Récupération de la largeur de la fenêtre
-    var largeur = $('#navbar').width();
+    var largeur = $('#navbar').width()/1.05;
+    // var largeur = $('#navbar').width();
+
+    // Calcul de la largeur de la barre
+    var barre = position / hauteur * largeur;
+
+    // Modification du CSS pour élargir ou réduire la barre
+    $("#progress-bar").css("width",barre);
+  });
+} else if ($(window).width() == 1024){
+  $(document).on('scroll',function(){ // Détection du scroll
+
+    // Calcul de la hauteur "utile"
+    var hauteur = $(document).height()-$(window).height();
+
+    // Récupération de la position verticale
+    var position = $(document).scrollTop();
+
+    // Récupération de la largeur de la fenêtre
+    var largeur = $('#navbar').width()/1.015;
     // var largeur = $('#navbar').width();
 
     // Calcul de la largeur de la barre
@@ -116,6 +88,44 @@ $(document).on('scroll',function(){ // Détection du scroll
     $("#progress-bar").css("width",barre);
   });
 
+  $(document).on('scroll',function(){ // Détection du scroll
+
+    // Calcul de la hauteur "utile"
+    var hauteur = $(document).height()-$(window).height();
+
+    // Récupération de la position verticale
+    var position = $(document).scrollTop();
+
+    // Récupération de la largeur de la fenêtre
+    var largeur = $('#navbar-navigation').width();
+    // var largeur = $('#navbar').width();
+
+    // Calcul de la largeur de la barre
+    var barre = position / hauteur * largeur;
+
+    // Modification du CSS pour élargir ou réduire la barre
+    $("#progress-bar").css("width",barre);
+  });
+
+}else{
+    $(document).on('scroll',function(){ // Détection du scroll
+
+    // Calcul de la hauteur "utile"
+    var hauteur = $(document).height()-$(window).height();
+
+    // Récupération de la position verticale
+    var position = $(document).scrollTop();
+
+    // Récupération de la largeur de la fenêtre
+    var largeur = $('#bs4navbar').width();
+
+    // Calcul de la largeur de la barre
+    var barre = position / hauteur * largeur;
+
+    // Modification du CSS pour élargir ou réduire la barre
+    $("#progress").css("width",barre);
+  });
+}
 });
 
 // BUTTON ENGLISH TEXT ON MOBILE
@@ -238,6 +248,7 @@ jQuery(document).ready(function ($) {
       direction: 'horizontal',
       init: true,
       width: 280
+
     });
   });
 
@@ -294,4 +305,10 @@ $("#sidebar-three").stick_in_parent({
 
 })(jQuery);
 
+
+
+// if (window.matchMedia("(orientation: landscape)").matches) {
+//    // you're in LANDSCAPE mode
+//    $('navbar-navigation').toggleClass('')
+// }
 

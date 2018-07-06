@@ -1,4 +1,4 @@
-@media (max-width: 767px){
+@media (max-width: 768px){
 // BASICS
 body{
   overflow-x: hidden;
@@ -156,7 +156,7 @@ img{
         }
       }
     }
-    .menu-item-425, .menu-item-426, .menu-item-429, .menu-item-964, .menu-item-965, .menu-item-968{
+    .menu-item-425, .menu-item-426, .menu-item-429, .menu-item-963, .menu-item-965, .menu-item-968{
       border-bottom: 0.5px solid #000;
       padding-bottom: 0.5rem;
     }
@@ -205,7 +205,7 @@ img{
    padding-left: 0;
    padding-right: 0;
    margin-left: 0.5rem;
-   margin-right: 1rem;
+   margin-right: 0.5rem;
 
 
    .navbar-search{
@@ -261,7 +261,7 @@ img{
         }
       }
     }
-    .menu-item-425, .menu-item-426, .menu-item-429, .menu-item-964, .menu-item-965, .menu-item-968{
+    .menu-item-425, .menu-item-426, .menu-item-429, .menu-item-963, .menu-item-965, .menu-item-968{
       border-bottom: 0.5px solid #000;
       padding-bottom: 0.5rem;
     }
@@ -291,9 +291,9 @@ img{
 }
 
 .navbar-light .navbar-toggler-table-icon {
-  background-image: url('../img/carre.svg')!important;
-  width: 1em!important;
-  height: 1em!important;
+  background-image: url('../img/carre.png')!important;
+  width: 0.85em!important;
+  height: 0.85em!important;
 }
 
 .navbar-light .navbar-toggler{
@@ -383,6 +383,8 @@ img{
 
 /********************************* ARTICLE *****************************************/
 
+
+
 .chocolat-wrapper .chocolat-top{
   display: flex;
   justify-content: center;
@@ -432,6 +434,7 @@ img{
     flex-direction: column-reverse;
     align-items: flex-start!important;
     padding-left: 15px!important;
+    padding-right: 15px!important;
     p{
       margin-top: 0;
       margin-bottom: 32vh!important;
@@ -657,7 +660,11 @@ img{
           font-size: 21px!important;
           font-weight: 400!important;
           padding-top: 10px;
-          padding-bottom: 10px;
+          // padding-bottom: 10px;
+        }
+        .reponse p{
+          padding-top: 10px;
+          margin-bottom: 6px!important;
         }
       }
     }
@@ -679,6 +686,7 @@ img{
   margin-top: 0px!important;
   margin-bottom: 0px!important;
   .panoramique{
+    right: -3px!important;
     img{
       max-height: 35vh!important;
     }
@@ -769,9 +777,9 @@ img{
 .container-video{
   // display: block!important;
   .video{
-    padding: 0!important;
+    padding: 15px 12px 0 8px!important;
     iframe{
-      height: 20vh!important;
+      height: 21vh!important;
       width: 100%!important;
     }
   }
@@ -989,13 +997,18 @@ body .articles-a-la-une{
 .container-home{
   padding-left: 15px!important;
   padding-right: 15px!important;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.container-with-banner{
-  margin-top: 24px!important;
-}
+// .container-with-banner{
+//   margin-top: 24px!important;
+// }
 .container-home .header-home{
   height: 100vh!important;
+  padding-top: 24px!important;
+  width: 103%!important;
 }
 .container-home .header-home .image-full-size .background-img, .container-home .header-home .image-full-size video, .container-home .header-home .video-full-size .background-img, .container-home .header-home .video-full-size video{
   height: 25vh!important;
@@ -1003,7 +1016,7 @@ body .articles-a-la-une{
 }
 
 .container-home .header-home .logo-home{
-  bottom: 73vh!important;
+  bottom: 70vh!important;
 }
 
 .container-home .header-home .sous-titre-home{
@@ -1014,6 +1027,7 @@ body .articles-a-la-une{
   margin-bottom: 5vh;
   padding-right: 0!important;
   text-align: left!important;
+  padding-left: 5px!important;
 }
 
 .container-home{
@@ -1104,6 +1118,11 @@ body .articles-a-la-une{
   border-bottom: none!important;
 }
 
+.contact-home{
+  border-top: 0.5px solid #000;
+  margin: 0 15px;
+}
+
 .contact-home .button-contactez-nous{
   font-size: 11px!important;
   font-weight: 500!important;
@@ -1118,11 +1137,16 @@ body .articles-a-la-une{
 
 .button-newsletter{
   /* Style for "JE M’INSCR" */
-  font-size: 9px!important;
-  font-weight: 300!important;
-  letter-spacing: 1.8px!important;
-  line-height: 21px!important;
-  width: 145px!important;
+  font-size: 11px!important;
+    font-weight: 500!important;
+    letter-spacing: 2.2px!important;
+    width: 180px!important;
+    height: 38px!important;
+  // font-size: 9px!important;
+  // font-weight: 300!important;
+  // letter-spacing: 1.8px!important;
+  // line-height: 21px!important;
+  // width: 145px!important;
   // padding: 10px 10px!important;
 }
 
@@ -1276,7 +1300,7 @@ body .articles-a-la-une{
 body .container-cubes-mobile{
   padding-top:60px!important;
   .category-header{
-    margin: 0 1% 15px!important;
+    margin: 0 8px 15px!important;
     .the-category-title{
       font-size: 21px!important;
       text-align: center;
@@ -1289,14 +1313,18 @@ body .container-cubes-mobile{
 
 }
 
+.category-area .row-category .right-part-category-horizontal, .category-area .row-category .right-part-category-vertical, .category-area .row-category .thumbnail-category{
+  padding: 0!important;
+}
+
 .categ-cubes{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 
   .category-area{
-    margin: 0 1% 15px!important;
-    width: 48%!important;
+    margin: 0 8px 15px!important;
+    width: 45.5%!important;
     justify-content: flex-start;
     border-bottom: 1px solid #000;
     // padding-bottom: 15px;
@@ -1382,6 +1410,11 @@ body .container-cubes-mobile{
   height: auto!important;
 }
 
+
+.loader-single .lieu-article{
+  margin-top: 20px!important;
+}
+
 .container-header .navbar #bs4navbar #menu-menu-mobile{
   margin-top: 20px!important;
 }
@@ -1391,7 +1424,7 @@ body .container-cubes-mobile{
 }
 
 .container-home .header-home .logo-home{
-  bottom: 72vh!important;
+  bottom: 68vh!important;
 }
 
 .container-video .legende-video .direction-artistique .title, .container-video .legende-video .lieu-video .title, .container-video .legende-video .musique-originale .title, .container-video .legende-video .vues-aeriennes .title{
@@ -1407,7 +1440,7 @@ body .container-cubes-mobile{
 }
 
 .home-edition {
-  height: 170vh!important;
+  height: 135vh!important;
 }
 
 .paragraphe-remerciements{
@@ -1455,6 +1488,12 @@ body .container-recherche #searchform{
     }
 }
 
+
+.categ-cubes{
+  .category-area{
+    width: 44.8%!important;
+  }
+}
 
 
 }

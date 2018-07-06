@@ -14,7 +14,8 @@ $detect = new Mobile_Detect ; ?>
   <div id="top"></div>
 <div class="container-fluid container-header">
 
- <nav class="navbar navbar-expand-md navbar-light bg-faded" id="navbar-navigation">
+<?php if ( $detect -> isMobile () || $detect->isTablet() ) {?>
+ <nav class="navbar navbar-expand-xl navbar-light bg-faded" id="navbar-navigation">
   <a class="xs-visible navbar-search" href="<?php the_permalink(51); ?>">
     <img class="img-responsive recherche-img" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/loupe.svg">
   </a>
@@ -29,7 +30,7 @@ $detect = new Mobile_Detect ; ?>
     <span class="navbar-toggler-icon"></span>
   </button>
 
-<?php if ( $detect -> isMobile () && !$detect->isTablet() ) {
+<?php
 wp_nav_menu([
     'menu'            => 'menu-mobile',
     'theme_location'  => 'menu-mobile',
@@ -41,10 +42,25 @@ wp_nav_menu([
     'depth'           => 2,
     'fallback_cb'     => 'bs4navwalker::fallback',
     'walker'          => new bs4navwalker()
-  ]);
+  ]);?>
+</nav>
 
+<?php  }else{?>
+  <nav class="navbar navbar-expand-md navbar-light bg-faded" id="navbar-navigation">
+  <a class="xs-visible navbar-search" href="<?php the_permalink(51); ?>">
+    <img class="img-responsive recherche-img" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/loupe.svg">
+  </a>
+  <a class="navbar-brand xs-visible" href="<?php bloginfo('url'); ?>">
+    <img class="img-responsive logo" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/logo-nomades.svg">
+  </a>
+  <button class="navbar-special cubes" type="button" id="cubes">
+    <span class="navbar-toggler-icon navbar-toggler-table-icon"></span>
+  </button>
 
-}else{
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <?php
   wp_nav_menu([
     'menu'            => 'top',
     'theme_location'  => 'top',
@@ -56,12 +72,13 @@ wp_nav_menu([
     'depth'           => 2,
     'fallback_cb'     => 'bs4navwalker::fallback',
     'walker'          => new bs4navwalker()
-  ]);
-}
+  ]);?>
+  </nav>
+<?php }
 ?>
 
 
-</nav>
+
 </div>
 
   <aside class="sidebar-contact xs-invisible" id="contact">

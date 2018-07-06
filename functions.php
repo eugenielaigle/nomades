@@ -79,11 +79,6 @@ function theme_js(){
 
   wp_enqueue_script( 'jquery-mobile-customized-min', get_template_directory_uri() . '/assets/js/jquery.min.js', array('jquery'), false  );
 
-  wp_register_script('cubes', get_template_directory_uri().'/assets/js/cubes.js', array('jquery'), '4.9.6', true);
-  if( is_category() ):
-    wp_enqueue_script('cubes');
-  endif;
-
   wp_register_script('recherche-form', get_template_directory_uri().'/assets/js/recherche.js', array('jquery'), '4.9.6', true);
   if( is_page('recherche') ):
     wp_enqueue_script('recherche-form');
@@ -98,6 +93,18 @@ function theme_js(){
     wp_enqueue_script('counter');
   endif;
 
+  wp_register_script('cubes', get_template_directory_uri().'/assets/js/cubes.js', array('jquery'), '4.9.6', true);
+  if( is_category() ):
+    wp_enqueue_script('inview');
+    wp_enqueue_script('cubes');
+  endif;
+
+  wp_register_script('edito', get_template_directory_uri().'/assets/js/edito.js', array('jquery'), '4.9.6', true);
+  if( is_page('edito') ):
+    wp_enqueue_script('inview');
+    wp_enqueue_script('edito');
+  endif;
+
   wp_enqueue_script('inview');
   wp_enqueue_script( 'chocolat', get_template_directory_uri() . '/assets/js/jquery.chocolat.js', array('jquery'), '4.9.6', true );
 
@@ -109,7 +116,7 @@ function theme_js(){
 
   wp_enqueue_script('script');
 
-   wp_register_script('home', get_template_directory_uri() . '/assets/js/home.js', array('jquery'), '4.9.6', true );
+  wp_register_script('home', get_template_directory_uri() . '/assets/js/home.js', array('jquery'), '4.9.6', true );
 
   if( is_front_page() ):
     wp_enqueue_script('home');

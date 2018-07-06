@@ -31,7 +31,7 @@
  display: none;
 }
 
-@media (min-width: 768px){
+@media (min-width: 769px){
   .xs-visible{
     display: none!important;
   }
@@ -44,6 +44,7 @@
 body{
   background-color: $legende!important;
   overflow-x: hidden;
+  position: relative;
 }
 
 .normal-title{
@@ -1091,7 +1092,7 @@ p{
       align-items: flex-end;
       a{
         // position: relative;
-        height: 45px;
+        // height: 45px;
         width: 80%;
         .article-title{
           // position: absolute;
@@ -1099,6 +1100,10 @@ p{
           // left: -55px;
           display: flex;
           justify-content: flex-end;
+          // margin-top: 10px;
+          // h2{
+          //   line-height: 1!important;
+          // }
         }
       }
       .category-and-date{
@@ -1538,6 +1543,8 @@ p{
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      display: flex;
+    justify-content: center;
       span{
         text-transform: lowercase!important;
         font-family: 'Freight Text'!important;
@@ -1574,7 +1581,7 @@ p{
 
 
 .container-with-banner{
-  margin-top: 28px;
+  // margin-top: 28px;
 
 }
 

@@ -232,7 +232,7 @@
           <?php elseif( get_row_layout() == 'dyptique' ):?>
             <div class="layout layout-<?php echo get_row_index();?>" data-count="<?php echo get_row_index()+1;?>">
               <?php if( get_sub_field('couleur_fond') == 'Blanc' ): ?>
-                <div class="container-dyptique fond-blanc xs-invisible">
+                <div class="container-dyptique fond-blanc xs-invisible tablet-visible">
                   <div class="dyptique">
                     <a href="<?php the_sub_field('image_gauche');?>" class="chocolat-image" title="<?php the_sub_field('legende_francais');?> <?php the_sub_field('legende_anglais');?>">
                       <img class="image-gauche" src="<?php the_sub_field('image_gauche');?>" alt="dyptique nomades">
@@ -244,7 +244,7 @@
                       </div>
                     </a>
                   </div>
-                  <div class="legendes-dyptique">
+                  <div class="legendes-dyptique xs-invisible">
                     <div class="legende-dyp legende-francais-dyptique">
                       <p><?php the_sub_field('legende_francais');?></p>
                     </div>
@@ -254,7 +254,7 @@
                   </div>
                 </div>
                 <?php else:?>
-                  <div class="container-dyptique xs-invisible">
+                  <div class="container-dyptique xs-invisible tablet-visible">
                     <div class="dyptique">
                       <a href="<?php the_sub_field('image_gauche');?>" class="chocolat-image" title="<?php the_sub_field('legende_francais');?> <?php the_sub_field('legende_anglais');?>">
                         <img class="image-gauche" src="<?php the_sub_field('image_gauche');?>" alt="dyptique nomades">
@@ -266,7 +266,7 @@
                         </div>
                       </a>
                     </div>
-                    <div class="legendes-dyptique">
+                    <div class="legendes-dyptique xs-invisible">
                       <div class="legende-dyp legende-francais-dyptique">
                         <p><?php the_sub_field('legende_francais');?></p>
                       </div>
@@ -277,7 +277,7 @@
                   </div>
                 <?php endif; ?>
               </div> <!-- end layout -->
-              <div class="container-dyptique-edito dypt xs-visible">
+              <div class="container-dyptique-edito dypt xs-visible tablet-invisible">
                 <div class="swiper-container xs-visible">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">

@@ -11,24 +11,62 @@ $('.layout').on('inview', function(event, isInView) {
 });
 
 
+// BARRES LATERALES ARRET A ARTICLES A LA UNE
+$('.articles-a-la-une').on('inview', function(event, isInView) {
+  if (isInView) {
+    // element is now visible in the viewport
+    var footerHeight = document.body.clientHeight - $('.articles-a-la-une').offset().top;
+    $('.sidebar-recherche').css({
+      'position': 'absolute',
+      'bottom': footerHeight,
+      'top':'auto',
+      // 'transition': 'top .1s linear, bottom .1s linear'
+    });
 
-var videoPlay = document.getElementById("video3");
+    $('.sidebar-contact').css({
+      'position': 'absolute',
+      'bottom': footerHeight,
+      'top':'auto',
+      // 'transition': 'top .1s linear, bottom .1s linear'
+    });
+  } else {
+    // element has gone out of viewport
+    $('.sidebar-recherche').css({
+      'position': 'fixed',
+      'bottom': '0',
+      'top':'0'
+    });
+    $('.sidebar-contact').css({
+      'position': 'fixed',
+      'bottom': '0',
+      'top':'0'
+    });
+  }
+});
 
-function PlayPause3()
-{
-if (videoPlay.paused) videoPlay.play();
-else videoPlay.pause();
-}
 
-videoPlay.onclick=function(){PlayPause3()}
+// TAP SUR VIDEO = LECTURE SUR SAFARI
+// var videoPlay = document.getElementById("video3");
+
+// if (videoPlay !== null){
+//   function PlayPause3()
+//   {
+//     if (videoPlay.paused) videoPlay.play();
+//     else videoPlay.pause();
+//   }
+
+// videoPlay.onclick=function(){PlayPause3()}
+// }
 
 
-var videoSecond = document.getElementById("video4");
+// var videoSecond = document.getElementById("video4");
 
-function PlayPause4()
-{
-if (videoSecond.paused) videoSecond.play();
-else videoSecond.pause();
-}
+// if (videoSecond !== null){
+//   function PlayPause4()
+//   {
+//     if (videoSecond.paused) videoSecond.play();
+//     else videoSecond.pause();
+//   }
 
-videoSecond.onclick=function(){PlayPause4()}
+//   videoSecond.onclick=function(){PlayPause4()}
+// }

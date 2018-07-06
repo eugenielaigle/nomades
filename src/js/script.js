@@ -91,7 +91,7 @@ $(document).ready(function(){
        if ($(this.elems.img).width() > $(this.elems.img).height()){
         var imageLargeur = $(this.elems.img).width();
         var imageLeft = this.elems.content[0].offsetLeft;
-        console.log(imageLeft);
+        // console.log(imageLeft);
         this.elems.pagination.appendTo(this.elems.bottom);
         this.elems.description.appendTo(this.elems.bottom);
         // this.elems.fullscreen.appendTo(this.elems.bottom);
@@ -113,7 +113,7 @@ $(document).ready(function(){
 
 if ($(window).width() > 768) {
   var widthContent = $('.container-video .video iframe').width()/1.35;
-  console.log(widthContent);
+  // console.log(widthContent);
   var goodHeight = widthContent/2.5;
   $('.container-video .video iframe ').height(goodHeight);
 
@@ -121,8 +121,8 @@ if ($(window).width() > 768) {
   var containerVideoHeight = $('.container-video .video').height((parseFloat(goodHeight) + 20 + "px"));
 
   var containerVideoWidth = $('.container-video .video').width((parseFloat(widthContent) + 10) + "px");
-  console.log(containerVideoHeight);
-  console.log(containerVideoWidth);
+  // console.log(containerVideoHeight);
+  // console.log(containerVideoWidth);
 }
 
 

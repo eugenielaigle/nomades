@@ -14,7 +14,7 @@ $detect = new Mobile_Detect ; ?>
 
 <div class="container-fluid container-header">
 
- <nav class="navbar navbar-expand-md navbar-light bg-faded" id="navbar-navigation">
+ <nav class="navbar navbar-expand-xl navbar-light bg-faded" id="navbar-navigation">
   <a class="xs-visible navbar-search" href="<?php the_permalink(51); ?>">
     <img class="img-responsive recherche-img" src="<?php bloginfo('stylesheet_directory') ?>/assets/img/loupe.svg">
   </a>
@@ -28,7 +28,7 @@ $detect = new Mobile_Detect ; ?>
     <span class="navbar-toggler-icon"></span>
   </button>
 
-<?php if ( $detect -> isMobile () && !$detect->isTablet() ) {
+<?php if ( $detect -> isMobile () || $detect->isTablet() ) {
 wp_nav_menu([
     'menu'            => 'menu-mobile',
     'theme_location'  => 'menu-mobile',
