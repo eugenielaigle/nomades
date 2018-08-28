@@ -43,6 +43,7 @@ wp_nav_menu([
     'fallback_cb'     => 'bs4navwalker::fallback',
     'walker'          => new bs4navwalker()
   ]);?>
+
 </nav>
 
 <?php  }else{?>
@@ -73,6 +74,8 @@ wp_nav_menu([
     'fallback_cb'     => 'bs4navwalker::fallback',
     'walker'          => new bs4navwalker()
   ]);?>
+
+
   </nav>
 <?php }
 ?>
@@ -93,6 +96,7 @@ wp_nav_menu([
     </p>
   </aside>
 </a>
+
 
 
 

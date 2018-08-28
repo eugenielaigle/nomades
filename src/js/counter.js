@@ -45,20 +45,25 @@ $('.articles-a-la-une').on('inview', function(event, isInView) {
 });
 
 
+if ( /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+
+for (var j=1;j<50;j++){
+
+var id="video"+j
 // TAP SUR VIDEO = LECTURE SUR SAFARI
-// var videoPlay = document.getElementById("video3");
+var videoPlay = document.getElementById(id);
 
-// if (videoPlay !== null){
-//   function PlayPause3()
-//   {
-//     if (videoPlay.paused) videoPlay.play();
-//     else videoPlay.pause();
-//   }
+if (videoPlay !== null){
+  function PlayPause()
+  {
+    if (videoPlay.paused) videoPlay.play();
+    else videoPlay.pause();
+  }
 
-// videoPlay.onclick=function(){PlayPause3()}
-// }
+videoPlay.onclick=function(){PlayPause()}
+}
 
-
+}
 // var videoSecond = document.getElementById("video4");
 
 // if (videoSecond !== null){
@@ -70,3 +75,6 @@ $('.articles-a-la-une').on('inview', function(event, isInView) {
 
 //   videoSecond.onclick=function(){PlayPause4()}
 // }
+
+
+}

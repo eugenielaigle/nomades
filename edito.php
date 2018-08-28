@@ -170,7 +170,7 @@ if ($titre): ?>
     <p>N’hésitez pas à nous contacter directement par mail ou par téléphone.</p>
   </div>
   <div class="legende-anglais toggle-anglais">
-    <p>N’hésitez pas à nous contacter directement par mail ou par téléphone.</p>
+    <p>Contact us directly by email or phone if you are interested.</p>
   </div>
   <button id="contact" class="button-newsletter button-contactez-nous">NOUS CONTACTER</button>
 </div>

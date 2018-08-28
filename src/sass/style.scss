@@ -14,6 +14,7 @@
 @import 'src/sass/contact';
 @import 'src/sass/flexible';
 @import 'src/sass/recherche';
+@import 'src/sass/woocommerce';
 
 /*
 * FONTS FAMILIES
@@ -185,7 +186,7 @@ strong{
       font-size: 58px;
       font-weight: 300;
       line-height: 47px;
-          margin-bottom: 0.2em;
+      margin-bottom: 0.2em;
       span{
         font-family: 'Freight Big Book';
         font-style: italic;
@@ -302,7 +303,7 @@ strong{
   padding-left: 5%;
   padding-right: 5%;
   .header-home{
-    height: 110vh;
+    height: 100vh;
     position: relative;
     .image-full-size, .video-full-size{
       overflow: hidden;
@@ -315,7 +316,7 @@ strong{
     .logo-home{
       position: absolute;
       width: 90%;
-      bottom: 40vh;
+      bottom: 31vh;
       left: 5%;
     }
     .sous-titre-home{
@@ -334,9 +335,9 @@ strong{
   }
 
   @media (min-width: 992px) and (max-width: 1800px){
-    .intro{
-      margin-top: 10vh;
-    }
+    // .intro{
+    //   margin-top: 10vh;
+    // }
   }
   .intro{
     display:flex;
@@ -367,12 +368,16 @@ strong{
 .bloc-panoramique-home{
   margin-top: 10vh;
   margin-bottom: 10vh;
-  height: 120vh;
+  height: 110vh;
   .panoramique{
     position: absolute;
     left: 0;
     right: 0;
     height: 100vh;
+    div:first-child{
+      max-height: 100vh;
+      overflow: hidden;
+    }
     // z-index: 5;
     img{
       width: 100%;
@@ -382,14 +387,21 @@ strong{
   }
 }
 
+// .category-studio{
+//   width: 100%!important;
+// }
+// .category-studio .studio-left img{
+//   width: 100%!important;
+// }
+
 .categories-prez{
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
+  border-bottom: 0.5px solid black;
+  border-top: 0.5px solid black;
   display: flex;
   margin-top: 10vh;
   // margin: 0 5%;
   a{
-    border-left: 1px solid black;
+    border-left: 0.5px solid black;
     margin: 40px 0;
     .categorie{
     // width: 25%;
@@ -417,7 +429,7 @@ strong{
   }
 }
 a:first-child{
-  border-left: 1px solid transparent!important;
+  border-left: 0.5px solid transparent!important;
 }
 
 }
@@ -1256,7 +1268,7 @@ p{
 
   }
   .contact-edito{
-    border-top: 1px solid #000;
+    border-top: 0.5px solid #000;
   }
 
 /*********************** MENTIONS LEGALES **************************/
@@ -1544,7 +1556,7 @@ p{
       overflow: hidden;
       text-overflow: ellipsis;
       display: flex;
-    justify-content: center;
+      justify-content: center;
       span{
         text-transform: lowercase!important;
         font-family: 'Freight Text'!important;
@@ -1596,6 +1608,20 @@ p{
 
 .chocolat-wrapper .chocolat-fullscreen{
   display: none!important;
+}
+
+
+.lecture {
+  background: url(../img/logo-lecture.png) no-repeat 50% 50%;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  display: none;
+}
+
+.compartiment{
+  position: relative;
 }
 
 

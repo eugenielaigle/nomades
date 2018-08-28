@@ -222,7 +222,7 @@
             }
         }
 
-        if ($(window).width() >= 768 && $(window).width() <= 1800 && $(window).height() > 670){
+        if ($(window).width() > 1025 && $(window).width() <= 1800 && $(window).height() > 670){
             if (imgWidth < imgHeight){
                 return {
                     'height' : height*1.3,
@@ -238,6 +238,23 @@
                     'left'   : (holderWidth - width)/2
                 };
             }
+        }else if ($(window).width() > 768 && $(window).width() <= 1025 ){
+            if (imgWidth < imgHeight){
+                return {
+                    'height' : height*1.2,
+                    'width'  : width*1.2,
+                    'top'    : (holderHeight - height)/5,
+                    'left'   : (holderWidth - width)/2.3
+                };
+            }else{
+                return {
+                    'height' : height*1.2,
+                    'width'  : width*1.2,
+                    'top'    : (holderHeight - height)/4,
+                    'left'   : (holderWidth - width)/3
+                };
+            }
+
         }else if ($(window).width() < 768){
             if (imgWidth < imgHeight){
                 return {

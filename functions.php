@@ -7,7 +7,9 @@ register_nav_menus(array(
   'plan-du-site-rubriques' => 'Plan du site - Rubriques',
   'plan-du-site-edition' => 'Plan du site - Edition',
   'menu-mobile' => 'Menu mobile',
-  'reseaux-sociaux-mobile' => 'Réseaux sociaux Footer Mobile'
+  'reseaux-sociaux-mobile' => 'Réseaux sociaux Footer Mobile',
+  'menu-woocommerce-header' => 'Menu Woocommerce Header',
+  'menu-woocommerce-footer' => 'Menu Woocommerce Footer'
 ));
 
 
@@ -132,7 +134,7 @@ function theme_js(){
 
   wp_enqueue_script('swiper');
 
-  wp_enqueue_script( 'basics', get_template_directory_uri() . '/assets/js/basics.js', array('jquery'), '4.9.6', false );
+  wp_enqueue_script( 'basics', get_template_directory_uri() . '/assets/js/basics.js', array('jquery'), '4.9.6', true );
 
   wp_enqueue_script( 'navigation');
 
@@ -362,6 +364,100 @@ function custom_search_filter($query) {
 return $query;
 }
 
+// COMPATIBLE WOOCOMMERCE
+
+function mytheme_add_woocommerce_support() {
+  add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
 
 
+add_action('wp_head','my_analytics', 20);
+
+function my_analytics() {
+ ?>
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-85103120-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-85103120-2');
+</script>
+
+
+<?php
+ }
+
+
+ add_filter( 'single_product_archive_thumbnail_size', function( $size ) {
+return 'full';
+} );
+
+ // Utiliser les variables pour le format des prix WC 2.0
+add_filter( 'woocommerce_variable_sale_price_html', 'wc_wc20_variation_price_format', 10, 2 );
+add_filter( 'woocommerce_variable_price_html', 'wc_wc20_variation_price_format', 10, 2 );
+function wc_wc20_variation_price_format( $price, $product ) {
+$min_price = $product->get_variation_price( 'min', true );
+$max_price = $product->get_variation_price( 'max', true );
+if ($min_price != $max_price){
+$price = sprintf( __( 'A PARTIR DE %1$s', 'woocommerce' ), wc_price( $min_price ) );
+return $price;
+} else {
+$price = sprintf( __( '%1$s', 'woocommerce' ), wc_price( $min_price ) );
+return $price;
+}
+}
+
+
+/**
+ * Résumé du panier Woocommerce
+ */
+if( ! function_exists( 'jst_cart_summary' ) )
+{
+  function jst_cart_summary()
+  {
+    $cart_link = '<div class="jst-cart-header">' .
+      '<span class="amount">' .wp_kses_data( WC()->cart->get_cart_subtotal() ). '</span>' .
+      '<span class="">' . wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'jst' ), WC()->cart->get_cart_contents_count() ) ) . '</span>' .
+      '</div>';
+    echo $cart_link;
+  }
+}
+
+
+/**
+ * Panier menu
+*/
+if( ! function_exists( 'jst_header_cart' ) )
+{
+  function jst_header_cart()
+  {
+    if( class_exists( 'woocommerce' ) )
+    {
+    ?>
+      <ul class="site-header-cart menu" id="site-header-cart">
+        <li><?php jst_cart_summary(); ?></li>
+        <li><?php the_widget( 'WC_Widget_Cart', 'title=' ); ?></li>
+      </ul>
+    <?php
+    }
+  }
+}
+
+
+/* Indiquer la rupture de stock */
+
+add_action( 'woocommerce_before_shop_loop_item_title', 'wpm_display_sold_out_loop_woocommerce' );// On l'affiche sur la page boutique
+add_action( 'woocommerce_single_product_summary', 'wpm_display_sold_out_loop_woocommerce' );// On l'affiche sur la page du produit seul
+
+
+function wpm_display_sold_out_loop_woocommerce() {
+    global $product;
+  //Si le produit est en rupture de stock, on affiche :
+    if ( !$product->is_in_stock() ) {
+        echo '<p class="soldout">' . __( 'Produit victime de son succès', 'woocommerce' ) . '</p>';
+    }
+}

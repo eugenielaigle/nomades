@@ -4,6 +4,21 @@ body{
   overflow-x: hidden;
   max-width: 100%!important;
 }
+
+#popmake-997{
+  position: sticky!important;
+  position: -webkit-sticky!important;
+  top: 100vh!important;
+  bottom: 0!important;
+  min-height: 50px;
+  margin-bottom: 0!important;
+}
+
+.pum-theme-custom #popmake-112, body .pum-theme-116 #popmake-112{
+  max-width: 100vw!important;
+  zoom: 100%!important;
+}
+
 .container-content{
   padding-right: 1%!important;
   padding-left: 1%!important;
@@ -87,7 +102,7 @@ img{
   }
 
   .toggle-absolute-english{
-    left: 0;
+    left: 0!important;
     -webkit-transition:0.4s;
     -moz-transition:0.4s;
     -ms-transition:0.4s;
@@ -199,6 +214,7 @@ img{
 .container-header{
   padding-left: 0px!important;
   padding-right: 0px!important;
+  max-height: 56px;
   .navbar{
    width: 100%!important;
    border-bottom: 0.5px solid black;
@@ -221,6 +237,7 @@ img{
   margin: 0;
   margin-left: 10px;
   margin-right: -10px;
+  max-height: 56px;
   .logo{
     width: 60%;
   }
@@ -1011,12 +1028,12 @@ body .articles-a-la-une{
   width: 103%!important;
 }
 .container-home .header-home .image-full-size .background-img, .container-home .header-home .image-full-size video, .container-home .header-home .video-full-size .background-img, .container-home .header-home .video-full-size video{
-  height: 25vh!important;
+  height: 30vh!important;
 
 }
 
 .container-home .header-home .logo-home{
-  bottom: 70vh!important;
+  bottom: 65vh!important;
 }
 
 .container-home .header-home .sous-titre-home{
@@ -1052,7 +1069,7 @@ body .articles-a-la-une{
 }
 
 .home-rencontre-destination, .home-category-retrospective, .category-studio, .home-edition{
-  margin: 0 0 5vh 0!important;
+  margin: 0px 0px 5vh 0px!important;
   img{
     height: auto;
   }
@@ -1072,7 +1089,9 @@ body .articles-a-la-une{
 
 .home-rencontre-destination, .home-category-left, .studio-left, .write-edition{
   flex-direction: column;
+
 }
+
 
 
 .home-category-right, .home-category-left, .studio-left{
@@ -1080,6 +1099,10 @@ body .articles-a-la-une{
   margin-top: 30px!important;
   display: flex;
 }
+
+.category-studio .studio-left img{
+    width: 100%!important;
+  }
 
 .home-category-right{
   flex-direction: column-reverse;
@@ -1221,12 +1244,20 @@ body .articles-a-la-une{
 .category-area:nth-child(4n+2) .row-bottom .title-and-sentence-bottom{
   padding: 5px!important;
 }
+
+.categ-without-cubes h2{
+  line-height: 1!important;
+}
 .home-edition .write-edition .paragraphe-edition p:first-child{
   font-style: normal!important;
   font-size: 26px!important;
   text-align: justify;
   line-height: 30px!important;
   margin-bottom: 25px;
+}
+
+.category-area:nth-child(4n) .thumbnail-category .title-and-sentence-left .normal-title{
+  width: 100%;
 }
 
 .home-edition .write-edition .paragraphe-edition p:last-child{
@@ -1261,7 +1292,7 @@ body .container-cubes-mobile{
     .the-category-title{
       font-size: 21px!important;
       text-align: center;
-      border-bottom: 1px solid #000;
+      border-bottom: 0.5px solid #000;
     }
     p{
       display: none;
@@ -1283,7 +1314,7 @@ body .container-cubes-mobile{
     margin: 0 8px 15px!important;
     width: 45.5%!important;
     justify-content: flex-start;
-    border-bottom: 1px solid #000;
+    border-bottom: 0.5px solid #000;
     // padding-bottom: 15px;
   }
   .category-area:nth-child(4n) .thumbnail-category .title-and-sentence-left{
@@ -1339,6 +1370,11 @@ body .container-cubes-mobile{
     margin: 0!important;
   }
 
+  #close-recherche{
+        top: 0!important;
+    right: 10px!important;
+  }
+
 }
 
 
@@ -1385,6 +1421,39 @@ body .container-search{
 }
 
 
+.container-content .container-cgv{
+  margin-top: 5vh!important;
+}
+
+.envoi-corner, .cgv-corner {
+  margin-left: 0!important;
+  flex-direction: column;
+  .cgv-space{
+    width: 100%!important;
+    .cgv-title{
+      text-align: center;
+    }
+    h3{
+      margin-top: 5vh;
+    }
+  }
+}
+
+#bs4navbar-secondary-footer{
+  padding: 20px 0;
+  height: auto!important;
+  #menu-menu-woocommerce-footer{
+    flex-direction: column;
+    .menu-item{
+    margin: 2%!important;
+    font-size: 18px;
+font-weight: 400;
+line-height: 45px;
+text-transform: uppercase;
+  }
+  }
+}
+
 
 }
 
@@ -1404,8 +1473,21 @@ body .container-search{
 
 
 
+
+
+
+
+
+
 // IPHONE 5
 @media (max-width: 767px) and (max-height: 670px){
+
+
+  .pum-theme-custom #popmake-112, body .pum-theme-116 #popmake-112{
+  max-width: 100vw!important;
+  zoom: 100%!important;
+}
+
   .container-header .navbar{
    padding-top: 0!important;
  }
@@ -1432,7 +1514,7 @@ body .container-search{
 }
 
 .container-home .header-home .logo-home{
-  bottom: 68vh!important;
+  bottom: 63vh!important;
 }
 
 .container-video .legende-video .direction-artistique .title, .container-video .legende-video .lieu-video .title, .container-video .legende-video .musique-originale .title, .container-video .legende-video .vues-aeriennes .title{

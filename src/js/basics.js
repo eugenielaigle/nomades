@@ -218,6 +218,12 @@ if ($(window).width()>768){
   });
 }
 
+if ($(window).width()<= 768){
+  $("#popmake-997").stick_in_parent({
+    bottom: 0
+  });
+}
+
 // var imageCentree = $('.image-centree .image-relative .image' );
 // var largeur = imageCentree.width();
 // console.log('largeur:' + largeur);
@@ -304,6 +310,9 @@ $("#sidebar-three").stick_in_parent({
 });
 
 })(jQuery);
+
+
+
 
 
 

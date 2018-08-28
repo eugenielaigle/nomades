@@ -58,7 +58,7 @@
 
       <?php elseif ($video):?> <!-- sinon -> afficher video -->
       <div class="video-full-size">
-        <video width="100%" height="auto" autoplay="true" loop id="video3">
+        <video width="100%" height="auto" autoplay="true" loop id="video<?php echo get_row_index()+1;?>">
          <source src="<?php the_field('video_header');?>" type="video/mp4" />
          </video>
          <div class="legende-image-full-size xs-invisible">
@@ -125,7 +125,7 @@
             <?php elseif ($video):?> <!-- sinon -> afficher video -->
             <div class="bloc-panoramique">
               <div class="panoramique">
-                <video width="100%" height="auto" autoplay="true" loop id="video4">
+                <video width="100%" height="auto" number="<?php echo get_row_index()+1;?>" autoplay="true" loop id="video<?php echo get_row_index()+1;?>">
                  <source src="<?php the_sub_field('video_panoramique');?>" type="video/mp4" />
                  </video>
 

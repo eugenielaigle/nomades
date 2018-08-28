@@ -9,8 +9,8 @@
 
 /************************** HOME *****************************/
 .sidebar-contact .nomades-prez{
-    bottom: 32vh!important;
-    left: -14vw!important;
+  bottom: 32vh!important;
+  left: -14vw!important;
 }
 .sidebar-recherche .recherche{
   right: -14vw!important;
@@ -26,18 +26,18 @@
 }
 
 
-  .home-rencontre-destination{
-    margin-left:15%!important;
-    margin-right: 5%!important;
-    img{
-      width: 80%;
-      height:auto;
-    }
+.home-rencontre-destination{
+  margin-left:15%!important;
+  margin-right: 5%!important;
+  img{
+    width: 80%;
+    height:auto;
   }
+}
 
-  .home-category-left img{
-    width: 78%!important;
-  }
+.home-category-left img{
+  width: 78%!important;
+}
 
   // .home-rencontre-destination img{
   //   width: 90%!important;
@@ -54,9 +54,9 @@
     }
   }
 
-.bloc-panoramique-home{
-  height: 110vh!important;
-}
+  .bloc-panoramique-home{
+    height: 110vh!important;
+  }
 
   .category-studio{
     margin-left: 35%!important;
@@ -75,12 +75,12 @@
     }
   }
 
-.home-category-left{
-  width: 75%!important;
-}
-.home-category-right{
-  width: 70%!important;
-}
+  .home-category-left{
+    width: 75%!important;
+  }
+  .home-category-right{
+    width: 70%!important;
+  }
   .home-edition{
     .write-edition{
       .titre-edition{
@@ -146,20 +146,20 @@
   max-width: 60%!important;
 }
  /*************************** CATEGORY ******************************/
-.category-header p{
+ .category-header p{
   width: 38%!important;
 }
 
 /*********************** ARTICLE ************************************/
 .image-texte-scrollable #sticker {
-    width: 15vw!important;
-    height: auto!important;
+  width: 15vw!important;
+  height: auto!important;
 }
 
 .article-header .row-article .legende-sous-image{
-      width: 60%!important;
-    max-width: 60%!important;
-    flex-basis: 60%!important;
+  width: 60%!important;
+  max-width: 60%!important;
+  flex-basis: 60%!important;
 }
 .article-header .row-article .article-anglais, .article-header .row-article .article-francais{
   max-width: 20%!important;
@@ -189,7 +189,7 @@ footer .container-footer .row-footer .footer-right .right-footer-widget .footer-
     left: 0;
     right: 0;
     height: auto;
-        overflow: hidden;
+    overflow: hidden;
     // z-index: 5;
     img{
       width: 100%;
@@ -227,6 +227,16 @@ footer .container-footer .row-footer .footer-right .right-footer-widget .footer-
 .image-centree .legendes{
   width: 40%!important;
 }
+
+.envoi-corner {
+  margin-left: 35%!important;
+}
+
+.cgv-corner {
+  margin-left: 30%!important;
+}
+
+
 
 
 }

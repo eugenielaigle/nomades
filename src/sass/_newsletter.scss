@@ -68,7 +68,7 @@ input[type="checkbox"]:checked {
 
 .button-newsletter{
   width: 100px;
-  padding: 8px 10px;
+  padding: 10px 10px 8px 10px;
   color:#000;
   background-color: transparent;
   font-size: 9px;
@@ -196,7 +196,7 @@ input[type="checkbox"]:checked {
    height: 40vh;
  }
  .sib-alert-message{
-  padding: 30% 12px 55% 12px!important;
+  padding: 40% 12px 55% 12px!important;
   text-align: center;
   width: 100%;
   line-height: 25px!important;
@@ -206,7 +206,7 @@ input[type="checkbox"]:checked {
 }
 
 form#sib_signup_form_1 p.sib-alert-message-warning{
-  padding: 30% 12px 65% 12px!important;
+  padding: 50% 12px 65% 12px!important;
 }
 #sib_signup_form_1 .sib_loader{
   height: 48vh!important;
@@ -341,8 +341,8 @@ input[type=submit]{
       width: 100%;
       height: 100%;
       top: 0;
-      left: 0;
-      padding-top: 4px;
+      left: -35px;
+    padding-top: 7px;
       text-align: right;
     }
   }
@@ -367,10 +367,6 @@ input:matches([type="button"], [type="submit"], [type="reset"]), input[type="fil
   margin: 0!important;
 }
 
-#popmake-997{
-  bottom: 0!important;
-  min-height: 50px;
-  margin-bottom: 0!important;
-}
+
 
 

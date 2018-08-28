@@ -39,27 +39,48 @@ jQuery(document).ready(function($){
 
 
 
+if ( /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+
+$('#videohome1 .lecture').css('display','block');
+var boutonPlay = document.getElementById("videohome1");
+var myVideo = document.getElementById("video1");
+if (myVideo !== null){
+function PlayPause()
+{
+if (myVideo.paused){
+  myVideo.play();
+  $('#videohome1 .lecture').css('display','none');
+}
+else{
+  myVideo.pause();
+  $('#videohome1 .lecture').css('display','block');
+
+}
+}
+
+boutonPlay.onclick=function(){PlayPause();}
+}
 
 
-// var myVideo = document.getElementById("video1");
-// if (myVideo !== null){
-// function PlayPause()
-// {
-// if (myVideo.paused) myVideo.play();
-// else myVideo.pause();
-// }
+$('#videohome2 .lecture').css('display','block');
+var boutonPlaySecond = document.getElementById("videohome2");
+var secondVideo = document.getElementById("video2");
 
-// myVideo.onclick=function(){PlayPause()}
-// }
+if (secondVideo !== null){
+function PlayPause2()
+{
+if (secondVideo.paused){
+  secondVideo.play();
+  $('#videohome2 .lecture').css('display','none');
+}
+else{
+  secondVideo.pause();
+  $('#videohome2 .lecture').css('display','block');
 
+}
+}
 
-// var secondVideo = document.getElementById("video2");
-// if (secondVideo !== null){
-// function PlayPause2()
-// {
-// if (secondVideo.paused) secondVideo.play();
-// else secondVideo.pause();
-// }
+boutonPlaySecond.onclick=function(){PlayPause2();}
+}
 
-// secondVideo.onclick=function(){PlayPause2()}
-// }
+}

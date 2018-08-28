@@ -1,0 +1,406 @@
+// WOOCOMMERCE
+
+.edition-sous-titre p{
+  font-style: normal;
+}
+
+.woocommerce-ordering {
+  display: none;
+}
+
+p.woocommerce-result-count {
+  display: none;
+}
+
+.container-subcategory{
+  padding-top: 50px!important;
+}
+
+
+
+
+.champ-texte-edit{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  // height: 400px!important;
+  padding-left: 10px;
+  p{
+    font-family: "Freight Text";
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 1.05px;
+    line-height: 25px;
+
+    // font-family: "Freight Text";
+    // font-size: 14px;
+    // font-weight: 500;
+    // letter-spacing: 1.05px;
+    // line-height: 25px;
+  }
+  .titre-product-cat{
+    width: 85%!important;
+  }
+
+}
+
+
+.titre-product-cat{
+  font-family: 'Freight Big Book';
+  font-size: 31px;
+  font-weight: 300;
+  letter-spacing: 1.55px;
+  line-height: 38px;
+  width: 95%;
+}
+
+.champ-texte-cat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  // height: 400px!important;
+  padding-left: 10px;
+  .product-cat{
+    font-family: "League Gothic";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 35px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+}
+
+.champ-texte-cat3{
+  align-items: flex-end!important;
+  justify-content: center!important;
+  padding-left: 0px!important;
+  padding-right: 10px;
+  .titre-product-cat, p{
+    text-align: right;
+
+  }
+  .titre-product-cat{
+    width: 65%!important;
+  }
+  .product-cat{
+    display: none;
+  }
+}
+
+.outofstock{
+    // filter: contrast(0.8);
+    // -webkit-filter: contrast(0.8);
+    // -moz-filter: contrast(0.8);
+    // -o-filter: contrast(0.8);
+    // -ms-filter: contrast(0.8);
+    .product_type_variable{
+      display: none;
+    }
+    .woocommerce-loop-product__link img{
+      opacity: 0.5!important;
+    }
+    .product-infos{
+      opacity: 0!important;
+    }
+    .soldout{
+      position: absolute;
+      text-align: center;
+      width: 50%;
+      font-family: "Freight Text";
+      font-size: 20px;
+      font-weight: 500;
+      font-style: italic;
+      line-height: 22px;
+      opacity: 0.65;
+    }
+  }
+
+
+
+  .category-header .paragraphe-francais-product-cat{
+    font-family: "Freight Text";
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.97px;
+    line-height: 25px;
+    font-style: normal;
+    width: 75%!important;
+  }
+
+  .category-header .paragraphe-anglais-product-cat{
+    font-family: "Freight Text";
+    font-size: 13px;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.97px;
+    line-height: 25px;
+    width: 75%!important;
+  }
+
+  .products{
+    display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // align-items: flex-start;
+  flex-flow: column wrap;
+  // align-content: space-between;
+  align-content: flex-start;
+  margin: 10vh 0;
+  // height: 1300px;
+  .product-count{
+    width: 32.5%;
+    margin: 5px;
+  }
+  .product{
+    background-color: #f0f0f0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .add_to_cart_button, .product_type_simple {
+      display: none;
+    }
+    .woocommerce-loop-product__link{
+     position: relative;
+     // margin:20%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     img{
+      object-fit: contain;
+      max-width: 80%;
+      max-height: 80%;
+      height: auto;
+
+    }
+    .product-infos{
+      // display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .woocommerce-loop-product__title{
+        font-family: "Freight Text";
+      }
+      .price{
+        font-family: "LeagueGothic";
+      }
+      .home_product_text{
+        font-size: 0.8em;
+        line-height: 1em;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .see-product{
+        width: auto;
+      }
+    }
+  }
+}
+.woocommerce-loop-product__link:hover .product-infos{
+  // display: flex;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+.woocommerce-loop-product__link:hover img{
+  transition: all 0.4s ease-in-out;
+  opacity: 0.5;
+}
+}
+
+// HEIGHT PAGE BOUTIQUE ET CATEGORIES PRODUITS
+
+@media (max-width: 768px){
+  .container-content .edition-header {
+    margin: 0 5px!important;
+}
+  .products .product-count{
+    width: 100%!important;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    margin-top: 0!important;
+  }
+
+  .category-header .the-category-title, .category-header .edition-sous-titre{
+    margin-left: 10px;
+  }
+  .category-header .soldout{
+    text-align: center!important;
+    font-size: 1em!important;
+  }
+  .category-header .champ-texte-edit p, .category-header .champ-texte-cat p{
+    font-size: 16px!important;
+    letter-spacing: 0.39px!important;
+    line-height: 26px!important;
+    width: 100%!important;
+    text-align: justify!important;
+
+  }
+  .category-header .champ-texte-edit , .category-header .champ-texte-cat {
+    padding-left: 0!important;
+    justify-content: center;
+    h2{
+      width: 90%!important;
+      margin-bottom: 1em;
+    }
+  }
+  .category-header .champ-texte-edit .paragraphe-anglais-product-cat, .category-header .champ-texte-cat .paragraphe-anglais-product-cat{
+    font-style: italic!important;
+    color: #626262;
+  }
+  .category-header .champ-texte-edit h2, .category-header .champ-texte-cat h2 {
+    font-size: 23px;
+    font-weight: 300;
+    letter-spacing: 1.15px;
+    line-height: 29px;
+  }
+}
+
+@media (max-width: 1800px){
+
+  .champ-texte-edit, .champ-texte-cat{
+    height: 400px!important;
+  }
+
+  .product-1, .product-3, .product-6, .product-8, .product-9{
+    height: 400px;
+  }
+  .product-2, .product-4, .product-5, .product-7, .product-10, .product-11, .product-12{
+    height: 200px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1800px){
+    .container-content .edition-header{
+    margin: 0 6.5%!important;
+  }
+  .products{
+    height: 1300px;
+  }
+}
+@media (min-width: 1800px){
+
+  .container-content .edition-header{
+    margin: 0 11%!important;
+  }
+  .products{
+    height: 1600px;
+  }
+
+  .category-header .champ-texte-edit, .category-header .champ-texte-cat{
+    height: 500px!important;
+    justify-content: center!important;
+    h2, p{
+      width: 52%!important;
+    }
+  }
+
+  .product-1, .product-3, .product-6, .product-8, .product-9{
+    height: 500px;
+  }
+  .product-2, .product-4, .product-5, .product-7, .product-10, .product-11, .product-12{
+    height: 250px;
+  }
+
+  .category-header .edition-sous-titre p{
+    width: 45%!important;
+  }
+}
+
+
+
+
+.cgv-corner{
+  margin-left: 20%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .cgv-space{
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    .cgv-title{
+      width: 100%;
+      font-family: "LeagueGothic";
+      font-size: 1.1em;
+      font-weight: 400;
+      letter-spacing: 0.85px;
+      line-height: 15px;
+      text-transform: uppercase;
+      margin-bottom: 2em;
+      min-height: 2vh;
+
+    }
+    h3{
+      font-family: "Freight Text";
+      font-size: 0.8em;
+      font-weight: 500;
+      font-style: italic;
+      letter-spacing: 0.33px;
+      line-height: 21px;
+
+    }
+    p{
+      font-family: "Freight Text";
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      line-height: 21px;
+      text-align: justify;
+
+    }
+  }
+}
+
+
+.envoi-corner{
+  margin-left: 45%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .cgv-space{
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    .cgv-title{
+      width: 100%;
+      font-family: "LeagueGothic";
+      font-size: 17px;
+      font-weight: 400;
+      letter-spacing: 0.85px;
+      line-height: 15px;
+      text-transform: uppercase;
+      margin-bottom: 2em;
+      min-height: 2vh;
+
+    }
+    h3{
+      font-family: "Freight Text";
+      font-size: 13px;
+      font-weight: 500;
+      font-style: italic;
+      letter-spacing: 0.33px;
+      line-height: 21px;
+
+    }
+    p{
+      font-family: "Freight Text";
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      line-height: 21px;
+      text-align: justify;
+
+    }
+  }
+}
