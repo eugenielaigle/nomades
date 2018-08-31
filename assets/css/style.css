@@ -1608,7 +1608,7 @@ table {
   padding-bottom: 0 !important;
   display: flex; }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .container-header .navbar {
     flex-direction: column; } }
 
@@ -1656,6 +1656,18 @@ table {
 .container-header .navbar #bs4navbar #menu-menu-principal .menu-item .active {
   text-decoration-color: #a2a2a2; }
 
+.cart-menu {
+  flex-basis: 25%;
+  display: flex;
+  justify-content: flex-end;
+  text-transform: capitalize !important;
+  margin-right: 4% !important; }
+
+@media (min-width: 1800px) {
+  #bs4navbar-secondary .cart-menu {
+    flex-basis: 30% !important;
+    margin-right: 5% !important; } }
+
 #bs4navbar-secondary {
   border-bottom: 0.5px solid black;
   font-size: 12px;
@@ -1666,37 +1678,89 @@ table {
   width: 100%;
   letter-spacing: 0.6px; }
 
-#bs4navbar-secondary #menu-menu-woocommerce-header {
+#bs4navbar-secondary #menu-menu-woocommerce-header-laptop, #bs4navbar-secondary #menu-menu-woocommerce-header-mobile {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   list-style-type: none;
   width: 100%;
   padding-top: 2px; }
 
-#bs4navbar-secondary #menu-menu-woocommerce-header .menu-item-object-custom {
+#bs4navbar-secondary #menu-menu-woocommerce-header-laptop .menu-item-object-custom, #bs4navbar-secondary #menu-menu-woocommerce-header-mobile .menu-item-object-custom {
   width: 50%; }
 
-#bs4navbar-secondary #menu-menu-woocommerce-header .menu-item-object-custom a {
+#bs4navbar-secondary #menu-menu-woocommerce-header-laptop .menu-item-object-custom a, #bs4navbar-secondary #menu-menu-woocommerce-header-mobile .menu-item-object-custom a {
   position: absolute;
   left: 45%; }
 
-#bs4navbar-secondary #menu-menu-woocommerce-header .menu-item {
+#bs4navbar-secondary #menu-menu-woocommerce-header-laptop .menu-item, #bs4navbar-secondary #menu-menu-woocommerce-header-mobile .menu-item {
   text-transform: lowercase;
   margin: 0 2%; }
 
-#bs4navbar-secondary #menu-menu-woocommerce-header .menu-item a {
-  color: black;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid transparent; }
+@media (min-width: 769px) {
+  #bs4navbar-secondary #menu-menu-woocommerce-header-laptop .menu-item a, #bs4navbar-secondary #menu-menu-woocommerce-header-mobile .menu-item a {
+    color: black;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid transparent; } }
 
-#bs4navbar-secondary #menu-menu-woocommerce-header .menu-item a:hover, #bs4navbar-secondary #menu-menu-woocommerce-header .menu-item .active {
+@media (max-width: 768px) {
+  #bs4navbar-secondary #menu-menu-woocommerce-header-laptop .menu-item a, #bs4navbar-secondary #menu-menu-woocommerce-header-mobile .menu-item a {
+    color: black;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-bottom: 1px solid transparent; } }
+
+#bs4navbar-secondary #menu-menu-woocommerce-header-laptop .menu-item .active, #bs4navbar-secondary #menu-menu-woocommerce-header-mobile .menu-item .active {
   font-weight: 700; }
 
-#bs4navbar-secondary #menu-menu-woocommerce-header .menu-item .active {
-  font-weight: 700; }
+@media (max-width: 767px) {
+  .container-header .navbar {
+    height: 40px !important; } }
+
+@media (max-width: 768px) {
+  #bs4navbar-secondary {
+    display: flex;
+    background-color: #fbfbfb;
+    margin: 0.5px 0; }
+  #bs4navbar-secondary #menu-menu-woocommerce-header-mobile {
+    display: flex;
+    justify-content: space-between !important;
+    list-style-type: none;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding-top: 0;
+    background-color: #fbfbfb;
+    border-bottom: 0.2px solid black; }
+  #bs4navbar-secondary #menu-menu-woocommerce-header-mobile .menu-item a {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    border-bottom: none !important; }
+  #bs4navbar-secondary #menu-menu-woocommerce-header-mobile .nav-link {
+    padding: 5px 0 !important; }
+  #bs4navbar-secondary #menu-menu-woocommerce-header-mobile .dropdown-toggle::after {
+    margin-left: 1.255em !important;
+    margin-top: 0.45em; }
+  #bs4navbar-secondary #menu-menu-woocommerce-header-mobile .dropdown-item {
+    padding-bottom: 0 !important; }
+  #bs4navbar-secondary #menu-menu-woocommerce-header-mobile .dropdown-item.active, #bs4navbar-secondary #menu-menu-woocommerce-header-mobile .dropdown-item:active {
+    background-color: transparent;
+    font-weight: bold; }
+  #bs4navbar-secondary #menu-menu-woocommerce-header-mobile .dropdown-menu {
+    margin-top: 0 !important;
+    background-color: transparent !important;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    font-family: "Freight Text";
+    font-style: italic;
+    letter-spacing: 0.6px;
+    border-radius: 0; } }
 
 #bs4navbar-secondary-footer {
   border-top: 0.5px solid black;
@@ -2972,6 +3036,9 @@ div.wpcf7-mail-sent-ok h2 {
 .container-search {
   padding-top: 100px !important; }
 
+.woocommerce-breadcrumb {
+  display: none !important; }
+
 .edition-sous-titre p {
   font-style: normal; }
 
@@ -3059,6 +3126,9 @@ p.woocommerce-result-count {
   line-height: 22px;
   opacity: 0.65; }
 
+.edition-sous-titre {
+  margin-bottom: 10vh; }
+
 .category-header .paragraphe-francais-product-cat {
   font-family: "Freight Text";
   font-size: 13px;
@@ -3081,7 +3151,7 @@ p.woocommerce-result-count {
   display: flex;
   flex-flow: column wrap;
   align-content: flex-start;
-  margin: 10vh 0; }
+  margin: 0; }
 
 .products .product-count {
   width: 32.5%;
@@ -3181,31 +3251,35 @@ p.woocommerce-result-count {
 @media (max-width: 1800px) {
   .champ-texte-edit, .champ-texte-cat {
     height: 400px !important; }
-  .product-1, .product-3, .product-6, .product-8, .product-9 {
+  .product-count:nth-child(1), .product-count:nth-child(3), .product-count:nth-child(6), .product-count:nth-child(8), .product-count:nth-child(9), .product-count:nth-child(11) {
     height: 400px; }
-  .product-2, .product-4, .product-5, .product-7, .product-10, .product-11, .product-12 {
-    height: 200px; } }
+  .product-count:nth-child(2), .product-count:nth-child(4), .product-count:nth-child(5), .product-count:nth-child(7), .product-count:nth-child(10), .product-count:nth-child(12) {
+    height: 200px; }
+  .pdt-11 {
+    height: 200px !important; } }
 
 @media (min-width: 769px) and (max-width: 1800px) {
   .container-content .edition-header {
     margin: 0 6.5% !important; }
   .products {
-    height: 1300px; } }
+    max-height: 1240px; } }
 
 @media (min-width: 1800px) {
   .container-content .edition-header {
     margin: 0 11% !important; }
   .products {
-    height: 1600px; }
+    max-height: 1600px; }
   .category-header .champ-texte-edit, .category-header .champ-texte-cat {
     height: 500px !important;
     justify-content: center !important; }
   .category-header .champ-texte-edit h2, .category-header .champ-texte-edit p, .category-header .champ-texte-cat h2, .category-header .champ-texte-cat p {
     width: 52% !important; }
-  .product-1, .product-3, .product-6, .product-8, .product-9 {
+  .product-count:nth-child(1), .product-count:nth-child(3), .product-count:nth-child(6), .product-count:nth-child(8), .product-count:nth-child(9), .product-count:nth-child(11) {
     height: 500px; }
-  .product-2, .product-4, .product-5, .product-7, .product-10, .product-11, .product-12 {
+  .product-count:nth-child(2), .product-count:nth-child(4), .product-count:nth-child(5), .product-count:nth-child(7), .product-count:nth-child(10), .product-count:nth-child(12) {
     height: 250px; }
+  .pdt-11 {
+    height: 250px !important; }
   .category-header .edition-sous-titre p {
     width: 45% !important; } }
 
@@ -3284,6 +3358,53 @@ p.woocommerce-result-count {
   letter-spacing: 0.3px;
   line-height: 21px;
   text-align: justify; }
+
+.product_meta {
+  display: none; }
+
+#primary {
+  min-height: 110vh; }
+
+.image-principale {
+  position: relative;
+  top: 50px;
+  left: 0;
+  right: 0; }
+
+.infos-produit {
+  position: absolute;
+  z-index: 2;
+  right: 10%;
+  top: 0;
+  height: 100%;
+  display: flex; }
+
+.infos-produit .product_title {
+  font-family: "Freight Big Book";
+  font-size: 58px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 47px; }
+
+.infos-produit .price {
+  font-family: "League Gothic";
+  font-size: 37px;
+  font-weight: 400;
+  line-height: 29px; }
+
+.infos-produit .woocommerce-product-details__short-description p {
+  font-family: "Freight Text";
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.97px;
+  line-height: 20px; }
+
+.variations_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 /*
 * FONTS FAMILIES

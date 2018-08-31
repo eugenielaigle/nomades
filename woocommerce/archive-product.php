@@ -64,6 +64,19 @@ $detect = new Mobile_Detect ; ?>
         'fallback_cb'     => 'bs4navwalker::fallback',
         'walker'          => new bs4navwalker()
       ]);?>
+      <?php
+      wp_nav_menu([
+        'menu'            => 'secondary',
+        'theme_location'  => 'menu-woocommerce-header-mobile',
+        'container'       => 'div',
+        'container_id'    => 'bs4navbar-secondary',
+        'container_class' => 'collapse navbar-collapse secondary-menu',
+        'menu_id'         => false,
+        'menu_class'      => 'navbar-nav mr-auto',
+        'depth'           => 2,
+        'fallback_cb'     => 'bs4navwalker::fallback',
+        'walker'          => new bs4navwalker()
+      ]);?>
     </nav>
 
     <?php  }else{?>
@@ -98,7 +111,7 @@ $detect = new Mobile_Detect ; ?>
         <?php
         wp_nav_menu([
           'menu'            => 'secondary',
-          'theme_location'  => 'menu-woocommerce-header',
+          'theme_location'  => 'menu-woocommerce-header-laptop',
           'container'       => 'div',
           'container_id'    => 'bs4navbar-secondary',
           'container_class' => 'collapse navbar-collapse secondary-menu',
@@ -217,21 +230,21 @@ else: ?>
           $champ_position = get_sub_field('champ_position', $taxonomy . '_' . $term_id);
 
           if ($i == $champ_position ):
-          echo '<div class="product-count champ-texte-cat champ-texte-cat' . $champ_position .' product-' . $i .'">';?>
+            echo '<div class="product-count champ-texte-cat champ-texte-cat' . $champ_position .' product-' . $i .'">';?>
             <h1 class="product-cat"><?php  single_cat_title();?></h1>
             <h2 class="titre-product-cat"><?php  the_sub_field('titre_product_cat', $queried_object );?></h2>
             <p class="paragraphe-francais-product-cat"><?php  the_sub_field('paragraphe_francais_product_cat', $queried_object );?></p>
             <p class="paragraphe-anglais-product-cat"><?php  the_sub_field('paragraphe_anglais_product_cat', $queried_object );?></p>
           </div>
           <?php $i++; ?>
-          <?php endif;
+        <?php endif;
 
-        endwhile;
-      endif;
-      echo '<div class="product-count product-' . $i .'">';
-      wc_get_template_part( 'content', 'product' );
-      echo'</div>';
-      $i++;
+      endwhile;
+    endif;
+    echo '<div class="product-count product-' . $i .'">';
+    wc_get_template_part( 'content', 'product' );
+    echo'</div>';
+    $i++;
   endwhile; // end of the loop.
 
 
@@ -239,10 +252,12 @@ else: ?>
 
 else:
   $i = 1;
+
   $products_IDs = new WP_Query( array(
     'post_type' => 'product',
     'posts_per_page' => 11
   ));
+
 
 
   if ( wc_get_loop_prop( 'total' ) ) {
@@ -256,26 +271,60 @@ else:
 			do_action( 'woocommerce_shop_loop' );
 
 
-if ($i == 11):
-          echo '<div class="product-count champ-texte-edit product-' . $i .'">';?>
-            <h2 class="titre-product-cat"><?php the_field('espace_de_droite_titre', 23);?></h2>
-            <p class="paragraphe-francais-product-cat"><?php  the_field('espace_de_droite_texte_francais', 23);?></p>
-            <p class="paragraphe-anglais-product-cat"><?php  the_field('espace_de_droite_texte_anglais', 23);?></p>
-          </div>
-          <?php $i++; ?>
-          <?php endif;
+      if ($i == 11):
+        echo '<div class="product-count champ-texte-edit product-' . $i .'">';?>
+        <h2 class="titre-product-cat"><?php the_field('espace_de_droite_titre', 23);?></h2>
+        <p class="paragraphe-francais-product-cat"><?php  the_field('espace_de_droite_texte_francais', 23);?></p>
+        <p class="paragraphe-anglais-product-cat"><?php  the_field('espace_de_droite_texte_anglais', 23);?></p>
+      </div>
+      <?php $i++; ?>
+    <?php endif;
 
 
 
-      echo '<div class="product-count product-' . $i .'">';
-      wc_get_template_part( 'content', 'product' );
-      echo'</div>';
-      $i++;
-    }
+    echo '<div class="product-count product-' . $i .'">';
+    wc_get_template_part( 'content', 'product' );
+    echo'</div>';
+    $i++;
+
   }
+}
+woocommerce_product_loop_end();
+
+$j = 1;
+  $products_IDs_after = new WP_Query( array(
+    'post_type' => 'product',
+    'posts_per_page' => 12,
+    'show_all' => true,
+    'offset' => $i - 2
+
+  ));
+
+woocommerce_product_loop_start();
+
+if ( wc_get_loop_prop( 'total' ) ) {
+  while ($products_IDs_after->have_posts() ) {
+   $products_IDs_after->the_post();
+
+      /**
+       * Hook: woocommerce_shop_loop.
+       *
+       * @hooked WC_Structured_Data::generate_product_data() - 10
+       */
+      do_action( 'woocommerce_shop_loop' );
+
+    echo '<div class="product-count product-' . $i .'">';
+    wc_get_template_part( 'content', 'product' );
+    echo'</div>';
+    $i++;
+
+  }
+}
+
+woocommerce_product_loop_end();
+$j++;
 
 endif;
-woocommerce_product_loop_end();
 
 	/**
 	 * Hook: woocommerce_after_shop_loop.

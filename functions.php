@@ -8,7 +8,8 @@ register_nav_menus(array(
   'plan-du-site-edition' => 'Plan du site - Edition',
   'menu-mobile' => 'Menu mobile',
   'reseaux-sociaux-mobile' => 'Réseaux sociaux Footer Mobile',
-  'menu-woocommerce-header' => 'Menu Woocommerce Header',
+  'menu-woocommerce-header-laptop' => 'Menu Woocommerce Header',
+  'menu-woocommerce-header-mobile' => 'Menu Woocommerce Header Mobile',
   'menu-woocommerce-footer' => 'Menu Woocommerce Footer'
 ));
 
@@ -428,25 +429,6 @@ if( ! function_exists( 'jst_cart_summary' ) )
 }
 
 
-/**
- * Panier menu
-*/
-if( ! function_exists( 'jst_header_cart' ) )
-{
-  function jst_header_cart()
-  {
-    if( class_exists( 'woocommerce' ) )
-    {
-    ?>
-      <ul class="site-header-cart menu" id="site-header-cart">
-        <li><?php jst_cart_summary(); ?></li>
-        <li><?php the_widget( 'WC_Widget_Cart', 'title=' ); ?></li>
-      </ul>
-    <?php
-    }
-  }
-}
-
 
 /* Indiquer la rupture de stock */
 
@@ -461,3 +443,102 @@ function wpm_display_sold_out_loop_woocommerce() {
         echo '<p class="soldout">' . __( 'Produit victime de son succès', 'woocommerce' ) . '</p>';
     }
 }
+
+
+//* Panier dans le menu
+/**
+* Place a cart icon with number of items and total cost in the menu bar.
+*
+* Source: http://wordpress.org/plugins/woocommerce-menu-bar-cart/
+*/
+add_filter('wp_nav_menu_items','sk_wcmenucart', 10, 2);
+function sk_wcmenucart($menu, $args) {
+// Check if WooCommerce is active and add a new item to a menu assigned to Primary Navigation Menu location
+if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) || 'menu-woocommerce-header-laptop' !== $args->theme_location && 'menu-woocommerce-header-mobile' !== $args->theme_location)
+return $menu;
+
+ob_start();
+global $woocommerce;
+$viewing_cart = __('View your shopping cart', 'nomades');
+$start_shopping = __('Start shopping', 'nomades');
+$cart_url = wc_get_cart_url();
+$shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
+$cart_contents_count = $woocommerce->cart->cart_contents_count;
+$cart_contents = sprintf(_n('%d', '%d', $cart_contents_count, 'nomades'), $cart_contents_count);
+$cart_total = $woocommerce->cart->get_cart_total();
+// Uncomment the line below to hide nav menu cart item when there are no items in the cart
+// if ( $cart_contents_count > 0 ) {
+if ($cart_contents_count == 0) {
+$menu_item = '<li class="cart-menu menu-item menu-item-type-taxonomy menu-item-object-product_cat nav-item" ><a class="wcmenucart-contents nav-link"  href="'. $shop_page_url .'"  title="'. $start_shopping .'" >';
+} else {
+$menu_item = '<li class="cart-menu menu-item menu-item-type-taxonomy menu-item-object-product_cat nav-item" ><a class="wcmenucart-contents nav-link"  href="'. $cart_url .'""  title="'. $viewing_cart .'" >';
+}
+// $menu_item .= '<i class="fa fa-shopping-cart" ></i> ';
+$menu_item .= 'Panier (' . $cart_contents . ')';
+$menu_item .= '</a></li>';
+// Uncomment the line below to hide nav menu cart item when there are no items in the cart
+// }
+echo $menu_item;
+$social = ob_get_clean();
+return $menu . $social;
+}
+
+
+add_filter('wp_nav_menu_items','sk_wcmenucart', 10, 2);
+function sk_wcmenucart_mobile($menu, $args) {
+// Check if WooCommerce is active and add a new item to a menu assigned to Primary Navigation Menu location
+if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) || 'menu-woocommerce-header-mobile' !== $args->theme_location )
+return $menu;
+
+ob_start();
+global $woocommerce;
+$viewing_cart = __('View your shopping cart', 'nomades');
+$start_shopping = __('Start shopping', 'nomades');
+$cart_url = wc_get_cart_url();
+$shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
+$cart_contents_count = $woocommerce->cart->cart_contents_count;
+$cart_contents = sprintf(_n('%d', '%d', $cart_contents_count, 'nomades'), $cart_contents_count);
+$cart_total = $woocommerce->cart->get_cart_total();
+// Uncomment the line below to hide nav menu cart item when there are no items in the cart
+// if ( $cart_contents_count > 0 ) {
+if ($cart_contents_count == 0) {
+$menu_item = '<li class="cart-menu menu-item menu-item-type-taxonomy menu-item-object-product_cat nav-item" ><a class="wcmenucart-contents nav-link"  href="'. $shop_page_url .'"  title="'. $start_shopping .'" >';
+} else {
+$menu_item = '<li class="cart-menu menu-item menu-item-type-taxonomy menu-item-object-product_cat nav-item" ><a class="wcmenucart-contents nav-link"  href="'. $cart_url .'""  title="'. $viewing_cart .'" >';
+}
+// $menu_item .= '<i class="fa fa-shopping-cart" ></i> ';
+$menu_item .= 'Panier (' . $cart_contents . ')';
+$menu_item .= '</a></li>';
+// Uncomment the line below to hide nav menu cart item when there are no items in the cart
+// }
+echo $menu_item;
+$social = ob_get_clean();
+return $menu . $social;
+}
+
+ add_filter( 'loop_shop_per_page', function ( $cols ) { return - 1; } );
+
+
+
+
+ function shuffle_variable_product_elements(){
+    if ( is_product() ) {
+        global $post;
+        $product = wc_get_product( $post->ID );
+        if ( $product->is_type( 'variable' ) ) {
+          remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+            remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation', 10 );
+            add_action( 'woocommerce_before_variations_form', 'woocommerce_single_variation', 20 );
+
+
+
+            remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+            add_action( 'woocommerce_before_variations_form', 'woocommerce_template_single_title', 10 );
+
+            remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+            add_action( 'woocommerce_before_variations_form', 'woocommerce_template_single_excerpt', 30 );
+        }
+    }
+}
+add_action( 'woocommerce_before_single_product', 'shuffle_variable_product_elements' );
+

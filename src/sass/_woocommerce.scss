@@ -1,5 +1,7 @@
 // WOOCOMMERCE
-
+.woocommerce-breadcrumb{
+  display: none!important;
+}
 .edition-sous-titre p{
   font-style: normal;
 }
@@ -118,6 +120,9 @@ p.woocommerce-result-count {
   }
 
 
+.edition-sous-titre{
+  margin-bottom: 10vh;
+}
 
   .category-header .paragraphe-francais-product-cat{
     font-family: "Freight Text";
@@ -147,7 +152,7 @@ p.woocommerce-result-count {
   flex-flow: column wrap;
   // align-content: space-between;
   align-content: flex-start;
-  margin: 10vh 0;
+  margin: 0;
   // height: 1300px;
   .product-count{
     width: 32.5%;
@@ -221,7 +226,7 @@ p.woocommerce-result-count {
 @media (max-width: 768px){
   .container-content .edition-header {
     margin: 0 5px!important;
-}
+  }
   .products .product-count{
     width: 100%!important;
     margin-left: 0!important;
@@ -270,20 +275,25 @@ p.woocommerce-result-count {
     height: 400px!important;
   }
 
-  .product-1, .product-3, .product-6, .product-8, .product-9{
-    height: 400px;
-  }
-  .product-2, .product-4, .product-5, .product-7, .product-10, .product-11, .product-12{
-    height: 200px;
-  }
+  .product-count:nth-child(1), .product-count:nth-child(3), .product-count:nth-child(6), .product-count:nth-child(8), .product-count:nth-child(9), .product-count:nth-child(11){
+  height: 400px;
+}
+
+.product-count:nth-child(2), .product-count:nth-child(4), .product-count:nth-child(5), .product-count:nth-child(7), .product-count:nth-child(10), .product-count:nth-child(12){
+  height: 200px;
+}
+
+  .pdt-11{
+   height: 200px!important;
+ }
 }
 
 @media (min-width: 769px) and (max-width: 1800px){
-    .container-content .edition-header{
+  .container-content .edition-header{
     margin: 0 6.5%!important;
   }
   .products{
-    height: 1300px;
+    max-height: 1240px;
   }
 }
 @media (min-width: 1800px){
@@ -292,7 +302,7 @@ p.woocommerce-result-count {
     margin: 0 11%!important;
   }
   .products{
-    height: 1600px;
+    max-height: 1600px;
   }
 
   .category-header .champ-texte-edit, .category-header .champ-texte-cat{
@@ -303,11 +313,20 @@ p.woocommerce-result-count {
     }
   }
 
-  .product-1, .product-3, .product-6, .product-8, .product-9{
-    height: 500px;
-  }
-  .product-2, .product-4, .product-5, .product-7, .product-10, .product-11, .product-12{
-    height: 250px;
+   .product-count:nth-child(1), .product-count:nth-child(3), .product-count:nth-child(6), .product-count:nth-child(8), .product-count:nth-child(9), .product-count:nth-child(11){
+  height: 500px;
+}
+
+.product-count:nth-child(2), .product-count:nth-child(4), .product-count:nth-child(5), .product-count:nth-child(7), .product-count:nth-child(10), .product-count:nth-child(12){
+  height: 250px;
+}
+
+
+
+
+
+  .pdt-11{
+    height: 250px!important;
   }
 
   .category-header .edition-sous-titre p{
@@ -403,4 +422,70 @@ p.woocommerce-result-count {
 
     }
   }
+}
+
+
+// PAGE PRODUIT
+
+.product_meta{
+  display: none;
+}
+
+.product{
+
+}
+#primary{
+  min-height: 110vh;
+}
+.entry-summary{
+
+  // height: 90vh;
+  // position: relative;
+  // top: 50px;
+
+}
+
+
+.image-principale{
+  position: relative;
+  top: 50px;
+  left: 0;
+  right: 0;
+}
+
+.infos-produit{
+  position: absolute;
+  z-index: 2;
+  right: 10%;
+      top: 0;
+    height: 100%;
+    display: flex;
+  .product_title{
+    font-family: "Freight Big Book";
+    font-size: 58px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 47px;
+  }
+  .price{
+    font-family: "League Gothic";
+    font-size: 37px;
+    font-weight: 400;
+    line-height: 29px;
+  }
+  .woocommerce-product-details__short-description p{
+    font-family: "Freight Text";
+    font-size: 13px;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.97px;
+    line-height: 20px;
+  }
+}
+
+.variations_form{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

@@ -134,8 +134,6 @@ if ($(window).width() > 768) {
 
 
 
-
-
 // if ( 'mail_sent' == data.status ) {
 //         $message.html( '' ).append( "<h2>FORMULAIRE</h2>").append( data.message ).slideDown( 'fast' );
 //         $message.attr( 'role', 'alert' );

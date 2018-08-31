@@ -149,7 +149,7 @@ $detect = new Mobile_Detect ; ?>
           <?php elseif ($video): ?>
             <div class="video-full-size">
               <div class="compartiment" id="videohome1">
-              <video class="delete-hover-effect" width="100%" height="auto" autoplay="true" loop id="video1">
+              <video class="delete-hover-effect" width="100%" height="auto" autoplay="true" loop muted id="video1">
                <source src="<?php the_field('video_couv_home');?>" type="video/mp4" />
                </video>
                <div class="lecture"></div>
@@ -453,7 +453,7 @@ if (!empty($image)):?>
     <div class="bloc-panoramique-home">
       <div class="panoramique">
         <div class="compartiment" id="videohome2">
-        <video class="delete-hover-effect" width="100%" height="auto" autoplay="true" loop id="video2">
+        <video class="delete-hover-effect" width="100%" height="auto" autoplay="true" loop muted id="video2">
          <source src="<?php the_field('panoramique_video');?>" type="video/mp4" />
        </video>
        <div class="lecture"></div>

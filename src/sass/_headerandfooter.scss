@@ -26,7 +26,7 @@
     z-index: 99;
     padding-bottom: 0!important;
     display: flex;
-    @media (min-width: 768px){
+    @media (min-width: 769px){
       flex-direction: column;
     }
 
@@ -79,94 +79,183 @@
   }
 }
 
+.cart-menu{
+  flex-basis: 25%;
+  display: flex;
+  justify-content: flex-end;
+  text-transform: capitalize!important;
+  margin-right: 4%!important;
+}
+
+@media (min-width: 1800px){
+  #bs4navbar-secondary .cart-menu{
+  flex-basis: 30%!important;
+  margin-right: 5%!important;
+}
+}
+
 #bs4navbar-secondary{
-      border-bottom: 0.5px solid black;
+  border-bottom: 0.5px solid black;
+  font-size: 12px;
+  font-family: "Freight Text";
+  font-style: italic;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  width: 100%;
+  letter-spacing: 0.6px;
+
+  #menu-menu-woocommerce-header-laptop, #menu-menu-woocommerce-header-mobile{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    width: 100%;
+    padding-top: 2px;
+    .menu-item-object-custom{
+      width: 50%;
+      a{
+        position: absolute;
+        left: 45%;
+      }
+    }
+    .menu-item{
+      text-transform: lowercase;
+      margin: 0 2%;
+      @media (min-width: 769px){
+        a{
+          color: black;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid transparent;
+        }
+      }
+      @media (max-width: 768px){
+        a{
+          color: black;
+          font-weight: 500;
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          border-bottom: 1px solid transparent;
+        }
+      }
+      // a:hover, .active{
+      //   font-weight: 700;
+      // }
+      .active{
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px){
+ .container-header .navbar{
+    height: 40px!important;
+  }
+}
+
+@media (max-width: 768px){
+
+  #bs4navbar-secondary{
+    display: flex;
+    background-color: $legende;
+    margin: 0.5px 0;
+  // width: 20%;
+  // flex-grow: 0;
+  // flex-basis: 20%!important;
+  #menu-menu-woocommerce-header-mobile{
+    display: flex;
+    justify-content: space-between!important;
+    list-style-type: none;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding-top: 0;
+    background-color: $legende;
+    border-bottom: 0.2px solid black;
+    .menu-item a{
+      padding-left: 0!important;
+      padding-right: 0!important;
+      padding-bottom: 0!important;
+      margin-bottom: 0!important;
+      border-bottom: none!important;
+    }
+    .nav-link{
+      padding: 5px 0!important;
+
+    }
+    .dropdown-toggle::after{
+      margin-left: 1.255em!important;
+      margin-top: 0.45em;
+    }
+    .dropdown-item{
+      padding-bottom: 0!important;
+    }
+    .dropdown-item.active, .dropdown-item:active{
+      background-color: transparent;
+      font-weight: bold;
+    }
+    .dropdown-menu{
+      margin-top: 0!important;
+      background-color: transparent!important;
+      border: none;
+      padding: 0;
       font-size: 12px;
       font-family: "Freight Text";
       font-style: italic;
-      margin-left: 1.5%;
-      margin-right: 1.5%;
-      width: 100%;
       letter-spacing: 0.6px;
-
-      #menu-menu-woocommerce-header{
-        display: flex;
-        justify-content: center;
-        list-style-type: none;
-        width: 100%;
-            padding-top: 2px;
-        .menu-item-object-custom{
-          width: 50%;
-          a{
-            position: absolute;
-            left: 45%;
-          }
-        }
-        .menu-item{
-          text-transform: lowercase;
-          margin: 0 2%;
-          a{
-            color: black;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 1px solid transparent;
-          }
-          a:hover, .active{
-            font-weight: 700;
-          }
-          .active{
-            font-weight: 700;
-          }
-        }
-      }
+      border-radius: 0;
     }
+
+  }
+}
+}
 
 
 #bs4navbar-secondary-footer{
-      border-top: 0.5px solid black;
-      font-size: 14px;
-      font-family: "LeagueGothic";
-      padding-left: 0;
-      width: 98%;
-      height: 35px;
+  border-top: 0.5px solid black;
+  font-size: 14px;
+  font-family: "LeagueGothic";
+  padding-left: 0;
+  width: 98%;
+  height: 35px;
 
-      #menu-menu-woocommerce-footer{
-        display: flex;
-        justify-content: center;
-        list-style-type: none;
-        margin-bottom: 0;
-            height: 100%;
+  #menu-menu-woocommerce-footer{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-bottom: 0;
+    height: 100%;
     align-items: center;
     padding-top: 2px;
-        .menu-item-object-custom{
-          width: 50%;
-          a{
-            position: absolute;
-            left: 45%;
-          }
-        }
-        .menu-item{
-          text-transform: uppercase;
-          margin: 0 2%;
-          a{
-            color: black;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 1px solid transparent;
-          }
-          a:hover, .active{
-            text-decoration: underline;
-          }
-          .active{
-            font-weight: 700;
-          }
-        }
+    .menu-item-object-custom{
+      width: 50%;
+      a{
+        position: absolute;
+        left: 45%;
       }
     }
+    .menu-item{
+      text-transform: uppercase;
+      margin: 0 2%;
+      a{
+        color: black;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid transparent;
+      }
+      a:hover, .active{
+        text-decoration: underline;
+      }
+      .active{
+        font-weight: 700;
+      }
+    }
+  }
+}
 div#wpcs_tab_84{
   top: 65px!important;
   left: -53px!important;
